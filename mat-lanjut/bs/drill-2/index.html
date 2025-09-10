@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal TKA Matematika Lanjut - 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration for LaTeX rendering -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="Math-Jax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+         body {
+             font-family: 'Inter', sans-serif;
+             background-color: #f3f4f6;
+         }
+         .content-card {
+             background-color: white;
+             border-radius: 0.75rem;
+             padding: 1.5rem 2rem;
+             margin-bottom: 1.5rem;
+             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+         }
+         .section-title {
+             font-size: 1.875rem; /* 30px */
+             font-weight: 700;
+             color: #3730a3; /* indigo-800 */
+             border-bottom: 3px solid #6366f1; /* indigo-500 */
+             padding-bottom: 0.5rem;
+             margin-bottom: 1.5rem;
+         }
+         .item-container {
+             margin-bottom: 1.75rem;
+             padding-bottom: 1.75rem;
+             border-bottom: 1px solid #e5e7eb;
+         }
+         .item-container:last-child {
+             border-bottom: none;
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
+         p, .question-text {
+             line-height: 1.6;
+             font-size: 1.1rem;
+         }
+         .options-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 1rem;
+             margin-top: 1rem;
+         }
+         .option {
+            padding: 0.5rem;
+         }
+         .data-sufficiency-options {
+             font-size: 0.95rem;
+             margin-top: 1rem;
+         }
+         .complex-table {
+             width: 100%;
+             margin-top: 1rem;
+             border-collapse: collapse;
+         }
+         .complex-table th, .complex-table td {
+             border: 1px solid #d1d5db;
+             padding: 0.75rem;
+             text-align: left;
+         }
+         .complex-table th {
+             background-color: #eef2ff;
+         }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-8">
+            <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-28">
+        </div>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal TKA Matematika Lanjut - 2</h1>
+            <p class="text-gray-600 mt-2">Topik: Vektor dan Lingkaran | Level: SMA</p>
+        </header>
+
+        <main>
+            <!-- Questions Section -->
+            <section class="content-card">
+                <h2 class="section-title">Soal-Soal Latihan</h2>
+                
+                <!-- Soal 1 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>1.</strong> Diberikan vektor $\vec{a} = 2\vec{i} - 3\vec{j} + \vec{k}$ dan $\vec{b} = -\vec{i} + 4\vec{j} - 2\vec{k}$. Hasil dari $2\vec{a} - \vec{b}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $5\vec{i} - 10\vec{j} + 4\vec{k}$</div>
+                        <div class="option">B. $3\vec{i} - 2\vec{j} - \vec{k}$</div>
+                        <div class="option">C. $5\vec{i} - 7\vec{j}$</div>
+                        <div class="option">D. $4\vec{i} - 6\vec{j} + 2\vec{k}$</div>
+                        <div class="option">E. $3\vec{i} + \vec{j} - \vec{k}$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>2.</strong> Pusat dan jari-jari dari lingkaran dengan persamaan $x^2 + y^2 - 6x + 8y - 24 = 0$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. Pusat $(3, -4)$ dan jari-jari 7</div>
+                        <div class="option">B. Pusat $(-3, 4)$ dan jari-jari 7</div>
+                        <div class="option">C. Pusat $(3, -4)$ dan jari-jari 5</div>
+                        <div class="option">D. Pusat $(-6, 8)$ dan jari-jari $\sqrt{24}$</div>
+                        <div class="option">E. Pusat $(6, -8)$ dan jari-jari 12</div>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>3.</strong> Proyeksi vektor ortogonal dari $\vec{u} = \begin{pmatrix} 6 \\ -2 \\ 3 \end{pmatrix}$ pada $\vec{v} = \begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $-\frac{4}{9}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">B. $-\frac{4}{3}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">C. $\frac{1}{3}\begin{pmatrix} 6 \\ -2 \\ 3 \end{pmatrix}$</div>
+                        <div class="option">D. $-\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">E. $4\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>4.</strong> Berapakah persamaan lingkaran yang berpusat di kuadran pertama dan menyinggung sumbu-Y?</p>
+                    <p class="mt-4"> (1) Lingkaran tersebut melalui titik $(3, 6)$. <br>
+                                         (2) Jari-jari lingkaran adalah 5.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 5 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>5.</strong> Sebuah drone terbang dengan kecepatan konstan yang direpresentasikan oleh vektor $\vec{v}_d = (2\vec{i} + 2\vec{j} + \vec{k})$ m/s. Pada saat yang sama, angin bertiup dengan kecepatan yang direpresentasikan oleh vektor $\vec{v}_a = (\vec{i} - \vec{j})$ m/s. Panjang lintasan yang ditempuh drone setelah terbang selama 10 detik adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\sqrt{11}$ meter</div>
+                        <div class="option">B. $10\sqrt{11}$ meter</div>
+                        <div class="option">C. $10\sqrt{3}$ meter</div>
+                        <div class="option">D. 30 meter</div>
+                        <div class="option">E. 110 meter</div>
+                    </div>
+                </div>
+
+                <!-- Soal 6 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>6.</strong> Dari titik $P(8, 6)$, dibuat garis singgung terhadap lingkaran $x^2 + y^2 = 25$. Manakah pernyataan yang benar mengenai situasi tersebut? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. Panjang segmen garis singgung dari titik P ke titik singgung adalah $\sqrt{75}$.</div>
+                        <div class="option">B. Salah satu persamaan garis singgungnya adalah $y - 6 = \frac{7}{24}(x - 8)$.</div>
+                        <div class="option">C. Terdapat dua garis singgung yang dapat dibuat dari titik P.</div>
+                        <div class="option">D. Jarak titik P ke pusat lingkaran adalah 10 satuan.</div>
+                        <div class="option">E. Titik $P$ berada di dalam lingkaran.</div>
+                    </div>
+                </div>
+                
+                <!-- Soal 7 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>7.</strong> Diketahui titik A(1, 2, 3), B(3, 3, 1), dan C(2, 0, 4). Luas jajar genjang yang dibentuk oleh vektor $\vec{AB}$ dan $\vec{AC}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\sqrt{50}$ satuan luas</div>
+                        <div class="option">B. $\sqrt{59}$ satuan luas</div>
+                        <div class="option">C. $5\sqrt{3}$ satuan luas</div>
+                        <div class="option">D. $\sqrt{62}$ satuan luas</div>
+                        <div class="option">E. 8 satuan luas</div>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>8.</strong> Lingkaran $L_1$ berpusat di $(0,0)$ dengan jari-jari 4 dan lingkaran $L_2$ berpusat di $(4,0)$ dengan jari-jari 4. Berapakah luas daerah irisan kedua lingkaran tersebut?</p>
+                    <div class="my-4 text-center">
+                        <svg width="250" height="150" viewBox="-5 -8 20 16" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="clip1">
+                                    <circle cx="0" cy="0" r="4"/>
+                                </clipPath>
+                                <clipPath id="clip2">
+                                    <circle cx="4" cy="0" r="4"/>
+                                </clipPath>
+                            </defs>
+                            <circle cx="0" cy="0" r="4" stroke="blue" stroke-width="0.2" fill="none"/>
+                            <circle cx="4" cy="0" r="4" stroke="red" stroke-width="0.2" fill="none"/>
+                            <g fill="rgba(100,100,200,0.5)">
+                                <circle cx="0" cy="0" r="4" clip-path="url(#clip2)"/>
+                                <circle cx="4" cy="0" r="4" clip-path="url(#clip1)"/>
+                            </g>
+                            <line x1="-5" y1="0" x2="10" stroke="black" stroke-width="0.1"/>
+                            <line x1="0" y1="-7" x2="0" y2="7" stroke="black" stroke-width="0.1"/>
+                            <text x="0.2" y="-0.2" font-size="1">(0,0)</text>
+                            <text x="4.2" y="-0.2" font-size="1">(4,0)</text>
+                        </svg>
+                    </div>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{32\pi}{3} - 8\sqrt{3}$</div>
+                        <div class="option">B. $\frac{16\pi}{3} - 4\sqrt{3}$</div>
+                        <div class="option">C. $16\pi - 8\sqrt{3}$</div>
+                        <div class="option">D. $\frac{32\pi}{3} - 4\sqrt{3}$</div>
+                        <div class="option">E. $8\pi - 8\sqrt{3}$</div>
+                    </div>
+                </div>
+                
+                <!-- Soal 9 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>9.</strong> Diberikan vektor non-nol $\vec{u}$ dan $\vec{v}$ di $\mathbb{R}^3$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $\vec{u} \cdot \vec{v} = 0$, maka $\vec{u}$ dan $\vec{v}$ sejajar.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>$|\vec{u} + \vec{v}| = |\vec{u}| + |\vec{v}|$</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Panjang proyeksi $\vec{u}$ pada $\vec{v}$ adalah $\frac{|\vec{u} \cdot \vec{v}|}{|\vec{u}|}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Soal 10 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>10.</strong> Persamaan garis singgung pada lingkaran $(x-1)^2 + (y+3)^2 = 20$ di titik $(3, 1)$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $x + 2y - 5 = 0$</div>
+                        <div class="option">B. $x - 2y - 1 = 0$</div>
+                        <div class="option">C. $2x + y - 7 = 0$</div>
+                        <div class="option">D. $2x - 3y - 3 = 0$</div>
+                        <div class="option">E. $x + y - 4 = 0$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 11 -->
+                 <div class="item-container">
+                    <p class="question-text"><strong>11.</strong> Diberikan vektor $\vec{p} = (k, -3, 6)$ dan $\vec{q} = (1, -k, 2)$. Apakah kedua vektor tersebut saling tegak lurus (ortogonal)?</p>
+                    <p class="mt-4"> (1) $k$ adalah bilangan bulat positif. <br>
+                                         (2) $k$ merupakan solusi dari persamaan $k^2 - 4k - 12 = 0$.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 12 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>12.</strong> Sebuah stasiun radar ditempatkan pada koordinat $(2, 3)$. Radar tersebut dapat mendeteksi objek hingga jarak 10 km. Seorang penyusup bergerak sepanjang garis lurus dengan persamaan $3x - 4y + 26 = 0$. Jarak terdekat penyusup dari stasiun radar adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 2 km</div>
+                        <div class="option">B. 3 km</div>
+                        <div class="option">C. 4 km</div>
+                        <div class="option">D. 5 km</div>
+                        <div class="option">E. 6 km</div>
+                    </div>
+                </div>
+
+                <!-- Soal 13 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>13.</strong> Diberikan titik P(1, -2) dan Q(4, 2). Panjang vektor $\vec{PQ}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 3</div>
+                        <div class="option">B. 4</div>
+                        <div class="option">C. 5</div>
+                        <div class="option">D. $\sqrt{7}$</div>
+                        <div class="option">E. 25</div>
+                    </div>
+                </div>
+
+                <!-- Soal 14 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>14.</strong> Jarak antara dua garis singgung lingkaran $x^2+y^2-4x+6y-3=0$ yang sejajar dengan garis $3x - 4y = 1$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 4</div>
+                        <div class="option">B. 5</div>
+                        <div class="option">C. 6</div>
+                        <div class="option">D. 8</div>
+                        <div class="option">E. 10</div>
+                    </div>
+                </div>
+
+                <!-- Soal 15 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>15.</strong> Vektor $\vec{a}$, $\vec{b}$, dan $\vec{c}$ dikatakan koplanar (sebidang) jika volume paralelepipedum yang dibentuk oleh ketiganya adalah nol. Manakah di antara set vektor berikut yang koplanar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="mt-4 space-y-2">
+                        <div class="option">A. $\vec{a}=(1,1,2), \vec{b}=(2,1,3), \vec{c}=(3,2,5)$</div>
+                        <div class="option">B. $\vec{a}=\vec{i}, \vec{b}=\vec{j}, \vec{c}=\vec{k}$</div>
+                        <div class="option">C. $\vec{a}=(2,-1,1), \vec{b}=(1,2,-3), \vec{c}=(3,1,-2)$</div>
+                        <div class="option">D. $\vec{a}=(1,2,3), \vec{b}=(3,2,1), \vec{c}=(0,0,0)$</div>
+                        <div class="option">E. $\vec{a}=(1,0,1), \vec{b}=(0,1,0), \vec{c}=(1,1,0)$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 16 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>16.</strong> Persamaan lingkaran yang berpusat di $(2, -5)$ dan menyinggung sumbu-X adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x-2)^2 + (y+5)^2 = 4$</div>
+                        <div class="option">B. $(x-2)^2 + (y+5)^2 = 25$</div>
+                        <div class="option">C. $(x+2)^2 + (y-5)^2 = 25$</div>
+                        <div class="option">D. $(x-2)^2 + (y+5)^2 = 5$</div>
+                        <div class="option">E. $(x+5)^2 + (y-2)^2 = 4$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 17 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>17.</strong> Diketahui vektor $\vec{a} = 2\vec{i} + 3\vec{j}$ dan $\vec{b} = \vec{i} - \vec{k}$. Vektor satuan yang tegak lurus terhadap bidang yang dibentuk oleh $\vec{a}$ dan $\vec{b}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{1}{\sqrt{14}}(-3\vec{i} + 2\vec{j} - 2\vec{k})$</div>
+                        <div class="option">B. $\frac{1}{\sqrt{22}}(-3\vec{i} + 2\vec{j} - 3\vec{k})$</div>
+                        <div class="option">C. $\frac{1}{\sqrt{17}}(-3\vec{i} + 2\vec{j} - 2\vec{k})$</div>
+                        <div class="option">D. $\frac{1}{\sqrt{17}}(3\vec{i} - 2\vec{j} + 2\vec{k})$</div>
+                        <div class="option">E. $\frac{1}{\sqrt{14}}(-3\vec{i} + 2\vec{j} + \vec{k})$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 18 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>18.</strong> Sebuah lingkaran L memiliki jari-jari $r$ dan berpusat di $(a,b)$. Apakah garis $y=x$ memotong lingkaran L?</p>
+                    <p class="mt-4"> (1) Pusat lingkaran $(a,b)$ berada di kuadran II dan L menyinggung kedua sumbu koordinat. <br>
+                                         (2) Jarak dari pusat $(a,b)$ ke garis $y=x$ lebih kecil dari $r$.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 19 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>19.</strong> Diberikan dua buah vektor gaya, $\vec{F}_1 = (3\vec{i} + 4\vec{j})$ N dan $\vec{F}_2 = (4\vec{i} - 3\vec{j})$ N, yang bekerja pada sebuah partikel. Tentukan kesesuaian pernyataan berikut.</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Sesuai</th>
+                                <th>Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Besar gaya $\vec{F}_1$ adalah 5 N.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>Vektor resultan gaya adalah $\vec{R} = (7\vec{i} + \vec{j})$ N.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Kedua vektor gaya saling tegak lurus.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Usaha yang dilakukan oleh gaya resultan jika partikel berpindah sejauh $\vec{d} = (\vec{i} + \vec{j})$ m adalah 8 Joule.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>20.</strong> Salah satu persamaan garis singgung lingkaran $x^2+y^2=25$ yang dapat ditarik dari titik $(7,1)$ adalah ...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $4x-3y=25$</div>
+                        <div class="option">B. $3x+4y=31$</div>
+                        <div class="option">C. $4x+3y=31$</div>
+                        <div class="option">D. $3x-4y=17$</div>
+                        <div class="option">E. $7x+y=50$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 21 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>21.</strong> Diberikan vektor $\vec{u} = \vec{i} + \sqrt{2}\vec{j} + \sqrt{3}\vec{k}$ dan $\vec{v} = \vec{i} - \sqrt{2}\vec{j} + \sqrt{3}\vec{k}$. Nilai dari $\cos\theta$, dengan $\theta$ adalah sudut antara $\vec{u}$ dan $\vec{v}$, adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $1/6$</div>
+                        <div class="option">B. $1/3$</div>
+                        <div class="option">C. $1/2$</div>
+                        <div class="option">D. $2/3$</div>
+                        <div class="option">E. $\sqrt{6}/6$</div>
+                    </div>
+                </div>
+                
+                <!-- Soal 22 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>22.</strong> Manakah di antara persamaan lingkaran berikut yang menyinggung garis $y=4$? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x-2)^2 + (y-1)^2 = 9$</div>
+                        <div class="option">B. $x^2 + y^2 - 6x - 14y + 49 = 0$</div>
+                        <div class="option">C. $(x+1)^2 + (y-5)^2 = 4$</div>
+                        <div class="option">D. $x^2 + y^2 = 16$</div>
+                        <div class="option">E. $(x-3)^2 + (y-8)^2 = 9$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 23 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>23.</strong> Titik R membagi garis yang menghubungkan titik P(2, 4, 1) dan Q(12, -1, 6) dengan perbandingan $3:2$. Koordinat titik R adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(8, 1, 4)$</div>
+                        <div class="option">B. $(6, 2, 3)$</div>
+                        <div class="option">C. $(4, 3, 2)$</div>
+                        <div class="option">D. $(8, 2, 4)$</div>
+                        <div class="option">E. $(10, 3, 5)$</div>
+                    </div>
+                </div>
+                
+                <!-- Soal 24 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>24.</strong> Persamaan tali busur persekutuan dari lingkaran $L_1 \equiv x^2+y^2=10$ dan $L_2 \equiv x^2+y^2-8x-4y+10=0$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $2x+y-5=0$</div>
+                        <div class="option">B. $2x-y-5=0$</div>
+                        <div class="option">C. $x+2y-5=0$</div>
+                        <div class="option">D. $x-2y+5=0$</div>
+                        <div class="option">E. $2x+y=0$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 25 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>25.</strong> Sebuah perahu menyeberangi sungai yang lebarnya 120 meter. Kecepatan perahu relatif terhadap air adalah 4 m/s dan tegak lurus terhadap tepi sungai. Jika kecepatan arus air adalah 3 m/s, maka panjang lintasan yang ditempuh perahu untuk menyeberangi sungai adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 120 m</div>
+                        <div class="option">B. 130 m</div>
+                        <div class="option">C. 140 m</div>
+                        <div class="option">D. 150 m</div>
+                        <div class="option">E. 160 m</div>
+                    </div>
+                </div>
+
+                <!-- Soal 26 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>26.</strong> Luas juring lingkaran dengan sudut pusat $120^\circ$ dan jari-jari 6 cm adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $6\pi$ cm$^2$</div>
+                        <div class="option">B. $8\pi$ cm$^2$</div>
+                        <div class="option">C. $10\pi$ cm$^2$</div>
+                        <div class="option">D. $12\pi$ cm$^2$</div>
+                        <div class="option">E. $24\pi$ cm$^2$</div>
+                    </div>
+                </div>
+
+                <!-- Soal 27 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>27.</strong> Berapakah besar sudut antara vektor $\vec{a}$ dan $\vec{b}$?</p>
+                    <p class="mt-4"> (1) $|\vec{a}|=3$, $|\vec{b}|=4$ <br>
+                                         (2) $|\vec{a}+\vec{b}|=5$ </p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 28 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>28.</strong> Diberikan lingkaran $L_1: (x-1)^2 + (y-2)^2 = 9$ dan $L_2: (x-10)^2 + (y-2)^2 = r^2$. Tentukan hubungan antara kedua lingkaran berdasarkan nilai $r$.</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Kondisi</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jika $r=5$, kedua lingkaran berpotongan di dua titik.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>Jika $r=6$, kedua lingkaran bersinggungan luar.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $r=12$, lingkaran $L_1$ berada di dalam $L_2$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $r=2$, kedua lingkaran tidak berpotongan dan saling lepas.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Soal 29 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>29.</strong> Diketahui titik A(1,0,-2), B(2,1,-1), dan C(2,0,-3). Jika ABCD adalah sebuah jajar genjang, maka koordinat titik D adalah...</p>
+                     <div class="options-grid">
+                        <div class="option">A. (1, -1, -4)</div>
+                        <div class="option">B. (3, 1, -2)</div>
+                        <div class="option">C. (1, 1, -2)</div>
+                        <div class="option">D. (3, 0, -4)</div>
+                        <div class="option">E. (0, -1, -3)</div>
+                    </div>
+                </div>
+
+                <!-- Soal 30 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>30.</strong> Dua roda gigi melingkar bersinggungan secara eksternal. Roda gigi pertama memiliki persamaan $(x-5)^2+y^2=16$. Roda gigi kedua memiliki jari-jari 2 dan pusatnya berada di sumbu-x positif. Persamaan roda gigi kedua adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x-11)^2+y^2=4$</div>
+                        <div class="option">B. $(x-9)^2+y^2=4$</div>
+                        <div class="option">C. $(x-7)^2+y^2=4$</div>
+                        <div class="option">D. $(x-1)^2+y^2=4$</div>
+                        <div class="option">E. $(x-3)^2+y^2=4$</div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
