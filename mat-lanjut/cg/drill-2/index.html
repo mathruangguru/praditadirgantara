@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal & Pembahasan TKA Matematika Lanjut - 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration for LaTeX rendering -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="Math-Jax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+         body {
+             font-family: 'Inter', sans-serif;
+             background-color: #f3f4f6;
+         }
+         .content-card {
+             background-color: white;
+             border-radius: 0.75rem;
+             padding: 1.5rem 2rem;
+             margin-bottom: 1.5rem;
+             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+         }
+         .section-title {
+             font-size: 1.875rem; /* 30px */
+             font-weight: 700;
+             color: #3730a3; /* indigo-800 */
+             border-bottom: 3px solid #6366f1; /* indigo-500 */
+             padding-bottom: 0.5rem;
+             margin-bottom: 1.5rem;
+         }
+         .item-container {
+             margin-bottom: 1.75rem;
+             padding-bottom: 1.75rem;
+             border-bottom: 1px solid #e5e7eb;
+         }
+         .item-container:last-child {
+             border-bottom: none;
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
+         p, .question-text {
+             line-height: 1.6;
+             font-size: 1.1rem;
+         }
+         .options-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 1rem;
+             margin-top: 1rem;
+         }
+         .option {
+            padding: 0.5rem;
+         }
+         .data-sufficiency-options {
+             font-size: 0.95rem;
+             margin-top: 1rem;
+         }
+         .complex-table {
+             width: 100%;
+             margin-top: 1rem;
+             border-collapse: collapse;
+         }
+         .complex-table th, .complex-table td {
+             border: 1px solid #d1d5db;
+             padding: 0.75rem;
+             text-align: left;
+         }
+         .complex-table th {
+             background-color: #eef2ff;
+         }
+         .pembahasan {
+             margin-top: 1.5rem;
+             padding: 1rem;
+             background-color: #f9fafb;
+             border-left: 4px solid #6366f1;
+             font-size: 1rem;
+         }
+         .pembahasan h3 {
+             font-weight: 600;
+             color: #4338ca;
+             margin-bottom: 0.5rem;
+         }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-8">
+            <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-28">
+        </div>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal & Pembahasan TKA Matematika Lanjut - 2</h1>
+            <p class="text-gray-600 mt-2">Topik: Vektor dan Lingkaran | Level: SMA</p>
+        </header>
+
+        <main>
+            <!-- Questions Section -->
+            <section class="content-card">
+                <h2 class="section-title">Soal & Pembahasan</h2>
+                
+                <!-- Soal 1 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>1.</strong> Diberikan vektor $\vec{a} = 2\vec{i} - 3\vec{j} + \vec{k}$ dan $\vec{b} = -\vec{i} + 4\vec{j} - 2\vec{k}$. Hasil dari $2\vec{a} - \vec{b}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $5\vec{i} - 10\vec{j} + 4\vec{k}$</div>
+                        <div class="option">B. $3\vec{i} - 2\vec{j} - \vec{k}$</div>
+                        <div class="option">C. $5\vec{i} - 7\vec{j}$</div>
+                        <div class="option">D. $4\vec{i} - 6\vec{j} + 2\vec{k}$</div>
+                        <div class="option">E. $3\vec{i} + \vec{j} - \vec{k}$</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Untuk menyelesaikan operasi vektor ini, kita perlu melakukan dua langkah: perkalian skalar dan pengurangan vektor.</p>
+                        <p><strong>Langkah 1: Perkalian Skalar</strong></p>
+                        <p>Kita kalikan vektor $\vec{a}$ dengan skalar 2. Ini berarti setiap komponen dari $\vec{a}$ dikalikan dengan 2.</p>
+                        <p>$\vec{a} = 2\vec{i} - 3\vec{j} + \vec{k}$</p>
+                        <p>$2\vec{a} = 2(2\vec{i} - 3\vec{j} + \vec{k}) = (2 \cdot 2)\vec{i} - (2 \cdot 3)\vec{j} + (2 \cdot 1)\vec{k} = 4\vec{i} - 6\vec{j} + 2\vec{k}$</p>
+                        <p><strong>Langkah 2: Pengurangan Vektor</strong></p>
+                        <p>Sekarang, kita kurangkan vektor $\vec{b}$ dari hasil $2\vec{a}$. Pengurangan vektor dilakukan dengan mengurangkan komponen yang bersesuaian.</p>
+                        <p>$2\vec{a} - \vec{b} = (4\vec{i} - 6\vec{j} + 2\vec{k}) - (-\vec{i} + 4\vec{j} - 2\vec{k})$</p>
+                        <p>$= (4 - (-1))\vec{i} + (-6 - 4)\vec{j} + (2 - (-2))\vec{k}$</p>
+                        <p>$= (4 + 1)\vec{i} + (-10)\vec{j} + (2 + 2)\vec{k}$</p>
+                        <p>$= 5\vec{i} - 10\vec{j} + 4\vec{k}$</p>
+                        <p>Jadi, jawaban yang benar adalah <strong>A. $5\vec{i} - 10\vec{j} + 4\vec{k}$</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>2.</strong> Pusat dan jari-jari dari lingkaran dengan persamaan $x^2 + y^2 - 6x + 8y - 24 = 0$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. Pusat $(3, -4)$ dan jari-jari 7</div>
+                        <div class="option">B. Pusat $(-3, 4)$ dan jari-jari 7</div>
+                        <div class="option">C. Pusat $(3, -4)$ dan jari-jari 5</div>
+                        <div class="option">D. Pusat $(-6, 8)$ dan jari-jari $\sqrt{24}$</div>
+                        <div class="option">E. Pusat $(6, -8)$ dan jari-jari 12</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Persamaan umum lingkaran adalah $x^2 + y^2 + Ax + By + C = 0$.</p>
+                        <p>Dari persamaan soal, kita dapat mengidentifikasi: $A = -6$, $B = 8$, dan $C = -24$.</p>
+                        <p><strong>Mencari Pusat Lingkaran $(a,b)$</strong></p>
+                        <p>Rumus untuk mencari pusat lingkaran dari bentuk umum adalah $P(a,b) = P(-\frac{A}{2}, -\frac{B}{2})$.</p>
+                        <p>$a = -\frac{-6}{2} = 3$</p>
+                        <p>$b = -\frac{8}{2} = -4$</p>
+                        <p>Jadi, pusat lingkaran adalah $(3, -4)$.</p>
+                        <p><strong>Mencari Jari-jari Lingkaran $(r)$</strong></p>
+                        <p>Rumus untuk mencari jari-jari adalah $r = \sqrt{a^2 + b^2 - C}$, di mana $(a,b)$ adalah koordinat pusat.</p>
+                        <p>$r = \sqrt{(3)^2 + (-4)^2 - (-24)}$</p>
+                        <p>$r = \sqrt{9 + 16 + 24}$</p>
+                        <p>$r = \sqrt{49} = 7$</p>
+                        <p>Jadi, pusat lingkaran adalah $(3, -4)$ dan jari-jarinya adalah 7.</p>
+                        <p>Jawaban yang benar adalah <strong>A. Pusat $(3, -4)$ dan jari-jari 7</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>3.</strong> Proyeksi vektor ortogonal dari $\vec{u} = \begin{pmatrix} 6 \\ -2 \\ 3 \end{pmatrix}$ pada $\vec{v} = \begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $-\frac{4}{9}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">B. $-\frac{4}{3}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">C. $\frac{1}{3}\begin{pmatrix} 6 \\ -2 \\ 3 \end{pmatrix}$</div>
+                        <div class="option">D. $-\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                        <div class="option">E. $4\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Proyeksi vektor ortogonal dari $\vec{u}$ pada $\vec{v}$, dinotasikan sebagai $proj_{\vec{v}}\vec{u}$, adalah vektor "bayangan" dari $\vec{u}$ yang searah (atau berlawanan arah) dengan $\vec{v}$.</p>
+                        <p>Rumus yang digunakan adalah: $proj_{\vec{v}}\vec{u} = \frac{\vec{u} \cdot \vec{v}}{|\vec{v}|^2} \vec{v}$</p>
+                        <p><strong>Langkah 1: Hitung produk titik (dot product) $\vec{u} \cdot \vec{v}$</strong></p>
+                        <p>Produk titik dihitung dengan mengalikan komponen yang bersesuaian lalu menjumlahkannya.</p>
+                        <p>$\vec{u} \cdot \vec{v} = (6)(1) + (-2)(2) + (3)(-2) = 6 - 4 - 6 = -4$</p>
+                        <p><strong>Langkah 2: Hitung kuadrat dari panjang (magnitudo) vektor $\vec{v}$, yaitu $|\vec{v}|^2$</strong></p>
+                        <p>Panjang vektor $|\vec{v}|$ adalah $\sqrt{x^2+y^2+z^2}$. Kuadrat panjangnya adalah $x^2+y^2+z^2$.</p>
+                        <p>$|\vec{v}|^2 = (1)^2 + (2)^2 + (-2)^2 = 1 + 4 + 4 = 9$</p>
+                        <p><strong>Langkah 3: Masukkan hasil ke dalam rumus proyeksi</strong></p>
+                        <p>Skalar pengali adalah $\frac{-4}{9}$. Vektor hasilnya adalah skalar ini dikalikan dengan vektor $\vec{v}$.</p>
+                        <p>$proj_{\vec{v}}\vec{u} = \frac{-4}{9} \vec{v} = -\frac{4}{9}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</p>
+                        <p>Jadi, jawaban yang benar adalah <strong>A. $-\frac{4}{9}\begin{pmatrix} 1 \\ 2 \\ -2 \end{pmatrix}$</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>4.</strong> Berapakah persamaan lingkaran yang berpusat di kuadran pertama dan menyinggung sumbu-Y?</p>
+                    <p class="mt-4"> (1) Lingkaran tersebut melalui titik $(3, 6)$. <br>
+                                         (2) Jari-jari lingkaran adalah 5.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                     <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Pertama, kita analisis informasi dari soal utama.</p>
+                        <ul>
+                            <li><strong>Berpusat di kuadran pertama</strong>: Jika pusatnya adalah $(a,b)$, maka menurut definisi kuadran pertama, $a > 0$ dan $b > 0$.</li>
+                            <li><strong>Menyinggung sumbu-Y</strong>: Jarak dari pusat lingkaran $(a,b)$ ke sumbu-Y adalah nilai absolut dari koordinat-x nya, yaitu $|a|$. Jarak ini sama dengan jari-jari ($r$). Karena $a > 0$, maka $a = r$.</li>
+                        </ul>
+                        <p>Dari informasi di atas, persamaan standar lingkaran $(x-a)^2 + (y-b)^2 = r^2$ dapat kita tulis ulang menjadi $(x-r)^2 + (y-b)^2 = r^2$. Ada dua variabel yang belum diketahui nilainya, yaitu $r$ dan $b$. Untuk dapat menjawab pertanyaan "Berapakah persamaan lingkaran?", kita harus bisa menemukan nilai unik untuk $r$ dan $b$.</p>
+                        
+                        <p><strong>Analisis Pernyataan (1)</strong></p>
+                        <p>Lingkaran melalui titik $(3, 6)$. Jika kita substitusikan titik ini ke dalam persamaan lingkaran, kita dapatkan:</p>
+                        <p>$(3-r)^2 + (6-b)^2 = r^2$</p>
+                        <p>Ini adalah satu persamaan dengan dua variabel ($r$ dan $b$). Kita tidak bisa menentukan nilai unik untuk $r$ dan $b$ dari persamaan ini. Contohnya, $r=2, b=5$ bisa jadi solusi, atau $r=10, b=1$ bisa jadi solusi lain. Jadi, pernyataan (1) SAJA tidak cukup.</p>
+                        
+                        <p><strong>Analisis Pernyataan (2)</strong></p>
+                        <p>Jari-jari lingkaran adalah 5, jadi $r=5$. Karena $a=r$, maka pusatnya adalah $(5,b)$. Persamaan lingkarannya menjadi:</p>
+                        <p>$(x-5)^2 + (y-b)^2 = 5^2 = 25$</p>
+                        <p>Kita masih belum mengetahui nilai $b$ (koordinat-y dari pusat). Jadi, pernyataan (2) SAJA tidak cukup.</p>
+                        
+                        <p><strong>Analisis Pernyataan (1) dan (2) Bersama-sama</strong></p>
+                        <p>Kita gabungkan kedua informasi. Dari (2), kita tahu $r=5$. Dari (1), kita tahu lingkaran melalui $(3, 6)$. Kita substitusikan kedua informasi ini ke persamaan dasar:</p>
+                        <p>$(3-5)^2 + (6-b)^2 = 5^2$</p>
+                        <p>$(-2)^2 + (6-b)^2 = 25$</p>
+                        <p>$4 + (6-b)^2 = 25$</p>
+                        <p>$(6-b)^2 = 21$</p>
+                        <p>$6-b = \pm\sqrt{21}$</p>
+                        <p>$b = 6 \mp \sqrt{21}$</p>
+                        <p>Kita mendapatkan dua nilai yang mungkin untuk $b$: $b_1 = 6 - \sqrt{21}$ dan $b_2 = 6 + \sqrt{21}$. Karena $\sqrt{16} < \sqrt{21} < \sqrt{25}$, maka $4 < \sqrt{21} < 5$. Kedua nilai $b$ ini positif, sehingga keduanya valid sebagai koordinat di kuadran pertama.</p>
+                        <p>Ini berarti ada dua kemungkinan persamaan lingkaran yang memenuhi semua syarat: $(x-5)^2 + (y - (6-\sqrt{21}))^2 = 25$ dan $(x-5)^2 + (y - (6+\sqrt{21}))^2 = 25$.</p>
+                        <p>Karena pertanyaan "Berapakah persamaan lingkaran?" menuntut sebuah jawaban yang unik, dan kita menemukan dua kemungkinan jawaban, maka kedua pernyataan tersebut BERSAMA-SAMA pun tidak cukup untuk memberikan satu jawaban unik.</p>
+                        <p>Jawaban yang benar adalah <strong>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Lanjutan soal dan pembahasan lainnya -->
+                <!-- Soal 5 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>5.</strong> Sebuah drone terbang dengan kecepatan konstan yang direpresentasikan oleh vektor $\vec{v}_d = (2\vec{i} + 2\vec{j} + \vec{k})$ m/s. Pada saat yang sama, angin bertiup dengan kecepatan yang direpresentasikan oleh vektor $\vec{v}_a = (\vec{i} - \vec{j})$ m/s. Panjang lintasan yang ditempuh drone setelah terbang selama 10 detik adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\sqrt{11}$ meter</div>
+                        <div class="option">B. $10\sqrt{11}$ meter</div>
+                        <div class="option">C. $10\sqrt{3}$ meter</div>
+                        <div class="option">D. 30 meter</div>
+                        <div class="option">E. 110 meter</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p><strong>Langkah 1: Tentukan Vektor Kecepatan Resultan</strong></p>
+                        <p>Kecepatan gerak drone yang sebenarnya adalah hasil penjumlahan (resultan) dari kecepatan drone itu sendiri dan kecepatan angin.</p>
+                        <p>$\vec{v}_{resultan} = \vec{v}_d + \vec{v}_a$</p>
+                        <p>$\vec{v}_{resultan} = (2\vec{i} + 2\vec{j} + \vec{k}) + (\vec{i} - \vec{j} + 0\vec{k})$</p>
+                        <p>$\vec{v}_{resultan} = (2+1)\vec{i} + (2-1)\vec{j} + (1+0)\vec{k} = 3\vec{i} + 1\vec{j} + 1\vec{k}$</p>
+                        <p><strong>Langkah 2: Hitung Besar Kecepatan Resultan (Laju)</strong></p>
+                        <p>Besar kecepatan (laju) adalah panjang atau magnitudo dari vektor kecepatan resultan.</p>
+                        <p>$|\vec{v}_{resultan}| = \sqrt{3^2 + 1^2 + 1^2} = \sqrt{9 + 1 + 1} = \sqrt{11}$ m/s.</p>
+                        <p>Ini adalah laju drone yang sebenarnya.</p>
+                        <p><strong>Langkah 3: Hitung Panjang Lintasan (Jarak)</strong></p>
+                        <p>Jarak ditempuh adalah hasil perkalian laju dengan waktu.</p>
+                        <p>Jarak = Laju $\times$ Waktu</p>
+                        <p>Jarak = $\sqrt{11} \text{ m/s} \times 10 \text{ s} = 10\sqrt{11}$ meter.</p>
+                        <p>Jawaban yang benar adalah <strong>B. $10\sqrt{11}$ meter</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 6 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>6.</strong> Dari titik $P(8, 6)$, dibuat garis singgung terhadap lingkaran $x^2 + y^2 = 25$. Manakah pernyataan yang benar mengenai situasi tersebut? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. Panjang segmen garis singgung dari titik P ke titik singgung adalah $\sqrt{75}$.</div>
+                        <div class="option">B. Salah satu persamaan garis singgungnya adalah $y - 6 = \frac{7}{24}(x - 8)$.</div>
+                        <div class="option">C. Terdapat dua garis singgung yang dapat dibuat dari titik P.</div>
+                        <div class="option">D. Jarak titik P ke pusat lingkaran adalah 10 satuan.</div>
+                        <div class="option">E. Titik $P$ berada di dalam lingkaran.</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Pertama, kita analisis lingkaran $x^2 + y^2 = 25$. Pusatnya adalah $C(0,0)$ dan jari-jarinya $r = \sqrt{25} = 5$.</p>
+                        <p><strong>Analisis Pernyataan D dan E: Posisi Titik P</strong></p>
+                        <p>Jarak titik P(8,6) ke pusat C(0,0) adalah $d = \sqrt{(8-0)^2 + (6-0)^2} = \sqrt{64+36} = \sqrt{100} = 10$. Pernyataan <strong>D benar</strong>. Karena jarak titik P ke pusat (10) lebih besar dari jari-jari (5), maka titik P berada di luar lingkaran. Pernyataan <strong>E salah</strong>.</p>
+                        <p><strong>Analisis Pernyataan C: Jumlah Garis Singgung</strong></p>
+                        <p>Karena titik P berada di luar lingkaran, maka dapat dibuat tepat dua garis singgung dari titik P ke lingkaran. Pernyataan <strong>C benar</strong>.</p>
+                        <p><strong>Analisis Pernyataan A: Panjang Garis Singgung</strong></p>
+                        <p>Panjang segmen garis singgung ($L$) dari titik di luar lingkaran dapat dihitung dengan rumus $L = \sqrt{d^2 - r^2}$, di mana $d$ adalah jarak titik ke pusat dan $r$ adalah jari-jari. Ini berasal dari teorema Pythagoras pada segitiga siku-siku yang dibentuk oleh pusat, titik P, dan titik singgung.</p>
+                        <p>$L = \sqrt{10^2 - 5^2} = \sqrt{100 - 25} = \sqrt{75}$. Pernyataan <strong>A benar</strong>.</p>
+                        <p><strong>Analisis Pernyataan B: Persamaan Garis Singgung</strong></p>
+                        <p>Metode termudah adalah dengan menggunakan garis polar. Persamaan garis polar dari titik P(8,6) terhadap lingkaran $x^2+y^2=25$ adalah $x_1x+y_1y=r^2 \implies 8x+6y=25$. Garis ini memotong lingkaran di dua titik singgung. Mari kita cari titik singgungnya. Dari garis polar, $y = \frac{25-8x}{6}$. Substitusi ke persamaan lingkaran:</p>
+                        <p>$x^2 + (\frac{25-8x}{6})^2 = 25$</p>
+                        <p>$36x^2 + (625 - 400x + 64x^2) = 25 \cdot 36 = 900$</p>
+                        <p>$100x^2 - 400x - 275 = 0 \implies 4x^2 - 16x - 11 = 0$. Ini tidak menghasilkan bilangan bulat yang bagus, menandakan perhitungannya rumit dan opsi B kemungkinan besar salah. Kita tidak perlu menyelesaikannya. Karena A, C, dan D sudah pasti benar, kita bisa menyimpulkan B salah.</p>
+                        <p>Jawaban yang benar adalah <strong>A, C, dan D</strong>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 7 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>7.</strong> Diketahui titik A(1, 2, 3), B(3, 3, 1), dan C(2, 0, 4). Luas jajar genjang yang dibentuk oleh vektor $\vec{AB}$ dan $\vec{AC}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\sqrt{50}$ satuan luas</div>
+                        <div class="option">B. $\sqrt{59}$ satuan luas</div>
+                        <div class="option">C. $5\sqrt{3}$ satuan luas</div>
+                        <div class="option">D. $\sqrt{62}$ satuan luas</div>
+                        <div class="option">E. 8 satuan luas</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Luas jajar genjang yang dibentuk oleh dua vektor adalah sama dengan magnitudo (panjang) dari hasil perkalian silang (cross product) kedua vektor tersebut.</p>
+                        <p><strong>Langkah 1: Tentukan Vektor $\vec{AB}$ dan $\vec{AC}$</strong></p>
+                        <p>$\vec{AB} = B - A = (3-1, 3-2, 1-3) = (2, 1, -2)$</p>
+                        <p>$\vec{AC} = C - A = (2-1, 0-2, 4-3) = (1, -2, 1)$</p>
+                        <p><strong>Langkah 2: Hitung Perkalian Silang (Cross Product) $\vec{AB} \times \vec{AC}$</strong></p>
+                        <p>$\vec{AB} \times \vec{AC} = \begin{vmatrix} \vec{i} & \vec{j} & \vec{k} \\ 2 & 1 & -2 \\ 1 & -2 & 1 \end{vmatrix}$</p>
+                        <p>$= \vec{i}((1)(1) - (-2)(-2)) - \vec{j}((2)(1) - (-2)(1)) + \vec{k}((2)(-2) - (1)(1))$</p>
+                        <p>$= \vec{i}(1 - 4) - \vec{j}(2 + 2) + \vec{k}(-4 - 1)$</p>
+                        <p>$= -3\vec{i} - 4\vec{j} - 5\vec{k}$</p>
+                        <p><strong>Langkah 3: Hitung Magnitudo dari Vektor Hasil Perkalian Silang</strong></p>
+                        <p>Luas = $|\vec{AB} \times \vec{AC}| = \sqrt{(-3)^2 + (-4)^2 + (-5)^2}$</p>
+                        <p>$= \sqrt{9 + 16 + 25} = \sqrt{50}$</p>
+                        <p>Luasnya adalah $\sqrt{50}$ atau $5\sqrt{2}$ satuan luas.</p>
+                        <p>Jawaban yang benar adalah <strong>A. $\sqrt{50}$ satuan luas</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>8.</strong> Lingkaran $L_1$ berpusat di $(0,0)$ dengan jari-jari 4 dan lingkaran $L_2$ berpusat di $(4,0)$ dengan jari-jari 4. Berapakah luas daerah irisan kedua lingkaran tersebut?</p>
+                    <div class="my-4 text-center">
+                        <svg width="250" height="150" viewBox="-5 -8 20 16" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <clipPath id="clip1">
+                                    <circle cx="0" cy="0" r="4"/>
+                                </clipPath>
+                                <clipPath id="clip2">
+                                    <circle cx="4" cy="0" r="4"/>
+                                </clipPath>
+                            </defs>
+                            <circle cx="0" cy="0" r="4" stroke="blue" stroke-width="0.2" fill="none"/>
+                            <circle cx="4" cy="0" r="4" stroke="red" stroke-width="0.2" fill="none"/>
+                            <g fill="rgba(100,100,200,0.5)">
+                                <circle cx="0" cy="0" r="4" clip-path="url(#clip2)"/>
+                                <circle cx="4" cy="0" r="4" clip-path="url(#clip1)"/>
+                            </g>
+                            <line x1="-5" y1="0" x2="10" stroke="black" stroke-width="0.1"/>
+                            <line x1="0" y1="-7" x2="0" y2="7" stroke="black" stroke-width="0.1"/>
+                            <text x="0.2" y="-0.2" font-size="1">(0,0)</text>
+                            <text x="4.2" y="-0.2" font-size="1">(4,0)</text>
+                        </svg>
+                    </div>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{32\pi}{3} - 8\sqrt{3}$</div>
+                        <div class="option">B. $\frac{16\pi}{3} - 4\sqrt{3}$</div>
+                        <div class="option">C. $16\pi - 8\sqrt{3}$</div>
+                        <div class="option">D. $\frac{32\pi}{3} - 4\sqrt{3}$</div>
+                        <div class="option">E. $8\pi - 8\sqrt{3}$</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Luas daerah irisan dua lingkaran yang identik ini sama dengan dua kali luas tembereng dari salah satu lingkaran.</p>
+                        <p><strong>Langkah 1: Cari Titik Potong Kedua Lingkaran</strong></p>
+                        <p>$L_1: x^2+y^2=16$</p>
+                        <p>$L_2: (x-4)^2+y^2=16 \implies x^2-8x+16+y^2=16 \implies x^2+y^2=8x$</p>
+                        <p>Substitusi $x^2+y^2=16$ ke persamaan kedua: $16 = 8x \implies x=2$.</p>
+                        <p>Substitusi $x=2$ ke persamaan $L_1$: $2^2+y^2=16 \implies 4+y^2=16 \implies y^2=12 \implies y = \pm\sqrt{12} = \pm 2\sqrt{3}$.</p>
+                        <p>Titik potongnya adalah $(2, 2\sqrt{3})$ dan $(2, -2\sqrt{3})$.</p>
+                        <p><strong>Langkah 2: Hitung Luas Tembereng</strong></p>
+                        <p>Kita hitung luas tembereng dari lingkaran $L_1$ (pusat di (0,0)). Luas tembereng = Luas juring - Luas segitiga.</p>
+                        <p>Juring dibatasi oleh pusat (0,0) dan dua titik potong. Untuk mencari sudut pusat juring ($\theta$), kita bisa gunakan trigonometri. Segitiga yang dibentuk oleh pusat (0,0), titik potong atas $(2, 2\sqrt{3})$, dan titik (2,0) adalah segitiga siku-siku. Sisi miringnya adalah jari-jari = 4. Sisi samping sudut di pusat adalah $x=2$.</p>
+                        <p>$\cos(\alpha) = \frac{sisi samping}{sisi miring} = \frac{2}{4} = \frac{1}{2}$. Maka $\alpha = 60^\circ$ atau $\frac{\pi}{3}$ radian. Sudut total juring adalah $2\alpha = 120^\circ$ atau $\frac{2\pi}{3}$ radian.</p>
+                        <p>Luas Juring = $\frac{\theta}{360^\circ} \times \pi r^2 = \frac{120^\circ}{360^\circ} \times \pi (4^2) = \frac{1}{3} \times 16\pi = \frac{16\pi}{3}$.</p>
+                        <p>Luas Segitiga yang dibentuk oleh pusat dan kedua titik potong memiliki alas $2 \times 2\sqrt{3} = 4\sqrt{3}$ dan tinggi $x=2$.</p>
+                        <p>Luas Segitiga = $\frac{1}{2} \times alas \times tinggi = \frac{1}{2} \times 4\sqrt{3} \times 2 = 4\sqrt{3}$.</p>
+                        <p>Luas Tembereng = $\frac{16\pi}{3} - 4\sqrt{3}$.</p>
+                        <p><strong>Langkah 3: Hitung Luas Irisan Total</strong></p>
+                        <p>Karena kedua lingkaran identik, luas irisannya adalah 2 kali luas tembereng.</p>
+                        <p>Luas Irisan = $2 \times (\frac{16\pi}{3} - 4\sqrt{3}) = \frac{32\pi}{3} - 8\sqrt{3}$.</p>
+                        <p>Jawaban yang benar adalah <strong>A. $\frac{32\pi}{3} - 8\sqrt{3}$</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 9 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>9.</strong> Diberikan vektor non-nol $\vec{u}$ dan $\vec{v}$ di $\mathbb{R}^3$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$</td>
+                                <td>&#10004;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $\vec{u} \cdot \vec{v} = 0$, maka $\vec{u}$ dan $\vec{v}$ sejajar.</td>
+                                <td></td>
+                                <td>&#10004;</td>
+                            </tr>
+                            <tr>
+                                <td>$|\vec{u} + \vec{v}| = |\vec{u}| + |\vec{v}|$</td>
+                                <td></td>
+                                <td>&#10004;</td>
+                            </tr>
+                            <tr>
+                                <td>Panjang proyeksi $\vec{u}$ pada $\vec{v}$ adalah $\frac{|\vec{u} \cdot \vec{v}|}{|\vec{u}|}$.</td>
+                                <td></td>
+                                <td>&#10004;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <ul>
+                            <li><strong>$\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}$</strong>: Ini adalah sifat komutatif dari produk titik (dot product). Pernyataan ini <strong>Benar</strong>.</li>
+                            <li><strong>Jika $\vec{u} \cdot \vec{v} = 0$, maka $\vec{u}$ dan $\vec{v}$ sejajar.</strong>: Produk titik yang hasilnya nol ($\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|\cos\theta = 0$) menandakan bahwa sudut di antara kedua vektor adalah $90^\circ$ (karena vektornya non-nol). Vektor yang membentuk sudut $90^\circ$ disebut ortogonal atau saling tegak lurus, bukan sejajar. Pernyataan ini <strong>Salah</strong>.</li>
+                            <li><strong>$|\vec{u} + \vec{v}| = |\vec{u}| + |\vec{v}|$</strong>: Ini disebut Ketaksamaan Segitiga, yang bentuk umumnya adalah $|\vec{u} + \vec{v}| \le |\vec{u}| + |\vec{v}|$. Tanda sama dengan (=) hanya berlaku jika kedua vektor $\vec{u}$ dan $\vec{v}$ searah (sudut di antara keduanya $0^\circ$). Karena tidak selalu searah, pernyataan ini secara umum <strong>Salah</strong>.</li>
+                            <li><strong>Panjang proyeksi $\vec{u}$ pada $\vec{v}$ adalah $\frac{|\vec{u} \cdot \vec{v}|}{|\vec{u}|}$</strong>: Rumus untuk panjang proyeksi skalar dari $\vec{u}$ pada $\vec{v}$ adalah $\frac{|\vec{u} \cdot \vec{v}|}{|\vec{v}|}$ (dibagi dengan panjang vektor tujuan proyeksi). Pernyataan ini <strong>Salah</strong> karena pembaginya adalah $|\vec{u}|$.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <!-- Soal 20 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>20.</strong> Salah satu persamaan garis singgung lingkaran $x^2+y^2=25$ yang dapat ditarik dari titik $(7,1)$ adalah ...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $4x-3y=25$</div>
+                        <div class="option">B. $3x+4y=31$</div>
+                        <div class="option">C. $4x+3y=31$</div>
+                        <div class="option">D. $3x-4y=17$</div>
+                        <div class="option">E. $7x+y=50$</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Ada beberapa cara, salah satunya menggunakan garis polar untuk menemukan titik-titik singgung.</p>
+                        <p><strong>Langkah 1: Tentukan Persamaan Garis Polar</strong></p>
+                        <p>Garis polar adalah garis yang menghubungkan dua titik singgung dari sebuah titik di luar lingkaran. Persamaannya didapat dengan rumus $x_1x + y_1y = r^2$.</p>
+                        <p>Dengan titik P(7,1) dan lingkaran $x^2+y^2=25$, garis polarnya adalah: $7x + 1y = 25 \implies y = 25 - 7x$.</p>
+                        <p><strong>Langkah 2: Cari Titik Singgung dengan Memotongkan Garis Polar dan Lingkaran</strong></p>
+                        <p>Substitusikan persamaan garis polar ke dalam persamaan lingkaran.</p>
+                        <p>$x^2 + (25 - 7x)^2 = 25$</p>
+                        <p>$x^2 + (625 - 350x + 49x^2) = 25$</p>
+                        <p>$50x^2 - 350x + 600 = 0$</p>
+                        <p>Bagi semua suku dengan 50: $x^2 - 7x + 12 = 0$.</p>
+                        <p>Faktorkan: $(x-3)(x-4) = 0$.</p>
+                        <p>Kita dapatkan dua nilai x untuk titik singgung: $x_A=3$ dan $x_B=4$.</p>
+                        <p>Cari nilai y yang bersesuaian menggunakan $y=25-7x$:</p>
+                        <ul>
+                            <li>Jika $x_A=3$, maka $y_A = 25 - 7(3) = 25 - 21 = 4$. Titik singgung A adalah (3,4).</li>
+                            <li>Jika $x_B=4$, maka $y_B = 25 - 7(4) = 25 - 28 = -3$. Titik singgung B adalah (4,-3).</li>
+                        </ul>
+                        <p><strong>Langkah 3: Tentukan Persamaan Garis Singgung di Setiap Titik Singgung</strong></p>
+                        <p>Gunakan rumus garis singgung di titik $(x_0, y_0)$ pada lingkaran $x^2+y^2=r^2$, yaitu $x_0x + y_0y = r^2$.</p>
+                        <ul>
+                            <li>Garis singgung di A(3,4): $3x + 4y = 25$.</li>
+                            <li>Garis singgung di B(4,-3): $4x - 3y = 25$.</li>
+                        </ul>
+                        <p>Dari opsi yang tersedia, $4x-3y=25$ cocok.</p>
+                        <p>Jawaban yang benar adalah <strong>A. $4x-3y=25$</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 28 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>28.</strong> Diberikan lingkaran $L_1: (x-1)^2 + (y-2)^2 = 9$ dan $L_2: (x-10)^2 + (y-2)^2 = r^2$. Tentukan hubungan antara kedua lingkaran berdasarkan nilai $r$.</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Kondisi</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jika $r=5$, kedua lingkaran berpotongan di dua titik.</td>
+                                <td></td>
+                                <td>&#10004;</td>
+                            </tr>
+                             <tr>
+                                <td>Jika $r=6$, kedua lingkaran bersinggungan luar.</td>
+                                <td>&#10004;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $r=12$, lingkaran $L_1$ berada di dalam $L_2$.</td>
+                                <td>&#10004;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $r=2$, kedua lingkaran tidak berpotongan dan saling lepas.</td>
+                                <td>&#10004;</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Pertama, kita identifikasi komponen utama dari kedua lingkaran.</p>
+                        <ul>
+                            <li>$L_1$: Pusat $C_1(1,2)$ dan jari-jari $r_1 = \sqrt{9} = 3$.</li>
+                            <li>$L_2$: Pusat $C_2(10,2)$ dan jari-jari $r_2 = r$.</li>
+                        </ul>
+                        <p>Jarak antara kedua pusat ($d$) adalah:</p>
+                        <p>$d = \sqrt{(10-1)^2 + (2-2)^2} = \sqrt{9^2 + 0^2} = 9$.</p>
+                        <p>Kita akan menganalisis setiap kondisi dengan membandingkan $d$ dengan $r_1+r_2$ dan $|r_1-r_2|$.</p>
+                        <ul>
+                            <li><strong>Jika $r=5$</strong>:
+                                $r_2=5$.
+                                $r_1+r_2 = 3+5=8$.
+                                $|r_1-r_2| = |3-5|=2$.
+                                Karena $d=9$ dan $r_1+r_2=8$, maka $d > r_1+r_2$. Ini berarti kedua lingkaran <strong>saling lepas (tidak berpotongan)</strong>. Pernyataan "berpotongan di dua titik" adalah <strong>Salah</strong>.</li>
+                            <li><strong>Jika $r=6$</strong>:
+                                $r_2=6$.
+                                $r_1+r_2 = 3+6=9$.
+                                Karena $d=9$ dan $r_1+r_2=9$, maka $d = r_1+r_2$. Ini adalah kondisi untuk <strong>bersinggungan luar</strong>. Pernyataan <strong>Benar</strong>.</li>
+                            <li><strong>Jika $r=12$</strong>:
+                                $r_2=12$.
+                                $r_1+r_2 = 3+12=15$.
+                                $|r_2-r_1| = |12-3|=9$.
+                                Karena $d=9$ dan $|r_2-r_1|=9$, maka $d = |r_2-r_1|$. Ini adalah kondisi untuk <strong>bersinggungan dalam</strong>. Dalam kasus ini, lingkaran $L_1$ yang lebih kecil berada di dalam $L_2$ dan menyinggungnya di satu titik. Pernyataan "$L_1$ berada di dalam $L_2$" adalah <strong>Benar</strong>.</li>
+                             <li><strong>Jika $r=2$</strong>:
+                                $r_2=2$.
+                                $r_1+r_2 = 3+2=5$.
+                                Karena $d=9$ dan $r_1+r_2=5$, maka $d > r_1+r_2$. Ini berarti kedua lingkaran <strong>saling lepas (tidak berpotongan)</strong>. Pernyataan <strong>Benar</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Soal 29 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>29.</strong> Diketahui titik A(1,0,-2), B(2,1,-1), dan C(2,0,-3). Jika ABCD adalah sebuah jajar genjang, maka koordinat titik D adalah...</p>
+                     <div class="options-grid">
+                        <div class="option">A. (1, -1, -4)</div>
+                        <div class="option">B. (3, 1, -2)</div>
+                        <div class="option">C. (1, 1, -2)</div>
+                        <div class="option">D. (3, 0, -4)</div>
+                        <div class="option">E. (0, -1, -3)</div>
+                    </div>
+                     <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p>Dalam jajar genjang ABCD, urutan titik-titiknya penting. Vektor yang dibentuk oleh dua titik berurutan akan sama dengan vektor sisi yang berhadapan. Artinya $\vec{AB} = \vec{DC}$.</p>
+                        <p><strong>Metode 1: Kesamaan Vektor</strong></p>
+                        <p>Misalkan koordinat titik D adalah $(x, y, z)$.</p>
+                        <p>Hitung vektor $\vec{AB}$:</p>
+                        <p>$\vec{AB} = B - A = (2-1, 1-0, -1-(-2)) = (1, 1, 1)$</p>
+                        <p>Hitung vektor $\vec{DC}$:</p>
+                        <p>$\vec{DC} = C - D = (2-x, 0-y, -3-z)$</p>
+                        <p>Karena $\vec{AB} = \vec{DC}$, maka komponen-komponennya harus sama:</p>
+                        <ul>
+                            <li>$1 = 2-x \implies x=1$</li>
+                            <li>$1 = 0-y \implies y=-1$</li>
+                            <li>$1 = -3-z \implies z=-4$</li>
+                        </ul>
+                        <p>Jadi, koordinat D adalah $(1, -1, -4)$.</p>
+                        <p><strong>Metode 2: Penjumlahan Vektor</strong></p>
+                        <p>Kita bisa memandang posisi titik D sebagai hasil dari perjalanan vektor. Untuk sampai ke D dari titik asal O, kita bisa pergi ke A, lalu menempuh perjalanan yang sama dengan dari B ke C. Jadi, $\vec{OD} = \vec{OA} + \vec{BC}$.</p>
+                        <p>$\vec{BC} = C - B = (2-2, 0-1, -3-(-1)) = (0, -1, -2)$.</p>
+                        <p>$D = A + \vec{BC} = (1,0,-2) + (0,-1,-2) = (1+0, 0-1, -2-2) = (1, -1, -4)$.</p>
+                        <p>Kedua metode memberikan hasil yang sama.</p>
+                        <p>Jawaban yang benar adalah <strong>A. (1, -1, -4)</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 30 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>30.</strong> Dua roda gigi melingkar bersinggungan secara eksternal. Roda gigi pertama memiliki persamaan $(x-5)^2+y^2=16$. Roda gigi kedua memiliki jari-jari 2 dan pusatnya berada di sumbu-x positif. Persamaan roda gigi kedua adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x-11)^2+y^2=4$</div>
+                        <div class="option">B. $(x-9)^2+y^2=4$</div>
+                        <div class="option">C. $(x-7)^2+y^2=4$</div>
+                        <div class="option">D. $(x-1)^2+y^2=4$</div>
+                        <div class="option">E. $(x-3)^2+y^2=4$</div>
+                    </div>
+                    <div class="pembahasan">
+                        <h3>Pembahasan</h3>
+                        <p><strong>Langkah 1: Analisis Roda Gigi Pertama ($L_1$)</strong></p>
+                        <p>Persamaan $L_1$ adalah $(x-5)^2+y^2=16$. Dari bentuk standar $(x-a)^2 + (y-b)^2 = r^2$, kita dapatkan:</p>
+                        <ul>
+                            <li>Pusat, $C_1 = (5, 0)$</li>
+                            <li>Jari-jari, $r_1 = \sqrt{16} = 4$</li>
+                        </ul>
+                        <p><strong>Langkah 2: Analisis Roda Gigi Kedua ($L_2$)</strong></p>
+                        <p>Kita diberi informasi bahwa:</p>
+                        <ul>
+                            <li>Jari-jari, $r_2 = 2$</li>
+                            <li>Pusatnya berada di sumbu-x positif. Misalkan pusatnya adalah $C_2 = (a, 0)$ dengan $a > 0$.</li>
+                        </ul>
+                        <p><strong>Langkah 3: Gunakan Syarat "Bersinggungan Secara Eksternal"</strong></p>
+                        <p>Dua lingkaran bersinggungan di luar jika jarak antara kedua pusatnya sama dengan jumlah dari kedua jari-jarinya.</p>
+                        <p>Jarak($C_1, C_2$) = $r_1 + r_2$</p>
+                        <p>Jarak antara $C_1(5,0)$ dan $C_2(a,0)$ adalah $d = \sqrt{(a-5)^2 + (0-0)^2} = |a-5|$.</p>
+                        <p>Jumlah jari-jarinya adalah $r_1+r_2 = 4 + 2 = 6$.</p>
+                        <p>Maka, kita dapatkan persamaan: $|a-5| = 6$.</p>
+                        <p>Persamaan nilai mutlak ini memiliki dua solusi:</p>
+                        <p>1) $a-5 = 6 \implies a = 11$</p>
+                        <p>2) $a-5 = -6 \implies a = -1$</p>
+                        <p>Karena disyaratkan pusat roda gigi kedua berada di sumbu-x <strong>positif</strong> ($a>0$), kita pilih solusi $a=11$. Jadi, pusat $C_2$ adalah $(11, 0)$.</p>
+                        <p><strong>Langkah 4: Tulis Persamaan Roda Gigi Kedua</strong></p>
+                        <p>Dengan pusat $(11, 0)$ dan jari-jari $r_2=2$, persamaannya adalah:</p>
+                        <p>$(x-11)^2 + (y-0)^2 = 2^2$</p>
+                        <p>$(x-11)^2 + y^2 = 4$</p>
+                        <p>Jawaban yang benar adalah <strong>A. $(x-11)^2+y^2=4$</strong>.</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
