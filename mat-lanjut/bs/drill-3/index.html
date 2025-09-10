@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal TKA Matematika Lanjut - 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Konfigurasi MathJax untuk memastikan rendering LaTeX -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Slate 100 */
+        }
+        .question-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            border: 1px solid #e2e8f0; /* Slate 200 */
+            border-top: 4px solid #6366f1; /* Indigo 500 */
+            transition: all 0.3s ease-in-out;
+        }
+        .question-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 768px) {
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .option {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+         .option:hover {
+            border-color: #6366f1;
+            background-color: #eef2ff; /* Indigo 50 */
+            transform: scale(1.02);
+        }
+        .option-letter {
+            font-weight: 700;
+            margin-right: 0.75rem;
+            color: #4338ca; /* Indigo 700 */
+            padding-top: 0.125rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b; /* Slate 800 */
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .instruction-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .complex-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+        }
+        .complex-table th, .complex-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .complex-table th {
+            background-color: #eef2ff; /* indigo 50 */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-700">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12 bg-white p-6 rounded-lg shadow-sm">
+             <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-24 mb-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal TKA Matematika Lanjut - 3</h1>
+            <p class="text-slate-500 mt-2 text-lg">Topik: Transformasi Geometri & Limit | Level: SMA</p>
+        </header>
+
+        <main>
+            <section>
+                <h2 class="section-title flex items-center"><i class="fas fa-pencil-alt mr-3 text-indigo-500"></i>Soal-Soal Latihan</h2>
+
+                <!-- Soal 1 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">1. Nilai dari $\lim\limits_{x \to 2} \frac{x^2 - 4}{x - 2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$2$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$4$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Tak terhingga</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">2. Titik $P(3, -5)$ ditransformasikan oleh matriks $T = \begin{pmatrix} 1 & -2 \\ 3 & 0 \end{pmatrix}$. Koordinat bayangan titik $P$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(13, 9)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(9, 13)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$(-7, 9)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$(13, -15)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$(-7, -15)$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">3. Nilai dari $\lim\limits_{x \to 0} \frac{\cos(4x) - 1}{x \tan(2x)}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-8</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>-2</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>4</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 4 (Diperbaiki) -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">4. Garis $y = 2x + 1$ dirotasikan sebesar $90^\circ$ berlawanan arah jarum jam dengan pusat $O(0,0)$, kemudian dicerminkan terhadap sumbu $x$. Persamaan bayangan garis tersebut adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$x - 2y + 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$y = -2x - 1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$x - 2y - 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$x + 2y + 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$2x + y - 1 = 0$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 5 (Diperbaiki) -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">5. Garis $g$ ditransformasi oleh matriks $T = \begin{pmatrix} a & 0 \\ 0 & b \end{pmatrix}$ menghasilkan bayangan $g'$. Apakah transformasi tersebut memperbesar luas suatu bidang?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) $|ab| > 1$.</p><p>(2) $a+b > 2$.</p></div>
+                     <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                            <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                            <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                            <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                            <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                            <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Soal 6 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">6. Sebuah logo berbentuk segitiga dengan titik sudut $A(1,1)$, $B(5,1)$, dan $C(3,4)$. Untuk keperluan desain, logo tersebut didilatasi dengan pusat $(2,3)$ dan faktor skala 2. Luas bayangan logo setelah didilatasi adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>6 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>12 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>24 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>36 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>48 satuan luas</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 7 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">7. Garis $g$ ditransformasikan oleh matriks $T = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ menghasilkan bayangan $g': 3x - 2y + 6 = 0$. Manakah pernyataan berikut yang benar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Transformasi T adalah rotasi $90^\circ$ searah jarum jam.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Persamaan garis $g$ adalah $2x+3y+6=0$.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Gradien garis $g$ adalah $-\frac{2}{3}$.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Garis $g$ memotong sumbu-y di titik $(0, -2)$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Matriks invers dari T adalah $\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$.</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">8. Nilai dari $\lim\limits_{x \to \infty} (\sqrt{x^2+6x} - \sqrt{x^2-2x})$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>4</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>8</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\infty$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 9 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">9. Sebuah titik $(x, y)$ ditransformasi secara berurutan. Pertama oleh matriks $M_1 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$ dan dilanjutkan oleh matriks $M_2 = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$. Tentukan apakah pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Benar</th>
+                                <th class="text-center">Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transformasi tunggalnya direpresentasikan oleh matriks $M_1 M_2$.</td>
+                                <td class="text-center"><input type="radio" name="q9_1"></td>
+                                <td class="text-center"><input type="radio" name="q9_1"></td>
+                            </tr>
+                            <tr>
+                                <td>Determinan matriks transformasi tunggalnya adalah 4.</td>
+                                <td class="text-center"><input type="radio" name="q9_2"></td>
+                                <td class="text-center"><input type="radio" name="q9_2"></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $\theta = 90^\circ$, bayangan titik $(1,0)$ adalah $(0,2)$.</td>
+                               <td class="text-center"><input type="radio" name="q9_3"></td>
+                               <td class="text-center"><input type="radio" name="q9_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Urutan transformasi tersebut ekuivalen dengan rotasi lalu dilatasi.</td>
+                               <td class="text-center"><input type="radio" name="q9_4"></td>
+                               <td class="text-center"><input type="radio" name="q9_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Soal 10 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">10. Kecepatan suatu objek mendekati kecepatan cahaya dimodelkan mengalami kontraksi panjang. Jika panjang awal objek $L_0$ dan kecepatannya $v$, panjangnya saat bergerak adalah $L = L_0 \sqrt{1 - \frac{v^2}{c^2}}$, dengan $c$ adalah kecepatan cahaya. Apa yang terjadi pada panjang objek $L$ jika kecepatannya $v$ mendekati $c$? ($\lim\limits_{v \to c^-} L$)</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Panjangnya mendekati $L_0$.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Panjangnya mendekati tak hingga.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Panjangnya mendekati 0.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Panjangnya mendekati $\frac{L_0}{2}$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Panjangnya tidak dapat ditentukan.</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 11 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">11. Nilai dari $\lim\limits_{x \to 1} \frac{\sin(\pi x)}{x-1}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$-\pi$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$-1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$1$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\pi$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 12 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">12. Bayangan titik $Q(-4, 6)$ oleh refleksi terhadap garis $x=2$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(-4, -2)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(8, 6)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$(0, 6)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$(-8, 6)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$(6, 6)$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 13 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">13. Transformasi $T$ adalah komposisi dari pencerminan terhadap garis $y=x$ dilanjutkan dengan pencerminan terhadap sumbu $x$. Matriks yang bersesuaian dengan $T$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 14 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">14. Nilai dari $\lim\limits_{x \to 0} \frac{1-\cos x}{x^2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>1/4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>1/2</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>1</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>2</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 15 (Diperbaiki) -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">15. Sebuah transformasi T memetakan setiap titik pada bidang. Apakah T merupakan transformasi rotasi murni (tanpa dilatasi)?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) Matriks T memiliki bentuk $\begin{pmatrix} a & -b \\ b & a \end{pmatrix}$ untuk suatu bilangan real a dan b.</p><p>(2) Determinan dari matriks T adalah 1.</p></div>
+                    <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                           <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                           <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                           <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                           <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                           <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Soal 16 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">16. Nilai dari $\lim\limits_{x \to 2} \frac{\sqrt{x+2} - \sqrt{2x}}{x-2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$-1/4$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$-1/2$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$1/4$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$1/2$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 17 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">17. Diberikan transformasi $T_1$ adalah refleksi terhadap sumbu $y$ dan $T_2$ adalah rotasi $180^\circ$ berpusat di $O(0,0)$. Manakah pernyataan berikut yang benar mengenai transformasi titik $(a,b)$? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(T_1 \circ T_2)(a,b) = (a, -b)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(T_2 \circ T_1)(a,b) = (a, -b)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$T_1 \circ T_2 = T_2 \circ T_1$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Matriks untuk $T_1 \circ T_2$ adalah $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Komposisi transformasi tersebut ekuivalen dengan refleksi terhadap sumbu $x$.</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 18 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">18. Matriks transformasi yang bersesuaian dengan dilatasi dengan pusat $O(0,0)$ dan faktor skala 3 adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\begin{pmatrix} 3 & 0 \\ 0 & 3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\begin{pmatrix} 1/3 & 0 \\ 0 & 1/3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$\begin{pmatrix} 0 & 3 \\ 3 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$\begin{pmatrix} 3 & 3 \\ 3 & 3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\begin{pmatrix} 1 & 3 \\ 3 & 1 \end{pmatrix}$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 19 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">19. Jika $\lim\limits_{x \to a} (f(x) - 3g(x)) = 7$ dan $\lim\limits_{x \to a} (2f(x) + g(x)) = 7$, maka nilai dari $\lim\limits_{x \to a} (f(x) \cdot g(x))$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-8</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>4</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>8</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">20. Diberikan fungsi $f(x) = \frac{x^2-9}{x-3}$. Tentukan kesesuaian pernyataan berikut.</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Sesuai</th>
+                                <th class="text-center">Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Domain dari $f(x)$ adalah semua bilangan real kecuali 3.</td>
+                                <td class="text-center"><input type="radio" name="q20_1"></td>
+                                <td class="text-center"><input type="radio" name="q20_1"></td>
+                            </tr>
+                            <tr>
+                                <td>$f(3)$ tidak terdefinisi.</td>
+                                <td class="text-center"><input type="radio" name="q20_2"></td>
+                                <td class="text-center"><input type="radio" name="q20_2"></td>
+                            </tr>
+                            <tr>
+                                <td>$\lim\limits_{x \to 3} f(x)$ ada dan nilainya 6.</td>
+                                <td class="text-center"><input type="radio" name="q20_3"></td>
+                                <td class="text-center"><input type="radio" name="q20_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Grafik fungsi $f(x)$ adalah garis lurus dengan sebuah lubang di $x=3$.</td>
+                                <td class="text-center"><input type="radio" name="q20_4"></td>
+                                <td class="text-center"><input type="radio" name="q20_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Soal 21 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">21. Sebuah parabola $y = x^2 - 4x + 5$ ditransformasikan oleh matriks $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ dilanjutkan oleh dilatasi pusat $O(0,0)$ dengan faktor skala 2. Persamaan bayangan parabola tersebut adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$y = 2x^2 - 8x + 10$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$x = 2y^2 - 8y + 10$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$x = \frac{1}{2}y^2 - 2y + 5$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$x = y^2 - 4y + 5$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$x = \frac{1}{2}y^2 - 4y + 10$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 22 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">22. Konsentrasi obat dalam darah seorang pasien setelah $t$ jam disuntikkan diberikan oleh fungsi $C(t) = \frac{0.2t}{t^2+1}$ mg/L. Konsentrasi obat dalam jangka waktu yang sangat lama, yaitu nilai dari $\lim\limits_{t \to \infty} C(t)$, akan mendekati...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0 mg/L</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>0.1 mg/L</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>0.2 mg/L</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>1 mg/L</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Tak terhingga</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 23 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">23. Nilai $a$ yang memenuhi $\lim\limits_{x \to \infty} \left( \sqrt{4x^2+ax} - (2x-1) \right) = \frac{9}{4}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>13</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>9</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>5</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>-5</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>-13</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 24 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">24. Bayangan dari garis $3x - y + 2 = 0$ apabila dicerminkan terhadap garis $y = -x$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$x - 3y + 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$x + 3y + 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$3x + y - 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$-3x - y - 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$x - 3y - 2 = 0$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 25 (Diperbaiki) -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">25. Diberikan fungsi $f(x)$. Apakah $\lim\limits_{x \to 2} f(x)$ ada?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) $\lim\limits_{x \to 2^-} f(x) = 5$.</p><p>(2) $f(x)$ adalah fungsi polinomial.</p></div>
+                    <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                           <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                           <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                           <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                           <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                           <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Soal 26 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">26. Nilai dari $\lim\limits_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\sin(x)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\cos(x)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$-\sin(x)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$-\cos(x)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>0</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 27 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">27. Sebuah transformasi matriks T memiliki determinan 3. Jika luas bangun datar A adalah 5 satuan luas, manakah pernyataan yang benar mengenai luas bayangan A oleh beberapa transformasi? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Luas bayangan oleh T adalah 15.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Luas bayangan oleh $T^2$ adalah 45.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Luas bayangan oleh $T^{-1}$ adalah $5/3$.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Luas bayangan oleh $2T$ (ordo 2x2) adalah 30.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Luas bayangan oleh $2T$ (ordo 2x2) adalah 60.</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 28 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">28. Nilai dari $\lim\limits_{x \to \frac{\pi}{2}} \frac{1 - \sin x}{(\frac{\pi}{2} - x) \cos x}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>1/2</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>1</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\infty$</div></div>
+                    </div>
+                </div>
+                
+                <!-- Soal 29 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">29. Seorang desainer grafis membuat pola dengan mentransformasikan kurva $y = \sqrt{x}$. Ia melakukan shear (gusuran) sejajar sumbu-x dengan faktor 2, yang direpresentasikan oleh matriks $\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$. Persamaan kurva hasil transformasi adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$y = \sqrt{x-2y}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$y = \sqrt{x+2y}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$y = \sqrt{x} + 2$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$y-2x = \sqrt{x}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$y = \sqrt{2x}$</div></div>
+                    </div>
+                </div>
+
+                <!-- Soal 30 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">30. Diketahui matriks rotasi $R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$. Tentukan kesesuaian pernyataan-pernyataan berikut.</p>
+                     <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Sesuai</th>
+                                <th class="text-center">Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$R_{90^\circ} R_{180^\circ} = R_{270^\circ}$</td>
+                                <td class="text-center"><input type="radio" name="q30_1"></td>
+                                <td class="text-center"><input type="radio" name="q30_1"></td>
+                            </tr>
+                            <tr>
+                                <td>Determinan dari $R_\theta$ selalu 1 untuk setiap $\theta$.</td>
+                                <td class="text-center"><input type="radio" name="q30_2"></td>
+                                <td class="text-center"><input type="radio" name="q30_2"></td>
+                            </tr>
+                            <tr>
+                                <td>Invers dari $R_\theta$ adalah $R_{-\theta}$.</td>
+                                <td class="text-center"><input type="radio" name="q30_3"></td>
+                                <td class="text-center"><input type="radio" name="q30_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Transformasi $R_{360^\circ}$ adalah matriks identitas.</td>
+                                <td class="text-center"><input type="radio" name="q30_4"></td>
+                                <td class="text-center"><input type="radio" name="q30_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
