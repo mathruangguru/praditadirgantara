@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal TKA Matematika Lanjut - 1 (Dengan Pembahasan)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="Math-Jax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+         body {
+             font-family: 'Inter', sans-serif;
+             background-color: #f3f4f6;
+         }
+         .content-card {
+             background-color: white;
+             border-radius: 0.75rem;
+             padding: 1.5rem 2rem;
+             margin-bottom: 1.5rem;
+             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+         }
+         .section-title {
+             font-size: 1.875rem; /* 30px */
+             font-weight: 700;
+             color: #3730a3; /* indigo-800 */
+             border-bottom: 3px solid #6366f1; /* indigo-500 */
+             padding-bottom: 0.5rem;
+             margin-bottom: 1.5rem;
+         }
+         .item-container {
+             margin-bottom: 1.75rem;
+             padding-bottom: 1.75rem;
+             border-bottom: 1px solid #e5e7eb;
+         }
+         .item-container:last-child {
+             border-bottom: none;
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
+         p, .question-text {
+             line-height: 1.6;
+             font-size: 1.1rem;
+         }
+         .options-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 1rem;
+             margin-top: 1rem;
+         }
+         .option {
+            padding: 0.5rem;
+         }
+         .data-sufficiency-options {
+            font-size: 0.95rem;
+            margin-top: 1rem;
+         }
+         .complex-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+         }
+         .complex-table th, .complex-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            text-align: left;
+         }
+         .complex-table th {
+            background-color: #eef2ff;
+         }
+         .pembahasan-card {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6366f1;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 0.25rem;
+         }
+         .final-answer {
+             font-weight: 700;
+             color: #166534; /* green-800 */
+             background-color: #dcfce7; /* green-100 */
+             padding: 0.25rem 0.75rem;
+             border-radius: 6px;
+             display: inline-block;
+             margin-top: 0.5rem;
+         }
+         .concept-box {
+            background-color: #eef2ff;
+            border: 1px solid #c7d2fe;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+         }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-8">
+            <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-20">
+        </div>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal & Pembahasan TKA Matematika Lanjut</h1>
+            <p class="text-gray-600 mt-2">Topik: Matriks, Polinomial, dan Fungsi | Level: SMA</p>
+        </header>
+
+        <main>
+            <section class="content-card">
+                <h2 class="section-title">Soal dan Pembahasan</h2>
+                
+                <!-- Soal 1 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>1.</strong> Diketahui matriks $A = \begin{pmatrix} 2 & 1 \\ 3 & 5 \end{pmatrix}$ dan $B = \begin{pmatrix} -1 & 0 \\ 4 & 2 \end{pmatrix}$. Hasil dari $2A - B$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\begin{pmatrix} 5 & 2 \\ 2 & 8 \end{pmatrix}$</div>
+                        <div class="option">B. $\begin{pmatrix} 3 & 2 \\ -1 & 3 \end{pmatrix}$</div>
+                        <div class="option">C. $\begin{pmatrix} 5 & 2 \\ 2 & 12 \end{pmatrix}$</div>
+                        <div class="option">D. $\begin{pmatrix} 4 & 1 \\ 2 & 8 \end{pmatrix}$</div>
+                        <div class="option">E. $\begin{pmatrix} 5 & 1 \\ 10 & 8 \end{pmatrix}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                          <p><strong>Konsep Dasar:</strong> Soal ini melibatkan dua operasi dasar pada matriks: perkalian skalar dan pengurangan matriks.</p>
+                          <ul class="list-disc list-inside mt-2">
+                            <li><strong>Perkalian Skalar:</strong> Mengalikan sebuah matriks dengan sebuah bilangan (skalar). Caranya adalah dengan mengalikan setiap elemen di dalam matriks dengan bilangan tersebut. Contoh: $k \begin{pmatrix} a & b \\ c & d \end{pmatrix} = \begin{pmatrix} ka & kb \\ kc & kd \end{pmatrix}$.</li>
+                            <li><strong>Pengurangan Matriks:</strong> Mengurangkan dua matriks. Syaratnya, kedua matriks harus memiliki ordo (ukuran baris x kolom) yang sama. Caranya adalah dengan mengurangkan elemen-elemen yang posisinya bersesuaian. Contoh: $\begin{pmatrix} a & b \\ c & d \end{pmatrix} - \begin{pmatrix} e & f \\ g & h \end{pmatrix} = \begin{pmatrix} a-e & b-f \\ c-g & d-h \end{pmatrix}$.</li>
+                          </ul>
+                        </div>
+                        <p><strong>Langkah 1: Lakukan operasi perkalian skalar $2A$.</strong><br>
+                        Kita kalikan setiap elemen matriks A dengan angka 2.<br>
+                        $2A = 2 \begin{pmatrix} 2 & 1 \\ 3 & 5 \end{pmatrix} = \begin{pmatrix} 2 \times 2 & 2 \times 1 \\ 2 \times 3 & 2 \times 5 \end{pmatrix} = \begin{pmatrix} 4 & 2 \\ 6 & 10 \end{pmatrix}$</p>
+                        <p><strong>Langkah 2: Lakukan operasi pengurangan $2A - B$.</strong><br>
+                        Sekarang kita kurangkan matriks B dari hasil yang kita dapatkan di Langkah 1. Kita kurangkan elemen yang posisinya sama.<br>
+                        $2A - B = \begin{pmatrix} 4 & 2 \\ 6 & 10 \end{pmatrix} - \begin{pmatrix} -1 & 0 \\ 4 & 2 \end{pmatrix}$</p>
+                        <p>$= \begin{pmatrix} 4 - (-1) & 2 - 0 \\ 6 - 4 & 10 - 2 \end{pmatrix} = \begin{pmatrix} 5 & 2 \\ 2 & 8 \end{pmatrix}$</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>2.</strong> Suku banyak $P(x) = 2x^4 + ax^3 - 3x^2 + 5x + b$ habis dibagi oleh $(x^2-1)$. Nilai dari $a+b$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. -8</div>
+                        <div class="option">B. -6</div>
+                        <div class="option">C. -4</div>
+                        <div class="option">D. 1</div>
+                        <div class="option">E. 4</div>
+                    </div>
+                     <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Teorema Faktor</strong><br>
+                           Teorema ini menyatakan bahwa jika suatu suku banyak (polinomial) $P(x)$ habis dibagi oleh $(x-k)$, maka nilai suku banyak tersebut saat $x=k$ adalah nol, atau $P(k)=0$. Dengan kata lain, $k$ adalah salah satu akar dari polinomial tersebut.</p>
+                        </div>
+                        <p><strong>Langkah 1: Faktorkan pembagi.</strong><br>
+                        Pembagi adalah $(x^2-1)$. Kita bisa memfaktorkannya menggunakan selisih dua kuadrat: $a^2-b^2 = (a-b)(a+b)$.<br>
+                        Jadi, $x^2-1 = (x-1)(x+1)$.</p>
+                        <p><strong>Langkah 2: Terapkan Teorema Faktor.</strong><br>
+                        Karena $P(x)$ habis dibagi oleh $(x^2-1)$, artinya $P(x)$ juga habis dibagi oleh faktor-faktornya, yaitu $(x-1)$ dan $(x+1)$.<br>
+                        Berdasarkan Teorema Faktor:<br>
+                        1. Jika habis dibagi $(x-1)$, maka $P(1)=0$.<br>
+                        2. Jika habis dibagi $(x+1)$ atau $(x-(-1))$, maka $P(-1)=0$.</p>
+                        <p><strong>Langkah 3: Gunakan informasi $P(1)=0$ untuk membentuk persamaan pertama.</strong><br>
+                        Substitusikan $x=1$ ke dalam $P(x)$:
+                        $P(1) = 2(1)^4 + a(1)^3 - 3(1)^2 + 5(1) + b = 0$<br>
+                        $2(1) + a(1) - 3(1) + 5 + b = 0$<br>
+                        $2 + a - 3 + 5 + b = 0$<br>
+                        $a + b + 4 = 0$<br>
+                        $a + b = -4$ &nbsp; (Persamaan 1)</p>
+                        <p><strong>Langkah 4: Analisis pertanyaan.</strong><br>
+                        Soal ini menanyakan nilai dari $a+b$. Dari Langkah 3, kita sudah langsung menemukan bahwa $a+b = -4$. Kita sebenarnya tidak perlu menggunakan informasi $P(-1)=0$ lagi, karena pertanyaan sudah terjawab.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">C</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>3.</strong> Domain dari fungsi $g(x) = \sqrt{x^2 - 3x - 10}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\{x | -2 \le x \le 5, x \in \mathbb{R}\}$</div>
+                        <div class="option">B. $\{x | -5 \le x \le 2, x \in \mathbb{R}\}$</div>
+                        <div class="option">C. $\{x | x \le -5 \text{ atau } x \ge 2, x \in \mathbb{R}\}$</div>
+                        <div class="option">D. $\{x | x \le -2 \text{ atau } x \ge 5, x \in \mathbb{R}\}$</div>
+                        <div class="option">E. $\{x | x < -2 \text{ atau } x > 5, x \in \mathbb{R}\}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Domain Fungsi Akar Kuadrat</strong><br>
+                           Domain (daerah asal) sebuah fungsi adalah himpunan semua nilai input (x) yang diizinkan agar fungsi tersebut menghasilkan nilai output (y) yang real (terdefinisi).<br>
+                           Untuk fungsi akar kuadrat, seperti $\sqrt{\text{sesuatu}}$, agar hasilnya real, ekspresi di dalam tanda akar <strong>tidak boleh negatif</strong>. Artinya, harus lebih besar dari atau sama dengan nol ($\ge 0$).</p>
+                        </div>
+                        <p><strong>Langkah 1: Terapkan syarat domain fungsi akar.</strong><br>
+                        Ekspresi di dalam akar adalah $x^2 - 3x - 10$. Syaratnya adalah:<br>
+                        $x^2 - 3x - 10 \ge 0$</p>
+                        <p><strong>Langkah 2: Selesaikan pertidaksamaan kuadrat.</strong><br>
+                        Pertama, kita cari akar-akar atau "pembuat nol" dari persamaan $x^2 - 3x - 10 = 0$. Kita bisa memfaktorkannya.<br>
+                        Kita cari dua bilangan yang jika dikalikan hasilnya -10 dan jika dijumlahkan hasilnya -3. Bilangan tersebut adalah -5 dan 2.<br>
+                        $(x-5)(x+2) = 0$<br>
+                        Pembuat nolnya adalah $x=5$ dan $x=-2$.</p>
+                        <p><strong>Langkah 3: Gunakan garis bilangan untuk menentukan interval yang memenuhi.</strong><br>
+                        Kita letakkan pembuat nol pada garis bilangan, yaitu -2 dan 5. Titik-titik ini membagi garis bilangan menjadi tiga daerah: $x < -2$, $-2 < x < 5$, dan $x > 5$.<br>
+                        Kita uji satu titik dari setiap daerah untuk melihat apakah hasilnya positif atau negatif.<br>
+                        <ul>
+                          <li><strong>Daerah 1 (x < -2):</strong> Ambil $x=-3$. $(-3-5)(-3+2) = (-8)(-1) = 8$ (Positif, $\ge 0$). Daerah ini memenuhi.</li>
+                          <li><strong>Daerah 2 (-2 < x < 5):</strong> Ambil $x=0$. $(0-5)(0+2) = (-5)(2) = -10$ (Negatif, tidak $\ge 0$). Daerah ini tidak memenuhi.</li>
+                          <li><strong>Daerah 3 (x > 5):</strong> Ambil $x=6$. $(6-5)(6+2) = (1)(8) = 8$ (Positif, $\ge 0$). Daerah ini memenuhi.</li>
+                        </ul>
+                        Karena pertidaksamaan menggunakan tanda '$\ge$', maka titik pembuat nolnya (-2 dan 5) termasuk dalam solusi.</p>
+                        <p><strong>Langkah 4: Tuliskan himpunan penyelesaian.</strong><br>
+                        Himpunan yang memenuhi adalah $x \le -2$ atau $x \ge 5$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">D</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>4.</strong> Diketahui matriks $A = \begin{pmatrix} a & 1 \\ b & 2 \end{pmatrix}$. Berapakah nilai $a+b$?</p>
+                    <p class="mt-4"> (1) Determinan matriks A adalah 4. <br>
+                                       (2) Invers matriks A adalah $A^{-1} = \begin{pmatrix} 1 & -1/2 \\ -3 & 1 \end{pmatrix}$.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Determinan dan Invers Matriks 2x2</strong><br>
+                           Untuk matriks $M = \begin{pmatrix} p & q \\ r & s \end{pmatrix}$:<br>
+                           - <strong>Determinannya</strong> adalah $det(M) = ps - qr$.<br>
+                           - <strong>Inversnya</strong> adalah $M^{-1} = \frac{1}{det(M)}\begin{pmatrix} s & -q \\ -r & p \end{pmatrix}$. Invers hanya ada jika $det(M) \neq 0$.
+                           </p>
+                           <p><strong>Tujuan:</strong> Menemukan nilai spesifik dari $a+b$. Ini hanya mungkin jika kita bisa menemukan nilai $a$ dan $b$ secara unik.</p>
+                        </div>
+                        <p><strong>Analisis Pernyataan (1) SAJA:</strong><br>
+                        Pernyataan ini mengatakan $det(A) = 4$.<br>
+                        Menggunakan rumus determinan: $det(A) = (a)(2) - (1)(b) = 2a - b$.<br>
+                        Maka, kita punya persamaan: $2a - b = 4$.<br>
+                        Ini adalah satu persamaan linear dengan dua variabel ($a$ dan $b$). Ada tak hingga banyak pasangan $(a,b)$ yang memenuhi persamaan ini (misalnya, $a=3, b=2$ atau $a=0, b=-4$). Karena kita tidak bisa menentukan nilai $a$ dan $b$ yang unik, kita tidak bisa menentukan nilai $a+b$.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (1) SAJA tidak cukup.</p>
+                        <p><strong>Analisis Pernyataan (2) SAJA:</strong><br>
+                        Pernyataan ini memberikan bentuk inversnya: $A^{-1} = \begin{pmatrix} 1 & -1/2 \\ -3 & 1 \end{pmatrix}$.<br>
+                        Kita juga tahu rumus umum invers dari matriks A: $A^{-1} = \frac{1}{2a-b}\begin{pmatrix} 2 & -1 \\ -b & a \end{pmatrix}$.<br>
+                        Kita dapat menyamakan kedua bentuk ini:<br>
+                        $\frac{1}{2a-b}\begin{pmatrix} 2 & -1 \\ -b & a \end{pmatrix} = \begin{pmatrix} 1 & -1/2 \\ -3 & 1 \end{pmatrix}$.<br>
+                        Dari sini kita bisa membandingkan elemen-elemen yang bersesuaian:<br>
+                        - Dari elemen baris 1, kolom 2: $\frac{-1}{2a-b} = -1/2 \implies 2a-b = 2$. (Ini adalah nilai determinan).<br>
+                        - Dari elemen baris 2, kolom 2: $\frac{a}{2a-b} = 1 \implies \frac{a}{2} = 1 \implies a=2$.<br>
+                        - Dari elemen baris 2, kolom 1: $\frac{-b}{2a-b} = -3 \implies \frac{-b}{2} = -3 \implies b=6$.<br>
+                        Karena kita berhasil menemukan nilai unik $a=2$ dan $b=6$, kita dapat menghitung nilai $a+b = 2+6 = 8$.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (2) SAJA cukup.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 5 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>5.</strong> Suatu suku banyak $f(x)$ jika dibagi $(x-1)$ bersisa 2, dan jika dibagi $(x-2)$ bersisa 3. Sisa pembagian $f(x)$ oleh $x^2-3x+2$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $x+1$</div>
+                        <div class="option">B. $x-1$</div>
+                        <div class="option">C. $2x+1$</div>
+                        <div class="option">D. $x+2$</div>
+                        <div class="option">E. $3x-1$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Teorema Sisa Polinomial</strong><br>
+                           1. <strong>Teorema Sisa:</strong> Jika polinomial $f(x)$ dibagi oleh $(x-k)$, maka sisanya adalah $f(k)$.<br>
+                           2. <strong>Bentuk Umum Pembagian:</strong> $f(x) = P(x) \cdot H(x) + S(x)$, di mana $P(x)$ adalah pembagi, $H(x)$ adalah hasil bagi, dan $S(x)$ adalah sisa.
+                           3. <strong>Derajat Sisa:</strong> Derajat sisa $S(x)$ selalu lebih kecil dari derajat pembagi $P(x)$. Jika pembagi berderajat $n$, maka sisa maksimal berderajat $n-1$.</p>
+                        </div>
+                        <p><strong>Langkah 1: Terjemahkan informasi dari soal menggunakan Teorema Sisa.</strong><br>
+                        - "jika dibagi $(x-1)$ bersisa 2" artinya $f(1) = 2$.<br>
+                        - "jika dibagi $(x-2)$ bersisa 3" artinya $f(2) = 3$.</p>
+                        <p><strong>Langkah 2: Analisis pembagi baru dan bentuk sisanya.</strong><br>
+                        Pembagi baru adalah $x^2-3x+2$. Ini adalah polinomial berderajat 2.<br>
+                        Berdasarkan aturan derajat sisa, jika pembagi berderajat 2, maka sisa $S(x)$ maksimal berderajat 1. Kita bisa memisalkan bentuk umum sisa sebagai $S(x) = px+q$.</p>
+                        <p><strong>Langkah 3: Gunakan bentuk umum pembagian dan faktorkan pembagi.</strong><br>
+                        $f(x) = (x^2-3x+2) \cdot H(x) + (px+q)$<br>
+                        Faktorkan pembaginya: $x^2-3x+2 = (x-1)(x-2)$.<br>
+                        $f(x) = (x-1)(x-2) \cdot H(x) + (px+q)$</p>
+                        <p><strong>Langkah 4: Substitusikan nilai-nilai dari Langkah 1 untuk mencari $p$ dan $q$.</strong><br>
+                        - Untuk $x=1$:<br>
+                        $f(1) = (1-1)(1-2) \cdot H(1) + (p(1)+q)$<br>
+                        $2 = (0)(-1) \cdot H(1) + p+q$<br>
+                        $2 = 0 + p+q \implies p+q=2$ (Persamaan 1)<br>
+                        - Untuk $x=2$:<br>
+                        $f(2) = (2-1)(2-2) \cdot H(2) + (p(2)+q)$<br>
+                        $3 = (1)(0) \cdot H(2) + 2p+q$<br>
+                        $3 = 0 + 2p+q \implies 2p+q=3$ (Persamaan 2)</p>
+                        <p><strong>Langkah 5: Selesaikan sistem persamaan linear untuk $p$ dan $q$.</strong><br>
+                        Kita punya sistem:<br>
+                        $2p+q=3$<br>
+                        $p+q=2$<br>
+                        Kurangkan persamaan atas dengan bawah: $(2p-p) + (q-q) = 3-2 \implies p=1$.<br>
+                        Substitusikan $p=1$ ke Persamaan 1: $1+q=2 \implies q=1$.</p>
+                        <p><strong>Langkah 6: Bentuk kembali sisa $S(x)$.</strong><br>
+                        Karena $p=1$ dan $q=1$, maka sisa pembagiannya adalah $S(x) = 1x+1 = x+1$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 6 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>6.</strong> Diberikan matriks $A$ dan $B$ adalah matriks persegi berordo $2 \times 2$. Manakah pernyataan berikut yang SELALU benar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. $(A+B)^2 = A^2+2AB+B^2$</div>
+                        <div class="option">B. $det(AB) = det(A)det(B)$</div>
+                        <div class="option">C. $(AB)^T = B^T A^T$</div>
+                        <div class="option">D. Jika $det(A) \neq 0$, maka $A$ memiliki invers.</div>
+                        <div class="option">E. $A+B = B+A$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Sifat-sifat Operasi Matriks</strong><br>
+                           Matriks memiliki sifat-sifat aljabar yang beberapa di antaranya mirip dengan bilangan real, tetapi ada juga yang sangat berbeda, terutama dalam perkalian.</p>
+                        </div>
+                        <p><strong>Analisis Setiap Pilihan:</strong></p>
+                        <p><strong>A. $(A+B)^2 = A^2+2AB+B^2$ &rarr; SALAH</strong><br>
+                        Di aljabar biasa, ini benar. Tapi di matriks, kita harus menguraikannya:
+                        $(A+B)^2 = (A+B)(A+B) = A(A+B) + B(A+B) = A^2 + AB + BA + B^2$.
+                        Sifat $AB+BA=2AB$ hanya berlaku jika $AB=BA$ (jika A dan B komutatif). Namun, perkalian matriks secara umum <strong>tidak komutatif</strong>. Jadi, pernyataan ini tidak selalu benar.</p>
+                        
+                        <p><strong>B. $det(AB) = det(A)det(B)$ &rarr; BENAR</strong><br>
+                        Ini adalah salah satu sifat fundamental dari determinan yang dikenal sebagai <strong>Teorema Binet</strong>. Determinan dari hasil perkalian dua matriks adalah hasil perkalian dari determinan masing-masing matriks. Sifat ini selalu berlaku untuk matriks persegi.</p>
+
+                        <p><strong>C. $(AB)^T = B^T A^T$ &rarr; BENAR</strong><br>
+                        Ini adalah sifat transpos dari perkalian matriks. Saat mentranspos hasil perkalian dua matriks, hasilnya adalah perkalian dari transpos masing-masing matriks tetapi dalam urutan terbalik. Sifat ini selalu berlaku.</p>
+
+                        <p><strong>D. Jika $det(A) \neq 0$, maka $A$ memiliki invers. &rarr; BENAR</strong><br>
+                        Ini adalah definisi dasar dari matriks yang dapat dibalik (invertible). Sebuah matriks persegi memiliki invers jika dan hanya jika determinannya tidak sama dengan nol. Matriks dengan determinan nol disebut matriks singular dan tidak memiliki invers.</p>
+
+                        <p><strong>E. $A+B = B+A$ &rarr; BENAR</strong><br>
+                        Operasi penjumlahan matriks bersifat <strong>komutatif</strong>. Ini karena penjumlahan dilakukan pada elemen-elemen yang bersesuaian, dan penjumlahan bilangan real biasa bersifat komutatif ($a_{ij} + b_{ij} = b_{ij} + a_{ij}$).</p>
+
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B, C, D, E</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 7 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>7.</strong> Asimtot datar dari grafik fungsi $f(x) = \frac{6x^2-x+1}{2x^2-4}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $y=0$</div>
+                        <div class="option">B. $y=1/2$</div>
+                        <div class="option">C. $y=2$</div>
+                        <div class="option">D. $y=3$</div>
+                        <div class="option">E. $y=6$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Asimtot Datar Fungsi Rasional</strong><br>
+                           Asimtot datar adalah sebuah garis horizontal $y=c$ yang didekati oleh grafik fungsi saat $x$ menuju tak hingga ($\infty$) atau negatif tak hingga ($-\infty$). Untuk fungsi rasional $f(x) = \frac{ax^n + ...}{px^m + ...}$ (di mana suku yang ditulis adalah suku dengan pangkat tertinggi):<br>
+                           - Jika pangkat pembilang lebih kecil dari penyebut ($n < m$), asimtot datarnya adalah $y=0$.<br>
+                           - Jika pangkat pembilang sama dengan penyebut ($n = m$), asimtot datarnya adalah $y = \frac{a}{p}$ (rasio koefisien utama).<br>
+                           - Jika pangkat pembilang lebih besar dari penyebut ($n > m$), tidak ada asimtot datar.
+                           </p>
+                        </div>
+                        <p><strong>Langkah 1: Identifikasi pangkat tertinggi pada pembilang dan penyebut.</strong><br>
+                        Fungsi: $f(x) = \frac{6x^2-x+1}{2x^2-4}$.<br>
+                        - Pembilang: Suku dengan pangkat tertinggi adalah $6x^2$. Jadi, $n=2$ dan koefisiennya $a=6$.<br>
+                        - Penyebut: Suku dengan pangkat tertinggi adalah $2x^2$. Jadi, $m=2$ dan koefisiennya $p=2$.</p>
+                        <p><strong>Langkah 2: Bandingkan pangkatnya.</strong><br>
+                        Di sini, $n=2$ dan $m=2$. Karena pangkatnya sama ($n=m$), kita menggunakan aturan kedua.</p>
+                        <p><strong>Langkah 3: Hitung rasio koefisien utamanya.</strong><br>
+                        Asimtot datar diberikan oleh $y = \frac{a}{p} = \frac{6}{2} = 3$.</p>
+                        <p>Ini berarti saat nilai $x$ menjadi sangat besar (positif atau negatif), nilai $y$ akan semakin mendekati 3.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">D</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>8.</strong> Sisa pembagian suku banyak $f(x) = x^4 - 2x^3 + 5x - 3$ oleh $(x+1)$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. -9</div>
+                        <div class="option">B. -5</div>
+                        <div class="option">C. 1</div>
+                        <div class="option">D. 3</div>
+                        <div class="option">E. 5</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Teorema Sisa</strong><br>
+                           Teorema Sisa adalah cara cepat untuk menemukan sisa pembagian polinomial. Teorema ini menyatakan: Jika sebuah polinomial $f(x)$ dibagi oleh binomial linear $(x-k)$, maka sisanya adalah sama dengan nilai fungsi saat $x=k$, yaitu $f(k)$.</p>
+                        </div>
+                        <p><strong>Langkah 1: Identifikasi pembagi dan nilai $k$.</strong><br>
+                        Pembaginya adalah $(x+1)$. Untuk mencocokkannya dengan bentuk $(x-k)$, kita tulis ulang menjadi $(x - (-1))$.<br>
+                        Dari sini, kita dapat melihat bahwa nilai $k = -1$.</p>
+                        <p><strong>Langkah 2: Terapkan Teorema Sisa.</strong><br>
+                        Menurut teorema, sisa pembagiannya adalah $f(k)$, yang dalam kasus ini adalah $f(-1)$.</p>
+                        <p><strong>Langkah 3: Hitung nilai $f(-1)$.</strong><br>
+                        Kita substitusikan $x=-1$ ke dalam polinomial $f(x) = x^4 - 2x^3 + 5x - 3$.<br>
+                        $f(-1) = (-1)^4 - 2(-1)^3 + 5(-1) - 3$<br>
+                        Perhatikan bahwa pangkat genap dari -1 adalah 1, dan pangkat ganjil adalah -1.<br>
+                        $f(-1) = 1 - 2(-1) - 5 - 3$<br>
+                        $f(-1) = 1 + 2 - 5 - 3$<br>
+                        $f(-1) = 3 - 8$<br>
+                        $f(-1) = -5$.</p>
+                        <p>Sisa pembagiannya adalah -5.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 9 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>9.</strong> Diberikan matriks identitas $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$I^3 = I$</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Determinan dari $I$ adalah 1.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>$I$ tidak memiliki invers.</td>
+                                <td></td>
+                                <td class="text-center">&#10003;</td>
+                            </tr>
+                             <tr>
+                                <td>Untuk sembarang matriks A berordo 2x2, berlaku $AI=IA$.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Matriks Identitas ($I$)</strong><br>
+                           Matriks identitas adalah matriks persegi yang elemen-elemen di diagonal utamanya adalah 1, dan elemen lainnya adalah 0. Matriks ini berfungsi seperti angka 1 dalam perkalian bilangan biasa. Jika sebuah matriks dikalikan dengan matriks identitas (dengan ordo yang sesuai), hasilnya adalah matriks itu sendiri ($AI = A$ dan $IA = A$).</p>
+                        </div>
+                        <p><strong>Analisis Setiap Pernyataan:</strong></p>
+                        <p>1. <strong>$I^3 = I$ &rarr; BENAR</strong><br>
+                        $I^3$ berarti $I \times I \times I$.<br>
+                        Karena $I \times I = I$, maka $I \times I \times I = (I \times I) \times I = I \times I = I$. Secara umum, $I^n = I$ untuk setiap bilangan bulat positif $n$.</p>
+                        
+                        <p>2. <strong>Determinan dari $I$ adalah 1 &rarr; BENAR</strong><br>
+                        Untuk matriks $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$, determinannya adalah $det(I) = (1)(1) - (0)(0) = 1 - 0 = 1$.</p>
+
+                        <p>3. <strong>$I$ tidak memiliki invers &rarr; SALAH</strong><br>
+                        Sebuah matriks memiliki invers jika dan hanya jika determinannya tidak nol. Kita sudah menghitung bahwa $det(I)=1$, yang jelas tidak nol. Oleh karena itu, matriks identitas <strong>selalu</strong> memiliki invers. Invers dari matriks identitas adalah dirinya sendiri ($I^{-1}=I$).</p>
+
+                        <p>4. <strong>Untuk sembarang matriks A berordo 2x2, berlaku $AI=IA$. &rarr; BENAR</strong><br>
+                        Ini adalah salah satu sifat paling fundamental dari matriks identitas. Matriks identitas adalah salah satu dari sedikit kasus di mana perkalian matriks menjadi komutatif. $AI=A$ dan $IA=A$, sehingga $AI=IA$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 10 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>10.</strong> Populasi bakteri di suatu kultur dimodelkan oleh fungsi $P(t) = 100 \cdot 3^t$, dengan $t$ adalah waktu dalam jam. Waktu yang dibutuhkan agar populasi menjadi 2700 adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 2 jam</div>
+                        <div class="option">B. 3 jam</div>
+                        <div class="option">C. 4 jam</div>
+                        <div class="option">D. 9 jam</div>
+                        <div class="option">E. 27 jam</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Fungsi Eksponensial</strong><br>
+                           Fungsi eksponensial $f(x) = a \cdot b^x$ digunakan untuk memodelkan pertumbuhan atau peluruhan yang berlipat ganda secara konstan. Di sini, $P(t) = 100 \cdot 3^t$ berarti:<br>
+                           - $100$ adalah populasi awal (saat $t=0$, $P(0) = 100 \cdot 3^0 = 100 \cdot 1 = 100$).<br>
+                           - $3$ adalah faktor pertumbuhan, artinya populasi menjadi 3 kali lipat setiap jamnya.
+                           </p>
+                        </div>
+                        <p><strong>Langkah 1: Susun persamaan matematika dari soal.</strong><br>
+                        Kita ingin mengetahui kapan populasi, $P(t)$, sama dengan 2700. Jadi kita tulis:<br>
+                        $P(t) = 2700$<br>
+                        $100 \cdot 3^t = 2700$</p>
+                        <p><strong>Langkah 2: Isolasi suku eksponensial ($3^t$).</strong><br>
+                        Untuk melakukan ini, bagi kedua sisi persamaan dengan 100.<br>
+                        $\frac{100 \cdot 3^t}{100} = \frac{2700}{100}$<br>
+                        $3^t = 27$</p>
+                        <p><strong>Langkah 3: Selesaikan untuk $t$.</strong><br>
+                        Sekarang kita harus menjawab pertanyaan: "3 pangkat berapa yang hasilnya 27?"<br>
+                        Kita tahu bahwa $3 \times 3 \times 3 = 27$, atau $3^3 = 27$.<br>
+                        Jadi, kita bisa menulis ulang persamaan sebagai:<br>
+                        $3^t = 3^3$<br>
+                        Karena basisnya sama (yaitu 3), maka eksponennya juga harus sama.<br>
+                        $t = 3$.</p>
+                        <p>Jadi, waktu yang dibutuhkan adalah 3 jam. Jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+                
+                 <!-- Soal 11 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>11.</strong> Salah satu faktor dari $P(x) = x^3 - x^2 - 14x + 24$ adalah $(x-2)$. Faktor linear lainnya adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x+3)$ dan $(x-4)$</div>
+                        <div class="option">B. $(x-3)$ dan $(x+4)$</div>
+                        <div class="option">C. $(x+6)$ dan $(x-2)$</div>
+                        <div class="option">D. $(x-6)$ dan $(x+2)$</div>
+                        <div class="option">E. $(x-3)$ dan $(x-4)$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Pembagian Polinomial</strong><br>
+                           Jika kita tahu salah satu faktor dari sebuah polinomial, kita bisa membagi polinomial tersebut dengan faktornya untuk mendapatkan polinomial lain yang berderajat lebih rendah. Polinomial hasil bagi ini kemudian bisa kita faktorkan lebih lanjut untuk menemukan faktor-faktor lainnya. Metode yang efisien untuk pembagian ini adalah Metode Horner (pembagian sintetik).</p>
+                        </div>
+                        <p><strong>Langkah 1: Siapkan pembagian Horner.</strong><br>
+                        Polinomial: $P(x) = 1x^3 - 1x^2 - 14x + 24$. Tuliskan koefisiennya secara berurutan: $1, -1, -14, 24$.<br>
+                        Faktor: $(x-2)$. Ini berarti akarnya adalah $x=2$. Angka 2 ini akan menjadi pembagi di skema Horner.</p>
+                        <p><strong>Langkah 2: Lakukan proses pembagian Horner.</strong><br>
+                        <pre>
+   2 | 1  -1  -14   24
+     |    2    2  -24
+     ------------------ +
+       1   1  -12    0 
+                        </pre>
+                        <strong>Prosesnya:</strong>
+                        1. Turunkan koefisien pertama (1).
+                        2. Kalikan hasil turun (1) dengan pembagi (2), hasilnya 2. Tulis di bawah koefisien kedua (-1).
+                        3. Jumlahkan: -1 + 2 = 1.
+                        4. Kalikan hasil jumlah (1) dengan pembagi (2), hasilnya 2. Tulis di bawah koefisien ketiga (-14).
+                        5. Jumlahkan: -14 + 2 = -12.
+                        6. Kalikan hasil jumlah (-12) dengan pembagi (2), hasilnya -24. Tulis di bawah koefisien terakhir (24).
+                        7. Jumlahkan: 24 + (-24) = 0. Angka terakhir ini adalah sisa. Sisa 0 mengkonfirmasi bahwa (x-2) memang faktor.</p>
+                        <p><strong>Langkah 3: Tulis hasil bagi dan faktorkan.</strong><br>
+                        Angka-angka di baris bawah (1, 1, -12) adalah koefisien dari polinomial hasil bagi, yang derajatnya satu lebih rendah dari polinomial awal. Jadi, hasil baginya adalah $1x^2 + 1x - 12$ atau $x^2 + x - 12$.</p>
+                        <p>Sekarang, kita faktorkan polinomial kuadrat ini:<br>
+                        $x^2 + x - 12 = 0$. Kita cari dua bilangan yang jika dikalikan hasilnya -12 dan jika dijumlahkan hasilnya 1. Bilangan tersebut adalah 4 dan -3.<br>
+                        $(x+4)(x-3)$.</p>
+                        <p>Jadi, faktor linear lainnya adalah $(x+4)$ dan $(x-3)$. Jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 12 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>12.</strong> Jika $f(x) = x^2+1$ dan $g(x) = \sqrt{x-1}$, maka domain dari fungsi komposisi $(f \circ g)(x)$ adalah...</p>
+                     <div class="options-grid">
+                        <div class="option">A. $\{x | x > 1, x \in \mathbb{R}\}$</div>
+                        <div class="option">B. $\{x | x \ge 1, x \in \mathbb{R}\}$</div>
+                        <div class="option">C. $\{x | x \ge 0, x \in \mathbb{R}\}$</div>
+                        <div class="option">D. $\{x | x \neq 1, x \in \mathbb{R}\}$</div>
+                        <div class="option">E. $\{x | x \in \mathbb{R}\}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Domain Fungsi Komposisi</strong><br>
+                           Fungsi komposisi $(f \circ g)(x)$ berarti "masukkan fungsi $g(x)$ ke dalam fungsi $f(x)$", atau $f(g(x))$. Untuk menentukan domainnya, ada dua syarat yang harus dipenuhi secara bersamaan:<br>
+                           1. Input $x$ harus terdefinisi untuk fungsi "dalam", yaitu $g(x)$. Jadi, $x$ harus berada di dalam domain $g(x)$.<br>
+                           2. Output dari fungsi "dalam", yaitu $g(x)$, harus terdefinisi untuk fungsi "luar", yaitu $f(x)$. Jadi, nilai $g(x)$ harus berada di dalam domain $f(x)$.</p>
+                        </div>
+                        <p><strong>Langkah 1: Tentukan domain dari fungsi "dalam", $g(x)$.</strong><br>
+                        Fungsi dalam adalah $g(x) = \sqrt{x-1}$. Ini adalah fungsi akar kuadrat.<br>
+                        Syarat agar terdefinisi adalah ekspresi di dalam akar harus $\ge 0$.<br>
+                        $x-1 \ge 0 \implies x \ge 1$.<br>
+                        Jadi, domain dari $g$ adalah $D_g = \{x | x \ge 1\}$. Ini adalah syarat pertama kita.</p>
+                        <p><strong>Langkah 2: Tentukan domain dari fungsi "luar", $f(x)$.</strong><br>
+                        Fungsi luar adalah $f(x) = x^2+1$. Ini adalah fungsi polinomial (kuadrat).<br>
+                        Fungsi polinomial terdefinisi untuk semua bilangan real. Jadi, domain dari $f$ adalah $D_f = \mathbb{R}$ (semua bilangan real).</p>
+                        <p><strong>Langkah 3: Terapkan syarat kedua.</strong><br>
+                        Syarat kedua adalah output dari $g(x)$, yaitu $\sqrt{x-1}$, harus berada di dalam domain $f$.<br>
+                        Karena domain $f$ adalah semua bilangan real, maka nilai apapun yang dihasilkan oleh $\sqrt{x-1}$ (selama ia real) akan diterima oleh $f$. Nilai $\sqrt{x-1}$ selalu real selama $x \ge 1$. Jadi, syarat kedua ini tidak memberikan batasan tambahan.</p>
+                        <p><strong>Langkah 4: Gabungkan batasan.</strong><br>
+                        Satu-satunya batasan yang kita miliki untuk nilai $x$ berasal dari domain fungsi $g(x)$, yaitu $x \ge 1$.</p>
+                        <p>Jadi, domain dari $(f \circ g)(x)$ adalah $\{x | x \ge 1, x \in \mathbb{R}\}$. Jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 13 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>13.</strong> Determinan dari matriks $Q=\begin{pmatrix} 1 & 2 & 3 \\ 2 & 5 & 8 \\ 3 & 8 & 14 \end{pmatrix}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. -2</div>
+                        <div class="option">B. -1</div>
+                        <div class="option">C. 0</div>
+                        <div class="option">D. 1</div>
+                        <div class="option">E. 2</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Determinan Matriks 3x3 (Metode Sarrus)</strong><br>
+                           Metode Sarrus adalah cara visual untuk menghitung determinan matriks 3x3. Caranya adalah dengan menuliskan kembali dua kolom pertama matriks di sebelah kanan matriks, kemudian menjumlahkan hasil kali elemen-elemen di sepanjang tiga diagonal utama (dari kiri atas ke kanan bawah) dan menguranginya dengan jumlah hasil kali elemen-elemen di sepanjang tiga diagonal sekunder (dari kanan atas ke kiri bawah).</p>
+                        </div>
+                        <p><strong>Langkah 1: Tulis ulang dua kolom pertama di sebelah kanan matriks.</strong><br>
+                        $det(Q) = \begin{vmatrix} 1 & 2 & 3 \\ 2 & 5 & 8 \\ 3 & 8 & 14 \end{vmatrix} \begin{matrix} 1 & 2 \\ 2 & 5 \\ 3 & 8 \end{matrix}$</p>
+                        <p><strong>Langkah 2: Hitung jumlah hasil kali diagonal utama (positif).</strong><br>
+                        Diagonal 1: $(1) \times (5) \times (14) = 70$<br>
+                        Diagonal 2: $(2) \times (8) \times (3) = 48$<br>
+                        Diagonal 3: $(3) \times (2) \times (8) = 48$<br>
+                        Jumlahnya = $70 + 48 + 48 = 166$.</p>
+                        <p><strong>Langkah 3: Hitung jumlah hasil kali diagonal sekunder (negatif).</strong><br>
+                        Diagonal 4: $(3) \times (5) \times (3) = 45$<br>
+                        Diagonal 5: $(1) \times (8) \times (8) = 64$<br>
+                        Diagonal 6: $(2) \times (2) \times (14) = 56$<br>
+                        Jumlahnya = $45 + 64 + 56 = 165$.</p>
+                        <p><strong>Langkah 4: Kurangkan jumlah diagonal sekunder dari jumlah diagonal utama.</strong><br>
+                        Determinan = (Jumlah diagonal utama) - (Jumlah diagonal sekunder)<br>
+                        Determinan = $166 - 165 = 1$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">D</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 14 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>14.</strong> Diberikan polinomial $P(x) = (x^2-4)(x-3)$. Manakah di antara berikut ini yang merupakan akar dari $P(x)$? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. 1</div>
+                        <div class="option">B. 2</div>
+                        <div class="option">C. -2</div>
+                        <div class="option">D. 3</div>
+                        <div class="option">E. 4</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Akar-akar Polinomial</strong><br>
+                           Akar dari sebuah polinomial $P(x)$ adalah nilai $x$ yang membuat nilai polinomial tersebut menjadi nol, yaitu $P(x) = 0$. Jika polinomial sudah dalam bentuk faktor, kita bisa menemukan akarnya dengan menyamakan setiap faktor dengan nol.</p>
+                        </div>
+                        <p><strong>Langkah 1: Samakan polinomial dengan nol.</strong><br>
+                        Untuk mencari akar, kita selesaikan persamaan $P(x) = 0$.<br>
+                        $(x^2-4)(x-3) = 0$</p>
+                        <p><strong>Langkah 2: Faktorkan setiap bagian selengkap mungkin.</strong><br>
+                        Suku $(x^2-4)$ adalah bentuk selisih dua kuadrat, yang dapat difaktorkan menjadi $(x-2)(x+2)$.<br>
+                        Sehingga persamaan menjadi:<br>
+                        $(x-2)(x+2)(x-3) = 0$</p>
+                        <p><strong>Langkah 3: Tentukan nilai $x$ dari setiap faktor.</strong><br>
+                        Hasil perkalian akan menjadi nol jika salah satu faktornya adalah nol. Jadi, kita samakan setiap faktor dengan nol:<br>
+                        - $x-2=0 \implies x=2$<br>
+                        - $x+2=0 \implies x=-2$<br>
+                        - $x-3=0 \implies x=3$</p>
+                        <p><strong>Langkah 4: Bandingkan hasil dengan pilihan yang tersedia.</strong><br>
+                        Akar-akar yang kita temukan adalah 2, -2, dan 3. Pilihan yang cocok adalah B, C, dan D.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B, C, D</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 15 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>15.</strong> Domain dari fungsi $f(x) = \frac{3x+1}{x-5}$ adalah...</p>
+                    <div class="options-grid">
+                         <div class="option">A. $\{x | x \neq 5, x \in \mathbb{R}\}$</div>
+                         <div class="option">B. $\{x | x > 5, x \in \mathbb{R}\}$</div>
+                         <div class="option">C. $\{x | x < 5, x \in \mathbb{R}\}$</div>
+                         <div class="option">D. $\{x | x \neq -1/3, x \in \mathbb{R}\}$</div>
+                         <div class="option">E. $\{x | x \in \mathbb{R}\}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Domain Fungsi Rasional (Pecahan)</strong><br>
+                           Domain adalah himpunan semua nilai input (x) yang membuat fungsi terdefinisi. Untuk fungsi rasional (berbentuk pecahan), masalah utama yang bisa terjadi adalah pembagian dengan nol, karena operasi ini tidak terdefinisi dalam matematika. Oleh karena itu, syarat utama domain fungsi rasional adalah <strong>penyebutnya tidak boleh sama dengan nol</strong>.</p>
+                        </div>
+                        <p><strong>Langkah 1: Identifikasi penyebut dari fungsi.</strong><br>
+                        Fungsi: $f(x) = \frac{3x+1}{x-5}$.<br>
+                        Penyebutnya adalah $(x-5)$.</p>
+                        <p><strong>Langkah 2: Terapkan syarat bahwa penyebut tidak boleh nol.</strong><br>
+                        $x-5 \neq 0$</p>
+                        <p><strong>Langkah 3: Selesaikan pertidaksamaan untuk $x$.</strong><br>
+                        Tambahkan 5 ke kedua sisi:<br>
+                        $x \neq 5$</p>
+                        <p>Ini berarti fungsi $f(x)$ terdefinisi untuk semua bilangan real $x$, kecuali untuk $x=5$. Jika kita memasukkan $x=5$, kita akan mendapatkan $\frac{16}{0}$, yang tidak terdefinisi.</p>
+                        <p>Jadi, domainnya adalah $\{x | x \neq 5, x \in \mathbb{R}\}$. Jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 16 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>16.</strong> Diketahui polinomial $P(x) = x^3+bx^2+cx+d$ memiliki tiga akar berbeda. Berapakah jumlah dari ketiga akarnya?</p>
+                    <p class="mt-4"> (1) $b = -5$. <br>
+                                       (2) Salah satu akarnya adalah 3.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Teorema Vieta</strong><br>
+                           Teorema Vieta memberikan hubungan antara koefisien-koefisien sebuah polinomial dengan jumlah dan hasil kali akar-akarnya. Untuk polinomial derajat tiga, $ax^3+bx^2+cx+d=0$, dengan akar-akar $x_1, x_2, x_3$:<br>
+                           - Jumlah akar-akar: $x_1+x_2+x_3 = -\frac{b}{a}$<br>
+                           - Jumlah hasil kali dua akar: $x_1x_2+x_1x_3+x_2x_3 = \frac{c}{a}$<br>
+                           - Hasil kali semua akar: $x_1x_2x_3 = -\frac{d}{a}$
+                           </p>
+                        </div>
+                        <p><strong>Pertanyaan:</strong> Berapakah nilai dari $x_1+x_2+x_3$?</p>
+                        <p><strong>Langkah 1: Terapkan Teorema Vieta pada soal.</strong><br>
+                        Polinomialnya adalah $P(x) = 1x^3+bx^2+cx+d$. Di sini $a=1$.<br>
+                        Maka, jumlah akar-akarnya adalah $x_1+x_2+x_3 = -\frac{b}{1} = -b$.<br>
+                        Untuk menjawab pertanyaan, kita hanya perlu mengetahui nilai dari $b$.</p>
+                        <p><strong>Analisis Pernyataan (1) SAJA:</strong><br>
+                        Pernyataan ini memberikan informasi: $b = -5$.<br>
+                        Dengan informasi ini, kita bisa langsung menghitung jumlah akar:<br>
+                        Jumlah akar = $-b = -(-5) = 5$.<br>
+                        Kita mendapatkan sebuah nilai yang spesifik.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (1) SAJA cukup.</p>
+                        <p><strong>Analisis Pernyataan (2) SAJA:</strong><br>
+                        Pernyataan ini memberikan informasi: Salah satu akarnya adalah 3. Artinya, $P(3)=0$.<br>
+                        $3^3+b(3)^2+c(3)+d = 0 \implies 27 + 9b + 3c + d = 0$.<br>
+                        Ini adalah satu persamaan dengan tiga variabel ($b, c, d$). Informasi ini tidak cukup untuk menentukan nilai $b$ secara unik. Oleh karena itu, kita tidak bisa menentukan jumlah akarnya.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (2) SAJA tidak cukup.</p>
+                        <p>Karena pernyataan (1) saja sudah cukup dan (2) saja tidak, maka jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 17 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>17.</strong> Sebuah perusahaan memproduksi dua jenis produk, A dan B. Biaya produksi per unit adalah Rp 10.000 untuk A dan Rp 15.000 untuk B. Waktu perakitan per unit adalah 4 jam untuk A dan 5 jam untuk B. Perusahaan memiliki anggaran biaya produksi Rp 5.000.000 dan total jam kerja 1.500 jam. Jika $x$ adalah jumlah unit produk A dan $y$ adalah jumlah unit produk B, sistem persamaan matriks yang sesuai dengan masalah ini adalah...</p>
+                    <div class="mt-4 space-y-2">
+                        <div class="option">A. $\begin{pmatrix} 10000 & 4 \\ 15000 & 5 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 5000000 \\ 1500 \end{pmatrix}$</div>
+                        <div class="option">B. $\begin{pmatrix} 10000 & 15000 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 5000000 \\ 1500 \end{pmatrix}$</div>
+                        <div class="option">C. $\begin{pmatrix} 4 & 5 \\ 10000 & 15000 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 5000000 \\ 1500 \end{pmatrix}$</div>
+                        <div class="option">D. $\begin{pmatrix} x & y \end{pmatrix} \begin{pmatrix} 10000 & 15000 \\ 4 & 5 \end{pmatrix} = \begin{pmatrix} 5000000 & 1500 \end{pmatrix}$</div>
+                        <div class="option">E. $\begin{pmatrix} 10000 & 15000 \\ 5 & 4 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 1500 \\ 5000000 \end{pmatrix}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Mengubah Sistem Persamaan Linear (SPL) ke Bentuk Matriks</strong><br>
+                           Sebuah sistem persamaan linear:<br>
+                           $ax + by = p$<br>
+                           $cx + dy = q$<br>
+                           dapat ditulis dalam bentuk perkalian matriks sebagai:
+                           $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} p \\ q \end{pmatrix}$.<br>
+                           Matriks pertama berisi koefisien, matriks kedua berisi variabel, dan matriks ketiga berisi konstanta hasil.</p>
+                        </div>
+                        <p><strong>Langkah 1: Buat sistem persamaan linear dari informasi cerita.</strong><br>
+                        Kita perlu membuat dua persamaan berdasarkan dua batasan: biaya dan waktu.<br>
+                        - <strong>Persamaan Biaya:</strong><br>
+                        Biaya total berasal dari total biaya produk A ditambah total biaya produk B.<br>
+                        Total biaya A = (biaya per unit A) $\times$ (jumlah unit A) = $10000x$<br>
+                        Total biaya B = (biaya per unit B) $\times$ (jumlah unit B) = $15000y$<br>
+                        Anggaran total adalah Rp 5.000.000. Maka persamaannya:<br>
+                        $10000x + 15000y = 5000000$ (Persamaan 1)<br>
+                        - <strong>Persamaan Waktu:</strong><br>
+                        Waktu total berasal dari total waktu produk A ditambah total waktu produk B.<br>
+                        Total waktu A = (waktu per unit A) $\times$ (jumlah unit A) = $4x$<br>
+                        Total waktu B = (waktu per unit B) $\times$ (jumlah unit B) = $5y$<br>
+                        Total jam kerja adalah 1.500 jam. Maka persamaannya:<br>
+                        $4x + 5y = 1500$ (Persamaan 2)</p>
+                        <p><strong>Langkah 2: Susun SPL ke dalam bentuk matriks.</strong><br>
+                        Kita punya sistem:<br>
+                        $10000x + 15000y = 5000000$<br>
+                        $4x + 5y = 1500$<br>
+                        Mengikuti format $\begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} p \\ q \end{pmatrix}$, kita susun matriks koefisien dari koefisien $x$ dan $y$ di setiap baris.<br>
+                        - Baris 1: koefisiennya adalah 10000 dan 15000. Hasilnya 5000000.<br>
+                        - Baris 2: koefisiennya adalah 4 dan 5. Hasilnya 1500.<br>
+                        Maka bentuk matriksnya adalah:<br>
+                        $\begin{pmatrix} 10000 & 15000 \\ 4 & 5 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 5000000 \\ 1500 \end{pmatrix}$</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 18 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>18.</strong> Range (daerah hasil) dari fungsi kuadrat $f(x) = -x^2 + 4x - 1$ adalah...</p>
+                    <div class="options-grid">
+                         <div class="option">A. $\{y | y \le 3, y \in \mathbb{R}\}$</div>
+                         <div class="option">B. $\{y | y \ge 3, y \in \mathbb{R}\}$</div>
+                         <div class="option">C. $\{y | y \le -1, y \in \mathbb{R}\}$</div>
+                         <div class="option">D. $\{y | y \ge -1, y \in \mathbb{R}\}$</div>
+                         <div class="option">E. $\{y | y \in \mathbb{R}\}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Range Fungsi Kuadrat (Parabola)</strong><br>
+                           Range (daerah hasil) adalah himpunan semua nilai output (y) yang mungkin dari sebuah fungsi. Grafik fungsi kuadrat $f(x) = ax^2+bx+c$ adalah parabola. Range-nya ditentukan oleh apakah parabola membuka ke atas atau ke bawah, dan di mana letak titik puncaknya.<br>
+                           - Jika $a > 0$, parabola membuka ke atas dan memiliki nilai <strong>minimum</strong>. Range-nya adalah $\{y | y \ge y_{puncak}\}$.<br>
+                           - Jika $a < 0$, parabola membuka ke bawah dan memiliki nilai <strong>maksimum</strong>. Range-nya adalah $\{y | y \le y_{puncak}\}$.<br>
+                           Koordinat y dari titik puncak dapat dihitung dengan rumus $y_{puncak} = -\frac{D}{4a}$ di mana $D=b^2-4ac$ adalah diskriminan.</p>
+                        </div>
+                        <p><strong>Langkah 1: Analisis bentuk parabola.</strong><br>
+                        Fungsi: $f(x) = -x^2 + 4x - 1$.<br>
+                        Koefisien $x^2$ adalah $a=-1$. Karena $a$ negatif, parabola membuka ke <strong>bawah</strong>. Ini berarti fungsi ini memiliki nilai maksimum.</p>
+                        <p><strong>Langkah 2: Hitung nilai maksimum (koordinat y dari puncak).</strong><br>
+                        Kita identifikasi koefisien: $a=-1, b=4, c=-1$.<br>
+                        Pertama, hitung diskriminan $D$:<br>
+                        $D = b^2 - 4ac = (4)^2 - 4(-1)(-1) = 16 - 4 = 12$.<br>
+                        Sekarang, hitung $y_{puncak}$:<br>
+                        $y_{puncak} = -\frac{D}{4a} = -\frac{12}{4(-1)} = -\frac{12}{-4} = 3$.</p>
+                        <p><strong>Langkah 3: Tentukan range.</strong><br>
+                        Karena parabola membuka ke bawah dan nilai maksimumnya adalah 3, maka semua nilai $y$ yang mungkin dari fungsi ini akan selalu lebih kecil dari atau sama dengan 3.</p>
+                        <p>Jadi, range-nya adalah $\{y | y \le 3, y \in \mathbb{R}\}$. Jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 19 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>19.</strong> Jika matriks $P=\begin{pmatrix} 4 & 5 \\ 2 & 3 \end{pmatrix}$, maka invers dari matriks P, yaitu $P^{-1}$, adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\begin{pmatrix} 3/2 & -5/2 \\ -1 & 2 \end{pmatrix}$</div>
+                        <div class="option">B. $\begin{pmatrix} 2 & -5/2 \\ -1 & 3/2 \end{pmatrix}$</div>
+                        <div class="option">C. $\begin{pmatrix} 3 & -5 \\ -2 & 4 \end{pmatrix}$</div>
+                        <div class="option">D. $\begin{pmatrix} 1/2 & -5/2 \\ -1 & 3 \end{pmatrix}$</div>
+                        <div class="option">E. $\begin{pmatrix} 4 & -2 \\ -5 & 3 \end{pmatrix}$</div>
+                    </div>
+                     <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Invers Matriks 2x2</strong><br>
+                           Invers dari sebuah matriks $M$, yang dinotasikan $M^{-1}$, adalah matriks yang jika dikalikan dengan $M$ akan menghasilkan matriks identitas ($M \cdot M^{-1} = I$). Untuk matriks 2x2, $M = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, rumus inversnya adalah:<br>
+                           $M^{-1} = \frac{1}{ad-bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$<br>
+                           Di mana $ad-bc$ adalah determinan matriks. Langkah-langkahnya adalah:<br>
+                           1. Hitung determinan.
+                           2. Tukar posisi elemen diagonal utama ($a$ dan $d$).
+                           3. Kalikan elemen diagonal lainnya ($b$ dan $c$) dengan -1.
+                           4. Kalikan matriks yang dihasilkan dengan $\frac{1}{\text{determinan}}$.
+                           </p>
+                        </div>
+                        <p><strong>Langkah 1: Hitung determinan matriks P.</strong><br>
+                        Untuk $P=\begin{pmatrix} 4 & 5 \\ 2 & 3 \end{pmatrix}$, kita punya $a=4, b=5, c=2, d=3$.<br>
+                        $det(P) = ad-bc = (4)(3) - (5)(2) = 12 - 10 = 2$.</p>
+                        <p><strong>Langkah 2: Bentuk matriks adjoin.</strong><br>
+                        Tukar posisi $a$ dan $d$, lalu negasikan $b$ dan $c$.<br>
+                        $\begin{pmatrix} d & -b \\ -c & a \end{pmatrix} = \begin{pmatrix} 3 & -5 \\ -2 & 4 \end{pmatrix}$</p>
+                        <p><strong>Langkah 3: Kalikan matriks adjoin dengan 1/determinan.</strong><br>
+                        $P^{-1} = \frac{1}{2}\begin{pmatrix} 3 & -5 \\ -2 & 4 \end{pmatrix}$<br>
+                        Sekarang, kalikan setiap elemen di dalam matriks dengan $1/2$.<br>
+                        $P^{-1} = \begin{pmatrix} 3 \times \frac{1}{2} & -5 \times \frac{1}{2} \\ -2 \times \frac{1}{2} & 4 \times \frac{1}{2} \end{pmatrix} = \begin{pmatrix} 3/2 & -5/2 \\ -1 & 2 \end{pmatrix}$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>20.</strong> Manakah dari fungsi-fungsi berikut yang grafiknya TIDAK PERNAH memotong sumbu-x? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                         <div class="option">A. $f(x) = x^2 + 4$</div>
+                         <div class="option">B. $f(x) = 5^x$</div>
+                         <div class="option">C. $f(x) = \log_{10}(x)$</div>
+                         <div class="option">D. $f(x) = \sin(x) + 2$</div>
+                         <div class="option">E. $f(x) = |x| - 1$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Titik Potong Sumbu-x</strong><br>
+                           Sebuah grafik fungsi memotong sumbu-x pada titik-titik di mana nilai $y$ (atau $f(x)$) sama dengan nol. Titik-titik ini juga dikenal sebagai akar atau solusi dari persamaan $f(x)=0$. Jadi, untuk memeriksa apakah sebuah fungsi memotong sumbu-x, kita coba selesaikan persamaan $f(x)=0$. Jika tidak ada solusi bilangan real, maka grafiknya tidak memotong sumbu-x.</p>
+                        </div>
+                        <p><strong>Analisis Setiap Pilihan:</strong></p>
+                        <p><strong>A. $f(x) = x^2 + 4$</strong><br>
+                        Set $f(x)=0 \implies x^2 + 4 = 0 \implies x^2 = -4$. Tidak ada bilangan real yang jika dikuadratkan hasilnya negatif. Maka, tidak ada solusi real. <strong>Grafik tidak memotong sumbu-x.</strong></p>
+                        
+                        <p><strong>B. $f(x) = 5^x$</strong><br>
+                        Set $f(x)=0 \implies 5^x = 0$. Fungsi eksponensial dengan basis positif ($5$) tidak akan pernah menghasilkan nilai nol atau negatif. Nilainya selalu positif. Maka, tidak ada solusi. <strong>Grafik tidak memotong sumbu-x.</strong> (Sumbu-x adalah asimtot datarnya).</p>
+
+                        <p><strong>C. $f(x) = \log_{10}(x)$</strong><br>
+                        Set $f(x)=0 \implies \log_{10}(x) = 0$. Berdasarkan definisi logaritma, ini artinya $10^0 = x$, sehingga $x=1$. Karena ada solusi real ($x=1$), maka <strong>grafik memotong sumbu-x</strong> di titik (1,0).</p>
+
+                        <p><strong>D. $f(x) = \sin(x) + 2$</strong><br>
+                        Set $f(x)=0 \implies \sin(x) + 2 = 0 \implies \sin(x) = -2$. Range (daerah hasil) dari fungsi sinus adalah dari -1 sampai 1 (yaitu, $-1 \le \sin(x) \le 1$). Nilai $\sin(x)$ tidak akan pernah mencapai -2. Maka, tidak ada solusi. <strong>Grafik tidak memotong sumbu-x.</strong></p>
+
+                        <p><strong>E. $f(x) = |x| - 1$</strong><br>
+                        Set $f(x)=0 \implies |x| - 1 = 0 \implies |x| = 1$. Persamaan nilai mutlak ini memiliki dua solusi: $x=1$ dan $x=-1$. Karena ada solusi real, maka <strong>grafik memotong sumbu-x</strong> di titik (1,0) dan (-1,0).</p>
+                        
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A, B, D</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 21 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>21.</strong> Volume sebuah kotak berbentuk balok dinyatakan dalam fungsi $V(x) = x^3 + 7x^2 + 14x + 8$ dalam cm$^3$. Jika panjang kotak adalah $(x+2)$ cm dan tinggi kotak adalah $(x+1)$ cm, maka lebar kotak tersebut adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(x+3)$ cm</div>
+                        <div class="option">B. $(x+8)$ cm</div>
+                        <div class="option">C. $(x+4)$ cm</div>
+                        <div class="option">D. $(x-2)$ cm</div>
+                        <div class="option">E. $(x-4)$ cm</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Volume Balok dan Faktor Polinomial</strong><br>
+                           Volume balok dihitung dengan rumus: $V = \text{Panjang} \times \text{Lebar} \times \text{Tinggi}$.<br>
+                           Jika semua dimensi ini dinyatakan sebagai polinomial dalam $x$, maka polinomial Volume adalah hasil perkalian dari ketiga polinomial dimensi tersebut. Ini berarti, polinomial Panjang, Lebar, dan Tinggi adalah faktor-faktor dari polinomial Volume. Untuk mencari salah satu dimensi, kita bisa membagi polinomial Volume dengan dimensi-dimensi lain yang sudah diketahui.</p>
+                        </div>
+                        <p><strong>Langkah 1: Cari produk dari dimensi yang diketahui.</strong><br>
+                        Kita tahu Panjang $P(x)=(x+2)$ dan Tinggi $T(x)=(x+1)$.<br>
+                        Produknya adalah $(x+2)(x+1) = x(x+1) + 2(x+1) = x^2+x+2x+2 = x^2+3x+2$.</p>
+                        <p><strong>Langkah 2: Bagi polinomial Volume dengan produk dimensi yang diketahui.</strong><br>
+                        Lebar $L(x) = \frac{V(x)}{P(x)T(x)} = \frac{x^3 + 7x^2 + 14x + 8}{x^2+3x+2}$.<br>
+                        Kita bisa menggunakan pembagian polinomial biasa atau penalaran.<br>
+                        Karena Volume berderajat 3 dan pembagi berderajat 2, hasilnya (Lebar) pasti berderajat 1, dengan bentuk umum $(x+k)$.<br>
+                        Maka, harus berlaku: $(x^2+3x+2)(x+k) = x^3 + 7x^2 + 14x + 8$.<br>
+                        Mari kita fokus pada suku pertama dan suku terakhir untuk menemukan $k$.<br>
+                        - Suku pertama: $x^2 \times x = x^3$. (Sudah cocok).<br>
+                        - Suku terakhir (konstanta): $2 \times k = 8$. Dari sini kita dapatkan $k = 4$.<br>
+                        Jadi, kemungkinan besar lebarnya adalah $(x+4)$.</p>
+                        <p><strong>Langkah 3: Verifikasi hasil (opsional tapi disarankan).</strong><br>
+                        Mari kita kalikan $(x^2+3x+2)$ dengan $(x+4)$ untuk memastikan hasilnya sama dengan $V(x)$.<br>
+                        $(x^2+3x+2)(x+4) = x(x^2+3x+2) + 4(x^2+3x+2)$<br>
+                        $= (x^3+3x^2+2x) + (4x^2+12x+8)$<br>
+                        $= x^3 + (3+4)x^2 + (2+12)x + 8$<br>
+                        $= x^3 + 7x^2 + 14x + 8$. Hasilnya cocok.</p>
+                        <p>Jadi, lebar kotak adalah $(x+4)$ cm. Jawaban yang benar adalah <span class="final-answer">C</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 22 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>22.</strong> Diketahui fungsi kuadrat $f(x)=ax^2+bx+c$. Apakah grafik fungsi tersebut membuka ke atas?</p>
+                    <p class="mt-4"> (1) Grafik memotong sumbu-x di dua titik berbeda. <br>
+                                       (2) Titik puncaknya berada di kuadran IV.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Grafik Fungsi Kuadrat (Parabola)</strong><br>
+                           - Arah bukaan parabola ditentukan oleh tanda koefisien $a$. Jika $a>0$, parabola membuka ke atas. Jika $a<0$, parabola membuka ke bawah.<br>
+                           - Hubungan dengan sumbu-x ditentukan oleh diskriminan $D=b^2-4ac$. Jika $D>0$, memotong di 2 titik. Jika $D=0$, menyinggung di 1 titik. Jika $D<0$, tidak memotong.<br>
+                           - Titik puncak $(x_p, y_p)$ adalah titik minimum (jika $a>0$) atau maksimum (jika $a<0$).
+                           - Kuadran IV adalah daerah di mana $x>0$ dan $y<0$.
+                           </p>
+                        </div>
+                        <p><strong>Pertanyaan:</strong> Apakah $a > 0$?</p>
+                        <p><strong>Analisis Pernyataan (1) SAJA:</strong><br>
+                        "Grafik memotong sumbu-x di dua titik berbeda." Ini berarti $D > 0$. Informasi ini tidak memberi tahu kita apa-apa tentang tanda $a$. Parabola bisa saja membuka ke atas dan memotong di dua titik, atau membuka ke bawah dan memotong di dua titik. Keduanya mungkin.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (1) SAJA tidak cukup.</p>
+                        <p><strong>Analisis Pernyataan (2) SAJA:</strong><br>
+                        "Titik puncaknya berada di kuadran IV." Ini berarti $y_{puncak} < 0$.<br>
+                        - Kasus 1: Jika parabola membuka ke atas ($a>0$), titik puncaknya adalah titik minimum. Mungkin saja titik minimumnya negatif (di bawah sumbu-x).<br>
+                        - Kasus 2: Jika parabola membuka ke bawah ($a<0$), titik puncaknya adalah titik maksimum. Mungkin juga titik maksimumnya negatif.<br>
+                        Karena kedua kasus ($a>0$ dan $a<0$) masih mungkin, pernyataan ini tidak cukup untuk menentukan arah bukaan.<br>
+                        <strong>Kesimpulan:</strong> Pernyataan (2) SAJA tidak cukup.</p>
+                        <p><strong>Analisis Pernyataan (1) dan (2) BERSAMA-SAMA:</strong><br>
+                        Kita menggabungkan kedua informasi:<br>
+                        (1) Grafik memotong sumbu-x.<br>
+                        (2) Titik puncaknya berada di bawah sumbu-x (karena di Kuadran IV, $y < 0$).<br>
+                        Mari kita visualisasikan. Jika sebuah parabola memiliki titik puncak di bawah sumbu-x, bagaimana caranya agar ia bisa memotong sumbu-x? Satu-satunya cara adalah jika parabola tersebut membuka ke <strong>atas</strong>. Jika ia membuka ke bawah dari puncak yang sudah di bawah sumbu-x, ia tidak akan pernah bisa "naik" untuk memotong sumbu-x.<br>
+                        Dengan demikian, kombinasi kedua pernyataan ini memaksa kita untuk menyimpulkan bahwa parabola harus membuka ke atas, yang berarti $a > 0$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">C</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 23 -->
+                <div class="item-container">
+                     <p class="question-text"><strong>23.</strong> Nilai $x$ yang memenuhi persamaan determinan $\begin{vmatrix} x & x \\ 4 & x \end{vmatrix} = \begin{vmatrix} -2 & -2 \\ 4 & -2 \end{vmatrix}$ adalah...</p>
+                     <div class="options-grid">
+                        <div class="option">A. -6 atau 2</div>
+                        <div class="option">B. -4 atau 3</div>
+                        <div class="option">C. -3 atau 4</div>
+                        <div class="option">D. -2 atau 6</div>
+                        <div class="option">E. 2 atau 6</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Determinan Matriks 2x2</strong><br>
+                           Determinan dari matriks berordo 2x2, $M = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, dihitung dengan rumus:<br>
+                           $det(M) = \begin{vmatrix} a & b \\ c & d \end{vmatrix} = ad - bc$<br>
+                           (Hasil kali elemen diagonal utama dikurangi hasil kali elemen diagonal lainnya).</p>
+                        </div>
+                        <p><strong>Langkah 1: Hitung determinan matriks di ruas kiri.</strong><br>
+                        Matriksnya adalah $\begin{pmatrix} x & x \\ 4 & x \end{pmatrix}$.<br>
+                        Determinannya adalah $(x)(x) - (x)(4) = x^2 - 4x$.</p>
+                        <p><strong>Langkah 2: Hitung determinan matriks di ruas kanan.</strong><br>
+                        Matriksnya adalah $\begin{pmatrix} -2 & -2 \\ 4 & -2 \end{pmatrix}$.<br>
+                        Determinannya adalah $(-2)(-2) - (-2)(4) = 4 - (-8) = 4 + 8 = 12$.</p>
+                        <p><strong>Langkah 3: Samakan kedua hasil determinan dan selesaikan persamaan.</strong><br>
+                        Dari langkah 1 dan 2, kita mendapatkan persamaan:<br>
+                        $x^2 - 4x = 12$<br>
+                        Untuk menyelesaikan persamaan kuadrat ini, pindahkan semua suku ke satu ruas untuk membuatnya sama dengan nol.<br>
+                        $x^2 - 4x - 12 = 0$<br>
+                        Sekarang, faktorkan persamaan kuadrat tersebut. Kita cari dua bilangan yang jika dikalikan hasilnya -12 dan jika dijumlahkan hasilnya -4. Bilangan tersebut adalah -6 dan 2.<br>
+                        $(x-6)(x+2) = 0$<br>
+                        Ini memberikan dua kemungkinan solusi:<br>
+                        $x-6 = 0 \implies x = 6$<br>
+                        $x+2 = 0 \implies x = -2$</p>
+                        <p>Jadi, nilai $x$ yang memenuhi adalah -2 atau 6. Jawaban yang benar adalah <span class="final-answer">D</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 24 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>24.</strong> Grafik fungsi $y = 2^x - 3$ memotong sumbu-y di titik...</p>
+                    <div class="options-grid">
+                        <div class="option">A. (0, -3)</div>
+                        <div class="option">B. (0, -2)</div>
+                        <div class="option">C. (0, 1)</div>
+                        <div class="option">D. (-3, 0)</div>
+                        <div class="option">E. (1, 0)</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Titik Potong Sumbu-y</strong><br>
+                           Sumbu-y adalah garis vertikal di mana nilai koordinat x selalu nol. Oleh karena itu, untuk menemukan titik di mana sebuah grafik memotong sumbu-y, kita hanya perlu mengganti (mensubstitusi) nilai $x$ dengan 0 ke dalam persamaan fungsi dan menghitung nilai $y$ yang dihasilkan.</p>
+                        </div>
+                        <p><strong>Langkah 1: Substitusikan $x=0$ ke dalam persamaan fungsi.</strong><br>
+                        Fungsi: $y = 2^x - 3$<br>
+                        Ganti $x$ dengan 0:<br>
+                        $y = 2^0 - 3$</p>
+                        <p><strong>Langkah 2: Hitung nilai $y$.</strong><br>
+                        Ingat bahwa setiap bilangan (kecuali 0) yang dipangkatkan 0 hasilnya adalah 1.<br>
+                        $y = 1 - 3$<br>
+                        $y = -2$</p>
+                        <p><strong>Langkah 3: Tuliskan koordinat titik potong.</strong><br>
+                        Ketika $x=0$, kita mendapatkan $y=-2$. Jadi, titik potong dengan sumbu-y adalah $(0, -2)$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">B</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 25 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>25.</strong> Diberikan fungsi logaritma $f(x) = \log_2(x)$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Domain fungsi adalah $\{x | x > 0, x \in \mathbb{R}\}$.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Range fungsi adalah seluruh bilangan real.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Grafik fungsi memotong sumbu-y.</td>
+                                <td></td>
+                                <td class="text-center">&#10003;</td>
+                            </tr>
+                             <tr>
+                                <td>Grafik fungsi melalui titik (8, 3).</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Fungsi Logaritma</strong><br>
+                           Fungsi logaritma $f(x) = \log_b(x)$ adalah invers dari fungsi eksponensial $g(x) = b^x$. Pernyataan $\log_b(x) = y$ ekuivalen dengan $b^y = x$.<br>
+                           - <strong>Domain:</strong> Argumen logaritma (numerus), yaitu $x$, harus selalu positif ($x>0$).<br>
+                           - <strong>Range:</strong> Hasil dari fungsi logaritma bisa berupa bilangan real apa saja, dari negatif tak hingga sampai positif tak hingga.<br>
+                           - <strong>Grafik:</strong> Selalu melalui titik $(1,0)$ karena $\log_b(1) = 0$. Sumbu-y adalah asimtot tegak.
+                           </p>
+                        </div>
+                        <p><strong>Analisis Setiap Pernyataan:</strong></p>
+                        <p>1. <strong>Domain fungsi adalah $\{x | x > 0, x \in \mathbb{R}\}$ &rarr; BENAR</strong><br>
+                        Sesuai dengan definisi dasar logaritma, numerus (nilai di dalam logaritma, yaitu $x$) harus selalu lebih besar dari nol. Jadi, domainnya adalah $x>0$.</p>
+                        
+                        <p>2. <strong>Range fungsi adalah seluruh bilangan real &rarr; BENAR</strong><br>
+                        Grafik fungsi logaritma terus naik (atau turun) tanpa batas. Ia bisa mencapai nilai y yang sangat besar (misal $\log_2(1024)=10$) maupun sangat kecil/negatif (misal $\log_2(1/8)=-3$). Jadi, rangenya adalah semua bilangan real.</p>
+
+                        <p>3. <strong>Grafik fungsi memotong sumbu-y &rarr; SALAH</strong><br>
+                        Grafik memotong sumbu-y saat $x=0$. Namun, $x=0$ tidak termasuk dalam domain fungsi logaritma. Faktanya, grafik fungsi logaritma akan terus mendekati sumbu-y tetapi tidak pernah menyentuhnya (sumbu-y adalah asimtot tegak).</p>
+
+                        <p>4. <strong>Grafik fungsi melalui titik (8, 3) &rarr; BENAR</strong><br>
+                        Untuk memeriksa apakah sebuah titik dilalui grafik, kita substitusikan koordinatnya ke dalam fungsi. Kita cek apakah $f(8)=3$.<br>
+                        $f(8) = \log_2(8)$. Ini menanyakan, "2 pangkat berapa yang hasilnya 8?". Jawabannya adalah 3, karena $2^3=8$. Jadi, pernyataan ini benar.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 26 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>26.</strong> Hasil dari perkalian polinomial $(x^2 - 2x + 3)$ dan $(x+4)$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $x^3 + 2x^2 - 5x + 12$</div>
+                        <div class="option">B. $x^3 - 2x^2 + 5x + 12$</div>
+                        <div class="option">C. $x^3 + 2x^2 - 11x + 12$</div>
+                        <div class="option">D. $x^3 + 4x^2 - 8x + 12$</div>
+                        <div class="option">E. $x^3 - 6x^2 - 5x + 12$</div>
+                    </div>
+                     <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Perkalian Polinomial</strong><br>
+                           Untuk mengalikan dua polinomial, kita harus menggunakan sifat distributif. Artinya, setiap suku dari polinomial pertama harus dikalikan dengan setiap suku dari polinomial kedua. Setelah itu, suku-suku yang sejenis (memiliki variabel dan pangkat yang sama) dijumlahkan.</p>
+                        </div>
+                        <p><strong>Langkah 1: Distribusikan setiap suku dari polinomial kedua ke polinomial pertama.</strong><br>
+                        $(x^2 - 2x + 3)(x+4) = x(x^2 - 2x + 3) + 4(x^2 - 2x + 3)$</p>
+                        <p><strong>Langkah 2: Lakukan perkalian pada setiap bagian.</strong><br>
+                        - Bagian pertama: $x(x^2 - 2x + 3) = (x \cdot x^2) - (x \cdot 2x) + (x \cdot 3) = x^3 - 2x^2 + 3x$<br>
+                        - Bagian kedua: $4(x^2 - 2x + 3) = (4 \cdot x^2) - (4 \cdot 2x) + (4 \cdot 3) = 4x^2 - 8x + 12$</p>
+                        <p><strong>Langkah 3: Jumlahkan hasil dari kedua bagian.</strong><br>
+                        Hasil total = $(x^3 - 2x^2 + 3x) + (4x^2 - 8x + 12)$</p>
+                        <p><strong>Langkah 4: Kelompokkan dan jumlahkan suku-suku yang sejenis.</strong><br>
+                        - Suku $x^3$: hanya ada satu, yaitu $x^3$.<br>
+                        - Suku $x^2$: $-2x^2 + 4x^2 = 2x^2$.<br>
+                        - Suku $x$: $3x - 8x = -5x$.<br>
+                        - Suku konstanta: hanya ada satu, yaitu $12$.<br>
+                        Gabungkan semuanya: $x^3 + 2x^2 - 5x + 12$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 27 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>27.</strong> Jika $A=\begin{pmatrix} 3 & 1 \\ 2 & 1 \end{pmatrix}$ dan $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$. Matriks $X$ yang memenuhi $AX = I$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\begin{pmatrix} 1 & -1 \\ -2 & 3 \end{pmatrix}$</div>
+                        <div class="option">B. $\begin{pmatrix} 3 & -1 \\ -2 & 1 \end{pmatrix}$</div>
+                        <div class="option">C. $\begin{pmatrix} 1 & 1 \\ 2 & 3 \end{pmatrix}$</div>
+                        <div class="option">D. $\begin{pmatrix} -1 & 1 \\ 2 & -3 \end{pmatrix}$</div>
+                        <div class="option">E. $\begin{pmatrix} 1/3 & 1 \\ 1/2 & 1 \end{pmatrix}$</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Persamaan Matriks dan Invers</strong><br>
+                           Dalam aljabar matriks, tidak ada operasi "pembagian". Untuk menyelesaikan persamaan seperti $AX=B$, kita menggunakan konsep matriks invers. Jika $A$ memiliki invers $A^{-1}$, kita bisa mengalikan kedua sisi persamaan dengan $A^{-1}$ dari <strong>kiri</strong>:<br>
+                           $A^{-1}(AX) = A^{-1}B$<br>
+                           $(A^{-1}A)X = A^{-1}B$<br>
+                           $IX = A^{-1}B$<br>
+                           $X = A^{-1}B$<br>
+                           Dalam kasus khusus di soal ini, $AX=I$. Ini adalah definisi dari matriks invers itu sendiri. Matriks $X$ adalah matriks yang jika dikalikan dengan $A$ menghasilkan identitas, artinya $X$ adalah invers dari $A$, atau $X=A^{-1}$.</p>
+                        </div>
+                        <p><strong>Tujuan:</strong> Mencari matriks $X$, yang artinya kita perlu mencari $A^{-1}$.</p>
+                        <p><strong>Langkah 1: Hitung determinan matriks A.</strong><br>
+                        Untuk $A=\begin{pmatrix} 3 & 1 \\ 2 & 1 \end{pmatrix}$, determinannya adalah:<br>
+                        $det(A) = (3)(1) - (1)(2) = 3 - 2 = 1$.</p>
+                        <p><strong>Langkah 2: Terapkan rumus invers.</strong><br>
+                        $A^{-1} = \frac{1}{det(A)}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$<br>
+                        $A^{-1} = \frac{1}{1}\begin{pmatrix} 1 & -1 \\ -2 & 3 \end{pmatrix}$<br>
+                        $A^{-1} = \begin{pmatrix} 1 & -1 \\ -2 & 3 \end{pmatrix}$.</p>
+                        <p>Karena $X = A^{-1}$, maka $X = \begin{pmatrix} 1 & -1 \\ -2 & 3 \end{pmatrix}$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">A</span>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 28 -->
+                <div class="item-container">
+                     <p class="question-text"><strong>28.</strong> Akar-akar persamaan suku banyak $2x^3 - 13x^2 + kx - 18 = 0$ adalah $x_1, x_2,$ dan $x_3$. Jika diketahui $x_1 = 2x_2$ dan $x_1, x_2, x_3$ semuanya positif, maka nilai $k$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option">A. 3</div>
+                        <div class="option">B. 9</div>
+                        <div class="option">C. 12</div>
+                        <div class="option">D. 15</div>
+                        <div class="option">E. 27</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Teorema Vieta untuk Polinomial Derajat 3</strong><br>
+                           Untuk polinomial $ax^3+bx^2+cx+d=0$ dengan akar-akar $x_1, x_2, x_3$:<br>
+                           1. Jumlah akar: $x_1+x_2+x_3 = -b/a$<br>
+                           2. Jumlah hasil kali pasangan akar: $x_1x_2+x_1x_3+x_2x_3 = c/a$<br>
+                           3. Hasil kali akar: $x_1x_2x_3 = -d/a$
+                           </p>
+                        </div>
+                        <p><strong>Langkah 1: Terapkan Teorema Vieta pada soal.</strong><br>
+                        Dari $2x^3 - 13x^2 + kx - 18 = 0$, kita punya $a=2, b=-13, c=k, d=-18$.<br>
+                        1. $x_1+x_2+x_3 = -(-13)/2 = 13/2$<br>
+                        2. $x_1x_2+x_1x_3+x_2x_3 = k/2$<br>
+                        3. $x_1x_2x_3 = -(-18)/2 = 9$</p>
+                        <p><strong>Langkah 2: Gunakan informasi $x_1 = 2x_2$ dan hubungan hasil kali akar (rumus 3).</strong><br>
+                        Substitusi $x_1 = 2x_2$ ke dalam rumus 3:<br>
+                        $(2x_2) \cdot x_2 \cdot x_3 = 9 \implies 2x_2^2 x_3 = 9$.</p>
+                        <p><strong>Langkah 3: Gunakan informasi $x_1 = 2x_2$ dan hubungan jumlah akar (rumus 1).</strong><br>
+                        Substitusi $x_1 = 2x_2$ ke dalam rumus 1:<br>
+                        $(2x_2) + x_2 + x_3 = 13/2 \implies 3x_2 + x_3 = 13/2$.<br>
+                        Dari sini kita bisa menyatakan $x_3$ dalam $x_2$: $x_3 = 13/2 - 3x_2$.</p>
+                        <p><strong>Langkah 4: Substitusikan ekspresi $x_3$ dari Langkah 3 ke dalam persamaan dari Langkah 2.</strong><br>
+                        $2x_2^2 (13/2 - 3x_2) = 9$<br>
+                        $13x_2^2 - 6x_2^3 = 9$<br>
+                        Pindahkan semua ke satu ruas: $6x_2^3 - 13x_2^2 + 9 = 0$. Ini adalah persamaan polinomial baru untuk menemukan $x_2$.</p>
+                        <p><strong>Langkah 5: Selesaikan persamaan untuk $x_2$.</strong><br>
+                        Kita bisa coba-coba dengan faktor rasional dari $9/6$. Setelah mencoba, kita dapati $x_2 = 3/2$ adalah solusi, karena $6(27/8) - 13(9/4) + 9 = 81/4 - 117/4 + 36/4 = 0$.</p>
+                        <p><strong>Langkah 6: Temukan nilai semua akar.</strong><br>
+                        - $x_2 = 3/2$<br>
+                        - $x_1 = 2x_2 = 2(3/2) = 3$<br>
+                        - $x_3 = 13/2 - 3x_2 = 13/2 - 3(3/2) = 13/2 - 9/2 = 4/2 = 2$.<br>
+                        Ketiga akar (3, 3/2, 2) semuanya positif, sesuai syarat.</p>
+                        <p><strong>Langkah 7: Gunakan hubungan pasangan akar (rumus 2) untuk menemukan $k$.</strong><br>
+                        $k/2 = x_1x_2+x_1x_3+x_2x_3$<br>
+                        $k/2 = (3)(3/2) + (3)(2) + (3/2)(2)$<br>
+                        $k/2 = 9/2 + 6 + 3 = 9/2 + 9 = 9/2 + 18/2 = 27/2$<br>
+                        $k = 27$.</p>
+                        <p>Jadi, jawaban yang benar adalah <span class="final-answer">E</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 29 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>29.</strong> Tinggi sebuah roket air $t$ detik setelah diluncurkan dimodelkan oleh fungsi $h(t) = -5t^2 + 40t$ meter. Tinggi maksimum yang dicapai roket air tersebut adalah...</p>
+                     <div class="options-grid">
+                        <div class="option">A. 40 meter</div>
+                        <div class="option">B. 60 meter</div>
+                        <div class="option">C. 80 meter</div>
+                        <div class="option">D. 100 meter</div>
+                        <div class="option">E. 160 meter</div>
+                    </div>
+                    <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <div class="concept-box">
+                           <p><strong>Konsep Dasar: Nilai Maksimum Fungsi Kuadrat</strong><br>
+                           Fungsi kuadrat $f(x) = ax^2+bx+c$ yang menggambarkan gerak parabola (seperti lemparan roket) akan mencapai tinggi maksimum pada titik puncaknya. Titik puncak ini terjadi saat:<br>
+                           - Waktu (sumbu-x): $t_{puncak} = -\frac{b}{2a}$<br>
+                           - Tinggi (sumbu-y): $h_{maksimum} = f(t_{puncak})$ atau bisa juga dihitung langsung dengan $h_{maksimum} = -\frac{D}{4a}$ di mana $D=b^2-4ac$.
+                           Karena koefisien $t^2$ adalah -5 (negatif), parabola terbuka ke bawah, yang mengkonfirmasi adanya titik maksimum.
+                           </p>
+                        </div>
+                        <p><strong>Langkah 1: Identifikasi koefisien $a$ dan $b$ dari fungsi.</strong><br>
+                        Fungsi: $h(t) = -5t^2 + 40t$.<br>
+                        $a = -5$, $b = 40$.</p>
+                        <p><strong>Langkah 2: Hitung waktu ($t$) saat tinggi maksimum tercapai.</strong><br>
+                        Gunakan rumus sumbu simetri parabola:<br>
+                        $t_{puncak} = -\frac{b}{2a} = - \frac{40}{2(-5)} = - \frac{40}{-10} = 4$.<br>
+                        Ini berarti roket mencapai ketinggian maksimumnya pada detik ke-4.</p>
+                        <p><strong>Langkah 3: Hitung tinggi maksimum dengan mensubstitusikan $t=4$ ke dalam fungsi $h(t)$.</strong><br>
+                        $h_{maksimum} = h(4) = -5(4)^2 + 40(4)$<br>
+                        $h(4) = -5(16) + 160$<br>
+                        $h(4) = -80 + 160$<br>
+                        $h(4) = 80$.</p>
+                        <p>Jadi, tinggi maksimum yang dicapai roket adalah 80 meter. Jawaban yang benar adalah <span class="final-answer">C</span>.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 30 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>30.</strong> Diberikan $P(x) = x^3 - 8$. Pasangkan pernyataan di kolom kiri dengan respon yang sesuai di kolom kanan.</p>
+                     <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Sesuai</th>
+                                <th>Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$(x-2)$ adalah faktor dari $P(x)$.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>$P(x)$ hanya memiliki satu akar real.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Sisa pembagian $P(x)$ oleh $(x-1)$ adalah -7.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td>Jumlah dari semua akar-akar $P(x)$ adalah 0.</td>
+                                <td class="text-center">&#10003;</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <div class="pembahasan-card">
+                        <h3 class="font-bold text-lg">Pembahasan Detail</h3>
+                        <p><strong>Analisis Setiap Pernyataan:</strong></p>
+                        <p>1. <strong>"$(x-2)$ adalah faktor dari $P(x)$." &rarr; SESUAI</strong><br>
+                        Menurut Teorema Faktor, $(x-2)$ adalah faktor jika $P(2)=0$.<br>
+                        Mari kita hitung: $P(2) = (2)^3 - 8 = 8 - 8 = 0$.<br>
+                        Karena hasilnya 0, pernyataan ini benar.</p>
+                        
+                        <p>2. <strong>"$P(x)$ hanya memiliki satu akar real." &rarr; SESUAI</strong><br>
+                        Kita bisa memfaktorkan $P(x) = x^3 - 8$ menggunakan rumus selisih kubik $a^3-b^3=(a-b)(a^2+ab+b^2)$.<br>
+                        $P(x) = (x-2)(x^2 + 2x + 4)$.<br>
+                        Dari faktor $(x-2)$, kita dapat akar real $x=2$.<br>
+                        Untuk faktor kuadrat $(x^2+2x+4)$, kita cek diskriminannya: $D = b^2-4ac = 2^2-4(1)(4) = 4-16 = -12$.<br>
+                        Karena $D < 0$, faktor kuadrat ini tidak memiliki akar real (akarnya imajiner). Jadi, satu-satunya akar real adalah $x=2$. Pernyataan ini benar.</p>
+
+                        <p>3. <strong>"Sisa pembagian $P(x)$ oleh $(x-1)$ adalah -7." &rarr; SESUAI</strong><br>
+                        Menurut Teorema Sisa, sisa pembagian oleh $(x-1)$ adalah $P(1)$.<br>
+                        Mari kita hitung: $P(1) = (1)^3 - 8 = 1 - 8 = -7$.<br>
+                        Pernyataan ini benar.</p>
+
+                        <p>4. <strong>"Jumlah dari semua akar-akar $P(x)$ adalah 0." &rarr; SESUAI</strong><br>
+                        Menurut Teorema Vieta, untuk polinomial $ax^3+bx^2+cx+d=0$, jumlah akarnya adalah $-b/a$.<br>
+                        Polinomial kita adalah $P(x) = x^3 - 8$, yang bisa ditulis sebagai $1x^3 + 0x^2 + 0x - 8 = 0$.<br>
+                        Di sini, $a=1$ dan $b=0$.<br>
+                        Jumlah akar = $-b/a = -0/1 = 0$. Pernyataan ini benar.</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
