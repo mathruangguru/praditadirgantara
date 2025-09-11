@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembahasan Soal TKA Matematika Lanjut - 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Konfigurasi MathJax untuk memastikan rendering LaTeX -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* Slate 100 */
+        }
+        .question-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            border: 1px solid #e2e8f0; /* Slate 200 */
+            border-top: 4px solid #6366f1; /* Indigo 500 */
+        }
+        .solution-box {
+            background-color: #f8fafc; /* Slate 50 */
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #10b981; /* Emerald 500 */
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .solution-box h3 {
+            font-weight: 700;
+            color: #047857; /* Emerald 700 */
+            margin-bottom: 0.75rem;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        @media (min-width: 768px) {
+            .options-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .option {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            background-color: #f8fafc; /* Slate 50 */
+        }
+        .option-letter {
+            font-weight: 700;
+            margin-right: 0.75rem;
+            color: #4338ca; /* Indigo 700 */
+            padding-top: 0.125rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b; /* Slate 800 */
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .instruction-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .complex-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+        }
+        .complex-table th, .complex-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .complex-table th {
+            background-color: #eef2ff; /* indigo 50 */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-700">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-12 bg-white p-6 rounded-lg shadow-sm">
+             <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-24 mb-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Pembahasan Soal TKA Matematika Lanjut - 3</h1>
+            <p class="text-slate-500 mt-2 text-lg">Topik: Transformasi Geometri & Limit | Level: SMA</p>
+        </header>
+
+        <main>
+            <section>
+                <h2 class="section-title flex items-center"><i class="fas fa-pencil-alt mr-3 text-indigo-500"></i>Soal & Pembahasan</h2>
+
+                <!-- Soal 1 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">1. Nilai dari $\lim\limits_{x \to 2} \frac{x^2 - 4}{x - 2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$2$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$4$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Tak terhingga</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit fungsi aljabar. Jika substitusi langsung menghasilkan bentuk tak tentu $\frac{0}{0}$, kita perlu menyederhanakan fungsi tersebut, biasanya dengan faktorisasi.</p>
+                        <p><b>Langkah 1: Substitusi Langsung</b><br>
+                        Coba substitusikan $x=2$ ke dalam fungsi:
+                        $$ \frac{2^2 - 4}{2 - 2} = \frac{4 - 4}{0} = \frac{0}{0} $$
+                        Hasilnya adalah bentuk tak tentu, sehingga kita perlu melakukan faktorisasi.</p>
+                        <p><b>Langkah 2: Faktorisasi</b><br>
+                        Faktorkan bagian pembilang ($x^2-4$) menggunakan rumus selisih dua kuadrat, $a^2 - b^2 = (a-b)(a+b)$.
+                        $$ x^2 - 4 = (x-2)(x+2) $$
+                        </p>
+                        <p><b>Langkah 3: Sederhanakan dan Hitung Limit</b><br>
+                        Substitusikan kembali hasil faktorisasi ke dalam limit dan batalkan faktor yang sama.
+                        $$ \lim\limits_{x \to 2} \frac{(x-2)(x+2)}{x - 2} = \lim\limits_{x \to 2} (x+2) $$
+                        Sekarang, substitusikan $x=2$ ke dalam fungsi yang sudah disederhanakan:
+                        $$ 2 + 2 = 4 $$
+                        Jadi, nilai limitnya adalah 4.</p>
+                        <p><b>Jawaban: D</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">2. Titik $P(3, -5)$ ditransformasikan oleh matriks $T = \begin{pmatrix} 1 & -2 \\ 3 & 0 \end{pmatrix}$. Koordinat bayangan titik $P$ adalah...</p>
+                     <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(13, 9)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(9, 13)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$(-7, 9)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$(13, -15)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$(-7, -15)$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Transformasi titik menggunakan matriks. Jika titik $(x, y)$ ditransformasikan oleh matriks $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$, bayangannya $(x', y')$ dapat ditemukan dengan perkalian matriks:</p>
+                        $$ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} $$
+                        <p><b>Langkah 1: Siapkan Perkalian Matriks</b><br>
+                        Substitusikan matriks $T$ dan koordinat titik $P(3, -5)$:
+                        $$ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 1 & -2 \\ 3 & 0 \end{pmatrix} \begin{pmatrix} 3 \\ -5 \end{pmatrix} $$
+                        </p>
+                        <p><b>Langkah 2: Lakukan Perkalian Matriks</b><br>
+                        Hitung nilai $x'$ dan $y'$:
+                        $$ x' = (1 \cdot 3) + (-2 \cdot -5) = 3 + 10 = 13 $$
+                        $$ y' = (3 \cdot 3) + (0 \cdot -5) = 9 + 0 = 9 $$
+                        </p>
+                        <p><b>Langkah 3: Tentukan Koordinat Bayangan</b><br>
+                        Hasilnya adalah $(x', y') = (13, 9)$.
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">3. Nilai dari $\lim\limits_{x \to 0} \frac{\cos(4x) - 1}{x \tan(2x)}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-8</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>-2</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>4</div></div>
+                    </div>
+                     <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit fungsi trigonometri. Kita akan menggunakan beberapa identitas dan sifat limit dasar:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Identitas: $1 - \cos(A) = 2\sin^2\left(\frac{A}{2}\right)$. Maka $\cos(A) - 1 = -2\sin^2\left(\frac{A}{2}\right)$.</li>
+                            <li>Sifat Limit: $\lim\limits_{u \to 0} \frac{\sin(au)}{bu} = \frac{a}{b}$.</li>
+                            <li>Sifat Limit: $\lim\limits_{u \to 0} \frac{\tan(au)}{u} = a$.</li>
+                            <li>Sifat Limit: $\lim\limits_{u \to 0} \frac{\sin(au)}{\tan(bu)} = \frac{a}{b}$.</li>
+                        </ul>
+                        <p><b>Langkah 1: Ubah Bentuk Pembilang</b><br>
+                        Gunakan identitas $\cos(A) - 1 = -2\sin^2\left(\frac{A}{2}\right)$ dengan $A=4x$.
+                        $$ \cos(4x) - 1 = -2\sin^2\left(\frac{4x}{2}\right) = -2\sin^2(2x) $$
+                        </p>
+                        <p><b>Langkah 2: Substitusi ke dalam Limit</b><br>
+                        $$ \lim\limits_{x \to 0} \frac{-2\sin^2(2x)}{x \tan(2x)} = \lim\limits_{x \to 0} \frac{-2 \sin(2x) \sin(2x)}{x \tan(2x)} $$
+                        </p>
+                        <p><b>Langkah 3: Gunakan Sifat-sifat Limit</b><br>
+                        Kita bisa memecah ekspresi dan menggunakan sifat limit "pasangan":
+                        $$ (-2) \cdot \left(\lim\limits_{x \to 0} \frac{\sin(2x)}{x}\right) \cdot \left(\lim\limits_{x \to 0} \frac{\sin(2x)}{\tan(2x)}\right) $$
+                        Hitung nilai masing-masing limit:
+                        $$ = (-2) \cdot \left(\frac{2}{1}\right) \cdot \left(\frac{2}{2}\right) $$
+                        $$ = (-2) \cdot (2) \cdot (1) = -4 $$
+                        </p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+
+                 <!-- Soal 4 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">4. Garis $y = 2x + 1$ dirotasikan sebesar $90^\circ$ berlawanan arah jarum jam dengan pusat $O(0,0)$, kemudian dicerminkan terhadap sumbu $x$. Persamaan bayangan garis tersebut adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$x - 2y + 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$y = -2x - 1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$x - 2y - 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$x + 2y + 1 = 0$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$2x + y - 1 = 0$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Komposisi transformasi geometri menggunakan matriks. Transformasi $T_1$ dilanjutkan $T_2$ ($T_2 \circ T_1$) memiliki matriks komposisi $M = M_2 M_1$.</p>
+                        <p><b>Langkah 1: Tentukan Matriks Transformasi</b><br>
+                        - $T_1$: Rotasi $90^\circ$ berlawanan arah jarum jam. Matriksnya adalah $M_1 = \begin{pmatrix} \cos(90^\circ) & -\sin(90^\circ) \\ \sin(90^\circ) & \cos(90^\circ) \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$.
+                        - $T_2$: Pencerminan terhadap sumbu $x$. Matriksnya adalah $M_2 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$.
+                        </p>
+                        <p><b>Langkah 2: Tentukan Matriks Komposisi</b><br>
+                        Matriks komposisi $M = M_2 M_1$.
+                        $$ M = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} (1\cdot0+0\cdot1) & (1\cdot(-1)+0\cdot0) \\ (0\cdot0+(-1)\cdot1) & (0\cdot(-1)+(-1)\cdot0) \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} $$
+                        </p>
+                        <p><b>Langkah 3: Cari Hubungan antara $(x,y)$ dan $(x',y')$</b><br>
+                        Kita tahu bahwa $\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$. Untuk menemukan persamaan garis awal, kita perlu menyatakan $(x,y)$ dalam $(x',y')$. Maka, $\begin{pmatrix} x \\ y \end{pmatrix} = M^{-1} \begin{pmatrix} x' \\ y' \end{pmatrix}$.
+                        Cari invers dari $M$: $\det(M) = (0)(0) - (-1)(-1) = -1$.
+                        $$ M^{-1} = \frac{1}{-1} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} $$
+                        Jadi, $\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}$.
+                        Ini berarti $x = -y'$ dan $y = -x'$.
+                        </p>
+                        <p><b>Langkah 4: Substitusi ke Persamaan Garis Awal</b><br>
+                        Substitusikan $x = -y'$ dan $y = -x'$ ke dalam persamaan $y = 2x + 1$:
+                        $$ (-x') = 2(-y') + 1 $$
+                        $$ -x' = -2y' + 1 $$
+                        Pindahkan semua suku ke satu ruas:
+                        $$ 2y' - x' - 1 = 0 $$
+                        Hilangkan tanda aksen (') dan kalikan dengan -1 agar sesuai dengan pilihan jawaban:
+                        $$ x - 2y + 1 = 0 $$
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 5 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">5. Garis $g$ ditransformasi oleh matriks $T = \begin{pmatrix} a & 0 \\ 0 & b \end{pmatrix}$ menghasilkan bayangan $g'$. Apakah transformasi tersebut memperbesar luas suatu bidang?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) $|ab| > 1$.</p><p>(2) $a+b > 2$.</p></div>
+                     <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                            <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                            <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                            <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                            <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                            <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Perubahan luas akibat transformasi matriks. Jika suatu bangun dengan luas $L$ ditransformasikan oleh matriks $T$, maka luas bayangannya, $L'$, adalah $L' = |\det(T)| \times L$.
+                        Transformasi dikatakan memperbesar luas jika faktor pengalinya, yaitu $|\det(T)|$, lebih besar dari 1.</p>
+                        <p><b>Analisis Soal:</b>
+                        Kita perlu mengetahui apakah $|\det(T)| > 1$.
+                        Matriks transformasinya adalah $T = \begin{pmatrix} a & 0 \\ 0 & b \end{pmatrix}$.
+                        Determinannya adalah $\det(T) = (a)(b) - (0)(0) = ab$.
+                        Jadi, pertanyaan ini sama dengan menanyakan "Apakah $|ab| > 1$?"</p>
+                        <p><b>Analisis Pernyataan (1):</b>
+                        Pernyataan (1) memberikan informasi bahwa $|ab| > 1$. Ini secara langsung menjawab pertanyaan yang diajukan. Jadi, pernyataan (1) SAJA cukup.</p>
+                        <p><b>Analisis Pernyataan (2):</b>
+                        Pernyataan (2) memberikan informasi bahwa $a+b > 2$. Apakah ini cukup untuk menyimpulkan $|ab| > 1$? Mari kita uji dengan beberapa kasus:
+                        - Kasus 1: Jika $a=3$ dan $b=1$, maka $a+b=4 > 2$. Nilai $|ab| = |3 \cdot 1| = 3 > 1$. (Memperbesar)
+                        - Kasus 2: Jika $a=1.1$ dan $b=1.1$, maka $a+b=2.2 > 2$. Nilai $|ab| = |1.1 \cdot 1.1| = 1.21 > 1$. (Memperbesar)
+                        - Kasus 3: Jika $a=5$ dan $b=0.1$, maka $a+b=5.1 > 2$. Nilai $|ab| = |5 \cdot 0.1| = 0.5 < 1$. (Memperkecil)
+                        Karena ada kasus di mana $a+b>2$ tetapi $|ab|$ tidak lebih dari 1, maka pernyataan (2) SAJA tidak cukup untuk menjawab pertanyaan.</p>
+                        <p><b>Kesimpulan:</b>
+                        Pernyataan (1) saja cukup untuk menjawab pertanyaan, tetapi pernyataan (2) saja tidak cukup.</p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                 <!-- Soal 6 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">6. Sebuah logo berbentuk segitiga dengan titik sudut $A(1,1)$, $B(5,1)$, dan $C(3,4)$. Untuk keperluan desain, logo tersebut didilatasi dengan pusat $(2,3)$ dan faktor skala 2. Luas bayangan logo setelah didilatasi adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>6 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>12 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>24 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>36 satuan luas</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>48 satuan luas</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Perubahan luas akibat dilatasi. Jika suatu bangun dengan luas $L$ didilatasi dengan faktor skala $k$, maka luas bayangannya, $L'$, adalah $L' = k^2 \times L$. Pusat dilatasi tidak mempengaruhi perubahan luas.</p>
+                        <p><b>Langkah 1: Hitung Luas Awal Segitiga</b><br>
+                        Kita bisa memandang alas segitiga adalah ruas garis AB.
+                        - Panjang alas (jarak antara A dan B) = $|5 - 1| = 4$ satuan.
+                        - Tinggi segitiga adalah jarak vertikal dari titik C ke garis alas y=1. Tinggi = $|4 - 1| = 3$ satuan.
+                        - Luas Awal ($L$) = $\frac{1}{2} \times \text{alas} \times \text{tinggi} = \frac{1}{2} \times 4 \times 3 = 6$ satuan luas.
+                        </p>
+                        <p><b>Langkah 2: Hitung Luas Bayangan</b><br>
+                        Diketahui faktor skala $k=2$.
+                        Luas Bayangan ($L'$) = $k^2 \times L = 2^2 \times 6 = 4 \times 6 = 24$ satuan luas.
+                        </p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 7 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">7. Garis $g$ ditransformasikan oleh matriks $T = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ menghasilkan bayangan $g': 3x - 2y + 6 = 0$. Manakah pernyataan berikut yang benar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Transformasi T adalah rotasi $90^\circ$ searah jarum jam.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Persamaan garis $g$ adalah $2x+3y+6=0$.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Gradien garis $g$ adalah $-\frac{2}{3}$.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Garis $g$ memotong sumbu-y di titik $(0, -2)$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Matriks invers dari T adalah $\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$.</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Mencari objek awal dari bayangan hasil transformasi. Jika bayangan $P'$ didapat dari $P' = M P$, maka objek awal $P$ dapat dicari dengan $P = M^{-1} P'$.</p>
+                        <p><b>Langkah 1: Analisis Matriks T</b><br>
+                        Matriks $T = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ adalah matriks rotasi $90^\circ$ berlawanan arah jarum jam. Jadi, pernyataan A salah.</p>
+                        <p><b>Langkah 2: Cari Matriks Invers $T^{-1}$</b><br>
+                        $\det(T) = (0)(0) - (-1)(1) = 1$.
+                        $$ T^{-1} = \frac{1}{1} \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} $$
+                        Pernyataan E benar.</p>
+                        <p><b>Langkah 3: Cari Hubungan Koordinat</b><br>
+                        $\begin{pmatrix} x \\ y \end{pmatrix} = T^{-1} \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}$.
+                        Maka, $x = y'$ dan $y = -x'$.</p>
+                        <p><b>Langkah 4: Substitusi ke Persamaan Bayangan (g')</b><br>
+                        Persamaan bayangan adalah $3x' - 2y' + 6 = 0$. Substitusikan $x' = -y$ dan $y' = x$:
+                        $$ 3(-y) - 2(x) + 6 = 0 $$
+                        $$ -3y - 2x + 6 = 0 $$
+                        Kalikan dengan -1: $2x + 3y - 6 = 0$. Ini adalah persamaan garis $g$.
+                        Pernyataan B salah karena konstanta berbeda ($+6$ vs $-6$).</p>
+                        <p><b>Langkah 5: Analisis Properti Garis g</b><br>
+                        Dari persamaan $2x + 3y - 6 = 0$, kita dapat mencari gradien dan titik potong.
+                        - Gradien: $3y = -2x + 6 \implies y = -\frac{2}{3}x + 2$. Gradiennya adalah $-\frac{2}{3}$. Pernyataan C benar.
+                        - Titik potong sumbu-y (saat $x=0$): $2(0) + 3y - 6 = 0 \implies 3y = 6 \implies y=2$. Titik potongnya adalah $(0,2)$. Pernyataan D salah.</p>
+                        <p><b>Jawaban: C dan E</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">8. Nilai dari $\lim\limits_{x \to \infty} (\sqrt{x^2+6x} - \sqrt{x^2-2x})$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>4</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>8</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\infty$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit di tak hingga untuk bentuk $\infty - \infty$. Untuk bentuk $\lim\limits_{x \to \infty} (\sqrt{ax^2+bx+c} - \sqrt{px^2+qx+r})$, ada rumus cepat:</p>
+                        <ul class="list-disc list-inside">
+                            <li>Jika $a > p$, hasilnya $\infty$.</li>
+                            <li>Jika $a < p$, hasilnya $-\infty$.</li>
+                            <li>Jika $a = p$, hasilnya adalah $\frac{b-q}{2\sqrt{a}}$.</li>
+                        </ul>
+                        <p><b>Langkah 1: Identifikasi Koefisien</b><br>
+                        Dari soal, kita punya $\sqrt{x^2+6x} - \sqrt{x^2-2x}$.
+                        - $a=1, b=6, c=0$
+                        - $p=1, q=-2, r=0$
+                        </p>
+                        <p><b>Langkah 2: Terapkan Rumus Cepat</b><br>
+                        Karena $a=p=1$, kita gunakan rumus $\frac{b-q}{2\sqrt{a}}$.
+                        $$ \frac{6 - (-2)}{2\sqrt{1}} = \frac{6+2}{2 \cdot 1} = \frac{8}{2} = 4 $$
+                        </p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 9 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">9. Sebuah titik $(x, y)$ ditransformasi secara berurutan. Pertama oleh matriks $M_1 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$ dan dilanjutkan oleh matriks $M_2 = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$. Tentukan apakah pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Benar</th>
+                                <th class="text-center">Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transformasi tunggalnya direpresentasikan oleh matriks $M_1 M_2$.</td>
+                                <td class="text-center"><input type="radio" name="q9_1"></td>
+                                <td class="text-center"><input type="radio" name="q9_1"></td>
+                            </tr>
+                            <tr>
+                                <td>Determinan matriks transformasi tunggalnya adalah 4.</td>
+                                <td class="text-center"><input type="radio" name="q9_2"></td>
+                                <td class="text-center"><input type="radio" name="q9_2"></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $\theta = 90^\circ$, bayangan titik $(1,0)$ adalah $(0,2)$.</td>
+                               <td class="text-center"><input type="radio" name="q9_3"></td>
+                               <td class="text-center"><input type="radio" name="q9_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Urutan transformasi tersebut ekuivalen dengan rotasi lalu dilatasi.</td>
+                               <td class="text-center"><input type="radio" name="q9_4"></td>
+                               <td class="text-center"><input type="radio" name="q9_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Komposisi transformasi. Jika transformasi $T_1$ (matriks $M_1$) dilanjutkan dengan $T_2$ (matriks $M_2$), maka matriks komposisinya adalah $M = M_2 M_1$. Matriks transformasi yang terakhir diterapkan diletakkan di paling kiri.</p>
+                        <p>1. <b>Transformasi tunggalnya direpresentasikan oleh matriks $M_1 M_2$.</b><br>
+                        Ini salah. Karena $M_1$ dilakukan pertama, lalu dilanjutkan $M_2$, matriks komposisinya secara notasi adalah $M_2 M_1$. (<b>Salah</b>)</p>
+                        
+                        <p>2. <b>Determinan matriks transformasi tunggalnya adalah 4.</b><br>
+                        Matriks komposisinya adalah $M_2 M_1$. Sifat determinan: $\det(AB) = \det(A)\det(B)$.
+                        $\det(M_1) = (2)(2) - (0)(0) = 4$.
+                        $\det(M_2) = \cos^2\theta - (-\sin^2\theta) = \cos^2\theta + \sin^2\theta = 1$.
+                        $\det(M_2 M_1) = \det(M_2) \cdot \det(M_1) = 1 \cdot 4 = 4$. (<b>Benar</b>)</p>
+                        
+                        <p>3. <b>Jika $\theta = 90^\circ$, bayangan titik $(1,0)$ adalah $(0,2)$.</b><br>
+                        $M_1 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$. $M_2 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$.
+                        Matriks komposisi: $M = M_2 M_1 = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 0 & -2 \\ 2 & 0 \end{pmatrix}$.
+                        Bayangan titik $(1,0)$: $\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 0 & -2 \\ 2 & 0 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 2 \end{pmatrix}$. Bayangannya adalah $(0,2)$. (<b>Benar</b>)</p>
+
+                        <p>4. <b>Urutan transformasi tersebut ekuivalen dengan rotasi lalu dilatasi.</b><br>
+                        Urutan yang dilakukan adalah dilatasi ($M_1$) lalu rotasi ($M_2$), dengan matriks $M_2 M_1$.
+                        Urutan sebaliknya adalah rotasi ($M_2$) lalu dilatasi ($M_1$), dengan matriks $M_1 M_2$.
+                        $M_1 M_2 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} = \begin{pmatrix} 2\cos\theta & -2\sin\theta \\ 2\sin\theta & 2\cos\theta \end{pmatrix}$.
+                        $M_2 M_1 = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix} \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} = \begin{pmatrix} 2\cos\theta & -2\sin\theta \\ 2\sin\theta & 2\cos\theta \end{pmatrix}$.
+                        Karena $M_1 M_2 = M_2 M_1$, maka kedua urutan ekuivalen. (<b>Benar</b>)</p>
+                    </div>
+                </div>
+
+                <!-- Soal 10 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">10. Kecepatan suatu objek mendekati kecepatan cahaya dimodelkan mengalami kontraksi panjang. Jika panjang awal objek $L_0$ dan kecepatannya $v$, panjangnya saat bergerak adalah $L = L_0 \sqrt{1 - \frac{v^2}{c^2}}$, dengan $c$ adalah kecepatan cahaya. Apa yang terjadi pada panjang objek $L$ jika kecepatannya $v$ mendekati $c$? ($\lim\limits_{v \to c^-} L$)</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Panjangnya mendekati $L_0$.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Panjangnya mendekati tak hingga.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Panjangnya mendekati 0.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Panjangnya mendekati $\frac{L_0}{2}$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Panjangnya tidak dapat ditentukan.</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit pada suatu titik. Kita ingin mengevaluasi nilai fungsi saat variabelnya mendekati suatu nilai tertentu.</p>
+                        <p><b>Langkah 1: Tuliskan Limitnya</b><br>
+                        Kita diminta untuk menghitung:
+                        $$ \lim\limits_{v \to c^-} L_0 \sqrt{1 - \frac{v^2}{c^2}} $$
+                        Tanda $v \to c^-$ berarti $v$ mendekati $c$ dari nilai yang lebih kecil dari $c$, yang masuk akal karena kecepatan tidak bisa melebihi $c$.
+                        </p>
+                        <p><b>Langkah 2: Substitusi Langsung</b><br>
+                        Karena fungsi akar kuadrat adalah fungsi kontinu, kita bisa langsung mensubstitusikan nilai $v=c$ ke dalam ekspresi.
+                        $$ L = L_0 \sqrt{1 - \frac{c^2}{c^2}} $$
+                        $$ L = L_0 \sqrt{1 - 1} $$
+                        $$ L = L_0 \sqrt{0} $$
+                        $$ L = 0 $$
+                        Artinya, ketika kecepatan suatu objek mendekati kecepatan cahaya, panjangnya dari sudut pandang pengamat diam akan menyusut mendekati nol.
+                        </p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+                
+                 <!-- Soal 11 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">11. Nilai dari $\lim\limits_{x \to 1} \frac{\sin(\pi x)}{x-1}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$-\pi$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$-1$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$1$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\pi$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit fungsi trigonometri yang tidak menuju 0. Kita perlu menggunakan substitusi untuk mengubahnya menjadi bentuk limit yang kita kenal, yaitu $\lim\limits_{u \to 0} \frac{\sin(au)}{u} = a$.</p>
+                        <p><b>Langkah 1: Substitusi Langsung</b><br>
+                        Substitusi $x=1$ menghasilkan $\frac{\sin(\pi)}{1-1} = \frac{0}{0}$, sebuah bentuk tak tentu.</p>
+                        <p><b>Langkah 2: Lakukan Substitusi Variabel</b><br>
+                        Misalkan $u = x-1$. Maka $x = u+1$.
+                        Ketika $x \to 1$, maka $u \to 1-1 = 0$.
+                        Substitusikan ini ke dalam limit:
+                        $$ \lim\limits_{u \to 0} \frac{\sin(\pi (u+1))}{u} = \lim\limits_{u \to 0} \frac{\sin(\pi u + \pi)}{u} $$
+                        </p>
+                        <p><b>Langkah 3: Gunakan Identitas Trigonometri</b><br>
+                        Gunakan identitas sudut relasi: $\sin(A + \pi) = -\sin(A)$.
+                        Jadi, $\sin(\pi u + \pi) = -\sin(\pi u)$.
+                        Limitnya menjadi:
+                        $$ \lim\limits_{u \to 0} \frac{-\sin(\pi u)}{u} $$
+                        </p>
+                        <p><b>Langkah 4: Hitung Limitnya</b><br>
+                        Menggunakan sifat dasar limit $\lim\limits_{u \to 0} \frac{\sin(au)}{u} = a$:
+                        $$ \lim\limits_{u \to 0} \frac{-\sin(\pi u)}{u} = - \lim\limits_{u \to 0} \frac{\sin(\pi u)}{u} = -(\pi) = -\pi $$
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 12 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">12. Bayangan titik $Q(-4, 6)$ oleh refleksi terhadap garis $x=2$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(-4, -2)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(8, 6)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$(0, 6)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$(-8, 6)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$(6, 6)$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Refleksi (pencerminan) suatu titik terhadap garis vertikal. Jika titik $P(x,y)$ dicerminkan terhadap garis $x=k$, maka bayangannya adalah $P'(2k-x, y)$. Koordinat $y$ tidak berubah, sementara koordinat $x$ berubah.</p>
+                        <p><b>Langkah 1: Identifikasi Titik dan Garis Cermin</b><br>
+                        - Titik awal: $Q(x,y) = (-4, 6)$.
+                        - Garis cermin: $x=k$, dengan $k=2$.
+                        </p>
+                        <p><b>Langkah 2: Terapkan Rumus Refleksi</b><br>
+                        - Koordinat x bayangan: $x' = 2k - x = 2(2) - (-4) = 4 + 4 = 8$.
+                        - Koordinat y bayangan: $y' = y = 6$.
+                        </p>
+                        <p><b>Langkah 3: Tentukan Koordinat Bayangan</b><br>
+                        Jadi, koordinat bayangan titik Q adalah $(8, 6)$.</p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 13 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">13. Transformasi $T$ adalah komposisi dari pencerminan terhadap garis $y=x$ dilanjutkan dengan pencerminan terhadap sumbu $x$. Matriks yang bersesuaian dengan $T$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Matriks komposisi transformasi. Jika transformasi $T_1$ (matriks $M_1$) dilanjutkan dengan $T_2$ (matriks $M_2$), maka matriks transformasinya adalah $M = M_2 M_1$.</p>
+                        <p><b>Langkah 1: Tentukan Matriks untuk Setiap Transformasi</b><br>
+                        - $T_1$: Pencerminan terhadap garis $y=x$. Matriksnya adalah $M_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$.
+                        - $T_2$: Pencerminan terhadap sumbu $x$. Matriksnya adalah $M_2 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$.
+                        </p>
+                        <p><b>Langkah 2: Hitung Matriks Komposisi</b><br>
+                        Karena $T_1$ dilanjutkan dengan $T_2$, matriksnya adalah $M = M_2 M_1$.
+                        $$ M = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} $$
+                        $$ M = \begin{pmatrix} (1 \cdot 0 + 0 \cdot 1) & (1 \cdot 1 + 0 \cdot 0) \\ (0 \cdot 0 + (-1) \cdot 1) & (0 \cdot 1 + (-1) \cdot 0) \end{pmatrix} $$
+                        $$ M = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} $$
+                        Transformasi ini sebenarnya ekuivalen dengan rotasi $90^\circ$ searah jarum jam.
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 14 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">14. Nilai dari $\lim\limits_{x \to 0} \frac{1-\cos x}{x^2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>1/4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>1/2</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>1</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>2</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit trigonometri dasar dan identitas sudut ganda.
+                        - Identitas: $1 - \cos(A) = 2\sin^2\left(\frac{A}{2}\right)$.
+                        - Sifat Limit: $\lim\limits_{u \to 0} \left(\frac{\sin(au)}{bu}\right)^2 = \left(\frac{a}{b}\right)^2$.
+                        </p>
+                        <p><b>Langkah 1: Gunakan Identitas Trigonometri</b><br>
+                        Ganti $1-\cos x$ dengan $2\sin^2(x/2)$:
+                        $$ \lim\limits_{x \to 0} \frac{2\sin^2(x/2)}{x^2} $$
+                        </p>
+                        <p><b>Langkah 2: Sederhanakan dan Terapkan Sifat Limit</b><br>
+                        Kita bisa menulis ulang ekspresi tersebut sebagai:
+                        $$ 2 \cdot \lim\limits_{x \to 0} \frac{\sin^2(x/2)}{x^2} = 2 \cdot \lim\limits_{x \to 0} \left(\frac{\sin(x/2)}{x}\right)^2 $$
+                        Sekarang kita hitung limit di dalam kurung:
+                        $$ \lim\limits_{x \to 0} \frac{\sin(x/2)}{x} = \frac{1/2}{1} = \frac{1}{2} $$
+                        Maka, hasil akhirnya adalah:
+                        $$ 2 \cdot \left(\frac{1}{2}\right)^2 = 2 \cdot \frac{1}{4} = \frac{1}{2} $$
+                        </p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 15 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">15. Sebuah transformasi T memetakan setiap titik pada bidang. Apakah T merupakan transformasi rotasi murni (tanpa dilatasi)?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) Matriks T memiliki bentuk $\begin{pmatrix} a & -b \\ b & a \end{pmatrix}$ untuk suatu bilangan real a dan b.</p><p>(2) Determinan dari matriks T adalah 1.</p></div>
+                    <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                           <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                           <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                           <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                           <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                           <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Matriks rotasi murni. Matriks rotasi murni (rotasi dengan pusat O sebesar $\theta$ tanpa dilatasi) memiliki bentuk $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$. Properti utamanya adalah determinannya selalu 1 ($\cos^2\theta + \sin^2\theta = 1$).</p>
+                        <p><b>Analisis Soal:</b> Pertanyaannya adalah apakah T adalah rotasi murni.</p>
+                        <p><b>Analisis Pernyataan (1):</b>
+                        Matriks $T = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$ merepresentasikan rotasi yang dikomposisikan dengan dilatasi. Ini adalah rotasi murni hanya jika faktor dilatasinya 1, yang berarti $\sqrt{a^2+b^2}=1$ atau $a^2+b^2=1$. Pernyataan (1) tidak menjamin ini. Contoh, jika $a=2, b=0$, $T$ adalah dilatasi murni, bukan rotasi murni. Jadi, (1) tidak cukup.</p>
+                        <p><b>Analisis Pernyataan (2):</b>
+                        $\det(T) = 1$. Ini berarti transformasi mempertahankan luas. Namun, banyak transformasi yang bukan rotasi murni memiliki determinan 1, contohnya matriks shear (gusuran) seperti $\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$. Jadi, (2) tidak cukup.</p>
+                        <p><b>Analisis Pernyataan (1) dan (2) Bersama-sama:</b>
+                        Dari (1), kita tahu bentuk matriksnya adalah $T = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$.
+                        Determinannya adalah $\det(T) = (a)(a) - (-b)(b) = a^2+b^2$.
+                        Dari (2), kita tahu $\det(T)=1$.
+                        Maka, kita dapat menyimpulkan bahwa $a^2+b^2 = 1$. Jika $a^2+b^2 = 1$, kita dapat mendefinisikan suatu sudut $\theta$ sehingga $a=\cos\theta$ dan $b=\sin\theta$. Dengan substitusi ini, matriks T menjadi $\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$, yang merupakan matriks rotasi murni. Kedua pernyataan bersama-sama cukup.</p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 16 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">16. Nilai dari $\lim\limits_{x \to 2} \frac{\sqrt{x+2} - \sqrt{2x}}{x-2}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$-1/4$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$-1/2$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$1/4$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$1/2$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit bentuk tak tentu $\frac{0}{0}$ yang melibatkan akar kuadrat. Solusinya adalah dengan mengalikan dengan bentuk sekawan (konjugat).</p>
+                        <p><b>Langkah 1: Substitusi Langsung</b><br>
+                        Substitusi $x=2$ menghasilkan $\frac{\sqrt{2+2}-\sqrt{2(2)}}{2-2} = \frac{\sqrt{4}-\sqrt{4}}{0} = \frac{0}{0}$.</p>
+                        <p><b>Langkah 2: Kalikan dengan Bentuk Sekawan</b><br>
+                        Bentuk sekawan dari $(\sqrt{x+2} - \sqrt{2x})$ adalah $(\sqrt{x+2} + \sqrt{2x})$.
+                        $$ \lim\limits_{x \to 2} \frac{\sqrt{x+2} - \sqrt{2x}}{x-2} \cdot \frac{\sqrt{x+2} + \sqrt{2x}}{\sqrt{x+2} + \sqrt{2x}} $$
+                        </p>
+                        <p><b>Langkah 3: Sederhanakan Ekspresi</b><br>
+                        - Pembilang: $(\sqrt{x+2})^2 - (\sqrt{2x})^2 = (x+2) - 2x = 2-x = -(x-2)$.
+                        - Penyebut: $(x-2)(\sqrt{x+2} + \sqrt{2x})$.
+                        Limitnya menjadi:
+                        $$ \lim\limits_{x \to 2} \frac{-(x-2)}{(x-2)(\sqrt{x+2} + \sqrt{2x})} $$
+                        </p>
+                        <p><b>Langkah 4: Batalkan Faktor yang Sama dan Substitusi</b><br>
+                        $$ \lim\limits_{x \to 2} \frac{-1}{\sqrt{x+2} + \sqrt{2x}} $$
+                        Substitusikan $x=2$:
+                        $$ \frac{-1}{\sqrt{2+2} + \sqrt{2(2)}} = \frac{-1}{\sqrt{4} + \sqrt{4}} = \frac{-1}{2+2} = -\frac{1}{4} $$
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 17 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">17. Diberikan transformasi $T_1$ adalah refleksi terhadap sumbu $y$ dan $T_2$ adalah rotasi $180^\circ$ berpusat di $O(0,0)$. Manakah pernyataan berikut yang benar mengenai transformasi titik $(a,b)$? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$(T_1 \circ T_2)(a,b) = (a, -b)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$(T_2 \circ T_1)(a,b) = (a, -b)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$T_1 \circ T_2 = T_2 \circ T_1$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Matriks untuk $T_1 \circ T_2$ adalah $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Komposisi transformasi tersebut ekuivalen dengan refleksi terhadap sumbu $x$.</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Aturan komposisi transformasi. Notasi $(T_1 \circ T_2)(P)$ berarti transformasi $T_2$ diterapkan terlebih dahulu, diikuti oleh $T_1$. Dalam perkalian matriks, ini menjadi $M_1 \cdot M_2 \cdot P$.</p>
+                        <p><b>Langkah 1: Definisikan Transformasi</b><br>
+                        - $T_1$ (Refleksi sumbu y): $T_1(x,y) = (-x, y)$. Matriksnya $M_1 = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$.
+                        - $T_2$ (Rotasi 180°): $T_2(x,y) = (-x, -y)$. Matriksnya $M_2 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}$.
+                        </p>
+                        <p><b>Langkah 2: Analisis Pernyataan A dan B</b><br>
+                        - $(T_1 \circ T_2)(a,b) = T_1(T_2(a,b)) = T_1(-a, -b) = (-(-a), -b) = (a, -b)$. Pernyataan A benar.
+                        - $(T_2 \circ T_1)(a,b) = T_2(T_1(a,b)) = T_2(-a, b) = (-(-a), -b) = (a, -b)$. Pernyataan B benar.
+                        </p>
+                        <p><b>Langkah 3: Analisis Pernyataan C</b><br>
+                        Karena hasil dari A dan B sama untuk sembarang titik $(a,b)$, maka $T_1 \circ T_2 = T_2 \circ T_1$. Transformasi ini bersifat komutatif. Pernyataan C benar.
+                        </p>
+                        <p><b>Langkah 4: Analisis Pernyataan D</b><br>
+                        Matriks untuk komposisi $(T_1 \circ T_2)$ adalah $M_1 M_2$.
+                        $$ M_1 M_2 = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = \begin{pmatrix} (-1)(-1)+0 & 0+0 \\ 0+0 & (1)(-1) \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} $$
+                        Pernyataan D benar.
+                        </p>
+                        <p><b>Langkah 5: Analisis Pernyataan E</b><br>
+                        Hasil transformasi komposisi adalah $(a,b) \to (a, -b)$. Ini adalah definisi dari refleksi terhadap sumbu $x$. Matriks $\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$ juga merupakan matriks refleksi terhadap sumbu $x$. Pernyataan E benar.
+                        </p>
+                        <p><b>Jawaban: A, B, C, D, dan E</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 18 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">18. Matriks transformasi yang bersesuaian dengan dilatasi dengan pusat $O(0,0)$ dan faktor skala 3 adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\begin{pmatrix} 3 & 0 \\ 0 & 3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\begin{pmatrix} 1/3 & 0 \\ 0 & 1/3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$\begin{pmatrix} 0 & 3 \\ 3 & 0 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$\begin{pmatrix} 3 & 3 \\ 3 & 3 \end{pmatrix}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\begin{pmatrix} 1 & 3 \\ 3 & 1 \end{pmatrix}$</div></div>
+                    </div>
+                     <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Matriks dilatasi. Sebuah dilatasi dengan pusat di $O(0,0)$ dan faktor skala $k$ akan mengubah setiap titik $(x,y)$ menjadi $(kx, ky)$.</p>
+                        <p><b>Langkah 1: Tuliskan Hubungan Transformasi</b><br>
+                        Bayangan $(x', y')$ diberikan oleh:
+                        $$ x' = kx $$
+                        $$ y' = ky $$
+                        </p>
+                        <p><b>Langkah 2: Bentuk Persamaan Matriks</b><br>
+                        Kita ingin mencari matriks $M$ sehingga $\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$.
+                        Dari hubungan di atas, kita bisa menulis:
+                        $$ \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} kx \\ ky \end{pmatrix} = \begin{pmatrix} kx + 0y \\ 0x + ky \end{pmatrix} = \begin{pmatrix} k & 0 \\ 0 & k \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} $$
+                        </p>
+                        <p><b>Langkah 3: Substitusikan Faktor Skala</b><br>
+                        Diketahui $k=3$. Maka matriksnya adalah $\begin{pmatrix} 3 & 0 \\ 0 & 3 \end{pmatrix}$.</p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 19 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">19. Jika $\lim\limits_{x \to a} (f(x) - 3g(x)) = 7$ dan $\lim\limits_{x \to a} (2f(x) + g(x)) = 7$, maka nilai dari $\lim\limits_{x \to a} (f(x) \cdot g(x))$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>-8</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>-4</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>4</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>8</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Sifat-sifat aljabar limit. Jika $\lim\limits_{x \to a} f(x) = L$ dan $\lim\limits_{x \to a} g(x) = M$, maka berlaku sifat-sifat seperti $\lim (f+g) = L+M$, $\lim(fg) = LM$, dll.</p>
+                        <p><b>Langkah 1: Misalkan Nilai Limit</b><br>
+                        Misalkan $L = \lim\limits_{x \to a} f(x)$ dan $M = \lim\limits_{x \to a} g(x)$.
+                        Dari soal, kita dapat menulis sistem persamaan linear:
+                        1. $L - 3M = 7$
+                        2. $2L + M = 7$
+                        </p>
+                        <p><b>Langkah 2: Selesaikan Sistem Persamaan</b><br>
+                        Dari persamaan (2), kita dapat menyatakan $M = 7 - 2L$.
+                        Substitusikan ini ke persamaan (1):
+                        $$ L - 3(7 - 2L) = 7 $$
+                        $$ L - 21 + 6L = 7 $$
+                        $$ 7L = 28 $$
+                        $$ L = 4 $$
+                        Sekarang, cari nilai $M$:
+                        $$ M = 7 - 2(4) = 7 - 8 = -1 $$
+                        </p>
+                        <p><b>Langkah 3: Hitung Limit yang Ditanyakan</b><br>
+                        Kita diminta mencari $\lim\limits_{x \to a} (f(x) \cdot g(x))$, yang nilainya adalah $L \cdot M$.
+                        $$ L \cdot M = (4) \cdot (-1) = -4 $$
+                        </p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">20. Diberikan fungsi $f(x) = \frac{x^2-9}{x-3}$. Tentukan kesesuaian pernyataan berikut.</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Sesuai</th>
+                                <th class="text-center">Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Domain dari $f(x)$ adalah semua bilangan real kecuali 3.</td>
+                                <td class="text-center"><input type="radio" name="q20_1" checked></td>
+                                <td class="text-center"><input type="radio" name="q20_1"></td>
+                            </tr>
+                            <tr>
+                                <td>$f(3)$ tidak terdefinisi.</td>
+                                <td class="text-center"><input type="radio" name="q20_2" checked></td>
+                                <td class="text-center"><input type="radio" name="q20_2"></td>
+                            </tr>
+                            <tr>
+                                <td>$\lim\limits_{x \to 3} f(x)$ ada dan nilainya 6.</td>
+                                <td class="text-center"><input type="radio" name="q20_3" checked></td>
+                                <td class="text-center"><input type="radio" name="q20_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Grafik fungsi $f(x)$ adalah garis lurus dengan sebuah lubang di $x=3$.</td>
+                                <td class="text-center"><input type="radio" name="q20_4" checked></td>
+                                <td class="text-center"><input type="radio" name="q20_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Analisis fungsi rasional, domain, kontinuitas, dan limit. Fungsi ini memiliki diskontinuitas yang dapat dihapus (removable discontinuity).</p>
+                        <p>1. <b>Domain dari $f(x)$ adalah semua bilangan real kecuali 3.</b><br>
+                        Fungsi rasional tidak terdefinisi ketika penyebutnya nol. $x-3=0 \implies x=3$. Jadi domainnya adalah $\{x \in \mathbb{R} | x \neq 3\}$. Pernyataan ini <b>Sesuai</b>.</p>
+
+                        <p>2. <b>$f(3)$ tidak terdefinisi.</b><br>
+                        Seperti yang dijelaskan di atas, substitusi $x=3$ menyebabkan pembagian dengan nol, sehingga $f(3)$ tidak terdefinisi. Pernyataan ini <b>Sesuai</b>.</p>
+                        
+                        <p>3. <b>$\lim\limits_{x \to 3} f(x)$ ada dan nilainya 6.</b><br>
+                        Untuk mencari limit, kita faktorkan pembilangnya:
+                        $$ \lim\limits_{x \to 3} \frac{(x-3)(x+3)}{x-3} = \lim\limits_{x \to 3} (x+3) = 3+3 = 6 $$
+                        Karena limit dari kiri dan kanan menuju nilai yang sama (yaitu 6), maka limitnya ada dan nilainya 6. Pernyataan ini <b>Sesuai</b>.</p>
+
+                        <p>4. <b>Grafik fungsi $f(x)$ adalah garis lurus dengan sebuah lubang di $x=3$.</b><br>
+                        Fungsi $f(x) = \frac{x^2-9}{x-3}$ identik dengan fungsi $g(x)=x+3$ untuk semua nilai $x$ kecuali $x=3$. Jadi, grafiknya adalah garis lurus $y=x+3$ dengan titik yang hilang (lubang) pada saat $x=3$. Koordinat lubang tersebut adalah $(3, 6)$. Pernyataan ini <b>Sesuai</b>.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 21 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">21. Sebuah parabola $y = x^2 - 4x + 5$ ditransformasikan oleh matriks $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ dilanjutkan oleh dilatasi pusat $O(0,0)$ dengan faktor skala 2. Persamaan bayangan parabola tersebut adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$y = 2x^2 - 8x + 10$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$x = 2y^2 - 8y + 10$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$x = \frac{1}{2}y^2 - 2y + 5$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$x = y^2 - 4y + 5$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$x = \frac{1}{2}y^2 - 4y + 10$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Mencari persamaan bayangan kurva. Kita perlu mencari hubungan antara koordinat awal $(x,y)$ dan koordinat akhir $(x',y')$ lalu mensubstitusikannya ke persamaan awal.</p>
+                        <p><b>Langkah 1: Tentukan Matriks Komposisi</b><br>
+                        - $T_1$: Transformasi oleh $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ (refleksi thd. garis y=x). $M_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$.
+                        - $T_2$: Dilatasi pusat O, faktor 2. $M_2 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix}$.
+                        - Matriks komposisi $M = M_2 M_1 = \begin{pmatrix} 2 & 0 \\ 0 & 2 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 2 \\ 2 & 0 \end{pmatrix}$.
+                        </p>
+                        <p><b>Langkah 2: Cari Hubungan Koordinat</b><br>
+                        $\begin{pmatrix} x' \\ y' \end{pmatrix} = M \begin{pmatrix} x \\ y \end{pmatrix}$. Kita butuh $(x,y)$ dalam bentuk $(x',y')$, jadi kita cari invers M.
+                        $\det(M) = 0 - 4 = -4$.
+                        $$ M^{-1} = \frac{1}{-4} \begin{pmatrix} 0 & -2 \\ -2 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1/2 \\ 1/2 & 0 \end{pmatrix} $$
+                        Maka, $\begin{pmatrix} x \\ y \end{pmatrix} = M^{-1} \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 0 & 1/2 \\ 1/2 & 0 \end{pmatrix} \begin{pmatrix} x' \\ y' \end{pmatrix}$.
+                        Ini memberikan kita $x = \frac{1}{2}y'$ dan $y = \frac{1}{2}x'$.
+                        </p>
+                        <p><b>Langkah 3: Substitusi ke Persamaan Awal</b><br>
+                        Substitusikan $x$ dan $y$ ke persamaan $y = x^2 - 4x + 5$:
+                        $$ \frac{1}{2}x' = \left(\frac{1}{2}y'\right)^2 - 4\left(\frac{1}{2}y'\right) + 5 $$
+                        $$ \frac{1}{2}x' = \frac{1}{4}(y')^2 - 2y' + 5 $$
+                        Kalikan kedua ruas dengan 2:
+                        $$ x' = \frac{1}{2}(y')^2 - 4y' + 10 $$
+                        Hilangkan tanda aksen: $x = \frac{1}{2}y^2 - 4y + 10$.
+                        </p>
+                        <p><b>Jawaban: E</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 22 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">22. Konsentrasi obat dalam darah seorang pasien setelah $t$ jam disuntikkan diberikan oleh fungsi $C(t) = \frac{0.2t}{t^2+1}$ mg/L. Konsentrasi obat dalam jangka waktu yang sangat lama, yaitu nilai dari $\lim\limits_{t \to \infty} C(t)$, akan mendekati...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0 mg/L</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>0.1 mg/L</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>0.2 mg/L</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>1 mg/L</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Tak terhingga</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit di tak hingga dari fungsi rasional (pecahan). Untuk mencari limit saat variabel menuju tak hingga, kita bandingkan pangkat tertinggi dari variabel di pembilang dan penyebut.</p>
+                        <p><b>Metode Cepat:</b><br>
+                        - Pangkat tertinggi pembilang ($t^1$) lebih kecil dari pangkat tertinggi penyebut ($t^2$).
+                        - Jika pangkat pembilang < pangkat penyebut, maka nilai limitnya adalah 0.
+                        </p>
+                        <p><b>Metode Formal:</b><br>
+                        Bagi setiap suku di pembilang dan penyebut dengan pangkat tertinggi dari penyebut, yaitu $t^2$.
+                        $$ \lim\limits_{t \to \infty} \frac{\frac{0.2t}{t^2}}{\frac{t^2}{t^2} + \frac{1}{t^2}} = \lim\limits_{t \to \infty} \frac{\frac{0.2}{t}}{1 + \frac{1}{t^2}} $$
+                        Saat $t \to \infty$, nilai $\frac{0.2}{t} \to 0$ dan $\frac{1}{t^2} \to 0$.
+                        $$ \frac{0}{1 + 0} = 0 $$
+                        Artinya, setelah waktu yang sangat lama, konsentrasi obat dalam darah akan menurun dan mendekati nol.
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 23 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">23. Nilai $a$ yang memenuhi $\lim\limits_{x \to \infty} \left( \sqrt{4x^2+ax} - (2x-1) \right) = \frac{9}{4}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>13</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>9</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>5</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>-5</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>-13</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit di tak hingga bentuk $\infty - \infty$. Kita harus mengubahnya ke bentuk $\sqrt{\dots} - \sqrt{\dots}$ agar bisa menggunakan rumus cepat.</p>
+                        <p><b>Langkah 1: Ubah Bentuk Suku Kedua</b><br>
+                        Untuk $x > 0$ (karena $x \to \infty$), kita bisa tulis $2x-1 = \sqrt{(2x-1)^2}$.
+                        $$ (2x-1)^2 = (2x)^2 - 2(2x)(1) + 1^2 = 4x^2 - 4x + 1 $$
+                        Maka limitnya menjadi:
+                        $$ \lim\limits_{x \to \infty} \left( \sqrt{4x^2+ax} - \sqrt{4x^2-4x+1} \right) $$
+                        </p>
+                        <p><b>Langkah 2: Terapkan Rumus Cepat</b><br>
+                        Limit ini memiliki bentuk $\lim\limits_{x \to \infty} (\sqrt{px^2+qx+r} - \sqrt{sx^2+tx+u})$ dengan $p=s=4$. Maka hasilnya adalah $\frac{q-t}{2\sqrt{p}}$.
+                        - $p=4, q=a, r=0$
+                        - $s=4, t=-4, u=1$
+                        $$ \frac{a - (-4)}{2\sqrt{4}} = \frac{a+4}{2 \cdot 2} = \frac{a+4}{4} $$
+                        </p>
+                        <p><b>Langkah 3: Samakan dengan Nilai Limit</b><br>
+                        Diketahui nilai limitnya adalah $\frac{9}{4}$.
+                        $$ \frac{a+4}{4} = \frac{9}{4} $$
+                        $$ a+4 = 9 $$
+                        $$ a = 5 $$
+                        </p>
+                        <p><b>Jawaban: C</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 24 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">24. Bayangan dari garis $3x - y + 2 = 0$ apabila dicerminkan terhadap garis $y = -x$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$x - 3y + 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$x + 3y + 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$3x + y - 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$-3x - y - 2 = 0$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$x - 3y - 2 = 0$</div></div>
+                    </div>
+                     <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Refleksi terhadap garis $y=-x$. Transformasi ini menukar koordinat $x$ dan $y$, lalu keduanya dikalikan -1. Jadi, titik $(x,y)$ bayangannya adalah $(x',y') = (-y, -x)$.</p>
+                        <p><b>Langkah 1: Cari Hubungan Koordinat</b><br>
+                        Dari aturan di atas, kita punya:
+                        $x' = -y \implies y = -x'$
+                        $y' = -x \implies x = -y'$
+                        </p>
+                        <p><b>Langkah 2: Substitusi ke Persamaan Awal</b><br>
+                        Substitusikan ekspresi untuk $x$ dan $y$ ke dalam persamaan garis $3x - y + 2 = 0$:
+                        $$ 3(-y') - (-x') + 2 = 0 $$
+                        $$ -3y' + x' + 2 = 0 $$
+                        </p>
+                        <p><b>Langkah 3: Susun Ulang Persamaan</b><br>
+                        Hilangkan tanda aksen (') dan susun ulang agar $x$ di depan:
+                        $$ x - 3y + 2 = 0 $$
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 25 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">25. Diberikan fungsi $f(x)$. Apakah $\lim\limits_{x \to 2} f(x)$ ada?</p>
+                    <div class="mt-4 space-y-2 pl-4"><p>(1) $\lim\limits_{x \to 2^-} f(x) = 5$.</p><p>(2) $f(x)$ adalah fungsi polinomial.</p></div>
+                    <div class="instruction-box mt-4">
+                        <ul class="list-none text-slate-600 text-sm">
+                           <li><b>A.</b> Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup.</li>
+                           <li><b>B.</b> Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.</li>
+                           <li><b>C.</b> DUA pernyataan BERSAMA-SAMA cukup, tetapi SATU pernyataan SAJA tidak cukup.</li>
+                           <li><b>D.</b> Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
+                           <li><b>E.</b> Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</li>
+                        </ul>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Syarat keberadaan limit. Suatu limit $\lim\limits_{x \to c} f(x)$ dikatakan ada jika dan hanya jika limit dari kiri sama dengan limit dari kanan, yaitu $\lim\limits_{x \to c^-} f(x) = \lim\limits_{x \to c^+} f(x)$.</p>
+                        <p><b>Analisis Pernyataan (1):</b>
+                        Pernyataan ini hanya memberitahu kita nilai limit dari kiri, yaitu 5. Kita tidak tahu nilai limit dari kanan. Bisa saja limit kanannya 5, bisa juga berbeda. Jadi, pernyataan (1) SAJA tidak cukup.</p>
+                        <p><b>Analisis Pernyataan (2):</b>
+                        Pernyataan ini memberitahu kita bahwa $f(x)$ adalah fungsi polinomial. Salah satu sifat fundamental dari fungsi polinomial adalah ia kontinu di seluruh domainnya (semua bilangan real). Sebuah fungsi yang kontinu di suatu titik $x=c$ pasti memiliki limit di titik tersebut. Jadi, mengetahui bahwa $f(x)$ adalah polinomial sudah cukup untuk menjamin bahwa $\lim\limits_{x \to 2} f(x)$ ada. Pernyataan (2) SAJA cukup.</p>
+                         <p><b>Kesimpulan:</b>
+                        Pernyataan (2) saja cukup untuk menjawab pertanyaan, tetapi pernyataan (1) saja tidak cukup.</p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 26 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">26. Nilai dari $\lim\limits_{h \to 0} \frac{\sin(x+h) - \sin(x)}{h}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$\sin(x)$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$\cos(x)$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$-\sin(x)$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$-\cos(x)$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>0</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit ini adalah bentuk formal dari definisi turunan. Turunan dari fungsi $f(x)$ didefinisikan sebagai $f'(x) = \lim\limits_{h \to 0} \frac{f(x+h) - f(x)}{h}$.</p>
+                        <p><b>Metode 1: Menggunakan Definisi Turunan</b><br>
+                        Jika kita mengambil $f(x) = \sin(x)$, maka limit yang ditanyakan adalah $f'(x)$. Turunan dari $\sin(x)$ adalah $\cos(x)$.</p>
+                        
+                        <p><b>Metode 2: Menggunakan Identitas Trigonometri</b><br>
+                        <b>Langkah 1: Gunakan Rumus Selisih Sinus</b><br>
+                        $\sin(A) - \sin(B) = 2\cos\left(\frac{A+B}{2}\right)\sin\left(\frac{A-B}{2}\right)$.
+                        Dengan $A=x+h$ dan $B=x$:
+                        $$ \sin(x+h) - \sin(x) = 2\cos\left(\frac{x+h+x}{2}\right)\sin\left(\frac{x+h-x}{2}\right) = 2\cos\left(x+\frac{h}{2}\right)\sin\left(\frac{h}{2}\right) $$
+                        <b>Langkah 2: Substitusi ke dalam Limit</b>
+                        $$ \lim\limits_{h \to 0} \frac{2\cos\left(x+\frac{h}{2}\right)\sin\left(\frac{h}{2}\right)}{h} $$
+                        <b>Langkah 3: Susun Ulang dan Hitung</b>
+                        $$ \lim\limits_{h \to 0} \cos\left(x+\frac{h}{2}\right) \cdot \frac{2\sin(h/2)}{h} = \lim\limits_{h \to 0} \cos\left(x+\frac{h}{2}\right) \cdot \frac{\sin(h/2)}{h/2} $$
+                        Saat $h \to 0$, $\cos(x+h/2) \to \cos(x)$ dan $\frac{\sin(h/2)}{h/2} \to 1$.
+                        Hasilnya adalah $\cos(x) \cdot 1 = \cos(x)$.
+                        </p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 27 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">27. Sebuah transformasi matriks T (berordo 2x2) memiliki determinan 3. Jika luas bangun datar A adalah 5 satuan luas, manakah pernyataan yang benar mengenai luas bayangan A oleh beberapa transformasi? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>Luas bayangan oleh T adalah 15.</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>Luas bayangan oleh $T^2$ adalah 45.</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>Luas bayangan oleh $T^{-1}$ adalah $5/3$.</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>Luas bayangan oleh $2T$ adalah 30.</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>Luas bayangan oleh $2T$ adalah 60.</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Hubungan antara luas, transformasi, dan determinan.
+                        - $L_{bayangan} = |\det(\text{matriks})| \cdot L_{awal}$.
+                        - $\det(T^n) = (\det(T))^n$.
+                        - $\det(T^{-1}) = \frac{1}{\det(T)}$.
+                        - $\det(kT) = k^n \det(T)$, dimana $n$ adalah ordo matriks.
+                        </p>
+                        <p>Diketahui $L_{awal}=5$ dan $\det(T)=3$.
+                        <p><b>A. Luas bayangan oleh T adalah 15.</b><br>
+                        $L' = |\det(T)| \cdot L_{awal} = |3| \cdot 5 = 15$. Pernyataan ini benar.</p>
+                        <p><b>B. Luas bayangan oleh $T^2$ adalah 45.</b><br>
+                        $\det(T^2) = (\det(T))^2 = 3^2 = 9$.
+                        $L' = |\det(T^2)| \cdot L_{awal} = 9 \cdot 5 = 45$. Pernyataan ini benar.</p>
+                        <p><b>C. Luas bayangan oleh $T^{-1}$ adalah $5/3$.</b><br>
+                        $\det(T^{-1}) = 1/\det(T) = 1/3$.
+                        $L' = |\det(T^{-1})| \cdot L_{awal} = \frac{1}{3} \cdot 5 = \frac{5}{3}$. Pernyataan ini benar.</p>
+                        <p><b>D dan E. Luas bayangan oleh $2T$ adalah 30 atau 60.</b><br>
+                        Karena ini transformasi bidang (2D), matriksnya berordo $n=2$.
+                        $\det(2T) = 2^2 \det(T) = 4 \cdot 3 = 12$.
+                        $L' = |\det(2T)| \cdot L_{awal} = 12 \cdot 5 = 60$. Pernyataan E benar, D salah.</p>
+                        <p><b>Jawaban: A, B, C, dan E</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 28 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">28. Nilai dari $\lim\limits_{x \to \frac{\pi}{2}} \frac{1 - \sin x}{(\frac{\pi}{2} - x) \cos x}$ adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>0</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>1/2</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>1</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>2</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$\infty$</div></div>
+                    </div>
+                     <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Limit trigonometri yang memerlukan substitusi dan penggunaan identitas.</p>
+                        <p><b>Langkah 1: Substitusi Variabel</b><br>
+                        Misalkan $u = \frac{\pi}{2} - x$. Maka $x = \frac{\pi}{2} - u$.
+                        Ketika $x \to \frac{\pi}{2}$, maka $u \to 0$.
+                        Substitusikan ke dalam limit:
+                        $$ \lim\limits_{u \to 0} \frac{1 - \sin(\frac{\pi}{2} - u)}{u \cos(\frac{\pi}{2} - u)} $$
+                        </p>
+                        <p><b>Langkah 2: Gunakan Identitas Sudut Relasi (Kofungsi)</b><br>
+                        $\sin(\frac{\pi}{2} - u) = \cos(u)$ dan $\cos(\frac{\pi}{2} - u) = \sin(u)$.
+                        Limitnya menjadi:
+                        $$ \lim\limits_{u \to 0} \frac{1 - \cos u}{u \sin u} $$
+                        </p>
+                        <p><b>Langkah 3: Gunakan Identitas Sudut Ganda</b><br>
+                        $1 - \cos u = 2\sin^2(u/2)$.
+                        $$ \lim\limits_{u \to 0} \frac{2\sin^2(u/2)}{u \sin u} $$
+                        </p>
+                         <p><b>Langkah 4: Pecah dan Selesaikan Limit</b><br>
+                        Kita bisa memecahnya menjadi:
+                        $$ \lim\limits_{u \to 0} \frac{2 \cdot \sin(u/2) \cdot \sin(u/2)}{u \cdot \sin u} $$
+                        $$ = \lim\limits_{u \to 0} 2 \cdot \frac{\sin(u/2)}{u} \cdot \frac{\sin(u/2)}{\sin u} $$
+                        Menggunakan sifat limit, hasilnya adalah:
+                        $$ = 2 \cdot \left(\frac{1/2}{1}\right) \cdot \left(\frac{1/2}{1}\right) = 2 \cdot \frac{1}{2} \cdot \frac{1}{2} = \frac{1}{2} $$
+                        </p>
+                        <p><b>Jawaban: B</b></p>
+                    </div>
+                </div>
+                
+                <!-- Soal 29 -->
+                 <div class="question-card">
+                    <p class="font-semibold mb-4 text-slate-800">29. Seorang desainer grafis membuat pola dengan mentransformasikan kurva $y = \sqrt{x}$. Ia melakukan shear (gusuran) sejajar sumbu-x dengan faktor 2, yang direpresentasikan oleh matriks $\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$. Persamaan kurva hasil transformasi adalah...</p>
+                    <div class="options-grid">
+                        <div class="option"><span class="option-letter">A.</span><div>$y = \sqrt{x-2y}$</div></div>
+                        <div class="option"><span class="option-letter">B.</span><div>$y = \sqrt{x+2y}$</div></div>
+                        <div class="option"><span class="option-letter">C.</span><div>$y = \sqrt{x} + 2$</div></div>
+                        <div class="option"><span class="option-letter">D.</span><div>$y-2x = \sqrt{x}$</div></div>
+                        <div class="option"><span class="option-letter">E.</span><div>$y = \sqrt{2x}$</div></div>
+                    </div>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Menentukan persamaan bayangan kurva. Kita harus menyatakan koordinat awal $(x,y)$ dalam bentuk koordinat bayangan $(x',y')$.</p>
+                        <p><b>Langkah 1: Tentukan Hubungan Transformasi</b><br>
+                        $\begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}$.
+                        Ini menghasilkan sistem persamaan:
+                        1. $x' = x + 2y$
+                        2. $y' = y$
+                        </p>
+                        <p><b>Langkah 2: Ekspresikan $(x,y)$ dalam $(x',y')$</b><br>
+                        Dari persamaan (2), kita langsung dapat $y = y'$.
+                        Substitusikan $y=y'$ ke persamaan (1):
+                        $x' = x + 2y' \implies x = x' - 2y'$.
+                        </p>
+                        <p><b>Langkah 3: Substitusi ke Persamaan Kurva Awal</b><br>
+                        Substitusikan $y=y'$ dan $x=x'-2y'$ ke dalam persamaan $y = \sqrt{x}$:
+                        $$ y' = \sqrt{x' - 2y'} $$
+                        </p>
+                        <p><b>Langkah 4: Tulis Persamaan Akhir</b><br>
+                        Hilangkan tanda aksen (') untuk mendapatkan persamaan bayangannya:
+                        $$ y = \sqrt{x - 2y} $$
+                        </p>
+                        <p><b>Jawaban: A</b></p>
+                    </div>
+                </div>
+
+                <!-- Soal 30 -->
+                <div class="question-card">
+                    <p class="font-semibold mb-3 text-slate-800">30. Diketahui matriks rotasi $R_\theta = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$. Tentukan kesesuaian pernyataan-pernyataan berikut.</p>
+                     <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th class="text-center">Sesuai</th>
+                                <th class="text-center">Tidak Sesuai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$R_{90^\circ} R_{180^\circ} = R_{270^\circ}$</td>
+                                <td class="text-center"><input type="radio" name="q30_1" checked></td>
+                                <td class="text-center"><input type="radio" name="q30_1"></td>
+                            </tr>
+                            <tr>
+                                <td>Determinan dari $R_\theta$ selalu 1 untuk setiap $\theta$.</td>
+                                <td class="text-center"><input type="radio" name="q30_2" checked></td>
+                                <td class="text-center"><input type="radio" name="q30_2"></td>
+                            </tr>
+                            <tr>
+                                <td>Invers dari $R_\theta$ adalah $R_{-\theta}$.</td>
+                                <td class="text-center"><input type="radio" name="q30_3" checked></td>
+                                <td class="text-center"><input type="radio" name="q30_3"></td>
+                            </tr>
+                            <tr>
+                                <td>Transformasi $R_{360^\circ}$ adalah matriks identitas.</td>
+                                <td class="text-center"><input type="radio" name="q30_4" checked></td>
+                                <td class="text-center"><input type="radio" name="q30_4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution-box">
+                        <h3>Pembahasan</h3>
+                        <p><b>Konsep Dasar:</b> Properti matriks rotasi.</p>
+                        <p>1. <b>$R_{90^\circ} R_{180^\circ} = R_{270^\circ}$</b><br>
+                        Perkalian matriks rotasi ekuivalen dengan menjumlahkan sudutnya: $R_\alpha R_\beta = R_{\alpha+\beta}$.
+                        Maka, $R_{90^\circ} R_{180^\circ} = R_{90^\circ+180^\circ} = R_{270^\circ}$. Pernyataan ini <b>Sesuai</b>.</p>
+                        
+                        <p>2. <b>Determinan dari $R_\theta$ selalu 1 untuk setiap $\theta$.</b><br>
+                        $\det(R_\theta) = (\cos\theta)(\cos\theta) - (-\sin\theta)(\sin\theta) = \cos^2\theta + \sin^2\theta = 1$.
+                        Ini adalah identitas trigonometri dasar yang berlaku untuk semua $\theta$. Pernyataan ini <b>Sesuai</b>.</p>
+                        
+                        <p>3. <b>Invers dari $R_\theta$ adalah $R_{-\theta}$.</b><br>
+                        Invers dari rotasi sebesar $\theta$ adalah rotasi sebesar $-\theta$. Mari kita cek matriksnya.
+                        $R_{-\theta} = \begin{pmatrix} \cos(-\theta) & -\sin(-\theta) \\ \sin(-\theta) & \cos(-\theta) \end{pmatrix} = \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}$.
+                        Invers dari $R_\theta$ adalah $\frac{1}{\det(R_\theta)} \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix} = \frac{1}{1} \begin{pmatrix} \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta \end{pmatrix}$.
+                        Keduanya sama. Pernyataan ini <b>Sesuai</b>.</p>
+
+                        <p>4. <b>Transformasi $R_{360^\circ}$ adalah matriks identitas.</b><br>
+                        Rotasi sebesar 360 derajat akan mengembalikan objek ke posisi semula, yang merupakan efek dari transformasi identitas.
+                        $R_{360^\circ} = \begin{pmatrix} \cos(360^\circ) & -\sin(360^\circ) \\ \sin(360^\circ) & \cos(360^\circ) \end{pmatrix} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix} = I$. Pernyataan ini <b>Sesuai</b>.</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
