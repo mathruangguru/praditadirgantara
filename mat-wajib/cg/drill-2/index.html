@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal & Pembahasan TKA Matematika Wajib - 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- MathJax Configuration for LaTeX rendering -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="Math-Jax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .content-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .section-title {
+            font-size: 1.875rem; /* 30px */
+            font-weight: 700;
+            color: #3730a3; /* indigo-800 */
+            border-bottom: 3px solid #6366f1; /* indigo-500 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .item-container {
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.75rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .item-container:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        p, .question-text {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .option {
+            padding: 0.5rem;
+        }
+        .data-sufficiency-options {
+            font-size: 0.95rem;
+            margin-top: 1rem;
+        }
+        .complex-table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+        }
+        .complex-table th, .complex-table td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .complex-table th {
+            background-color: #eef2ff;
+        }
+        .solution {
+            margin-top: 2rem;
+            background-color: #eef2ff;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            line-height: 1.8;
+        }
+        .solution h4 {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .solution p {
+            margin-bottom: 0.5rem;
+        }
+        .solution .step {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-8">
+            <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-28">
+        </div>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal TKA Matematika Wajib - 2</h1>
+            <p class="text-gray-600 mt-2">Topik: Barisan dan Deret, Objek Geometri, dan Trigonometri | Level: SMA</p>
+        </header>
+
+        <main>
+            <!-- Questions Section -->
+            <section class="content-card">
+                <h2 class="section-title">Soal-Soal Latihan</h2>
+                
+                <!-- Soal 1 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>1.</strong> Seorang siswa menabung uang Rp5.000,00 pada hari pertama. Setiap hari, ia menambahkan tabungannya sebesar Rp1.000,00 dari tabungan hari sebelumnya. Jumlah total tabungan siswa tersebut setelah 30 hari adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. Rp550.000,00</div>
+                        <div class="option">B. Rp585.000,00</div>
+                        <div class="option">C. Rp600.000,00</div>
+                        <div class="option">D. Rp625.000,00</div>
+                        <div class="option">E. Rp650.000,00</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Masalah ini dapat diselesaikan dengan menggunakan konsep barisan dan deret aritmetika, karena ada penambahan yang tetap setiap harinya. Jumlah total tabungan adalah jumlah dari deret aritmetika.</p>
+                        <p><span class="step">Langkah 1:</span> Identifikasi nilai-nilai yang kita ketahui dari soal.</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Suku pertama ($a$) adalah tabungan pada hari pertama: Rp5.000,00.</li>
+                            <li>Beda ($b$) adalah penambahan tabungan harian: Rp1.000,00.</li>
+                            <li>Jumlah hari ($n$) adalah 30.</li>
+                        </ul>
+                        <p><span class="step">Langkah 2:</span> Gunakan rumus jumlah $n$ suku pertama dari deret aritmetika untuk menghitung total tabungan setelah 30 hari.</p>
+                        <p>Rumus jumlah $n$ suku pertama adalah $S_n = \frac{n}{2}(2a + (n-1)b)$.</p>
+                        <p>Substitusikan nilai-nilai yang sudah kita dapatkan:</p>
+                        <p>$S_{30} = \frac{30}{2}(2(5.000) + (30-1)(1.000))$</p>
+                        <p>$S_{30} = 15(10.000 + 29(1.000))$</p>
+                        <p>$S_{30} = 15(10.000 + 29.000)$</p>
+                        <p>$S_{30} = 15(39.000)$</p>
+                        <p>$S_{30} = 585.000$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah Rp585.000,00.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>2.</strong> Pada kubus $\mathrm{ABCD.EFGH}$ dengan panjang rusuk $a$ $\mathrm{cm}$, jarak dari titik $\mathrm{A}$ ke garis $\mathrm{CE}$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $a\sqrt{2}$</div>
+                        <div class="option">B. $a\sqrt{3}$</div>
+                        <div class="option">C. $\frac{1}{3}a\sqrt{6}$</div>
+                        <div class="option">D. $\frac{2}{3}a\sqrt{6}$</div>
+                        <div class="option">E. $\frac{1}{2}a\sqrt{6}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Jarak dari titik ke garis adalah panjang garis tegak lurus terpendek dari titik ke garis tersebut. Dalam kasus geometri bangun ruang, kita bisa menggunakan konsep segitiga dan luasnya untuk mencari jarak ini.</p>
+                        <p><span class="step">Langkah 1:</span> Bentuk segitiga yang melibatkan titik $\mathrm{A}$ dan garis $\mathrm{CE}$.</p>
+                        <p>Segitiga yang paling tepat adalah $\triangle ACE$, yang merupakan segitiga siku-siku di titik $\mathrm{A}$.</p>
+                        <p><span class="step">Langkah 2:</span> Tentukan panjang sisi-sisi segitiga $\triangle ACE$.</p>
+                        <p>Panjang $\mathrm{AE}$ adalah rusuk kubus, yaitu $a$.</p>
+                        <p>Panjang $\mathrm{AC}$ adalah diagonal bidang alas, yaitu $a\sqrt{2}$.</p>
+                        <p>Panjang $\mathrm{CE}$ adalah diagonal ruang, yaitu $a\sqrt{3}$.</p>
+                        <p><span class="step">Langkah 3:</span> Gunakan rumus luas segitiga dengan dua cara yang berbeda.</p>
+                        <p>Cara 1: Luas $\triangle ACE = \frac{1}{2} \times \text{alas} \times \text{tinggi} = \frac{1}{2} \times \mathrm{AE} \times \mathrm{AC}$</p>
+                        <p>$= \frac{1}{2} \times a \times a\sqrt{2}$</p>
+                        <p>$= \frac{1}{2}a^2\sqrt{2}$</p>
+                        <p>Cara 2: Kita anggap alasnya adalah $\mathrm{CE}$, dan tingginya adalah jarak dari $\mathrm{A}$ ke garis $\mathrm{CE}$ (kita sebut $t$).</p>
+                        <p>Luas $\triangle ACE = \frac{1}{2} \times \mathrm{CE} \times t = \frac{1}{2} \times a\sqrt{3} \times t$</p>
+                        <p><span class="step">Langkah 4:</span> Samakan kedua rumus luas untuk menemukan nilai $t$.</p>
+                        <p>$\frac{1}{2}a^2\sqrt{2} = \frac{1}{2}a\sqrt{3}t$</p>
+                        <p>$a^2\sqrt{2} = a\sqrt{3}t$</p>
+                        <p>$t = \frac{a^2\sqrt{2}}{a\sqrt{3}}$</p>
+                        <p>$t = \frac{a\sqrt{2}}{\sqrt{3}}$</p>
+                        <p>Rasionalkan penyebutnya:</p>
+                        <p>$t = \frac{a\sqrt{2}}{\sqrt{3}} \times \frac{\sqrt{3}}{\sqrt{3}} = \frac{a\sqrt{6}}{3}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{1}{3}a\sqrt{6}$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>3.</strong> Diketahui $\tan A = \frac{3}{4}$ dan $\tan B = \frac{5}{12}$, di mana sudut $A$ dan $B$ keduanya adalah sudut lancip. Nilai dari $\cos(A+B)$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{16}{65}$</div>
+                        <div class="option">B. $\frac{33}{65}$</div>
+                        <div class="option">C. $\frac{56}{65}$</div>
+                        <div class="option">D. $\frac{-33}{65}$</div>
+                        <div class="option">E. $\frac{-16}{65}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menemukan nilai dari $\cos(A+B)$, kita perlu menggunakan rumus jumlah sudut: $\cos(A+B) = \cos A \cos B - \sin A \sin B$. Karena kita hanya memiliki nilai $\tan A$ dan $\tan B$, langkah pertama adalah mencari nilai $\sin$ dan $\cos$ untuk masing-masing sudut.</p>
+                        <p><span class="step">Langkah 1:</span> Cari nilai $\sin A$ dan $\cos A$ dari $\tan A = \frac{3}{4}$.</p>
+                        <p>Dengan menggunakan Teorema Pythagoras pada segitiga siku-siku, kita tahu bahwa $\text{sisi depan} = 3$ dan $\text{sisi samping} = 4$. Maka, sisi miringnya adalah $\sqrt{3^2 + 4^2} = \sqrt{9+16} = \sqrt{25} = 5$. Karena $A$ adalah sudut lancip, semua nilai trigonometrinya positif.</p>
+                        <p>Maka, $\sin A = \frac{3}{5}$ dan $\cos A = \frac{4}{5}$.</p>
+                        <p><span class="step">Langkah 2:</span> Cari nilai $\sin B$ dan $\cos B$ dari $\tan B = \frac{5}{12}$.</p>
+                        <p>Sisi depannya 5 dan sisi sampingnya 12. Sisi miringnya adalah $\sqrt{5^2+12^2} = \sqrt{25+144} = \sqrt{169} = 13$. Karena $B$ juga sudut lancip, semua nilai trigonometrinya positif.</p>
+                        <p>Maka, $\sin B = \frac{5}{13}$ dan $\cos B = \frac{12}{13}$.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung $\cos(A+B)$ menggunakan rumusnya.</p>
+                        <p>$\cos(A+B) = \cos A \cos B - \sin A \sin B$</p>
+                        <p>Substitusikan nilai-nilai yang sudah kita temukan:</p>
+                        <p>$= (\frac{4}{5})(\frac{12}{13}) - (\frac{3}{5})(\frac{5}{13})$</p>
+                        <p>$= \frac{48}{65} - \frac{15}{65}$</p>
+                        <p>$= \frac{33}{65}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{33}{65}$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>4.</strong> Suku ke-4 dan suku ke-9 dari sebuah barisan aritmetika berturut-turut adalah 11 dan 26. Jumlah 20 suku pertama dari barisan tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. 500</div>
+                        <div class="option">B. 580</div>
+                        <div class="option">C. 610</div>
+                        <div class="option">D. 650</div>
+                        <div class="option">E. 700</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Deret aritmetika adalah deret yang setiap suku berurutan memiliki beda yang tetap. Untuk menyelesaikan soal ini, kita perlu menemukan suku pertama ($a$) dan beda ($b$) dari deret tersebut.</p>
+                        <p><span class="step">Langkah 1:</span> Tuliskan dua persamaan berdasarkan informasi yang diberikan menggunakan rumus suku ke-n, yaitu $U_n = a + (n-1)b$.</p>
+                        <p>Dari suku ke-4: $U_4 = a + (4-1)b = a+3b = 11$ (Persamaan 1)</p>
+                        <p>Dari suku ke-9: $U_9 = a + (9-1)b = a+8b = 26$ (Persamaan 2)</p>
+                        <p><span class="step">Langkah 2:</span> Selesaikan sistem persamaan ini untuk menemukan nilai $a$ dan $b$.</p>
+                        <p>Kurangi Persamaan 1 dari Persamaan 2 untuk menemukan $b$:</p>
+                        <p>$(a+8b) - (a+3b) = 26 - 11$</p>
+                        <p>$5b = 15$</p>
+                        <p>$b = 3$</p>
+                        <p>Substitusikan nilai $b=3$ ke Persamaan 1 untuk menemukan $a$:</p>
+                        <p>$a + 3(3) = 11$</p>
+                        <p>$a + 9 = 11$</p>
+                        <p>$a = 2$</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jumlah 20 suku pertama ($S_{20}$) menggunakan rumus jumlah deret aritmetika, yaitu $S_n = \frac{n}{2}(2a + (n-1)b)$.</p>
+                        <p>$S_{20} = \frac{20}{2}(2(2) + (20-1)(3))$</p>
+                        <p>$S_{20} = 10(4 + 19(3))$</p>
+                        <p>$S_{20} = 10(4 + 57)$</p>
+                        <p>$S_{20} = 10(61)$</p>
+                        <p>$S_{20} = 610$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 610.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 5 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>5.</strong> Seorang arsitek membuat miniatur sebuah gedung. Jika tinggi miniatur adalah $50$ $\mathrm{cm}$ dan tinggi gedung sebenarnya adalah $100$ $\mathrm{m}$. Jika volume miniatur adalah $1,25$ $\mathrm{m}^3$, maka volume gedung sebenarnya adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $10^6$ $\mathrm{m}^3$</div>
+                        <div class="option">B. $10^7$ $\mathrm{m}^3$</div>
+                        <div class="option">C. $10^8$ $\mathrm{m}^3$</div>
+                        <div class="option">D. $10^9$ $\mathrm{m}^3$</div>
+                        <div class="option">E. $10^{10}$ $\mathrm{m}^3$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Perbandingan volume dua bangun yang sebangun adalah pangkat tiga dari perbandingan panjangnya. Rumusnya adalah $\frac{V_{\text{miniatur}}}{V_{\text{sebenarnya}}} = (\frac{l_{\text{miniatur}}}{l_{\text{sebenarnya}}})^3$. Penting untuk memastikan satuan panjangnya sama.</p>
+                        <p><span class="step">Langkah 1:</span> Tentukan skala perbandingan panjang antara miniatur dan gedung sebenarnya.</p>
+                        <p>Pertama, samakan satuan tinggi. $50$ $\mathrm{cm}$ sama dengan $0.5$ $\mathrm{m}$.</p>
+                        <p>Skala perbandingan ($k$) $= \frac{\text{tinggi miniatur}}{\text{tinggi sebenarnya}} = \frac{0.5}{100} = \frac{1}{200}$.</p>
+                        <p><span class="step">Langkah 2:</span> Gunakan rumus perbandingan volume untuk menghitung volume sebenarnya.</p>
+                        <p>$\frac{\text{Volume miniatur}}{\text{Volume sebenarnya}} = k^3 = (\frac{1}{200})^3$</p>
+                        <p>$\frac{1.25}{\text{Volume sebenarnya}} = \frac{1}{200 \times 200 \times 200} = \frac{1}{8.000.000}$</p>
+                        <p><span class="step">Langkah 3:</span> Selesaikan persamaan untuk menemukan volume gedung sebenarnya.</p>
+                        <p>Volume sebenarnya $= 1.25 \times 8.000.000$</p>
+                        <p>Volume sebenarnya $= 10.000.000$ $\mathrm{m}^3$</p>
+                        <p>Dalam notasi ilmiah, $10.000.000$ dapat ditulis sebagai $10^7$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $10^7$ $\mathrm{m}^3$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 6 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>6.</strong> Sebuah pesawat terbang melaju dengan kecepatan konstan. Dari titik pengamatan di darat, pesawat terlihat dengan sudut elevasi $30^{\circ}$ dan berada di ketinggian $15$ $\mathrm{km}$. Setelah 10 menit, sudut elevasi menjadi $60^{\circ}$. Kecepatan pesawat tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $30\sqrt{3}$ km/jam</div>
+                        <div class="option">B. $45\sqrt{3}$ km/jam</div>
+                        <div class="option">C. $60\sqrt{3}$ km/jam</div>
+                        <div class="option">D. $90\sqrt{3}$ km/jam</div>
+                        <div class="option">E. $120\sqrt{3}$ km/jam</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Kita akan menggunakan perbandingan trigonometri, khususnya tangen ($\tan\alpha = \frac{\text{sisi depan}}{\text{sisi samping}}$), untuk menghitung jarak horizontal. Kecepatan adalah jarak yang ditempuh dibagi dengan waktu, $v = \frac{s}{t}$.</p>
+                        <p><span class="step">Langkah 1:</span> Hitung jarak horizontal awal ($d_1$) dari pengamat ke posisi pertama pesawat.</p>
+                        <p>Gunakan rumus tangen dengan sudut elevasi $30^{\circ}$. Ketinggian pesawat adalah 15 km.</p>
+                        <p>$\tan 30^{\circ} = \frac{\text{ketinggian}}{d_1} = \frac{15}{d_1}$</p>
+                        <p>$d_1 = \frac{15}{\tan 30^{\circ}} = \frac{15}{1/\sqrt{3}} = 15\sqrt{3}$ $\mathrm{km}$.</p>
+                        <p><span class="step">Langkah 2:</span> Hitung jarak horizontal akhir ($d_2$) dari pengamat ke posisi kedua pesawat.</p>
+                        <p>Gunakan rumus tangen dengan sudut elevasi $60^{\circ}$.</p>
+                        <p>$\tan 60^{\circ} = \frac{15}{d_2}$</p>
+                        <p>$d_2 = \frac{15}{\tan 60^{\circ}} = \frac{15}{\sqrt{3}} = \frac{15\sqrt{3}}{3} = 5\sqrt{3}$ $\mathrm{km}$.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jarak yang ditempuh pesawat ($s$).</p>
+                        <p>Jarak yang ditempuh adalah selisih antara jarak horizontal awal dan akhir:</p>
+                        <p>$s = d_1 - d_2 = 15\sqrt{3} - 5\sqrt{3} = 10\sqrt{3}$ $\mathrm{km}$.</p>
+                        <p><span class="step">Langkah 4:</span> Ubah waktu tempuh ke dalam jam dan hitung kecepatan pesawat.</p>
+                        <p>Waktu ($t$) $= 10$ menit $= \frac{10}{60}$ jam $= \frac{1}{6}$ jam.</p>
+                        <p>Kecepatan ($v$) $= \frac{s}{t} = \frac{10\sqrt{3}}{1/6} = 10\sqrt{3} \times 6 = 60\sqrt{3}$ $\mathrm{km/jam}$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $60\sqrt{3}$ km/jam.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 7 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>7.</strong> Suku ketiga dan suku keenam dari sebuah barisan geometri berturut-turut adalah 12 dan 96. Suku ke-10 dari barisan tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. 768</div>
+                        <div class="option">B. 1536</div>
+                        <div class="option">C. 2048</div>
+                        <div class="option">D. 3072</div>
+                        <div class="option">E. 6144</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Barisan geometri adalah barisan yang rasionya selalu tetap. Suku ke-$n$ dapat dihitung dengan rumus $U_n = ar^{n-1}$, di mana $a$ adalah suku pertama dan $r$ adalah rasio.</p>
+                        <p><span class="step">Langkah 1:</span> Tuliskan dua persamaan dari informasi yang diberikan.</p>
+                        <p>Suku ke-3: $U_3 = ar^{2} = 12$ (Persamaan 1)</p>
+                        <p>Suku ke-6: $U_6 = ar^{5} = 96$ (Persamaan 2)</p>
+                        <p><span class="step">Langkah 2:</span> Selesaikan sistem persamaan untuk menemukan rasio ($r$).</p>
+                        <p>Bagi Persamaan 2 dengan Persamaan 1:</p>
+                        <p>$\frac{U_6}{U_3} = \frac{ar^5}{ar^2} = \frac{96}{12}$</p>
+                        <p>$r^{3} = 8$</p>
+                        <p>$r = 2$</p>
+                        <p><span class="step">Langkah 3:</span> Temukan suku pertama ($a$) dengan substitusi nilai $r=2$ ke Persamaan 1.</p>
+                        <p>$a(2)^2 = 12$</p>
+                        <p>$4a = 12$</p>
+                        <p>$a = 3$</p>
+                        <p><span class="step">Langkah 4:</span> Hitung suku ke-10 ($U_{10}$) menggunakan rumus suku ke-$n$ dengan $a=3$ dan $r=2$.</p>
+                        <p>$U_{10} = ar^{9} = 3(2)^9 = 3(512) = 1536$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 1536.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 8 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>8.</strong> Titik $P(4, -2)$ dicerminkan terhadap garis $y = x$, kemudian dirotasikan sebesar $90^{\circ}$ berlawanan arah jarum jam terhadap titik pusat $(0,0)$. Bayangan titik $P$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(2, 4)$</div>
+                        <div class="option">B. $(-2, -4)$</div>
+                        <div class="option">C. $(4, -2)$</div>
+                        <div class="option">D. $(-4, -2)$</div>
+                        <div class="option">E. $(2, -4)$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menyelesaikan soal ini, kita harus melakukan dua transformasi geometri secara berurutan. Pertama adalah pencerminan, kemudian rotasi.</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Pencerminan terhadap garis $y=x$: Titik $(x, y)$ akan berubah menjadi $(y, x)$.</li>
+                            <li>Rotasi $90^{\circ}$ berlawanan arah jarum jam terhadap pusat $(0,0)$: Titik $(x, y)$ akan berubah menjadi $(-y, x)$.</li>
+                        </ul>
+                        <p><span class="step">Langkah 1:</span> Tentukan bayangan titik $P(4, -2)$ setelah dicerminkan terhadap garis $y = x$.</p>
+                        <p>Titik $P(4, -2)$ menjadi $P'(-2, 4)$.</p>
+                        <p><span class="step">Langkah 2:</span> Rotasikan titik $P'(-2, 4)$ sebesar $90^{\circ}$ berlawanan arah jarum jam.</p>
+                        <p>Titik $P'(-2, 4)$ menjadi $P''(-4, -2)$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $(-4, -2)$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 9 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>9.</strong> Diketahui $\sin x + \cos x = \frac{1}{2}$. Nilai dari $\sin^3 x + \cos^3 x$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{3}{4}$</div>
+                        <div class="option">B. $\frac{9}{16}$</div>
+                        <div class="option">C. $\frac{1}{2}$</div>
+                        <div class="option">D. $\frac{11}{16}$</div>
+                        <div class="option">E. $\frac{5}{16}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Soal ini menggabungkan identitas aljabar dan trigonometri. Kita akan menggunakan rumus $(\sin x + \cos x)^2 = 1 + 2\sin x \cos x$ untuk menemukan nilai $\sin x \cos x$. Kemudian, kita gunakan rumus jumlah kubik: $a^3+b^3 = (a+b)(a^2-ab+b^2)$.</p>
+                        <p><span class="step">Langkah 1:</span> Kuadratkan persamaan $\sin x + \cos x = \frac{1}{2}$ untuk mencari nilai $\sin x \cos x$.</p>
+                        <p>$(\sin x + \cos x)^2 = (\frac{1}{2})^2$</p>
+                        <p>$\sin^2 x + \cos^2 x + 2\sin x \cos x = \frac{1}{4}$</p>
+                        <p>Substitusikan $\sin^2 x + \cos^2 x = 1$ ke dalam persamaan:</p>
+                        <p>$1 + 2\sin x \cos x = \frac{1}{4}$</p>
+                        <p>$2\sin x \cos x = \frac{1}{4} - 1 = -\frac{3}{4}$</p>
+                        <p>$\sin x \cos x = -\frac{3}{8}$</p>
+                        <p><span class="step">Langkah 2:</span> Gunakan rumus jumlah kubik untuk menghitung $\sin^3 x + \cos^3 x$.</p>
+                        <p>$\sin^3 x + \cos^3 x = (\sin x + \cos x)(\sin^2 x - \sin x \cos x + \cos^2 x)$</p>
+                        <p>Substitusikan nilai-nilai yang sudah kita temukan:</p>
+                        <p>$= (\frac{1}{2})(1 - (-\frac{3}{8}))$</p>
+                        <p>$= (\frac{1}{2})(1 + \frac{3}{8})$</p>
+                        <p>$= (\frac{1}{2})(\frac{8}{8} + \frac{3}{8})$</p>
+                        <p>$= (\frac{1}{2})(\frac{11}{8})$</p>
+                        <p>$= \frac{11}{16}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{11}{16}$.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 10 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>10.</strong> Sebuah pinjaman sebesar Rp5.000.000,00 akan dilunasi dalam 5 tahun dengan sistem anuitas. Jika suku bunga efektif adalah $12\%$ per tahun, maka besar anuitasnya adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. Rp1.000.000,00</div>
+                        <div class="option">B. Rp1.100.000,00</div>
+                        <div class="option">C. Rp1.250.000,00</div>
+                        <div class="option">D. Rp1.387.050,00</div>
+                        <div class="option">E. Rp1.500.000,00</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Anuitas adalah pembayaran tetap yang dilakukan secara berkala untuk melunasi pinjaman dan bunganya. Rumus untuk menghitung anuitas ($A$) adalah $A = P \frac{i(1+i)^n}{(1+i)^n - 1}$.</p>
+                        <p><span class="step">Langkah 1:</span> Identifikasi nilai-nilai yang diketahui dari soal.</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Besar pinjaman ($P$) = Rp5.000.000,00.</li>
+                            <li>Suku bunga ($i$) = $12\% = 0.12$.</li>
+                            <li>Jumlah periode ($n$) = 5 tahun.</li>
+                        </ul>
+                        <p><span class="step">Langkah 2:</span> Masukkan nilai-nilai tersebut ke dalam rumus anuitas.</p>
+                        <p>$A = 5.000.000 \times \frac{0.12(1+0.12)^5}{(1+0.12)^5 - 1}$</p>
+                        <p><span class="step">Langkah 3:</span> Lakukan perhitungan.</p>
+                        <p>Hitung nilai $(1.12)^5 \approx 1.76234$.</p>
+                        <p>$A = 5.000.000 \times \frac{0.12 \times 1.76234}{1.76234 - 1}$</p>
+                        <p>$A = 5.000.000 \times \frac{0.21148}{0.76234}$</p>
+                        <p>$A \approx 5.000.000 \times 0.27741$</p>
+                        <p>$A \approx 1.387.050$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah Rp1.387.050,00.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 11 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>11.</strong> Sebuah segitiga memiliki panjang sisi 8, 15, dan 17. Jari-jari lingkaran luar segitiga tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. 7.5</div>
+                        <div class="option">B. 8.5</div>
+                        <div class="option">C. 10.5</div>
+                        <div class="option">D. 12.5</div>
+                        <div class="option">E. 15.5</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Jari-jari lingkaran luar segitiga ($R$) dapat dihitung dengan rumus $R = \frac{abc}{4L}$, di mana $a, b, c$ adalah panjang sisi-sisi segitiga, dan $L$ adalah luas segitiga. Kita perlu menentukan jenis segitiga terlebih dahulu untuk menghitung luasnya dengan mudah.</p>
+                        <p><span class="step">Langkah 1:</span> Tentukan jenis segitiga dengan Teorema Pythagoras.</p>
+                        <p>Periksa apakah segitiga ini siku-siku dengan mengkuadratkan sisi-sisinya: $8^2 = 64$, $15^2 = 225$, dan $17^2 = 289$.</p>
+                        <p>Karena $8^2 + 15^2 = 64 + 225 = 289 = 17^2$, maka segitiga ini adalah segitiga siku-siku.</p>
+                        <p><span class="step">Langkah 2:</span> Hitung luas ($L$) segitiga siku-siku.</p>
+                        <p>Untuk segitiga siku-siku, alas dan tinggi adalah dua sisi terpendeknya. Luasnya adalah $L = \frac{1}{2} \times \text{alas} \times \text{tinggi}$.</p>
+                        <p>$L = \frac{1}{2} \times 8 \times 15 = 60$</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jari-jari lingkaran luar ($R$).</p>
+                        <p>Substitusikan panjang sisi dan luas yang sudah didapatkan ke dalam rumus $R = \frac{abc}{4L}$.</p>
+                        <p>$R = \frac{8 \times 15 \times 17}{4 \times 60}$</p>
+                        <p>$R = \frac{2040}{240}$</p>
+                        <p>$R = 8.5$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 8.5.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 12 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>12.</strong> Sebuah mercusuar yang tingginya 100 meter diamati dari dua kapal, yaitu kapal A dan kapal B. Kapal A berada di timur mercusuar dan kapal B berada di barat mercusuar. Sudut elevasi mercusuar dari kapal A adalah $45^{\circ}$ dan dari kapal B adalah $30^{\circ}$. Jarak antara kapal A dan kapal B adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $100(\sqrt{3}-1)$ meter</div>
+                        <div class="option">B. $100(\sqrt{3}+1)$ meter</div>
+                        <div class="option">C. $100(\sqrt{2}+1)$ meter</div>
+                        <div class="option">D. $100\sqrt{3}$ meter</div>
+                        <div class="option">E. $200$ meter</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Sudut elevasi adalah sudut yang dibentuk oleh garis horizontal dan garis pandang ke atas. Kita akan menggunakan perbandingan trigonometri, khususnya tangen ($\tan\alpha = \frac{\text{sisi depan}}{\text{sisi samping}}$), untuk menghitung jarak horizontal dari setiap kapal ke mercusuar.</p>
+                        <p><span class="step">Langkah 1:</span> Hitung jarak horizontal dari kapal A ke mercusuar ($d_A$).</p>
+                        <p>Gunakan rumus tangen dengan sudut elevasi $45^{\circ}$ dan tinggi mercusuar 100 m.</p>
+                        <p>$\tan 45^{\circ} = \frac{\text{tinggi mercusuar}}{d_A} = \frac{100}{d_A}$</p>
+                        <p>Karena $\tan 45^{\circ} = 1$, maka $1 = \frac{100}{d_A} \implies d_A = 100$ meter.</p>
+                        <p><span class="step">Langkah 2:</span> Hitung jarak horizontal dari kapal B ke mercusuar ($d_B$).</p>
+                        <p>Gunakan rumus tangen dengan sudut elevasi $30^{\circ}$.</p>
+                        <p>$\tan 30^{\circ} = \frac{\text{tinggi mercusuar}}{d_B} = \frac{100}{d_B}$</p>
+                        <p>Karena $\tan 30^{\circ} = \frac{1}{\sqrt{3}}$, maka $\frac{1}{\sqrt{3}} = \frac{100}{d_B} \implies d_B = 100\sqrt{3}$ meter.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jarak total antara kapal A dan B.</p>
+                        <p>Karena kapal A berada di timur mercusuar dan kapal B berada di barat, maka jarak totalnya adalah jumlah kedua jarak horizontal tersebut.</p>
+                        <p>Jarak total $= d_A + d_B = 100 + 100\sqrt{3} = 100(1+\sqrt{3})$ meter.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $100(\sqrt{3}+1)$ meter.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 13 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>13.</strong> Jumlah 10 suku pertama dari deret aritmetika yang suku pertamanya 5 dan suku ke-6 adalah 15 adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. 120</div>
+                        <div class="option">B. 140</div>
+                        <div class="option">C. 160</div>
+                        <div class="option">D. 180</div>
+                        <div class="option">E. 200</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menemukan jumlah deret aritmetika, kita memerlukan nilai suku pertama ($a$) dan beda ($b$). Kita dapat menggunakan rumus suku ke-n ($U_n = a + (n-1)b$) dan rumus jumlah deret aritmetika ($S_n = \frac{n}{2}(2a + (n-1)b)$).</p>
+                        <p><span class="step">Langkah 1:</span> Gunakan informasi yang diberikan untuk mencari beda ($b$).</p>
+                        <p>Diketahui suku pertama ($a$) adalah 5 dan suku ke-6 ($U_6$) adalah 15. Gunakan rumus suku ke-n:</p>
+                        <p>$U_6 = a + (6-1)b = 15$</p>
+                        <p>$5 + 5b = 15$</p>
+                        <p>$5b = 10$</p>
+                        <p>$b = 2$</p>
+                        <p><span class="step">Langkah 2:</span> Hitung jumlah 10 suku pertama ($S_{10}$) menggunakan rumus jumlah deret.</p>
+                        <p>Substitusikan nilai $a=5$ dan $b=2$ ke dalam rumus $S_n$:</p>
+                        <p>$S_{10} = \frac{10}{2}(2(5) + (10-1)(2))$</p>
+                        <p>$S_{10} = 5(10 + 9(2))$</p>
+                        <p>$S_{10} = 5(10 + 18)$</p>
+                        <p>$S_{10} = 5(28)$</p>
+                        <p>$S_{10} = 140$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 140.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 14 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>14.</strong> Diberikan dua garis $g$ dan $h$ pada sebuah bidang. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jika $g$ sejajar dengan $h$ dan $g$ tegak lurus dengan garis $k$, maka $h$ tegak lurus dengan $k$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $g$ berpotongan dengan $h$ dan $g$ sejajar dengan $k$, maka $h$ berpotongan dengan $k$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $g$ tegak lurus dengan $h$, maka sudut yang dibentuk adalah $90^{\circ}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $g$ dan $h$ tidak berpotongan, maka kedua garis itu sejajar.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Pahami hubungan dasar antara dua atau lebih garis pada bidang datar. Konsep-konsep ini meliputi garis sejajar (tidak berpotongan), berpotongan, dan tegak lurus (berpotongan pada sudut $90^{\circ}$).</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan pertama.</p>
+                        <p>Pernyataan "Jika $g$ sejajar dengan $h$ dan $g$ tegak lurus dengan garis $k$, maka $h$ tegak lurus dengan $k$" adalah BENAR. Dua garis yang sejajar akan memiliki hubungan yang sama dengan garis ketiga yang memotong salah satunya.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan kedua.</p>
+                        <p>Pernyataan "Jika $g$ berpotongan dengan $h$ dan $g$ sejajar dengan $k$, maka $h$ berpotongan dengan $k$" adalah BENAR. Jika $g$ berpotongan dengan $h$, artinya mereka tidak sejajar. Karena $k$ sejajar dengan $g$, maka $k$ juga tidak sejajar dengan $h$. Dalam geometri bidang, dua garis yang tidak sejajar pasti berpotongan.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan ketiga.</p>
+                        <p>Pernyataan "Jika $g$ tegak lurus dengan $h$, maka sudut yang dibentuk adalah $90^{\circ}$" adalah BENAR. Ini adalah definisi dari dua garis yang saling tegak lurus.</p>
+                        <p><span class="step">Langkah 4:</span> Analisis pernyataan keempat.</p>
+                        <p>Pernyataan "Jika $g$ dan $h$ tidak berpotongan, maka kedua garis itu sejajar" adalah BENAR. Di bidang datar (dua dimensi), hanya ada dua kemungkinan untuk dua garis: berpotongan atau sejajar. Jika tidak berpotongan, maka mereka pasti sejajar.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 15 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>15.</strong> Jika $\tan x = \frac{3}{4}$ dan $x$ berada di kuadran III, nilai dari $\frac{\sin x}{\cos x} - \frac{\cos x}{\sin x}$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{7}{12}$</div>
+                        <div class="option">B. $\frac{12}{7}$</div>
+                        <div class="option">C. $\frac{-7}{12}$</div>
+                        <div class="option">D. $\frac{-25}{12}$</div>
+                        <div class="option">E. $\frac{25}{12}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Gunakan identitas dasar trigonometri untuk menyederhanakan ekspresi. Perhatikan bahwa $\frac{\sin x}{\cos x} = \tan x$ dan $\frac{\cos x}{\sin x} = \cot x$. Juga, $\cot x = \frac{1}{\tan x}$.</p>
+                        <p><span class="step">Langkah 1:</span> Sederhanakan ekspresi yang diberikan menggunakan identitas $\tan x$ dan $\cot x$.</p>
+                        <p>$\frac{\sin x}{\cos x} - \frac{\cos x}{\sin x} = \tan x - \cot x$</p>
+                        <p><span class="step">Langkah 2:</span> Substitusikan nilai $\tan x = \frac{3}{4}$ ke dalam ekspresi yang sudah disederhanakan.</p>
+                        <p>Kita tahu $\cot x = \frac{1}{\tan x} = \frac{1}{3/4} = \frac{4}{3}$.</p>
+                        <p><span class="step">Langkah 3:</span> Lakukan perhitungan akhir.</p>
+                        <p>$\tan x - \cot x = \frac{3}{4} - \frac{4}{3}$</p>
+                        <p>Untuk menguranginya, samakan penyebutnya menjadi 12.</p>
+                        <p>$= \frac{3 \times 3}{4 \times 3} - \frac{4 \times 4}{3 \times 4}$</p>
+                        <p>$= \frac{9}{12} - \frac{16}{12}$</p>
+                        <p>$= \frac{9 - 16}{12}$</p>
+                        <p>$= \frac{-7}{12}$</p>
+                        <p>Posisi $x$ di kuadran III hanya untuk memastikan nilai $\tan x$ positif, yang sudah diberikan di soal. Perhitungan akhir tidak terpengaruh oleh kuadran.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{-7}{12}$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 16 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>16.</strong> Suatu deret geometri tak hingga memiliki suku pertama 12 dan jumlah deret tersebut adalah 16. Rasio dari deret tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{1}{4}$</div>
+                        <div class="option">B. $\frac{1}{3}$</div>
+                        <div class="option">C. $\frac{1}{2}$</div>
+                        <div class="option">D. $\frac{2}{3}$</div>
+                        <div class="option">E. $\frac{3}{4}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Jumlah dari deret geometri tak hingga yang konvergen (nilai mutlak rasionya kurang dari 1) dapat dihitung dengan rumus $S_{\infty} = \frac{a}{1-r}$, di mana $a$ adalah suku pertama dan $r$ adalah rasio.</p>
+                        <p><span class="step">Langkah 1:</span> Identifikasi nilai-nilai yang diketahui.</p>
+                        <p>Suku pertama ($a$) = 12.</p>
+                        <p>Jumlah deret tak hingga ($S_{\infty}$) = 16.</p>
+                        <p><span class="step">Langkah 2:</span> Masukkan nilai-nilai tersebut ke dalam rumus jumlah deret tak hingga.</p>
+                        <p>$16 = \frac{12}{1-r}$</p>
+                        <p><span class="step">Langkah 3:</span> Selesaikan persamaan untuk menemukan nilai rasio ($r$).</p>
+                        <p>Kalikan kedua sisi dengan $(1-r)$:</p>
+                        <p>$16(1-r) = 12$</p>
+                        <p>$1-r = \frac{12}{16} = \frac{3}{4}$</p>
+                        <p>Pindahkan $r$ ke satu sisi:</p>
+                        <p>$r = 1 - \frac{3}{4}$</p>
+                        <p>$r = \frac{1}{4}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{1}{4}$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 17 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>17.</strong> Jarak titik $\mathrm{C}$ ke bidang $\mathrm{BDG}$ pada kubus $\mathrm{ABCD.EFGH}$ dengan panjang rusuk 6 $\mathrm{cm}$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $2\sqrt{2}$ cm</div>
+                        <div class="option">B. $3\sqrt{2}$ cm</div>
+                        <div class="option">C. $2\sqrt{3}$ cm</div>
+                        <div class="option">D. $3\sqrt{3}$ cm</div>
+                        <div class="option">E. $4\sqrt{3}$ cm</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Jarak titik ke bidang pada kubus seringkali dapat ditemukan dengan menggunakan diagonal ruang. Jarak dari titik sudut kubus ke bidang yang berhadapan dan melewati diagonal ruang adalah sepertiga dari panjang diagonal ruang tersebut.</p>
+                        <p><span class="step">Langkah 1:</span> Tentukan diagonal ruang yang melalui titik C dan tegak lurus terhadap bidang BDG.</p>
+                        <p>Diagonal ruang tersebut adalah AG. Jarak dari titik C ke bidang BDG adalah sepertiga dari panjang diagonal ruang AG.</p>
+                        <p><span class="step">Langkah 2:</span> Hitung panjang diagonal ruang AG. </p>
+                        <p>Rumus panjang diagonal ruang kubus dengan rusuk $s$ adalah $s\sqrt{3}$.</p>
+                        <p>Panjang rusuk ($s$) adalah 6 cm, jadi panjang diagonal ruang $AG = 6\sqrt{3}$ $\mathrm{cm}$.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jarak dari titik C ke bidang BDG.</p>
+                        <p>Jarak = $\frac{1}{3} \times (\text{panjang diagonal ruang})$</p>
+                        <p>Jarak = $\frac{1}{3} \times 6\sqrt{3}$</p>
+                        <p>Jarak = $2\sqrt{3}$ $\mathrm{cm}$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $2\sqrt{3}$ cm.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 18 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>18.</strong> Seorang pilot melihat sebuah mercusuar dengan sudut depresi $60^{\circ}$. Ketinggian pilot saat itu adalah $250\sqrt{3}$ $\mathrm{m}$. Setelah 5 detik, pilot melihat mercusuar dengan sudut depresi $30^{\circ}$ tanpa mengubah ketinggian. Kecepatan pesawat tersebut adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $100$ $\mathrm{m/s}$</div>
+                        <div class="option">B. $120$ $\mathrm{m/s}$</div>
+                        <div class="option">C. $150$ $\mathrm{m/s}$</div>
+                        <div class="option">D. $180$ $\mathrm{m/s}$</div>
+                        <div class="option">E. $200$ $\mathrm{m/s}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Sudut depresi adalah sudut yang dibentuk oleh garis horizontal dan garis pandang ke bawah. Kita akan menggunakan perbandingan trigonometri, khususnya tangen ($\tan\alpha = \frac{\text{sisi depan}}{\text{sisi samping}}$), untuk menghitung jarak horizontal. Kecepatan adalah jarak yang ditempuh dibagi dengan waktu ($v = \frac{s}{t}$).</p>
+                        <p><span class="step">Langkah 1:</span> Hitung jarak horizontal awal ($d_1$) dari posisi pertama pesawat ke mercusuar.</p>
+                        <p>$\tan 60^{\circ} = \frac{\text{ketinggian}}{d_1} = \frac{250\sqrt{3}}{d_1}$</p>
+                        <p>$d_1 = \frac{250\sqrt{3}}{\tan 60^{\circ}} = \frac{250\sqrt{3}}{\sqrt{3}} = 250$ $\mathrm{m}$.</p>
+                        <p><span class="step">Langkah 2:</span> Hitung jarak horizontal akhir ($d_2$) dari posisi kedua pesawat ke mercusuar.</p>
+                        <p>$\tan 30^{\circ} = \frac{250\sqrt{3}}{d_2}$</p>
+                        <p>$d_2 = \frac{250\sqrt{3}}{\tan 30^{\circ}} = \frac{250\sqrt{3}}{1/\sqrt{3}} = 250\sqrt{3} \times \sqrt{3} = 250 \times 3 = 750$ $\mathrm{m}$.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung jarak yang ditempuh pesawat ($s$) selama 5 detik.</p>
+                        <p>Jarak tempuh adalah selisih antara jarak horizontal akhir dan awal: $s = d_2 - d_1 = 750 - 250 = 500$ $\mathrm{m}$.</p>
+                        <p><span class="step">Langkah 4:</span> Hitung kecepatan pesawat ($v$) dengan membagi jarak dengan waktu.</p>
+                        <p>Waktu ($t$) = 5 detik.</p>
+                        <p>$v = \frac{s}{t} = \frac{500 \mathrm{m}}{5 \mathrm{s}} = 100$ $\mathrm{m/s}$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 100 m/s.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 19 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>19.</strong> Diketahui sebuah barisan aritmetika dengan suku pertama 4 dan beda 3. Suku ke-$n$ dari barisan tersebut adalah $U_n$. Manakah dari pernyataan berikut yang BENAR? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                    <div class="options-grid">
+                        <div class="option">A. $U_5 = 16$</div>
+                        <div class="option">B. $S_5 = 40$</div>
+                        <div class="option">C. Suku ke-8 adalah 25.</div>
+                        <div class="option">D. Jumlah 10 suku pertama adalah 175.</div>
+                        <div class="option">E. Suku ke-10 adalah 31.</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Kita akan menggunakan rumus dasar barisan aritmetika untuk memeriksa setiap pernyataan. Rumus suku ke-n adalah $U_n = a + (n-1)b$, dan rumus jumlah n suku pertama adalah $S_n = \frac{n}{2}(2a + (n-1)b)$.</p>
+                        <p><span class="step">Langkah 1:</span> Identifikasi nilai-nilai yang diketahui: suku pertama ($a=4$) dan beda ($b=3$).</p>
+                        <p><span class="step">Langkah 2:</span> Periksa kebenaran setiap pernyataan.</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li><p>Pernyataan A ($U_5 = 16$): Hitung $U_5 = 4 + (5-1)3 = 4 + 4(3) = 4 + 12 = 16$. Pernyataan ini **BENAR**.</p></li>
+                            <li><p>Pernyataan B ($S_5 = 40$): Hitung $S_5 = \frac{5}{2}(2(4) + (5-1)3) = \frac{5}{2}(8 + 12) = \frac{5}{2}(20) = 50$. Pernyataan ini **SALAH**.</p></li>
+                            <li><p>Pernyataan C (Suku ke-8 adalah 25): Hitung $U_8 = 4 + (8-1)3 = 4 + 7(3) = 4 + 21 = 25$. Pernyataan ini **BENAR**.</p></li>
+                            <li><p>Pernyataan D (Jumlah 10 suku pertama adalah 175): Hitung $S_{10} = \frac{10}{2}(2(4) + (10-1)3) = 5(8 + 9(3)) = 5(8 + 27) = 5(35) = 175$. Pernyataan ini **BENAR**.</p></li>
+                            <li><p>Pernyataan E (Suku ke-10 adalah 31): Hitung $U_{10} = 4 + (10-1)3 = 4 + 9(3) = 4 + 27 = 31$. Pernyataan ini **BENAR**.</li>
+                        </ul>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah A, C, D, dan E.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 20 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>20.</strong> Sebuah kubus $\mathrm{ABCD.EFGH}$ memiliki rusuk sepanjang 12 $\mathrm{cm}$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jarak titik $\mathrm{A}$ ke bidang $\mathrm{EFGH}$ adalah $12$ $\mathrm{cm}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jarak antara garis $\mathrm{AB}$ dan garis $\mathrm{GH}$ adalah $12$ $\mathrm{cm}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Diagonal ruang kubus memiliki panjang $12\sqrt{3}$ $\mathrm{cm}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jarak titik $\mathrm{A}$ ke bidang $\mathrm{BCGF}$ adalah $12\sqrt{2}$ $\mathrm{cm}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Pahami konsep jarak dalam bangun ruang tiga dimensi. Jarak terpendek dari suatu titik ke bidang atau dari satu garis ke garis lain selalu diukur dengan garis yang tegak lurus.</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan pertama.</p>
+                        <p>Jarak titik $\mathrm{A}$ ke bidang $\mathrm{EFGH}$ adalah panjang rusuk $\mathrm{AE}$, yang tegak lurus terhadap bidang tersebut. Panjang rusuknya adalah 12 cm. Jadi, pernyataan ini **BENAR**.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan kedua.</p>
+                        <p>Garis $\mathrm{AB}$ dan $\mathrm{GH}$ adalah dua garis sejajar pada bidang yang berbeda. Jarak terpendek antara mereka adalah panjang garis yang tegak lurus dan menghubungkan keduanya, seperti rusuk $\mathrm{AH}$ atau $\mathrm{BG}$. Jaraknya adalah panjang rusuk, yaitu 12 cm. Jadi, pernyataan ini **BENAR**.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan ketiga.</p>
+                        <p>Diagonal ruang kubus dapat dihitung dengan rumus $s\sqrt{3}$, di mana $s$ adalah panjang rusuk. Dengan $s = 12$ cm, panjang diagonal ruang adalah $12\sqrt{3}$ cm. Jadi, pernyataan ini **BENAR**.</p>
+                        <p><span class="step">Langkah 4:</span> Analisis pernyataan keempat.</p>
+                        <p>Jarak titik $\mathrm{A}$ ke bidang $\mathrm{BCGF}$ adalah panjang rusuk $\mathrm{AB}$ yang tegak lurus dengan bidang tersebut. Jaraknya adalah 12 cm. Nilai $12\sqrt{2}$ cm adalah panjang diagonal bidang (misalnya $\mathrm{AC}$ atau $\mathrm{AF}$). Jadi, pernyataan ini **SALAH**.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 21 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>21.</strong> Dalam sebuah $\triangle \mathrm{ABC}$, jika $\sin A = \frac{3}{5}$ dan $\cos B = \frac{12}{13}$, maka nilai $\cos C$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{16}{65}$</div>
+                        <div class="option">B. $\frac{33}{65}$</div>
+                        <div class="option">C. $\frac{56}{65}$</div>
+                        <div class="option">D. $\frac{-33}{65}$</div>
+                        <div class="option">E. $\frac{-16}{65}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Dalam setiap segitiga, jumlah ketiga sudutnya adalah $180^{\circ}$. Dengan demikian, $A+B+C = 180^{\circ}$. Kita bisa menggunakan identitas jumlah sudut untuk menemukan nilai $\cos C$.</p>
+                        <p><span class="step">Langkah 1:</span> Cari nilai $\cos A$ dan $\sin B$ menggunakan identitas Pythagoras ($\sin^2x + \cos^2x = 1$).</p>
+                        <p>Dari $\sin A = \frac{3}{5}$, kita dapatkan $\cos A = \sqrt{1 - (\frac{3}{5})^2} = \sqrt{1 - \frac{9}{25}} = \sqrt{\frac{16}{25}} = \frac{4}{5}$ (karena A adalah sudut segitiga, kita asumsikan cosinusnya positif).</p>
+                        <p>Dari $\cos B = \frac{12}{13}$, kita dapatkan $\sin B = \sqrt{1 - (\frac{12}{13})^2} = \sqrt{1 - \frac{144}{169}} = \sqrt{\frac{25}{169}} = \frac{5}{13}$.</p>
+                        <p><span class="step">Langkah 2:</span> Gunakan hubungan sudut dalam segitiga untuk menyatakan $C$ dalam bentuk $A$ dan $B$.</p>
+                        <p>$A+B+C = 180^{\circ} \implies C = 180^{\circ} - (A+B)$.</p>
+                        <p>Maka, $\cos C = \cos(180^{\circ} - (A+B))$. Menggunakan identitas sudut berelasi, $\cos(180^{\circ}-x) = -\cos x$, kita peroleh $\cos C = -\cos(A+B)$.</p>
+                        <p><span class="step">Langkah 3:</span> Hitung nilai $\cos(A+B)$ menggunakan rumus jumlah sudut.</p>
+                        <p>$\cos(A+B) = \cos A \cos B - \sin A \sin B$</p>
+                        <p>$= (\frac{4}{5})(\frac{12}{13}) - (\frac{3}{5})(\frac{5}{13})$</p>
+                        <p>$= \frac{48}{65} - \frac{15}{65} = \frac{33}{65}$</p>
+                        <p><span class="step">Langkah 4:</span> Tentukan nilai $\cos C$</p>
+                        <p>$\cos C = -\cos(A+B) = -\frac{33}{65}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $-\frac{33}{65}$.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 22 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>22.</strong> Sebuah deret aritmetika memiliki suku pertama $a$ dan beda $b$. Berapakah jumlah 5 suku pertama dari deret tersebut?</p>
+                    <p class="mt-4"> Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan. <br>
+                    (1) Suku ke-2 adalah 8. <br>
+                    (2) Suku ke-4 adalah 14.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menemukan jumlah suku dalam deret aritmetika, kita harus memiliki nilai suku pertama ($a$) dan beda ($b$). Kita dapat menggunakan rumus suku ke-n ($U_n = a + (n-1)b$) untuk membuat persamaan dari data yang diberikan.</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan (1) saja.</p>
+                        <p>Pernyataan (1) memberikan kita informasi bahwa $U_2 = a + b = 8$. Ini adalah satu persamaan dengan dua variabel ($a$ dan $b$). Tanpa informasi tambahan, kita tidak bisa menentukan nilai unik untuk $a$ dan $b$. Jadi, pernyataan ini saja TIDAK cukup.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan (2) saja.</p>
+                        <p>Pernyataan (2) memberikan kita informasi bahwa $U_4 = a + 3b = 14$. Sama seperti sebelumnya, ini adalah satu persamaan dengan dua variabel, sehingga TIDAK cukup.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan (1) dan (2) bersama-sama.</p>
+                        <p>Dengan menggabungkan kedua pernyataan, kita memiliki sistem dua persamaan linear:</p>
+                        <p>$a + b = 8$</p>
+                        <p>$a + 3b = 14$</p>
+                        <p>Kita dapat menyelesaikan sistem ini dengan eliminasi. Kurangi persamaan pertama dari yang kedua: $(a+3b) - (a+b) = 14 - 8 \implies 2b = 6 \implies b=3$.</p>
+                        <p>Substitusikan $b=3$ ke persamaan pertama: $a + 3 = 8 \implies a = 5$.</p>
+                        <p>Karena kita berhasil menemukan nilai unik untuk $a$ dan $b$, kita bisa menghitung jumlah 5 suku pertama. Dengan demikian, kedua pernyataan BERSAMA-SAMA CUKUP.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 23 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>23.</strong> Sebuah titik $P(x, y)$ ditranslasi oleh $T = \begin{pmatrix} 2 \\ -3 \end{pmatrix}$ kemudian dilanjutkan dengan dilatasi dengan pusat $(0,0)$ dan faktor skala 3. Jika bayangan akhirnya adalah $P''(12, 6)$, koordinat awal titik $P(x, y)$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $(2, 5)$</div>
+                        <div class="option">B. $(3, 4)$</div>
+                        <div class="option">C. $(6, 9)$</div>
+                        <div class="option">D. $(-1, 5)$</div>
+                        <div class="option">E. $(4, -2)$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menemukan koordinat awal setelah serangkaian transformasi, kita harus melakukan proses kebalikan (invers) dari setiap transformasi, dimulai dari yang terakhir.</p>
+                        <p><span class="step">Langkah 1:</span> Lakukan invers dari dilatasi.</p>
+                        <p>Dilatasi dengan pusat $(0,0)$ dan faktor skala 3 mengubah titik $(x, y)$ menjadi $(3x, 3y)$. Untuk membalikkan prosesnya, kita bagi koordinat bayangan akhir dengan faktor skala. Bayangan akhirnya adalah $P''(12, 6)$.</p>
+                        <p>Titik sebelum dilatasi, kita sebut $P'(x',y')$, adalah:</p>
+                        <p>$x' = \frac{12}{3} = 4$</p>
+                        <p>$y' = \frac{6}{3} = 2$</p>
+                        <p>Jadi, titik setelah translasi adalah $P'(4, 2)$.</p>
+                        <p><span class="step">Langkah 2:</span> Lakukan invers dari translasi.</p>
+                        <p>Translasi oleh $T = \begin{pmatrix} 2 \\ -3 \end{pmatrix}$ mengubah titik $(x, y)$ menjadi $(x+2, y-3)$. Untuk membalikkan, kita kurangi translasi dari titik yang sudah ditransformasi ($P'$).</p>
+                        <p>Koordinat awal titik $P(x, y)$ adalah:</p>
+                        <p>$x = 4 - 2 = 2$</p>
+                        <p>$y = 2 - (-3) = 2 + 3 = 5$</p>
+                        <p>Jadi, koordinat awal titik P adalah $(2, 5)$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $(2, 5)$.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 24 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>24.</strong> Jika $\sin x - \cos x = \frac{1}{2}$, nilai dari $\sin x \cdot \cos x$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{1}{8}$</div>
+                        <div class="option">B. $\frac{3}{8}$</div>
+                        <div class="option">C. $\frac{1}{4}$</div>
+                        <div class="option">D. $\frac{3}{4}$</div>
+                        <div class="option">E. $\frac{1}{2}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Gunakan identitas trigonometri $\sin^2 x + \cos^2 x = 1$ dan identitas aljabar untuk menyelesaikan soal ini. Dengan mengkuadratkan persamaan yang diberikan, kita dapat menemukan nilai dari $\sin x \cos x$.</p>
+                        <p><span class="step">Langkah 1:</span> Kuadratkan kedua sisi persamaan yang diberikan.</p>
+                        <p>$(\sin x - \cos x)^2 = (\frac{1}{2})^2$</p>
+                        <p>$\sin^2 x - 2\sin x \cos x + \cos^2 x = \frac{1}{4}$</p>
+                        <p><span class="step">Langkah 2:</span> Substitusikan identitas $\sin^2 x + \cos^2 x = 1$ ke dalam persamaan.</p>
+                        <p>$1 - 2\sin x \cos x = \frac{1}{4}$</p>
+                        <p><span class="step">Langkah 3:</span> Selesaikan persamaan untuk menemukan nilai $\sin x \cos x$.</p>
+                        <p>$1 - \frac{1}{4} = 2\sin x \cos x$</p>
+                        <p>$\frac{3}{4} = 2\sin x \cos x$</p>
+                        <p>$\sin x \cos x = \frac{3}{4 \times 2}$</p>
+                        <p>$\sin x \cos x = \frac{3}{8}$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{3}{8}$.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 25 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>25.</strong> Sebuah populasi bakteri bertumbuh secara eksponensial. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jika populasi awal 100 dan bertumbuh menjadi 800 dalam 3 jam, maka populasi akan mencapai 1600 dalam 4 jam.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Fungsi pertumbuhan populasi bakteri dapat dimodelkan sebagai $N(t) = N_0(1+r)^t$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Grafik pertumbuhan populasi bakteri adalah garis lurus.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Pertumbuhan eksponensial terjadi ketika laju pertumbuhan sebanding dengan jumlah populasi saat ini. Fungsi pertumbuhan eksponensial memiliki bentuk umum $N(t) = N_0 k^t$, di mana $N_0$ adalah populasi awal, $k$ adalah faktor pertumbuhan, dan $t$ adalah waktu.</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan pertama.</p>
+                        <p>Pada jam ke-3, populasi menjadi 800 dari 100. Ini berarti populasinya berlipat ganda setiap jam, karena $100 \times 2^3 = 800$. Jadi, faktor pertumbuhannya adalah $k=2$. Dengan faktor ini, pada jam ke-4, populasi akan menjadi $100 \times 2^4 = 100 \times 16 = 1600$. Jadi, pernyataan ini **BENAR**.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan kedua.</p>
+                        <p>Fungsi pertumbuhan populasi bakteri juga dapat dimodelkan dengan rumus $N(t) = N_0(1+r)^t$, di mana $r$ adalah laju pertumbuhan. Rumus ini adalah bentuk lain dari $N(t) = N_0 k^t$. Jadi, pernyataan ini **BENAR**.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan ketiga.</p>
+                        <p>Grafik dari fungsi eksponensial ($y = a^x$) adalah kurva yang melengkung (untuk pertumbuhan) atau melengkung ke bawah (untuk peluruhan), bukan garis lurus. Grafik garis lurus adalah untuk fungsi linear. Jadi, pernyataan ini **SALAH**.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 26 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>26.</strong> Sebuah kerucut memiliki jari-jari $r$ dan tinggi $h$. Sebuah kerucut lain memiliki jari-jari $2r$ dan tinggi $\frac{1}{2}h$. Perbandingan volume kerucut pertama dengan kerucut kedua adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $1:2$</div>
+                        <div class="option">B. $1:4$</div>
+                        <div class="option">C. $2:1$</div>
+                        <div class="option">D. $4:1$</div>
+                        <div class="option">E. $1:1$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Volume kerucut dihitung dengan rumus $V = \frac{1}{3}\pi r^2 h$. Untuk menemukan perbandingan volume, kita cukup menghitung volume kedua kerucut dan membandingkannya.</p>
+                        <p><span class="step">Langkah 1:</span> Tuliskan rumus volume untuk kerucut pertama ($V_1$).</p>
+                        <p>$V_1 = \frac{1}{3}\pi (r)^2 (h)$</p>
+                        <p>$V_1 = \frac{1}{3}\pi r^2 h$</p>
+                        <p><span class="step">Langkah 2:</span> Tuliskan rumus volume untuk kerucut kedua ($V_2$) dengan jari-jari $2r$ dan tinggi $\frac{1}{2}h$.</p>
+                        <p>$V_2 = \frac{1}{3}\pi (2r)^2 (\frac{1}{2}h)$</p>
+                        <p>$V_2 = \frac{1}{3}\pi (4r^2) (\frac{1}{2}h)$</p>
+                        <p>$V_2 = \frac{1}{3}\pi (2r^2 h)$</p>
+                        <p>$V_2 = \frac{2}{3}\pi r^2 h$</p>
+                        <p><span class="step">Langkah 3:</span> Hitung perbandingan volume $V_1$ dan $V_2$.</p>
+                        <p>$\frac{V_1}{V_2} = \frac{\frac{1}{3}\pi r^2 h}{\frac{2}{3}\pi r^2 h}$</p>
+                        <p>Hilangkan suku yang sama ($\pi r^2 h$) dari pembilang dan penyebut:</p>
+                        <p>$\frac{V_1}{V_2} = \frac{1/3}{2/3}$</p>
+                        <p>$\frac{V_1}{V_2} = \frac{1}{3} \times \frac{3}{2}$</p>
+                        <p>$\frac{V_1}{V_2} = \frac{1}{2}$</p>
+                        <p>Jadi, perbandingannya adalah $1:2$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $1:2$.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 27 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>27.</strong> Jika $\sin 2x = \cos x$ untuk $0^{\circ} \le x \le 90^{\circ}$, nilai dari $\tan x$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. $\frac{1}{2}\sqrt{3}$</div>
+                        <div class="option">B. $\sqrt{3}$</div>
+                        <div class="option">C. $\frac{1}{3}\sqrt{3}$</div>
+                        <div class="option">D. 1</div>
+                        <div class="option">E. $\frac{1}{2}$</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk menyelesaikan persamaan trigonometri ini, gunakan identitas sudut rangkap untuk sinus, yaitu $\sin 2x = 2 \sin x \cos x$. Setelah itu, faktorkan persamaan untuk menemukan nilai $x$ yang memenuhi.</p>
+                        <p><span class="step">Langkah 1:</span> Ubah persamaan yang diberikan menggunakan identitas sudut rangkap.</p>
+                        <p>$\sin 2x = \cos x$</p>
+                        <p>$2\sin x \cos x = \cos x$</p>
+                        <p><span class="step">Langkah 2:</span> Pindahkan semua suku ke satu sisi dan faktorkan $\cos x$.</p>
+                        <p>$2\sin x \cos x - \cos x = 0$</p>
+                        <p>$\cos x (2\sin x - 1) = 0$</p>
+                        <p><span class="step">Langkah 3:</span> Tentukan nilai $x$ dari setiap faktor.</p>
+                        <p>Kemungkinan 1: $\cos x = 0$. Dalam interval $0^{\circ} \le x \le 90^{\circ}$, nilai $x$ yang memenuhi adalah $x = 90^{\circ}$. Namun, nilai $\tan 90^{\circ}$ tidak terdefinisi, sehingga ini bukan jawaban yang valid.</p>
+                        <p>Kemungkinan 2: $2\sin x - 1 = 0 \implies \sin x = \frac{1}{2}$. Dalam interval yang sama, nilai $x$ yang memenuhi adalah $x = 30^{\circ}$.</p>
+                        <p><span class="step">Langkah 4:</span> Hitung nilai $\tan x$ untuk nilai $x$ yang valid.</p>
+                        <p>Nilai yang valid adalah $x=30^{\circ}$, maka nilai $\tan x = \tan 30^{\circ} = \frac{1}{\sqrt{3}} = \frac{1}{3}\sqrt{3}$.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah $\frac{1}{3}\sqrt{3}$.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 28 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>28.</strong> Diberikan barisan geometri dengan suku pertama $a$ dan rasio $r$. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                    <table class="complex-table">
+                        <thead>
+                            <tr>
+                                <th>Pernyataan</th>
+                                <th>Benar</th>
+                                <th>Salah</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jika $|r| < 1$, barisan tersebut konvergen ke 0.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Suku ke-$n$ dapat ditentukan dengan rumus $U_n = ar^{n-1}$.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Jika $r = 1$, barisan tersebut adalah barisan aritmetika.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Perkalian dua suku berurutan pada barisan ini selalu konstan.</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Pahami properti dasar dari barisan geometri. Barisan geometri memiliki rasio yang konstan antar suku-suku berurutannya.</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan pertama.</p>
+                        <p>Pernyataan "Jika $|r| < 1$, barisan tersebut konvergen ke 0" adalah **BENAR**. Ini adalah syarat konvergensi deret geometri tak hingga. Artinya, suku-suku barisan akan semakin kecil dan mendekati nol.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan kedua.</p>
+                        <p>Pernyataan "Suku ke-$n$ dapat ditentukan dengan rumus $U_n = ar^{n-1}$" adalah **BENAR**. Ini adalah rumus dasar untuk suku ke-$n$ pada barisan geometri, di mana $a$ adalah suku pertama dan $r$ adalah rasio.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan ketiga.</p>
+                        <p>Pernyataan "Jika $r = 1$, barisan tersebut adalah barisan aritmetika" adalah **BENAR**. Jika $r=1$, setiap suku akan sama dengan suku sebelumnya, sehingga beda antar suku adalah nol. Barisan dengan beda nol termasuk dalam kategori barisan aritmetika.</p>
+                        <p><span class="step">Langkah 4:</span> Analisis pernyataan keempat.</p>
+                        <p>Pernyataan "Perkalian dua suku berurutan pada barisan ini selalu konstan" adalah **SALAH**. Pada barisan geometri, yang konstan adalah hasil bagi (rasio) dari dua suku berurutan. Perkalian dua suku berurutan, seperti $U_2 \times U_3 = (ar)(ar^2) = a^2r^3$, tidak konstan.</p>
+                    </div>
+                </div>
+                
+                <!-- Soal 29 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>29.</strong> Dua buah sudut, $\angle A$ dan $\angle B$, adalah sudut komplementer. Jika besar $\angle A = (2x+10)^{\circ}$ dan $\angle B = (3x+5)^{\circ}$, maka nilai dari $2x+3$ adalah ....</p>
+                    <div class="options-grid">
+                        <div class="option">A. 33</div>
+                        <div class="option">B. 43</div>
+                        <div class="option">C. 53</div>
+                        <div class="option">D. 63</div>
+                        <div class="option">E. 73</div>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Sudut komplementer adalah dua sudut yang jika dijumlahkan, hasilnya sama dengan $90^{\circ}$. Dengan menggunakan definisi ini, kita dapat membuat persamaan untuk menemukan nilai $x$, lalu menghitung nilai ekspresi yang ditanyakan.</p>
+                        <p><span class="step">Langkah 1:</span> Buat persamaan berdasarkan definisi sudut komplementer.</p>
+                        <p>$\angle A + \angle B = 90^{\circ}$</p>
+                        <p>$(2x+10) + (3x+5) = 90$</p>
+                        <p><span class="step">Langkah 2:</span> Selesaikan persamaan untuk menemukan nilai $x$.</p>
+                        <p>Gabungkan suku-suku yang serupa:</p>
+                        <p>$(2x+3x) + (10+5) = 90$</p>
+                        <p>$5x + 15 = 90$</p>
+                        <p>$5x = 90 - 15$</p>
+                        <p>$5x = 75$</p>
+                        <p>$x = \frac{75}{5}$</p>
+                        <p>$x = 15$</p>
+                        <p><span class="step">Langkah 3:</span> Hitung nilai dari ekspresi yang diminta, yaitu $2x+3$.</p>
+                        <p>Substitusikan nilai $x=15$ ke dalam ekspresi:</p>
+                        <p>$2(15)+3 = 30+3 = 33$</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah 33.</p>
+                    </div>
+                </div>
+
+                <!-- Soal 30 -->
+                <div class="item-container">
+                    <p class="question-text"><strong>30.</strong> Diketahui sebuah barisan bilangan $a_1, a_2, a_3, \dots$ Berapakah suku ke-10 dari barisan tersebut?</p>
+                    <p class="mt-4"> Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan. <br>
+                    (1) Barisan tersebut adalah barisan geometri. <br>
+                    (2) Jumlah suku pertama dan kedua adalah 10.</p>
+                    <div class="data-sufficiency-options">
+                        <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                        <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                        <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                        <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                        <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                    <div class="solution">
+                        <h4>Konsep Dasar:</h4>
+                        <p>Untuk dapat menentukan suku ke-10 dari sebuah barisan, kita memerlukan informasi yang cukup untuk menemukan suku pertama dan rasio (untuk barisan geometri) atau beda (untuk barisan aritmetika).</p>
+                        <p><span class="step">Langkah 1:</span> Analisis pernyataan (1) saja.</p>
+                        <p>Pernyataan (1) memberitahu kita bahwa barisan tersebut adalah barisan geometri. Namun, kita tidak tahu berapa nilai suku pertama ($a_1$) atau rasionya ($r$). Karena kedua nilai ini bisa bervariasi, kita tidak bisa menemukan suku ke-10 secara unik. Jadi, pernyataan ini saja TIDAK cukup.</p>
+                        <p><span class="step">Langkah 2:</span> Analisis pernyataan (2) saja.</p>
+                        <p>Pernyataan (2) memberitahu kita bahwa $a_1 + a_2 = 10$. Kita tidak tahu jenis barisannya (apakah aritmetika, geometri, atau yang lain). Tanpa informasi ini, kita tidak dapat menemukan suku ke-10. Jadi, pernyataan ini saja TIDAK cukup.</p>
+                        <p><span class="step">Langkah 3:</span> Analisis pernyataan (1) dan (2) bersama-sama.</p>
+                        <p>Dari pernyataan (1), kita tahu barisan ini geometri, sehingga $a_2 = a_1 r$. Dari pernyataan (2), kita tahu $a_1 + a_2 = 10$.</p>
+                        <p>Gabungkan kedua informasi ini: $a_1 + a_1 r = 10 \implies a_1(1+r) = 10$.</p>
+                        <p>Persamaan ini masih memiliki dua variabel yang tidak diketahui ($a_1$ dan $r$). Ada banyak pasangan nilai yang mungkin. Misalnya:</p>
+                        <ul class="list-disc ml-6 space-y-1">
+                            <li>Jika $a_1 = 2$, maka $1+r=5 \implies r=4$. Suku ke-10-nya adalah $2 \cdot 4^9 = 524.288$.</li>
+                            <li>Jika $a_1 = 5$, maka $1+r=2 \implies r=1$. Suku ke-10-nya adalah $5 \cdot 1^9 = 5$.</li>
+                        </ul>
+                        <p>Karena kita tidak dapat menentukan nilai suku ke-10 secara tunggal, kedua pernyataan bersama-sama TIDAK CUKUP.</p>
+                        <p class="font-bold mt-4">Jadi, jawaban yang benar adalah Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
