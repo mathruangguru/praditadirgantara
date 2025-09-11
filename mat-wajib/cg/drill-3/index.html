@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Soal & Pembahasan TKA Matematika Wajib - 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi MathJax untuk render LaTeX -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+    <script id="Math-Jax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+         body {
+             font-family: 'Inter', sans-serif;
+             background-color: #f3f4f6;
+         }
+         .content-card {
+             background-color: white;
+             border-radius: 0.75rem;
+             padding: 1.5rem 2rem;
+             margin-bottom: 1.5rem;
+             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+         }
+         .section-title {
+             font-size: 1.875rem; /* 30px */
+             font-weight: 700;
+             color: #3730a3; /* indigo-800 */
+             border-bottom: 3px solid #6366f1; /* indigo-500 */
+             padding-bottom: 0.5rem;
+             margin-bottom: 1.5rem;
+         }
+         .item-container {
+             margin-bottom: 1.75rem;
+             padding-bottom: 1.75rem;
+             border-bottom: 1px solid #e5e7eb;
+         }
+         .item-container:last-child {
+             border-bottom: none;
+             margin-bottom: 0;
+             padding-bottom: 0;
+         }
+         .question-text {
+             line-height: 1.6;
+             font-size: 1.1rem;
+             margin-bottom: 1rem;
+         }
+         .options-grid {
+             display: grid;
+             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+             gap: 1rem;
+             margin-top: 1rem;
+             margin-bottom: 2rem;
+         }
+         .option {
+             padding: 0.5rem;
+         }
+         .data-sufficiency-options {
+             font-size: 0.95rem;
+             margin-top: 1rem;
+         }
+         .complex-table {
+             width: 100%;
+             margin-top: 1rem;
+             border-collapse: collapse;
+         }
+         .complex-table th, .complex-table td {
+             border: 1px solid #d1d5db;
+             padding: 0.75rem;
+             text-align: left;
+         }
+         .complex-table th {
+             background-color: #eef2ff;
+         }
+         .pembahasan {
+           margin-top: 2rem;
+           padding-top: 1.5rem;
+           border-top: 2px solid #e5e7eb;
+         }
+         .pembahasan h3 {
+           font-weight: 600;
+           color: #4338ca; /* indigo-600 */
+           font-size: 1.25rem;
+           margin-bottom: 1rem;
+         }
+         .pembahasan p {
+           margin-bottom: 0.5rem;
+           line-height: 1.6;
+         }
+         .pembahasan strong {
+           color: #1e3a8a; /* blue-900 */
+         }
+         .final-answer {
+           margin-top: 1.5rem;
+           padding: 0.75rem;
+           background-color: #ecfdf5; /* emerald-50 */
+           border-left: 4px solid #10b981; /* emerald-500 */
+           font-weight: 600;
+           color: #065f46; /* emerald-800 */
+         }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <div class="text-center mb-8">
+            <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_zekej2_3984.png" alt="Ruangguru Logo" class="mx-auto h-28">
+        </div>
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700">Drill Soal & Pembahasan TKA Matematika Wajib - 3</h1>
+            <p class="text-gray-600 mt-2">Topik: Data, Peluang, dan Aturan Pencacahan | Level: SMA</p>
+        </header>
+
+        <main>
+            <!-- Soal 1 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                <p class="question-text"><strong>1.</strong> Data nilai ulangan mata pelajaran Matematika dari dua kelas adalah sebagai berikut:
+                <br>Kelas A: 7, 8, 7, 6, 9, 8, 10, 7, 6, 8
+                <br>Kelas B: 6, 7, 8, 8, 9, 9, 10, 10
+                <br>Median dari data gabungan kedua kelas tersebut adalah ....</p>
+                <div class="options-grid">
+                    <div class="option">A. 7,5</div>
+                    <div class="option">B. 8</div>
+                    <div class="option">C. 8,25</div>
+                    <div class="option">D. 8,5</div>
+                    <div class="option">E. 9</div>
+                </div>
+
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 1</h3>
+                    <p><strong>KONSEP DASAR:</strong>
+                    Median adalah nilai tengah dari suatu kumpulan data <strong>setelah data tersebut diurutkan</strong> dari yang terkecil hingga terbesar.
+                    <ul>
+                        <li>Jika jumlah data ($n$) <strong>ganjil</strong>, median adalah data yang berada tepat di tengah, yaitu data ke-$(\frac{n+1}{2})$.</li>
+                        <li>Jika jumlah data ($n$) <strong>genap</strong>, median adalah rata-rata dari dua data yang berada di tengah, yaitu data ke-$(\frac{n}{2})$ dan data ke-$(\frac{n}{2}+1)$.</li>
+                    </ul>
+                    </p>
+                    <p><strong>ANALISIS SOAL:</strong>
+                    Kita diminta untuk mencari median dari data gabungan. Ini berarti kita harus menggabungkan semua nilai dari Kelas A dan Kelas B menjadi satu kumpulan data, mengurutkannya, lalu mencari nilai tengahnya.</p>
+                    <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                    <p><strong>Langkah 1: Gabungkan semua data dari kedua kelas.</strong>
+                    <br>Data Kelas A: {7, 8, 7, 6, 9, 8, 10, 7, 6, 8} (ada 10 data)
+                    <br>Data Kelas B: {6, 7, 8, 8, 9, 9, 10, 10} (ada 8 data)
+                    <br>Data Gabungan: {7, 8, 7, 6, 9, 8, 10, 7, 6, 8, 6, 7, 8, 8, 9, 9, 10, 10}
+                    </p>
+                    <p><strong>Langkah 2: Urutkan data gabungan dari nilai terkecil hingga terbesar.</strong>
+                    <br>Mengurutkan sangat penting untuk menemukan nilai tengah yang benar.
+                    <br>Data terurut: {6, 6, 6, 7, 7, 7, 7, 8, <strong>8, 8</strong>, 8, 8, 9, 9, 9, 10, 10, 10}
+                    </p>
+                    <p><strong>Langkah 3: Hitung jumlah total data ($n$).</strong>
+                    <br>Total data = (Jumlah data Kelas A) + (Jumlah data Kelas B) = $10 + 8 = 18$ data.
+                    </p>
+                    <p><strong>Langkah 4: Tentukan posisi median.</strong>
+                    <br>Karena jumlah data ($n=18$) adalah genap, median adalah rata-rata dari dua data di tengah.
+                    <br>Posisi data tengah pertama = $\frac{n}{2} = \frac{18}{2} = 9$. Ini berarti kita mencari data ke-9.
+                    <br>Posisi data tengah kedua = $\frac{n}{2} + 1 = \frac{18}{2} + 1 = 9 + 1 = 10$. Ini berarti kita mencari data ke-10.
+                    </p>
+                    <p><strong>Langkah 5: Temukan nilai data pada posisi ke-9 dan ke-10 dari data yang sudah diurutkan.</strong>
+                    <br>Data terurut: {6, 6, 6, 7, 7, 7, 7, 8, <strong class="text-blue-700">8</strong>, <strong class="text-red-700">8</strong>, 8, 8, 9, 9, 9, 10, 10, 10}
+                    <br>Data ke-9 adalah <strong>8</strong>.
+                    <br>Data ke-10 adalah <strong>8</strong>.
+                    </p>
+                    <p><strong>Langkah 6: Hitung median.</strong>
+                    <br>Median = $\frac{\text{Data ke-9} + \text{Data ke-10}}{2} = \frac{8 + 8}{2} = \frac{16}{2} = 8$.
+                    </p>
+                    <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>B. 8</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 2 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran & Perhitungan)</p>
+                <p class="question-text"><strong>2.</strong> Dalam sebuah kotak terdapat 5 kelereng merah, 3 kelereng biru, dan 2 kelereng hijau. Jika diambil 3 kelereng secara acak tanpa pengembalian, peluang terambilnya minimal satu kelereng merah dan minimal satu kelereng biru adalah ....</p>
+                <div class="options-grid">
+                    <div class="option">A. $\frac{1}{6}$</div>
+                    <div class="option">B. $\frac{1}{4}$</div>
+                    <div class="option">C. $\frac{1}{3}$</div>
+                    <div class="option">D. $\frac{1}{2}$</div>
+                    <div class="option">E. $\frac{5}{8}$</div>
+                </div>
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 2</h3>
+                    <p><strong>KONSEP DASAR:</strong>
+                    <ul>
+                        <li><strong>Peluang:</strong> Peluang suatu kejadian A, ditulis $P(A)$, adalah perbandingan antara banyaknya cara kejadian A bisa terjadi ($n(A)$) dengan total semua kemungkinan hasil yang bisa terjadi atau ruang sampel ($n(S)$). Rumusnya: $P(A) = \frac{n(A)}{n(S)}$.</li>
+                        <li><strong>Kombinasi:</strong> Digunakan ketika urutan pengambilan tidak penting. Mengambil kelereng {Merah, Biru, Hijau} sama saja dengan {Biru, Merah, Hijau}. Rumus kombinasi untuk memilih $k$ objek dari $n$ objek adalah $C(n,k) = \frac{n!}{k!(n-k)!}$.</li>
+                    </ul>
+                    </p>
+                    <p><strong>ANALISIS SOAL:</strong>
+                    Kita harus mencari peluang terambilnya 3 kelereng dengan syarat: <strong>minimal ada 1 merah DAN minimal ada 1 biru</strong>. Ini berarti komposisi kelereng yang terambil harus mengandung setidaknya satu merah dan satu biru.
+                    <br>Total Kelereng: 5 Merah (M) + 3 Biru (B) + 2 Hijau (H) = 10 kelereng.
+                    <br>Diambil: 3 kelereng.
+                    </p>
+                    <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                    <p><strong>Langkah 1: Hitung Ruang Sampel ($n(S)$).</strong>
+                    <br>Ini adalah total semua cara yang mungkin untuk mengambil 3 kelereng dari 10 kelereng yang ada, tanpa memperhatikan urutan.
+                    <br>$n(S) = C(10,3) = \frac{10!}{3!(10-3)!} = \frac{10!}{3!7!} = \frac{10 \times 9 \times 8 \times 7!}{3 \times 2 \times 1 \times 7!} = \frac{10 \times 9 \times 8}{6} = 10 \times 3 \times 4 = 120$.
+                    <br>Jadi, ada 120 kemungkinan kombinasi 3 kelereng yang bisa terambil.
+                    </p>
+                    <p><strong>Langkah 2: Tentukan Kejadian yang Diinginkan ($n(A)$).</strong>
+                    <br>Kita perlu mencari semua kombinasi 3 kelereng yang memenuhi syarat "minimal 1 Merah dan minimal 1 Biru". Mari kita jabarkan kemungkinannya:
+                    <ul>
+                        <li><strong>Kasus 1: 1 Merah, 1 Biru, 1 Hijau.</strong>
+                        <br>Cara mengambil 1 M dari 5 M: $C(5,1) = 5$.
+                        <br>Cara mengambil 1 B dari 3 B: $C(3,1) = 3$.
+                        <br>Cara mengambil 1 H dari 2 H: $C(2,1) = 2$.
+                        <br>Total cara untuk kasus 1 = $5 \times 3 \times 2 = 30$ cara.
+                        </li>
+                        <li><strong>Kasus 2: 2 Merah, 1 Biru, 0 Hijau.</strong>
+                        <br>Cara mengambil 2 M dari 5 M: $C(5,2) = \frac{5 \times 4}{2} = 10$.
+                        <br>Cara mengambil 1 B dari 3 B: $C(3,1) = 3$.
+                        <br>Total cara untuk kasus 2 = $10 \times 3 = 30$ cara.
+                        </li>
+                        <li><strong>Kasus 3: 1 Merah, 2 Biru, 0 Hijau.</strong>
+                        <br>Cara mengambil 1 M dari 5 M: $C(5,1) = 5$.
+                        <br>Cara mengambil 2 B dari 3 B: $C(3,2) = \frac{3 \times 2}{2} = 3$.
+                        <br>Total cara untuk kasus 3 = $5 \times 3 = 15$ cara.
+                        </li>
+                    </ul>
+                    Total kejadian yang diinginkan ($n(A)$) adalah jumlah dari semua kasus di atas:
+                    <br>$n(A) = 30 + 30 + 15 = 75$.
+                    </p>
+                    <p><strong>Langkah 3: Hitung Peluangnya.</strong>
+                    <br>$P(A) = \frac{n(A)}{n(S)} = \frac{75}{120}$.
+                    <br>Kita sederhanakan pecahan ini dengan membagi pembilang dan penyebut dengan FPB-nya, yaitu 15.
+                    <br>$P(A) = \frac{75 \div 15}{120 \div 15} = \frac{5}{8}$.
+                    </p>
+                    <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>E. $\frac{5}{8}$</strong>.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soal 3 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan)</p>
+                 <p class="question-text"><strong>3.</strong> Di sebuah kelas terdapat 15 siswa laki-laki dan 10 siswa perempuan. Akan dibentuk sebuah tim olimpiade yang terdiri dari 5 orang. Banyaknya cara untuk membentuk tim tersebut jika harus terdiri dari setidaknya 2 siswa laki-laki dan setidaknya 1 siswa perempuan adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. 12.600</div>
+                     <div class="option">B. 20.475</div>
+                     <div class="option">C. 21.450</div>
+                     <div class="option">D. 34.125</div>
+                     <div class="option">E. 46.725</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 3</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Kombinasi:</strong> Kembali kita menggunakan kombinasi karena urutan pemilihan anggota tim tidaklah penting. Memilih {Adi, Budi, Citra, Dita, Eka} adalah tim yang sama dengan {Budi, Adi, Eka, Citra, Dita}. Rumusnya: $C(n,k) = \frac{n!}{k!(n-k)!}$.</li>
+                            <li><strong>Aturan Penjumlahan dan Perkalian:</strong>
+                                <ul>
+                                    <li><strong>Aturan Perkalian:</strong> Digunakan ketika beberapa kejadian harus terjadi bersamaan. Contoh: "memilih 2 laki-laki DAN 3 perempuan". Caranya dikalikan.</li>
+                                    <li><strong>Aturan Penjumlahan:</strong> Digunakan untuk beberapa kasus yang saling lepas (tidak bisa terjadi bersamaan). Contoh: "kemungkinan tim (2L, 3P) ATAU (3L, 2P)". Caranya dijumlahkan.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Kita perlu membentuk tim berisi 5 orang dari 15 Laki-laki (L) dan 10 Perempuan (P).
+                        <br>Syarat:
+                        <br>1. Minimal 2 Laki-laki (bisa 2, 3, 4, atau 5).
+                        <br>2. Minimal 1 Perempuan (bisa 1, 2, 3, atau 4).
+                        <br>3. Total anggota tim harus 5.
+                        <br>Kita harus mencari semua komposisi tim yang memenuhi ketiga syarat ini.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Jabarkan semua kemungkinan komposisi tim yang valid.</strong>
+                        <br>Kita mulai dari syarat laki-laki, lalu lengkapi dengan perempuan hingga totalnya 5.
+                        <ul>
+                            <li><strong>Kasus 1: 2 Laki-laki.</strong>
+                                <br>Untuk melengkapi tim 5 orang, kita butuh $5 - 2 = 3$ Perempuan. Komposisi: <strong>(2 L, 3 P)</strong>.
+                                <br>Syarat minimal 2 L terpenuhi, syarat minimal 1 P terpenuhi. Kasus ini valid.
+                            </li>
+                            <li><strong>Kasus 2: 3 Laki-laki.</strong>
+                                <br>Butuh $5 - 3 = 2$ Perempuan. Komposisi: <strong>(3 L, 2 P)</strong>.
+                                <br>Syarat minimal 2 L terpenuhi, syarat minimal 1 P terpenuhi. Kasus ini valid.
+                            </li>
+                            <li><strong>Kasus 3: 4 Laki-laki.</strong>
+                                <br>Butuh $5 - 4 = 1$ Perempuan. Komposisi: <strong>(4 L, 1 P)</strong>.
+                                <br>Syarat minimal 2 L terpenuhi, syarat minimal 1 P terpenuhi. Kasus ini valid.
+                            </li>
+                            <li><strong>Kasus 4: 5 Laki-laki.</strong>
+                                <br>Butuh $5 - 5 = 0$ Perempuan. Komposisi: (5 L, 0 P).
+                                <br>Syarat minimal 2 L terpenuhi, tapi syarat minimal 1 P <strong>tidak terpenuhi</strong>. Kasus ini <strong>tidak valid</strong>.
+                            </li>
+                        </ul>
+                        Jadi, ada 3 kasus yang mungkin.
+                     </p>
+                     <p><strong>Langkah 2: Hitung banyaknya cara untuk setiap kasus.</strong>
+                        <ul>
+                            <li><strong>Kasus 1 (2 L, 3 P):</strong>
+                                <br>Cara pilih 2 L dari 15 L: $C(15,2) = \frac{15 \times 14}{2 \times 1} = 105$.
+                                <br>Cara pilih 3 P dari 10 P: $C(10,3) = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$.
+                                <br>Total cara kasus 1 = $105 \times 120 = 12.600$.
+                            </li>
+                            <li><strong>Kasus 2 (3 L, 2 P):</strong>
+                                <br>Cara pilih 3 L dari 15 L: $C(15,3) = \frac{15 \times 14 \times 13}{3 \times 2 \times 1} = 455$.
+                                <br>Cara pilih 2 P dari 10 P: $C(10,2) = \frac{10 \times 9}{2 \times 1} = 45$.
+                                <br>Total cara kasus 2 = $455 \times 45 = 20.475$.
+                            </li>
+                            <li><strong>Kasus 3 (4 L, 1 P):</strong>
+                                <br>Cara pilih 4 L dari 15 L: $C(15,4) = \frac{15 \times 14 \times 13 \times 12}{4 \times 3 \times 2 \times 1} = 1365$.
+                                <br>Cara pilih 1 P dari 10 P: $C(10,1) = 10$.
+                                <br>Total cara kasus 3 = $1365 \times 10 = 13.650$.
+                            </li>
+                        </ul>
+                     </p>
+                     <p><strong>Langkah 3: Jumlahkan semua cara dari kasus yang valid.</strong>
+                        <br>Total cara = (Cara Kasus 1) + (Cara Kasus 2) + (Cara Kasus 3)
+                        <br>Total cara = $12.600 + 20.475 + 13.650 = 46.725$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>E. 46.725</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 4 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran & Perhitungan)</p>
+                 <p class="question-text"><strong>4.</strong> Perhatikan data berikut yang menunjukkan hasil panen padi (dalam ton) di sebuah desa dari tahun 2018 hingga 2022:
+                 <table class="complex-table mt-4">
+                     <thead>
+                         <tr><th>Tahun</th><th>Hasil Panen (ton)</th></tr>
+                     </thead>
+                     <tbody>
+                         <tr><td>2018</td><td>45</td></tr>
+                         <tr><td>2019</td><td>55</td></tr>
+                         <tr><td>2020</td><td>35</td></tr>
+                         <tr><td>2021</td><td>50</td></tr>
+                         <tr><td>2022</td><td>40</td></tr>
+                     </tbody>
+                 </table>
+                 Jika hasil panen pada tahun 2023 adalah 10% lebih banyak dari rata-rata panen 5 tahun sebelumnya, maka total panen dari tahun 2018 hingga 2023 adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. 250,5 ton</div>
+                     <div class="option">B. 274,5 ton</div>
+                     <div class="option">C. 280,0 ton</div>
+                     <div class="option">D. 290,5 ton</div>
+                     <div class="option">E. 300,0 ton</div>
+                 </div>
+
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 4</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Rata-rata (Mean):</strong> Nilai rata-rata dari sekumpulan data dihitung dengan menjumlahkan semua nilai data, kemudian membaginya dengan banyaknya data. Rumus: $\bar{x} = \frac{\sum x}{n}$.</li>
+                            <li><strong>Persentase Kenaikan:</strong> Untuk mencari nilai baru setelah kenaikan persentase, kita bisa menghitung besar kenaikannya terlebih dahulu, lalu menambahkannya ke nilai awal. Nilai Baru = Nilai Awal + (Persen Kenaikan $\times$ Nilai Awal).</li>
+                        </ul>
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                     Soal ini adalah soal multi-langkah. Kita harus:
+                     <br>1. Menghitung rata-rata panen dari tahun 2018-2022.
+                     <br>2. Menghitung hasil panen tahun 2023 berdasarkan rata-rata tersebut.
+                     <br>3. Menjumlahkan total panen dari 2018 sampai 2023.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Hitung total dan rata-rata panen dari tahun 2018 hingga 2022.</strong>
+                     <br>Data panen 5 tahun: {45, 55, 35, 50, 40}.
+                     <br>Total panen 2018-2022 = $45 + 55 + 35 + 50 + 40 = 225$ ton.
+                     <br>Banyaknya data = 5 tahun.
+                     <br>Rata-rata panen = $\frac{\text{Total Panen}}{\text{Banyak Tahun}} = \frac{225}{5} = 45$ ton.
+                     </p>
+                     <p><strong>Langkah 2: Hitung hasil panen pada tahun 2023.</strong>
+                     <br>Hasil panen 2023 adalah 10% lebih banyak dari rata-rata panen 5 tahun sebelumnya (yaitu 45 ton).
+                     <br>Besar kenaikan = $10\% \times 45 = \frac{10}{100} \times 45 = 0.1 \times 45 = 4.5$ ton.
+                     <br>Panen tahun 2023 = Rata-rata + Kenaikan = $45 + 4.5 = 49.5$ ton.
+                     </p>
+                     <p><strong>Langkah 3: Hitung total panen dari tahun 2018 hingga 2023.</strong>
+                     <br>Ini adalah jumlah dari total panen 2018-2022 yang sudah kita hitung di langkah 1, ditambah dengan panen 2023 dari langkah 2.
+                     <br>Total panen 2018-2023 = (Total panen 2018-2022) + (Panen 2023)
+                     <br>Total panen 2018-2023 = $225 + 49.5 = 274.5$ ton.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>B. 274,5 ton</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 5 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                <p class="question-text"><strong>5.</strong> Rata-rata nilai ujian matematika 50 siswa di suatu sekolah adalah 75. Jika 10 siswa pindah dan rata-rata nilai mereka adalah 79, apakah rata-rata nilai sisa siswa di kelas tersebut lebih dari 76?</p>
+                <p class="mt-4">Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan.</p>
+                <p> (1) 10 siswa yang pindah tersebut adalah 5 siswa laki-laki dengan rata-rata 78 dan 5 siswa perempuan dengan rata-rata 80. <br>
+                (2) Jumlah nilai total 40 siswa yang tersisa adalah 3.000. </p>
+                <div class="data-sufficiency-options">
+                    <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                    <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                    <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                    <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                    <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                </div>
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 5</h3>
+                    <p><strong>KONSEP DASAR:</strong>
+                    Soal Kecukupan Data (Data Sufficiency) tidak meminta kita untuk mencari nilai akhir, tetapi untuk menentukan apakah informasi yang diberikan <strong>cukup</strong> untuk menjawab pertanyaan yang diajukan. Jawabannya harus "Ya" atau "Tidak" yang pasti.
+                    <br>Rumus yang relevan: Total Nilai = Rata-rata $\times$ Jumlah Siswa.
+                    </p>
+                    <p><strong>ANALISIS SOAL:</strong>
+                    Pertanyaan utamanya adalah: "Apakah rata-rata nilai sisa siswa > 76?". Untuk menjawab ini, kita perlu bisa menghitung nilai pasti dari rata-rata sisa siswa.
+                    
+                    <br><br><strong>Mari kita analisis informasi awal dari soal terlebih dahulu (sebelum melihat pernyataan 1 dan 2):</strong>
+                    <ul>
+                        <li>Jumlah siswa awal = 50, Rata-rata awal = 75.
+                        <br>Total nilai awal = $50 \times 75 = 3750$.</li>
+                        <li>Jumlah siswa pindah = 10, Rata-rata mereka = 79.
+                        <br>Total nilai siswa yang pindah = $10 \times 79 = 790$.</li>
+                        <li>Jumlah siswa tersisa = $50 - 10 = 40$.
+                        <br>Total nilai siswa yang tersisa = Total nilai awal - Total nilai yang pindah = $3750 - 790 = 2960$.</li>
+                        <li>Rata-rata baru siswa tersisa = $\frac{\text{Total nilai sisa}}{\text{Jumlah siswa sisa}} = \frac{2960}{40} = 74$.</li>
+                    </ul>
+                    Dari informasi awal saja, kita sudah bisa menjawab pertanyaan. Rata-rata baru adalah 74. Apakah 74 > 76? Jawabannya adalah "Tidak". Karena kita bisa memberi jawaban pasti, informasi awal sudah cukup.
+                    
+                    <br><strong>Namun, dalam format soal seperti ini, kita harus mengevaluasi kecukupan dari Pernyataan (1) dan (2) secara terpisah, seolah-olah kita tidak bisa menghitungnya dari informasi awal.</strong>
+                    </p>
+                    <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                    <p><strong>Langkah 1: Analisis Pernyataan (1) SAJA.</strong>
+                    <br>Pernyataan (1) mengatakan: "10 siswa yang pindah terdiri dari 5 laki-laki (rata-rata 78) dan 5 perempuan (rata-rata 80)".
+                    <br>Mari kita cek apakah rata-rata gabungan 10 siswa ini tetap 79.
+                    <br>Total nilai 10 siswa ini = $(5 \times 78) + (5 \times 80) = 390 + 400 = 790$.
+                    <br>Rata-rata 10 siswa ini = $\frac{790}{10} = 79$.
+                    <br>Pernyataan ini hanya merinci komposisi 10 siswa yang pindah, namun tidak mengubah informasi kunci bahwa total nilai mereka adalah 790. Pernyataan ini tidak memberikan informasi baru yang kita perlukan (yaitu total nilai sisa siswa). Jadi, pernyataan (1) SAJA <strong>tidak cukup</strong>.
+                    </p>
+                    <p><strong>Langkah 2: Analisis Pernyataan (2) SAJA.</strong>
+                    <br>Pernyataan (2) mengatakan: "Jumlah nilai total 40 siswa yang tersisa adalah 3.000".
+                    <br>Dengan informasi ini, kita bisa langsung menghitung rata-rata siswa yang tersisa.
+                    <br>Jumlah siswa sisa = 40 (diketahui dari soal).
+                    <br>Rata-rata sisa siswa = $\frac{\text{Jumlah nilai total sisa}}{\text{Jumlah siswa sisa}} = \frac{3000}{40} = 75$.
+                    <br>Sekarang kita bisa menjawab pertanyaan utama: "Apakah rata-rata nilai sisa siswa lebih dari 76?". Apakah 75 > 76? Jawabannya adalah "Tidak".
+                    <br>Karena kita bisa memberikan jawaban yang pasti ("Tidak"), maka pernyataan (2) SAJA <strong>cukup</strong>.
+                    </p>
+                    <p><strong>Langkah 3: Kesimpulan.</strong>
+                    <br>Pernyataan (1) saja tidak cukup, tetapi Pernyataan (2) saja sudah cukup untuk menjawab pertanyaan.
+                    </p>
+                    <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 6 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran & Perhitungan)</p>
+                <p class="question-text"><strong>6.</strong> Sekumpulan data A memiliki rata-rata 75 dan simpangan baku 5. Sekumpulan data B memiliki rata-rata 80 dan simpangan baku 6. Manakah pernyataan berikut yang benar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                <div class="options-grid">
+                    <div class="option">A. Koefisien variasi data A lebih kecil dari data B.</div>
+                    <div class="option">B. Simpangan baku data yang digabung akan lebih besar dari 6.</div>
+                    <div class="option">C. Jika setiap data di A ditambah 5, simpangan bakunya tidak berubah.</div>
+                    <div class="option">D. Jika setiap data di B dikalikan 2, simpangan bakunya menjadi 12.</div>
+                    <div class="option">E. Data A lebih konsisten dibandingkan data B.</div>
+                </div>
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 6</h3>
+                    <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Simpangan Baku ($s$ atau $\sigma$):</strong> Ukuran seberapa tersebar data dari nilai rata-ratanya. Semakin kecil simpangan baku, semakin dekat data-data tersebut ke rata-rata.</li>
+                            <li><strong>Koefisien Variasi (CV):</strong> Ukuran penyebaran data yang relatif terhadap rata-ratanya. Ini berguna untuk membandingkan konsistensi dua data yang memiliki satuan atau rata-rata yang berbeda. Rumus: $CV = \left(\frac{\text{Simpangan Baku}}{\text{Rata-rata}}\right) \times 100\%$. Semakin kecil CV, data semakin <strong>konsisten</strong> atau homogen.</li>
+                            <li><strong>Sifat Simpangan Baku:</strong>
+                                <ol>
+                                    <li>Jika setiap data ditambah atau dikurangi dengan bilangan konstan, simpangan baku <strong>tidak berubah</strong>. (Karena sebaran data tetap sama).</li>
+                                    <li>Jika setiap data dikali atau dibagi dengan bilangan konstan $k$, simpangan baku yang baru adalah simpangan baku lama dikali $|k|$.</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </p>
+                    <p><strong>ANALISIS SOAL:</strong>
+                    <br>Data A: Rata-rata $\bar{x}_A = 75$, Simpangan Baku $s_A = 5$.
+                    <br>Data B: Rata-rata $\bar{x}_B = 80$, Simpangan Baku $s_B = 6$.
+                    <br>Kita harus mengevaluasi kebenaran dari setiap pernyataan.
+                    </p>
+                    <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                    <p><strong>Analisis Pernyataan A: Koefisien variasi data A lebih kecil dari data B.</strong>
+                        <br>Hitung CV untuk masing-masing data.
+                        <br>$CV_A = \left(\frac{s_A}{\bar{x}_A}\right) \times 100\% = \left(\frac{5}{75}\right) \times 100\% = \frac{1}{15} \times 100\% \approx 6.67\%$.
+                        <br>$CV_B = \left(\frac{s_B}{\bar{x}_B}\right) \times 100\% = \left(\frac{6}{80}\right) \times 100\% = \frac{3}{40} \times 100\% = 7.5\%$.
+                        <br>Karena $6.67\% < 7.5\%$, maka pernyataan ini <strong>BENAR</strong>.
+                    </p>
+                    <p><strong>Analisis Pernyataan B: Simpangan baku data yang digabung akan lebih besar dari 6.</strong>
+                        <br>Tanpa mengetahui jumlah data di A dan B, kita tidak bisa menghitung simpangan baku gabungan secara pasti. Namun, secara umum, simpangan baku gabungan nilainya akan berada di antara simpangan baku individu (antara 5 dan 6), atau sedikit di luarnya tergantung pada perbedaan rata-rata. Namun, tidak mungkin nilainya akan jauh lebih besar dari yang terbesar. Pernyataan ini sangat mungkin <strong>SALAH</strong>.
+                    </p>
+                     <p><strong>Analisis Pernyataan C: Jika setiap data di A ditambah 5, simpangan bakunya tidak berubah.</strong>
+                        <br>Ini sesuai dengan sifat simpangan baku nomor 1. Menambahkan nilai konstan ke setiap data hanya menggeser seluruh data, tetapi tidak mengubah sebarannya. Jarak antar data tetap sama. Pernyataan ini <strong>BENAR</strong>.
+                    </p>
+                     <p><strong>Analisis Pernyataan D: Jika setiap data di B dikalikan 2, simpangan bakunya menjadi 12.</strong>
+                        <br>Ini sesuai dengan sifat simpangan baku nomor 2. Jika setiap data dikalikan 2, simpangan baku baru adalah simpangan baku lama dikali 2.
+                        <br>Simpangan baku baru = $s_B \times 2 = 6 \times 2 = 12$. Pernyataan ini <strong>BENAR</strong>.
+                    </p>
+                     <p><strong>Analisis Pernyataan E: Data A lebih konsisten dibandingkan data B.</strong>
+                        <br>Konsistensi data diukur dengan Koefisien Variasi (CV). Data yang lebih konsisten adalah data dengan CV yang lebih kecil.
+                        <br>Dari analisis pernyataan A, kita tahu $CV_A \approx 6.67\%$ dan $CV_B = 7.5\%$. Karena $CV_A < CV_B$, maka Data A memang lebih konsisten. Pernyataan ini <strong>BENAR</strong>.
+                    </p>
+                    <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A, C, D, dan E</strong>.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soal 7 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran) OSN-Level</p>
+                <p class="question-text"><strong>7.</strong> Sebuah kantong berisi bola bernomor 1 sampai 10. Jika diambil tiga bola secara acak tanpa pengembalian, apakah peluang terambilnya ketiga bola dengan jumlah nomor lebih dari 25 lebih besar dari peluang terambilnya ketiga bola dengan jumlah nomor kurang dari 10?</p>
+                <p class="mt-4">Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan.</p>
+                <p> (1) Peluang terambilnya tiga bola dengan jumlah nomor 26 adalah $\frac{1}{40}$. <br>
+                    (2) Peluang terambilnya tiga bola dengan jumlah nomor 9 adalah $\frac{1}{20}$.</p>
+                <div class="data-sufficiency-options">
+                    <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                    <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                    <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                    <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                    <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                </div>
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 7</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Soal kecukupan data ini membutuhkan perbandingan dua peluang. Untuk bisa membandingkan, kita harus bisa menghitung kedua peluang tersebut.
+                        <br>Peluang = (Jumlah cara kejadian) / (Total cara).
+                        <br>Total cara (ruang sampel) mengambil 3 bola dari 10 adalah $n(S) = C(10,3) = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        Pertanyaan: Apakah $P(\text{jumlah} > 25) > P(\text{jumlah} < 10)$?
+                        <br>Untuk menjawab ini, kita harus mencari tahu semua kombinasi 3 bola yang jumlahnya > 25 dan semua kombinasi yang jumlahnya < 10.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Analisis informasi dari soal utama (tanpa pernyataan 1 dan 2).</strong>
+                        <ul>
+                            <li><strong>Kejadian A: Jumlah > 25</strong>
+                                <br>Untuk mendapatkan jumlah yang besar, kita harus mengambil bola bernomor besar.
+                                <br>Satu-satunya kombinasi yang mungkin adalah:
+                                <ul>
+                                    <li>{10, 9, 8} -> Jumlah = 27 (> 25)</li>
+                                    <li>{10, 9, 7} -> Jumlah = 26 (> 25)</li>
+                                </ul>
+                                (Kombinasi lain seperti {10, 9, 6} jumlahnya 25, tidak termasuk. {10, 8, 7} jumlahnya 25, juga tidak termasuk).
+                                <br>Jadi, ada <strong>2 cara</strong> agar jumlah > 25.
+                                <br>$P(\text{jumlah} > 25) = \frac{2}{120} = \frac{1}{60}$.
+                            </li>
+                            <li><strong>Kejadian B: Jumlah < 10</strong>
+                                <br>Kita harus mengambil bola bernomor kecil.
+                                <br>Kombinasi yang mungkin:
+                                <ul>
+                                    <li>{1, 2, 3} -> Jumlah = 6</li>
+                                    <li>{1, 2, 4} -> Jumlah = 7</li>
+                                    <li>{1, 2, 5} -> Jumlah = 8</li>
+                                    <li>{1, 2, 6} -> Jumlah = 9</li>
+                                    <li>{1, 3, 4} -> Jumlah = 8</li>
+                                    <li>{1, 3, 5} -> Jumlah = 9</li>
+                                    <li>{2, 3, 4} -> Jumlah = 9</li>
+                                </ul>
+                                Jadi, ada <strong>7 cara</strong> agar jumlah < 10.
+                                <br>$P(\text{jumlah} < 10) = \frac{7}{120}$.
+                            </li>
+                        </ul>
+                        Sekarang kita bandingkan: Apakah $\frac{2}{120} > \frac{7}{120}$? Jawabannya adalah "Tidak".
+                        <br>Sama seperti soal 5, informasi awal sudah cukup untuk menjawab. Namun, kita tetap harus mengevaluasi pernyataan yang diberikan.
+                     </p>
+                     <p><strong>Langkah 2: Analisis Pernyataan (1) dan (2).</strong>
+                        <ul>
+                            <li><strong>Pernyataan (1):</strong> "Peluang terambilnya tiga bola dengan jumlah nomor 26 adalah $\frac{1}{40}$."
+                                <br>Dari perhitungan kita, kombinasi dengan jumlah 26 hanya ada satu: {10, 9, 7}. Peluangnya seharusnya $\frac{1}{120}$. Informasi yang diberikan ($\frac{1}{40}$) <strong>salah</strong> dan hanya memberikan informasi tentang satu dari dua kemungkinan jumlah (>25). Ini tidak cukup.
+                            </li>
+                            <li><strong>Pernyataan (2):</strong> "Peluang terambilnya tiga bola dengan jumlah nomor 9 adalah $\frac{1}{20}$."
+                                <br>Dari perhitungan kita, kombinasi dengan jumlah 9 ada tiga: {1, 2, 6}, {1, 3, 5}, {2, 3, 4}. Peluangnya seharusnya $\frac{3}{120} = \frac{1}{40}$. Informasi yang diberikan ($\frac{1}{20}$) <strong>salah</strong> dan hanya memberikan informasi tentang sebagian dari kasus jumlah (<10). Ini tidak cukup.
+                            </li>
+                        </ul>
+                        Karena kedua pernyataan memberikan informasi yang tidak akurat dan tidak lengkap (hanya mencakup sebagian kecil dari kasus yang dibutuhkan), keduanya, baik sendiri-sendiri maupun bersama-sama, tidak dapat digunakan untuk menjawab pertanyaan dengan benar. Kita membutuhkan semua kemungkinan, bukan hanya satu kasus spesifik.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</strong>
+                     </div>
+                </div>
+            </div>
+
+            <!-- Soal 8 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Aplikasi) OSN-Level</p>
+                 <p class="question-text"><strong>8.</strong> Terdapat 4 buku Matematika, 3 buku Fisika, dan 2 buku Kimia yang semuanya berbeda. Buku-buku tersebut akan disusun berjajar pada rak. Banyaknya susunan yang mungkin jika buku-buku yang sejenis harus berkelompok dan buku Fisika tidak boleh berada di ujung susunan adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. 576</div>
+                     <div class="option">B. 1.152</div>
+                     <div class="option">C. 1.728</div>
+                     <div class="option">D. 2.592</div>
+                     <div class="option">E. 3.456</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 8</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Permutasi Faktorial:</strong> Digunakan untuk menyusun $n$ objek yang berbeda dalam satu baris. Banyaknya cara adalah $n! = n \times (n-1) \times \dots \times 1$.</li>
+                            <li><strong>Prinsip Pengelompokan (Blok):</strong> Jika beberapa objek harus selalu bersama, kita bisa menganggap kelompok tersebut sebagai satu "blok" atau satu unit tunggal terlebih dahulu.</li>
+                            <li><strong>Aturan Perkalian:</strong> Total cara adalah hasil perkalian dari cara-cara untuk setiap tahap independen.</li>
+                        </ul>
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                     Ini adalah soal permutasi dengan dua syarat:
+                     <br>1. Buku sejenis harus berkelompok (Matematika bersama, Fisika bersama, Kimia bersama).
+                     <br>2. Kelompok buku Fisika tidak boleh di ujung.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Hitung cara menyusun buku di dalam masing-masing kelompok (permutasi internal).</strong>
+                        <ul>
+                            <li>4 buku Matematika (M) yang berbeda bisa disusun dalam $4! = 4 \times 3 \times 2 \times 1 = 24$ cara.</li>
+                            <li>3 buku Fisika (F) yang berbeda bisa disusun dalam $3! = 3 \times 2 \times 1 = 6$ cara.</li>
+                            <li>2 buku Kimia (K) yang berbeda bisa disusun dalam $2! = 2 \times 1 = 2$ cara.</li>
+                        </ul>
+                     </p>
+                     <p><strong>Langkah 2: Susun kelompok-kelompok tersebut (permutasi eksternal).</strong>
+                        <br>Karena buku sejenis harus bersama, kita anggap ada 3 "blok" besar: [Blok M], [Blok F], [Blok K].
+                        <br>Kita harus menyusun 3 blok ini dalam satu barisan dengan syarat [Blok F] tidak boleh di ujung.
+                        <br>Posisi yang tersedia ada 3: __ __ __ (Posisi 1, Posisi 2, Posisi 3).
+                        <br>Syarat: [Blok F] tidak boleh di Posisi 1 atau Posisi 3. Ini berarti [Blok F] <strong>harus</strong> di Posisi 2.
+                        <br>Susunannya menjadi: __ [Blok F] __.
+                        <br>Sekarang kita tinggal menyusun [Blok M] dan [Blok K] di dua posisi sisa (Posisi 1 dan 3).
+                        <br>Banyak cara menyusun [Blok M] dan [Blok K] adalah $2! = 2$ cara. Yaitu:
+                        <br>1. [Blok M] [Blok F] [Blok K]
+                        <br>2. [Blok K] [Blok F] [Blok M]
+                        <br>Jadi, ada 2 cara untuk menyusun kelompok-kelompok ini.
+                     </p>
+                     <p><strong>Langkah 3: Hitung total susunan menggunakan aturan perkalian.</strong>
+                        <br>Total Susunan = (Cara susun internal M) $\times$ (Cara susun internal F) $\times$ (Cara susun internal K) $\times$ (Cara susun eksternal blok)
+                        <br>Total Susunan = $24 \times 6 \times 2 \times 2$
+                        <br>Total Susunan = $144 \times 4 = 576$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A. 576</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 9 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                 <p class="question-text"><strong>9.</strong> Sebuah kantong berisi 4 bola merah dan 6 bola putih. Dari kantong tersebut, diambil 2 bola secara acak. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                 <table class="complex-table">
+                     <thead>
+                         <tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr>
+                     </thead>
+                     <tbody>
+                         <tr><td>Peluang terambilnya 2 bola merah adalah $\frac{2}{15}$.</td><td>✔</td><td></td></tr>
+                         <tr><td>Peluang terambilnya 2 bola putih adalah $\frac{1}{3}$.</td><td>✔</td><td></td></tr>
+                         <tr><td>Peluang terambilnya 1 merah dan 1 putih adalah $\frac{8}{15}$.</td><td>✔</td><td></td></tr>
+                     </tbody>
+                 </table>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 9</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Sama seperti soal-soal sebelumnya, kita menggunakan konsep Peluang dan Kombinasi.
+                        <br>$P(\text{Kejadian}) = \frac{\text{Jumlah cara kejadian terjadi}}{\text{Total semua kemungkinan}}$.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                     <br>Total bola = 4 Merah (M) + 6 Putih (P) = 10 bola.
+                     <br>Diambil 2 bola.
+                     <br>Kita perlu menghitung peluang untuk tiga skenario berbeda dan menentukan kebenarannya.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah Awal: Hitung Ruang Sampel ($n(S)$).</strong>
+                        <br>Ini adalah total cara mengambil 2 bola dari 10 bola yang ada.
+                        <br>$n(S) = C(10,2) = \frac{10 \times 9}{2 \times 1} = 45$.
+                        <br>Ada 45 kemungkinan pasangan bola yang bisa terambil.
+                     </p>
+                     <p><strong>Analisis Pernyataan 1: Peluang terambilnya 2 bola merah adalah $\frac{2}{15}$.</strong>
+                        <br>Kejadian yang diinginkan adalah terambil 2 bola merah. Kita punya 4 bola merah.
+                        <br>Jumlah cara mengambil 2 M dari 4 M: $n(2M) = C(4,2) = \frac{4 \times 3}{2 \times 1} = 6$.
+                        <br>Peluang = $\frac{n(2M)}{n(S)} = \frac{6}{45}$.
+                        <br>Sederhanakan pecahan (bagi dengan 3): $\frac{6 \div 3}{45 \div 3} = \frac{2}{15}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 2: Peluang terambilnya 2 bola putih adalah $\frac{1}{3}$.</strong>
+                        <br>Kejadian yang diinginkan adalah terambil 2 bola putih. Kita punya 6 bola putih.
+                        <br>Jumlah cara mengambil 2 P dari 6 P: $n(2P) = C(6,2) = \frac{6 \times 5}{2 \times 1} = 15$.
+                        <br>Peluang = $\frac{n(2P)}{n(S)} = \frac{15}{45}$.
+                        <br>Sederhanakan pecahan (bagi dengan 15): $\frac{15 \div 15}{45 \div 15} = \frac{1}{3}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 3: Peluang terambilnya 1 merah dan 1 putih adalah $\frac{8}{15}$.</strong>
+                        <br>Kejadian yang diinginkan adalah 1 Merah DAN 1 Putih.
+                        <br>Cara mengambil 1 M dari 4 M: $C(4,1) = 4$.
+                        <br>Cara mengambil 1 P dari 6 P: $C(6,1) = 6$.
+                        <br>Total cara mengambil 1 M dan 1 P = $C(4,1) \times C(6,1) = 4 \times 6 = 24$.
+                        <br>Peluang = $\frac{n(1M, 1P)}{n(S)} = \frac{24}{45}$.
+                        <br>Sederhanakan pecahan (bagi dengan 3): $\frac{24 \div 3}{45 \div 3} = \frac{8}{15}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, <strong>semua pernyataan Benar</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 10 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan)</p>
+                 <p class="question-text"><strong>10.</strong> Varians dari data kelompok dengan frekuensi berikut adalah ....
+                 <table class="complex-table mt-4">
+                     <thead><tr><th>Nilai</th><th>Frekuensi</th></tr></thead>
+                     <tbody>
+                         <tr><td>50-54</td><td>2</td></tr>
+                         <tr><td>55-59</td><td>4</td></tr>
+                         <tr><td>60-64</td><td>3</td></tr>
+                         <tr><td>65-69</td><td>1</td></tr>
+                     </tbody>
+                 </table></p>
+                 <div class="options-grid">
+                     <div class="option">A. 20,25</div>
+                     <div class="option">B. 22,5</div>
+                     <div class="option">C. 24,1</div>
+                     <div class="option">D. 25,25</div>
+                     <div class="option">E. 26</div>
+                 </div>
+
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 10</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Varians ($s^2$):</strong> Adalah ukuran seberapa jauh setiap data dalam kumpulan data tersebar dari rata-ratanya. Ini adalah rata-rata dari kuadrat selisih setiap data dengan rata-rata.
+                        <br>Untuk data kelompok, rumusnya adalah: $s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i}$
+                        <br>Di mana:
+                        <ul>
+                            <li>$f_i$ = Frekuensi setiap kelas</li>
+                            <li>$x_i$ = Nilai tengah setiap kelas</li>
+                            <li>$\bar{x}$ = Rata-rata dari data kelompok</li>
+                            <li>$\sum f_i$ = Total frekuensi (jumlah data)</li>
+                        </ul>
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong>
+                     Kita akan mengerjakan ini secara sistematis menggunakan tabel bantu.
+                     </p>
+                     <p><strong>Langkah 1: Tentukan nilai tengah ($x_i$) untuk setiap kelas dan hitung $\sum f_i$ dan $\sum f_i x_i$.</strong></p>
+                     <table class="complex-table">
+                         <thead><tr><th>Nilai</th><th>Frekuensi ($f_i$)</th><th>Nilai Tengah ($x_i$)</th><th>$f_i \cdot x_i$</th></tr></thead>
+                         <tbody>
+                             <tr><td>50-54</td><td>2</td><td>$\frac{50+54}{2}=52$</td><td>$2 \times 52 = 104$</td></tr>
+                             <tr><td>55-59</td><td>4</td><td>$\frac{55+59}{2}=57$</td><td>$4 \times 57 = 228$</td></tr>
+                             <tr><td>60-64</td><td>3</td><td>$\frac{60+64}{2}=62$</td><td>$3 \times 62 = 186$</td></tr>
+                             <tr><td>65-69</td><td>1</td><td>$\frac{65+69}{2}=67$</td><td>$1 \times 67 = 67$</td></tr>
+                             <tr><td><strong>Total</strong></td><td><strong>$\sum f_i = 10$</strong></td><td></td><td><strong>$\sum f_i x_i = 585$</strong></td></tr>
+                         </tbody>
+                     </table>
+                     <p><strong>Langkah 2: Hitung rata-rata ($\bar{x}$).</strong>
+                        <br>$\bar{x} = \frac{\sum f_i x_i}{\sum f_i} = \frac{585}{10} = 58.5$.
+                     </p>
+                     <p><strong>Langkah 3: Hitung $\sum f_i (x_i - \bar{x})^2$.</strong>
+                     <br>Ini adalah bagian inti dari perhitungan varians. Kita lanjutkan tabel bantu kita.
+                     </p>
+                     <table class="complex-table">
+                         <thead><tr><th>$x_i$</th><th>$f_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th><th>$f_i \cdot (x_i - \bar{x})^2$</th></tr></thead>
+                         <tbody>
+                             <tr><td>52</td><td>2</td><td>$52 - 58.5 = -6.5$</td><td>$(-6.5)^2 = 42.25$</td><td>$2 \times 42.25 = 84.5$</td></tr>
+                             <tr><td>57</td><td>4</td><td>$57 - 58.5 = -1.5$</td><td>$(-1.5)^2 = 2.25$</td><td>$4 \times 2.25 = 9.0$</td></tr>
+                             <tr><td>62</td><td>3</td><td>$62 - 58.5 = 3.5$</td><td>$(3.5)^2 = 12.25$</td><td>$3 \times 12.25 = 36.75$</td></tr>
+                             <tr><td>67</td><td>1</td><td>$67 - 58.5 = 8.5$</td><td>$(8.5)^2 = 72.25$</td><td>$1 \times 72.25 = 72.25$</td></tr>
+                             <tr><td colspan="4"><strong>Total</strong></td><td><strong>$\sum f_i (x_i - \bar{x})^2 = 202.5$</strong></td></tr>
+                         </tbody>
+                     </table>
+                     <p><strong>Langkah 4: Hitung Varians ($s^2$).</strong>
+                        <br>$s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i} = \frac{202.5}{10} = 20.25$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A. 20,25</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 11 -->
+            <div class="item-container content-card">
+                <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan)</p>
+                <p class="question-text"><strong>11.</strong> Data berat badan 10 siswa dalam kg adalah 40, 45, 50, 42, 48, 55, 60, 45, 52, 48. Hitunglah jangkauan interkuartil (IQR) dari data tersebut ....</p>
+                <div class="options-grid">
+                    <div class="option">A. 7 kg</div>
+                    <div class="option">B. 8 kg</div>
+                    <div class="option">C. 9 kg</div>
+                    <div class="option">D. 10 kg</div>
+                    <div class="option">E. 12 kg</div>
+                </div>
+                <div class="pembahasan">
+                    <h3>Pembahasan Soal 11</h3>
+                    <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Kuartil:</strong> Kuartil adalah nilai yang membagi data yang telah diurutkan menjadi empat bagian yang sama besar.
+                                <ul>
+                                    <li><strong>Kuartil Bawah ($Q_1$):</strong> Nilai tengah dari setengah data bagian bawah.</li>
+                                    <li><strong>Kuartil Tengah ($Q_2$):</strong> Sama dengan median.</li>
+                                    <li><strong>Kuartil Atas ($Q_3$):</strong> Nilai tengah dari setengah data bagian atas.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Jangkauan Interkuartil (IQR - Interquartile Range):</strong> Adalah selisih antara kuartil atas dan kuartil bawah. IQR mengukur sebaran dari 50% data yang berada di tengah. Rumus: $IQR = Q_3 - Q_1$.</li>
+                        </ul>
+                    </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Urutkan data dari yang terkecil hingga terbesar.</strong>
+                        <br>Data awal: {40, 45, 50, 42, 48, 55, 60, 45, 52, 48}
+                        <br>Data terurut: {40, 42, 45, 45, 48, 48, 50, 52, 55, 60}
+                     </p>
+                     <p><strong>Langkah 2: Tentukan letak kuartil.</strong>
+                        <br>Jumlah data $n=10$.
+                        <br>Letak $Q_1$ = data ke-$\frac{1}{4}(n+1) = \frac{1}{4}(11) = 2.75$. Ini berarti $Q_1$ berada di antara data ke-2 dan ke-3.
+                        <br>Letak $Q_3$ = data ke-$\frac{3}{4}(n+1) = \frac{3}{4}(11) = 8.25$. Ini berarti $Q_3$ berada di antara data ke-8 dan ke-9.
+                        <br><br>
+                        <strong>Metode Alternatif (lebih intuitif untuk data sedikit):</strong>
+                        <br>Karena datanya genap (10 data), kita bagi dua persis di tengah.
+                        <br>Data terurut: {40, 42, 45, 45, 48} | {48, 50, 52, 55, 60}
+                        <br>Setengah data bagian bawah: {40, 42, <strong>45</strong>, 45, 48}
+                        <br>Setengah data bagian atas: {48, 50, <strong>52</strong>, 55, 60}
+                     </p>
+                     <p><strong>Langkah 3: Tentukan nilai $Q_1$ dan $Q_3$.</strong>
+                        <br>$Q_1$ adalah median dari setengah data bagian bawah. Dari {40, 42, <strong>45</strong>, 45, 48}, nilai tengahnya adalah <strong>45</strong>. Jadi, $Q_1 = 45$.
+                        <br>$Q_3$ adalah median dari setengah data bagian atas. Dari {48, 50, <strong>52</strong>, 55, 60}, nilai tengahnya adalah <strong>52</strong>. Jadi, $Q_3 = 52$.
+                     </p>
+                     <p><strong>Langkah 4: Hitung Jangkauan Interkuartil (IQR).</strong>
+                        <br>$IQR = Q_3 - Q_1$
+                        <br>$IQR = 52 - 45 = 7$ kg.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A. 7 kg</strong>.
+                     </div>
+                </div>
+            </div>
+
+            <!-- Soal 12 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran) OSN-Level</p>
+                 <p class="question-text"><strong>12.</strong> Sebuah keluarga memiliki 2 anak. Diketahui bahwa setidaknya satu dari anak tersebut adalah laki-laki. Peluang anak yang lain adalah perempuan adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. $\frac{1}{4}$</div>
+                     <div class="option">B. $\frac{1}{3}$</div>
+                     <div class="option">C. $\frac{1}{2}$</div>
+                     <div class="option">D. $\frac{2}{3}$</div>
+                     <div class="option">E. $\frac{3}{4}$</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 12</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Peluang Bersyarat (Conditional Probability):</strong> Ini adalah peluang terjadinya suatu kejadian, dengan diketahui bahwa kejadian lain <strong>telah terjadi</strong>. Informasi tambahan ini mengubah (mempersempit) ruang sampel kita.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                     Kita tidak melihat semua kemungkinan keluarga dengan 2 anak. Kita hanya melihat keluarga yang memenuhi syarat "setidaknya satu anak laki-laki". Ini adalah kunci dari soal.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Tentukan Ruang Sampel Awal (semua kemungkinan 2 anak).</strong>
+                        <br>Misalkan L = Laki-laki, P = Perempuan.
+                        <br>Ruang sampel awal $S$ = {LL, LP, PL, PP}. Total ada 4 kemungkinan.
+                        <br>(LP berarti anak pertama laki-laki, kedua perempuan. PL berarti anak pertama perempuan, kedua laki-laki).
+                     </p>
+                     <p><strong>Langkah 2: Tentukan Ruang Sampel Baru berdasarkan syarat yang diberikan.</strong>
+                        <br>Syarat: "Diketahui bahwa setidaknya satu dari anak tersebut adalah laki-laki".
+                        <br>Ini berarti kita harus membuang semua kemungkinan yang tidak memiliki anak laki-laki sama sekali. Dari {LL, LP, PL, PP}, satu-satunya yang tidak memenuhi syarat adalah {PP}.
+                        <br>Maka, Ruang Sampel Baru kita ($S_{baru}$) adalah: {LL, LP, PL}.
+                        <br>Jumlah anggota ruang sampel baru, $n(S_{baru}) = 3$.
+                     </p>
+                     <p><strong>Langkah 3: Tentukan kejadian yang diinginkan dari Ruang Sampel Baru.</strong>
+                        <br>Pertanyaan: "Peluang anak yang lain adalah perempuan".
+                        <br>Ini berarti kita mencari kemungkinan di mana satu anak adalah laki-laki dan satu lagi adalah perempuan.
+                        <br>Dari $S_{baru}$ = {LL, LP, PL}, kejadian yang memenuhi adalah {LP} dan {PL}.
+                        <br>Jumlah kejadian yang diinginkan, $n(A) = 2$.
+                     </p>
+                     <p><strong>Langkah 4: Hitung peluangnya.</strong>
+                        <br>Peluang = $\frac{\text{Kejadian yang diinginkan}}{\text{Ruang Sampel Baru}} = \frac{n(A)}{n(S_{baru})} = \frac{2}{3}$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>D. $\frac{2}{3}$</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 13 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                 <p class="question-text"><strong>13.</strong> Dalam sebuah survei terhadap 100 orang, didapatkan informasi bahwa 60% responden adalah wanita. Berapakah jumlah wanita yang tidak memiliki smartphone?</p>
+                 <p class="mt-4">Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan.</p>
+                 <p> (1) Jumlah pria yang tidak memiliki smartphone adalah 10 orang. <br>
+                     (2) Total responden yang memiliki smartphone adalah 70 orang.</p>
+                 <div class="data-sufficiency-options">
+                     <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                     <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                     <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                     <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                     <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 13</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Soal kecukupan data ini melibatkan logika himpunan. Kita dapat membayangkannya dalam sebuah tabel 2x2 untuk mempermudah. Tujuannya adalah mencari nilai di satu sel spesifik dalam tabel tersebut.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        Pertanyaan: Berapa jumlah <strong>Wanita</strong> yang <strong>Tidak Punya Smartphone</strong>?
+                        <br>Informasi Awal:
+                        <ul>
+                            <li>Total Responden = 100 orang.</li>
+                            <li>Jumlah Wanita = $60\% \times 100 = 60$ orang.</li>
+                            <li>Jumlah Pria = $100 - 60 = 40$ orang.</li>
+                        </ul>
+                        Kita bisa buat kerangka tabel seperti ini:
+                        <table class="complex-table">
+                            <thead><tr><th>Gender</th><th>Punya Smartphone</th><th>Tidak Punya Smartphone</th><th>Total</th></tr></thead>
+                            <tbody>
+                                <tr><td>Wanita</td><td>?</td><td><strong>X</strong></td><td>60</td></tr>
+                                <tr><td>Pria</td><td>?</td><td>?</td><td>40</td></tr>
+                                <tr><td><strong>Total</strong></td><td>?</td><td>?</td><td>100</td></tr>
+                            </tbody>
+                        </table>
+                        Tujuan kita adalah menemukan nilai <strong>X</strong>.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Analisis Pernyataan (1) SAJA.</strong>
+                        <br>"Jumlah pria yang tidak memiliki smartphone adalah 10 orang."
+                        <br>Kita isi informasi ini ke dalam tabel:
+                        <table class="complex-table">
+                             <tbody>
+                                 <tr><td>Wanita</td><td>?</td><td><strong>X</strong></td><td>60</td></tr>
+                                 <tr><td>Pria</td><td>$40-10=30$</td><td>10</td><td>40</td></tr>
+                                 <tr><td><strong>Total</strong></td><td>?</td><td>?</td><td>100</td></tr>
+                             </tbody>
+                        </table>
+                        Dari sini, kita tahu jumlah pria yang punya smartphone adalah 30. Tapi kita masih belum punya informasi apa-apa tentang wanita. Kita tidak bisa menemukan nilai X.
+                        <br>Jadi, pernyataan (1) SAJA <strong>tidak cukup</strong>.
+                     </p>
+                     <p><strong>Langkah 2: Analisis Pernyataan (2) SAJA.</strong>
+                        <br>"Total responden yang memiliki smartphone adalah 70 orang."
+                        <br>Kita isi informasi ini ke dalam tabel awal (lupakan pernyataan 1).
+                        <table class="complex-table">
+                             <tbody>
+                                 <tr><td>Wanita</td><td>?</td><td><strong>X</strong></td><td>60</td></tr>
+                                 <tr><td>Pria</td><td>?</td><td>?</td><td>40</td></tr>
+                                 <tr><td><strong>Total</strong></td><td>70</td><td>$100-70=30$</td><td>100</td></tr>
+                             </tbody>
+                        </table>
+                        Dari sini, kita tahu total yang tidak punya smartphone adalah 30. Tapi kita tidak tahu bagaimana 30 orang ini terbagi antara pria dan wanita. Kita tidak bisa menemukan nilai X.
+                        <br>Jadi, pernyataan (2) SAJA <strong>tidak cukup</strong>.
+                     </p>
+                     <p><strong>Langkah 3: Analisis Pernyataan (1) DAN (2) BERSAMA-SAMA.</strong>
+                        <br>Sekarang kita gunakan kedua informasi tersebut.
+                        <br>Dari (2), kita tahu total yang tidak punya smartphone adalah 30.
+                        <br>Dari (1), kita tahu dari 30 orang itu, 10 di antaranya adalah pria.
+                        <br>Maka, sisanya pastilah wanita.
+                        <br>Jumlah Wanita Tidak Punya Smartphone = (Total Tidak Punya Smartphone) - (Pria Tidak Punya Smartphone)
+                        <br>$X = 30 - 10 = 20$.
+                        <br>Kita berhasil menemukan nilai X.
+                        <br>Tabel lengkapnya menjadi:
+                         <table class="complex-table">
+                             <tbody>
+                                 <tr><td>Wanita</td><td>$60-20=40$</td><td><strong>20</strong></td><td>60</td></tr>
+                                 <tr><td>Pria</td><td>$40-10=30$</td><td>10</td><td>40</td></tr>
+                                 <tr><td><strong>Total</strong></td><td>$40+30=70$</td><td>$20+10=30$</td><td>100</td></tr>
+                             </tbody>
+                         </table>
+                         Karena kita bisa menjawab pertanyaan dengan pasti, maka DUA pernyataan BERSAMA-SAMA <strong>cukup</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</strong>
+                     </div>
+                 </div>
+            </div>
+            
+            <!-- Soal 14 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran & Perhitungan)</p>
+                 <p class="question-text"><strong>14.</strong> Perhatikan tabel distribusi frekuensi berikut. Tentukan nilai-nilai yang benar mengenai data tersebut.</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Nilai</th><th>Frekuensi</th></tr></thead>
+                     <tbody>
+                         <tr><td>50-59</td><td>3</td></tr>
+                         <tr><td>60-69</td><td>5</td></tr>
+                         <tr><td>70-79</td><td>8</td></tr>
+                         <tr><td>80-89</td><td>4</td></tr>
+                     </tbody>
+                 </table>
+                 <p class="mt-4"><strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                 <div class="options-grid">
+                     <div class="option">A. Modus berada di kelas 70-79</div>
+                     <div class="option">B. Kuartil kedua berada di kelas 60-69</div>
+                     <div class="option">C. Rata-rata (mean) adalah 71</div>
+                     <div class="option">D. Terdapat 20 data</div>
+                     <div class="option">E. Simpangan baku data ini lebih kecil dari 10</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 14</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                           <li><strong>Modus Data Kelompok:</strong> Kelas interval dengan frekuensi tertinggi.</li>
+                           <li><strong>Kuartil Kedua ($Q_2$) / Median:</strong> Kelas di mana data ke-$\frac{n}{2}$ berada.</li>
+                           <li><strong>Rata-rata Data Kelompok:</strong> $\bar{x} = \frac{\sum f_i x_i}{\sum f_i}$, dengan $x_i$ adalah nilai tengah kelas.</li>
+                           <li><strong>Simpangan Baku:</strong> Akar dari varians. $s = \sqrt{\frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i}}$.</li>
+                        </ul>
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong>
+                        <br>Kita akan evaluasi setiap opsi satu per satu.
+                     </p>
+                     <p><strong>Analisis Opsi D: Terdapat 20 data.</strong>
+                        <br>Ini yang paling mudah dihitung.
+                        <br>Total frekuensi ($n$) = $3 + 5 + 8 + 4 = 20$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi A: Modus berada di kelas 70-79.</strong>
+                        <br>Frekuensi tertinggi adalah 8, yang berada pada kelas interval 70-79.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi B: Kuartil kedua berada di kelas 60-69.</strong>
+                        <br>Kuartil kedua ($Q_2$ atau Median) terletak pada data ke-$\frac{n}{2} = \frac{20}{2} = 10$.
+                        <br>Mari hitung frekuensi kumulatif:
+                        <ul>
+                           <li>Kelas 50-59: 3</li>
+                           <li>Kelas 60-69: $3 + 5 = 8$ (data ke-4 sampai ke-8 ada di sini)</li>
+                           <li>Kelas 70-79: $8 + 8 = 16$ (data ke-9 sampai ke-16 ada di sini)</li>
+                        </ul>
+                        Karena data ke-10 berada dalam rentang data ke-9 s.d. 16, maka $Q_2$ berada di kelas 70-79.
+                        <br>Pernyataan ini <strong>SALAH</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi C: Rata-rata (mean) adalah 71.</strong>
+                        <br>Kita butuh tabel bantu untuk menghitung $\sum f_i x_i$.
+                        <table class="complex-table">
+                            <thead><tr><th>Nilai</th><th>$f_i$</th><th>$x_i$ (Nilai Tengah)</th><th>$f_i \cdot x_i$</th></tr></thead>
+                            <tbody>
+                                <tr><td>50-59</td><td>3</td><td>54.5</td><td>163.5</td></tr>
+                                <tr><td>60-69</td><td>5</td><td>64.5</td><td>322.5</td></tr>
+                                <tr><td>70-79</td><td>8</td><td>74.5</td><td>596.0</td></tr>
+                                <tr><td>80-89</td><td>4</td><td>84.5</td><td>338.0</td></tr>
+                                <tr><td><strong>Total</strong></td><td><strong>20</strong></td><td></td><td><strong>1420.0</strong></td></tr>
+                            </tbody>
+                        </table>
+                        Rata-rata $\bar{x} = \frac{\sum f_i x_i}{\sum f_i} = \frac{1420}{20} = 71$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi E: Simpangan baku data ini lebih kecil dari 10.</strong>
+                        <br>Kita lanjutkan tabel untuk menghitung varians terlebih dahulu. Rata-rata $\bar{x} = 71$.
+                        <table class="complex-table">
+                            <thead><tr><th>$x_i$</th><th>$f_i$</th><th>$x_i - \bar{x}$</th><th>$(x_i - \bar{x})^2$</th><th>$f_i \cdot (x_i - \bar{x})^2$</th></tr></thead>
+                            <tbody>
+                                <tr><td>54.5</td><td>3</td><td>-16.5</td><td>272.25</td><td>816.75</td></tr>
+                                <tr><td>64.5</td><td>5</td><td>-6.5</td><td>42.25</td><td>211.25</td></tr>
+                                <tr><td>74.5</td><td>8</td><td>3.5</td><td>12.25</td><td>98.00</td></tr>
+                                <tr><td>84.5</td><td>4</td><td>13.5</td><td>182.25</td><td>729.00</td></tr>
+                                <tr><td colspan="4"><strong>Total</strong></td><td><strong>1855.00</strong></td></tr>
+                            </tbody>
+                        </table>
+                        Varians $s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i} = \frac{1855}{20} = 92.75$.
+                        <br>Simpangan Baku $s = \sqrt{92.75}$.
+                        <br>Kita tahu bahwa $9^2 = 81$ dan $10^2 = 100$. Karena 92.75 berada di antara 81 dan 100, maka $\sqrt{92.75}$ pasti di antara 9 dan 10. Tepatnya sekitar 9.63.
+                        <br>Karena $9.63 < 10$, pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A, C, D, dan E</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 15 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Aplikasi) OSN-Level</p>
+                 <p class="question-text"><strong>15.</strong> Suatu kantong berisi total 10 bola. Jika peluang terambilnya bola merah adalah $\frac{1}{2}$ dan peluang terambilnya bola hijau adalah $\frac{3}{10}$, maka tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
+                     <tbody>
+                         <tr><td>Banyaknya bola merah adalah 5.</td><td>✔</td><td></td></tr>
+                         <tr><td>Banyaknya bola hijau adalah 3.</td><td>✔</td><td></td></tr>
+                         <tr><td>Terdapat 2 bola dengan warna selain merah dan hijau.</td><td>✔</td><td></td></tr>
+                     </tbody>
+                 </table>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 15</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Hubungan antara peluang, jumlah kejadian, dan ruang sampel adalah:
+                        <br><strong>Jumlah Kejadian = Peluang Kejadian $\times$ Total Ruang Sampel</strong>
+                        <br>Dalam konteks ini, "Kejadian" adalah warna bola, dan "Ruang Sampel" adalah total bola di kantong.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Total Bola = 10.
+                        <br>$P(\text{Merah}) = \frac{1}{2}$.
+                        <br>$P(\text{Hijau}) = \frac{3}{10}$.
+                        <br>Kita akan verifikasi setiap pernyataan menggunakan data ini.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Pernyataan 1: Banyaknya bola merah adalah 5.</strong>
+                        <br>Jumlah Bola Merah = $P(\text{Merah}) \times$ Total Bola
+                        <br>Jumlah Bola Merah = $\frac{1}{2} \times 10 = 5$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 2: Banyaknya bola hijau adalah 3.</strong>
+                        <br>Jumlah Bola Hijau = $P(\text{Hijau}) \times$ Total Bola
+                        <br>Jumlah Bola Hijau = $\frac{3}{10} \times 10 = 3$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 3: Terdapat 2 bola dengan warna selain merah dan hijau.</strong>
+                        <br>Jumlah bola Merah dan Hijau = (Jumlah Bola Merah) + (Jumlah Bola Hijau) = $5 + 3 = 8$.
+                        <br>Jumlah bola warna lain = Total Bola - (Jumlah Merah + Hijau)
+                        <br>Jumlah bola warna lain = $10 - 8 = 2$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, <strong>semua pernyataan Benar</strong>.
+                     </div>
+                 </div>
+            </div>
+            
+            <!-- Soal 16 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Aplikasi & Penalaran)</p>
+                 <p class="question-text"><strong>16.</strong> Dalam sebuah acara, panitia menyediakan 8 macam hidangan pembuka, 12 hidangan utama, dan 6 hidangan penutup. Banyaknya cara seorang tamu memilih hidangan jika dia harus memilih setidaknya satu hidangan pembuka dan setidaknya satu hidangan penutup adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. 576</div>
+                     <div class="option">B. 696</div>
+                     <div class="option">C. 864</div>
+                     <div class="option">D. 1.152</div>
+                     <div class="option">E. 1.296</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 16</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Aturan Perkalian (Filling Slots):</strong> Jika suatu prosedur terdiri dari beberapa tahap yang berurutan, maka total cara untuk menyelesaikan prosedur tersebut adalah hasil kali dari banyaknya cara di setiap tahap.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        Pertanyaan ini seringkali menjebak. Frasa "setidaknya satu" bisa berarti memilih lebih dari satu dari setiap kategori. Namun, melihat pilihan jawaban yang merupakan bilangan relatif kecil, asumsi yang paling logis adalah bahwa tamu tersebut memilih <strong>tepat satu hidangan pembuka, tepat satu hidangan utama, dan tepat satu hidangan penutup</strong>. Soal ini menguji pemahaman konteks umum dalam soal cerita matematika. Jika soal menghendaki pemilihan lebih dari satu, biasanya akan digunakan konsep kombinasi dan angkanya akan jauh lebih besar.
+                        
+                        <br><br>Mari kita asumsikan tamu memilih <strong>satu dari setiap jenis hidangan</strong>.
+                        <ul>
+                            <li>Hidangan Pembuka: 8 pilihan</li>
+                            <li>Hidangan Utama: 12 pilihan</li>
+                            <li>Hidangan Penutup: 6 pilihan</li>
+                        </ul>
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p>Kita bisa membayangkannya sebagai tiga "slot" yang harus diisi:</p>
+                     <p>[Slot Pembuka] &nbsp; [Slot Utama] &nbsp; [Slot Penutup]</p>
+                     <p><strong>Langkah 1: Isi Slot Pembuka.</strong>
+                        <br>Ada 8 macam hidangan pembuka yang berbeda. Jadi, ada <strong>8</strong> cara untuk mengisi slot ini.
+                     </p>
+                      <p><strong>Langkah 2: Isi Slot Utama.</strong>
+                        <br>Ada 12 macam hidangan utama yang berbeda. Jadi, ada <strong>12</strong> cara untuk mengisi slot ini.
+                     </p>
+                      <p><strong>Langkah 3: Isi Slot Penutup.</strong>
+                        <br>Ada 6 macam hidangan penutup yang berbeda. Jadi, ada <strong>6</strong> cara untuk mengisi slot ini.
+                     </p>
+                      <p><strong>Langkah 4: Gunakan Aturan Perkalian.</strong>
+                        <br>Total cara memilih = (Cara pilih pembuka) $\times$ (Cara pilih utama) $\times$ (Cara pilih penutup)
+                        <br>Total cara = $8 \times 12 \times 6$
+                        <br>Total cara = $96 \times 6 = 576$.
+                     </p>
+                     <div class="final-answer">
+                        Berdasarkan interpretasi yang paling umum untuk soal semacam ini, jawaban yang benar adalah <strong>A. 576</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 17 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran) OSN-Level</p>
+                 <p class="question-text"><strong>17.</strong> Suatu toko mencatat persentase penjualan produknya. Produk A: 30%, Produk B: 25%, Produk C: 20%, Produk D: 25%. Toko tersebut ingin menaikkan keuntungan dengan mengubah komposisi persentase penjualan. Jika penjualan produk C saat ini adalah 120 unit, dan toko menargetkan persentase penjualan produk C menjadi 30% dari total penjualan baru, di mana total penjualan baru naik sebesar 25% dari total penjualan lama, berapakah penjualan produk C yang baru?</p>
+                 <div class="options-grid">
+                     <div class="option">A. 120 unit</div>
+                     <div class="option">B. 150 unit</div>
+                     <div class="option">C. 180 unit</div>
+                     <div class="option">D. 225 unit</div>
+                     <div class="option">E. 250 unit</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 17</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Logika Persentase:</strong> Jika suatu nilai (misalnya 120 unit) mewakili persentase tertentu (misalnya 20%) dari total, maka totalnya dapat dihitung dengan rumus: Total = $\frac{\text{Nilai}}{\text{Persentase}}$.</li>
+                            <li><strong>Kenaikan Persentase:</strong> Nilai Baru = Nilai Lama $\times (1 + \text{Persen Kenaikan})$.</li>
+                        </ul>
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                     Ini adalah soal yang menguji kemampuan kita untuk bekerja "mundur" dan "maju" dengan persentase.
+                     <br>1. Cari total penjualan lama berdasarkan data produk C.
+                     <br>2. Cari total penjualan baru setelah kenaikan 25%.
+                     <br>3. Cari jumlah penjualan produk C yang baru dengan persentase baru (30%).
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Hitung total penjualan awal (lama).</strong>
+                        <br>Kita tahu penjualan produk C lama adalah 120 unit, dan ini setara dengan 20% dari total penjualan lama.
+                        <br>Total Penjualan Lama = $\frac{\text{Penjualan C Lama}}{\text{Persentase C Lama}} = \frac{120}{20\%} = \frac{120}{0.20} = 600$ unit.
+                        <br>Jadi, total penjualan semua produk sebelumnya adalah 600 unit.
+                     </p>
+                     <p><strong>Langkah 2: Hitung total penjualan baru.</strong>
+                        <br>Total penjualan baru naik sebesar 25% dari total penjualan lama.
+                        <br>Total Penjualan Baru = Total Penjualan Lama $\times (1 + 25\%)$
+                        <br>Total Penjualan Baru = $600 \times (1 + 0.25) = 600 \times 1.25 = 750$ unit.
+                     </p>
+                     <p><strong>Langkah 3: Hitung penjualan produk C yang baru.</strong>
+                        <br>Penjualan produk C yang baru ditargetkan menjadi 30% dari total penjualan baru.
+                        <br>Penjualan C Baru = $30\% \times$ Total Penjualan Baru
+                        <br>Penjualan C Baru = $0.30 \times 750 = 225$ unit.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>D. 225 unit</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 18 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                 <p class="question-text"><strong>18.</strong> Sebuah keluarga memiliki 3 anak. Apakah peluang bahwa setidaknya dua anak berjenis kelamin sama?</p>
+                 <p class="mt-4">Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan.</p>
+                 <p> (1) Anak pertama adalah laki-laki. <br>
+                     (2) Anak terakhir adalah perempuan.</p>
+                 <div class="data-sufficiency-options">
+                     <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                     <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                     <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                     <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                     <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 18</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Prinsip Kandang Merpati (Pigeonhole Principle):</strong> Ini adalah konsep sederhana namun kuat. Jika Anda memiliki $n+1$ merpati dan hanya $n$ kandang, maka setidaknya satu kandang harus berisi lebih dari satu merpati.
+                        <br>Dalam konteks ini, "merpati" adalah anak (3 anak) dan "kandang" adalah jenis kelamin (2 jenis: Laki-laki, Perempuan).
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        Pertanyaannya adalah tentang peluang, tapi kita harus periksa dulu apakah kejadian tersebut <strong>pasti terjadi</strong>.
+                        <br>Kejadian yang ditanyakan: "setidaknya dua anak berjenis kelamin sama".
+                        <br>Mari kita pikirkan kebalikannya: "semua anak berjenis kelamin berbeda".
+                        <br>Dengan hanya 2 jenis kelamin (L dan P), apakah mungkin 3 anak memiliki jenis kelamin yang semuanya berbeda? Tidak mungkin. Setelah anak pertama (misal L) dan anak kedua (misal P), anak ketiga pasti akan sama dengan salah satu dari dua yang pertama (pasti L atau P).
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Analisis pertanyaan utama.</strong>
+                        <br>Ruang sampel untuk 3 anak adalah: {LLL, LLP, LPL, LPP, PLL, PLP, PPL, PPP}. Ada 8 kemungkinan.
+                        <br>Mari kita periksa setiap kemungkinan, apakah memenuhi "setidaknya dua anak berjenis kelamin sama":
+                        <ul>
+                            <li>LLL: Ya (3 L sama)</li>
+                            <li>LLP: Ya (2 L sama)</li>
+                            <li>LPL: Ya (2 L sama)</li>
+                            <li>LPP: Ya (2 P sama)</li>
+                            <li>PLL: Ya (2 L sama)</li>
+                            <li>PLP: Ya (2 P sama)</li>
+                            <li>PPL: Ya (2 P sama)</li>
+                            <li>PPP: Ya (3 P sama)</li>
+                        </ul>
+                        Ternyata, <strong>semua 8 kemungkinan</strong> memenuhi syarat. Ini berarti kejadian tersebut adalah kejadian yang <strong>pasti</strong> terjadi.
+                        <br>Peluang dari kejadian yang pasti terjadi adalah 1.
+                     </p>
+                     <p><strong>Langkah 2: Analisis kecukupan data.</strong>
+                        <br>Karena kita bisa menjawab pertanyaan ("Berapa peluangnya? Jawab: 1") hanya dengan informasi awal dari soal (keluarga memiliki 3 anak), maka kita sebenarnya <strong>tidak memerlukan informasi tambahan sama sekali</strong>.
+                        <br>Dalam soal kecukupan data, jika pertanyaan sudah bisa dijawab tanpa pernyataan (1) atau (2), maka masing-masing pernyataan dianggap cukup.
+                        <ul>
+                            <li><strong>Apakah Pernyataan (1) SAJA cukup?</strong> Ya, karena kita sudah tahu jawabannya 1, informasi tambahan tidak mengubahnya.</li>
+                            <li><strong>Apakah Pernyataan (2) SAJA cukup?</strong> Ya, karena alasan yang sama.</li>
+                        </ul>
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</strong>
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 19 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan & Penalaran)</p>
+                 <p class="question-text"><strong>19.</strong> Peluang siswa A lulus ujian adalah $\frac{3}{5}$, dan peluang siswa B lulus adalah $\frac{1}{2}$. Jika kejadian kelulusan mereka saling bebas, manakah dari pernyataan berikut yang benar? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                 <div class="options-grid">
+                     <div class="option">A. Peluang keduanya lulus adalah $\frac{3}{10}$.</div>
+                     <div class="option">B. Peluang hanya salah satu yang lulus adalah $\frac{1}{2}$.</div>
+                     <div class="option">C. Peluang A tidak lulus adalah $\frac{2}{5}$.</div>
+                     <div class="option">D. Peluang B tidak lulus adalah $\frac{1}{2}$.</div>
+                     <div class="option">E. Peluang setidaknya satu dari mereka lulus adalah $\frac{4}{5}$.</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 19</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                           <li><strong>Peluang Komplemen:</strong> Peluang suatu kejadian TIDAK terjadi adalah 1 dikurangi peluang kejadian itu terjadi. $P(A') = 1 - P(A)$.</li>
+                           <li><strong>Kejadian Saling Bebas:</strong> Dua kejadian dikatakan saling bebas jika terjadinya kejadian pertama tidak mempengaruhi peluang terjadinya kejadian kedua. Untuk kejadian bebas, berlaku:
+                              <br>$P(A \text{ dan } B) = P(A \cap B) = P(A) \times P(B)$.</li>
+                        </ul>
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Diketahui:
+                        <br>$P(A_{lulus}) = \frac{3}{5}$
+                        <br>$P(B_{lulus}) = \frac{1}{2}$
+                        <br>Dari sini, kita bisa langsung mencari peluang tidak lulus:
+                        <br>$P(A_{tidak}) = 1 - \frac{3}{5} = \frac{2}{5}$
+                        <br>$P(B_{tidak}) = 1 - \frac{1}{2} = \frac{1}{2}$
+                        <br>Kita akan verifikasi setiap opsi.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Opsi A: Peluang keduanya lulus adalah $\frac{3}{10}$.</strong>
+                        <br>Peluang A lulus DAN B lulus:
+                        <br>$P(A_{lulus} \cap B_{lulus}) = P(A_{lulus}) \times P(B_{lulus}) = \frac{3}{5} \times \frac{1}{2} = \frac{3}{10}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi C dan D (lebih mudah):</strong>
+                        <br><strong>Opsi C:</strong> Peluang A tidak lulus adalah $\frac{2}{5}$. Sesuai perhitungan awal kita, ini <strong>BENAR</strong>.
+                        <br><strong>Opsi D:</strong> Peluang B tidak lulus adalah $\frac{1}{2}$. Sesuai perhitungan awal kita, ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi B: Peluang hanya salah satu yang lulus adalah $\frac{1}{2}$.</strong>
+                        <br>"Hanya salah satu" berarti ada dua kemungkinan: (A lulus DAN B tidak lulus) ATAU (A tidak lulus DAN B lulus).
+                        <br>P(A lulus, B tidak) = $P(A_{lulus}) \times P(B_{tidak}) = \frac{3}{5} \times \frac{1}{2} = \frac{3}{10}$.
+                        <br>P(A tidak, B lulus) = $P(A_{tidak}) \times P(B_{lulus}) = \frac{2}{5} \times \frac{1}{2} = \frac{2}{10}$.
+                        <br>Total peluang = $\frac{3}{10} + \frac{2}{10} = \frac{5}{10} = \frac{1}{2}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Opsi E: Peluang setidaknya satu dari mereka lulus adalah $\frac{4}{5}$.</strong>
+                        <br>"Setidaknya satu lulus" adalah kebalikan (komplemen) dari "keduanya tidak lulus". Jadi, kita bisa hitung $1 - P(\text{keduanya tidak lulus})$.
+                        <br>P(keduanya tidak lulus) = $P(A_{tidak}) \times P(B_{tidak}) = \frac{2}{5} \times \frac{1}{2} = \frac{2}{10} = \frac{1}{5}$.
+                        <br>P(setidaknya satu lulus) = $1 - \frac{1}{5} = \frac{4}{5}$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A, B, C, D, dan E</strong>. Semuanya benar.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 20 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran & Perhitungan) OSN-Level</p>
+                 <p class="question-text"><strong>20.</strong> Rata-rata nilai ujian kelas A adalah 80 dan kelas B adalah 75. Jika rata-rata gabungan kedua kelas tersebut adalah 77, berapakah perbandingan jumlah siswa kelas A dan kelas B?</p>
+                 <div class="options-grid">
+                     <div class="option">A. 2:3</div>
+                     <div class="option">B. 3:2</div>
+                     <div class="option">C. 2:5</div>
+                     <div class="option">D. 3:5</div>
+                     <div class="option">E. 5:3</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 20</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Rata-rata Gabungan (Weighted Average):</strong> Rata-rata dari beberapa kelompok dihitung dengan menjumlahkan (hasil kali rata-rata tiap kelompok dengan jumlah anggotanya), lalu dibagi dengan total semua anggota.
+                        <br>Rumus: $\bar{x}_{gab} = \frac{n_A \bar{x}_A + n_B \bar{x}_B}{n_A + n_B}$
+                        <br>Di mana $n_A$ dan $n_B$ adalah jumlah siswa di masing-masing kelas.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Diketahui:
+                        <ul>
+                            <li>$\bar{x}_A = 80$ (rata-rata kelas A)</li>
+                            <li>$\bar{x}_B = 75$ (rata-rata kelas B)</li>
+                            <li>$\bar{x}_{gab} = 77$ (rata-rata gabungan)</li>
+                        </ul>
+                        Ditanya: Perbandingan $n_A : n_B$.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Masukkan nilai yang diketahui ke dalam rumus.</strong>
+                        <br>$77 = \frac{n_A \cdot 80 + n_B \cdot 75}{n_A + n_B}$
+                     </p>
+                     <p><strong>Langkah 2: Lakukan manipulasi aljabar untuk menemukan hubungan antara $n_A$ dan $n_B$.</strong>
+                        <br>Kalikan kedua sisi dengan $(n_A + n_B)$:
+                        <br>$77(n_A + n_B) = 80n_A + 75n_B$
+                        <br>Distribusikan nilai 77:
+                        <br>$77n_A + 77n_B = 80n_A + 75n_B$
+                        <br>Kumpulkan suku yang memiliki $n_A$ di satu sisi dan $n_B$ di sisi lain.
+                        <br>$77n_B - 75n_B = 80n_A - 77n_A$
+                        <br>Sederhanakan:
+                        <br>$2n_B = 3n_A$
+                     </p>
+                     <p><strong>Langkah 3: Ubah persamaan menjadi bentuk perbandingan.</strong>
+                        <br>Dari $2n_B = 3n_A$, kita ingin mencari $\frac{n_A}{n_B}$.
+                        <br>Bagi kedua sisi dengan $n_B$:
+                        <br>$2 = \frac{3n_A}{n_B}$
+                        <br>Bagi kedua sisi dengan 3:
+                        <br>$\frac{2}{3} = \frac{n_A}{n_B}$
+                        <br>Ini berarti perbandingan $n_A : n_B$ adalah $2:3$.
+                     </p>
+                     <p><strong>Metode Cepat (Diagram):</strong>
+                        <br>Rata-rata gabungan (77) lebih dekat ke rata-rata kelas B (75) daripada ke kelas A (80). Jaraknya adalah:
+                        <br>Jarak ke A: $|77 - 80| = 3$
+                        <br>Jarak ke B: $|77 - 75| = 2$
+                        <br>Perbandingan jumlah siswanya adalah kebalikan dari perbandingan jaraknya.
+                        <br>$n_A : n_B = (\text{Jarak ke B}) : (\text{Jarak ke A}) = 2 : 3$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>A. 2:3</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 21 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan)</p>
+                 <p class="question-text"><strong>21.</strong> Suatu komite yang terdiri dari 5 orang akan dipilih dari 7 guru dan 4 murid. Jika komite harus terdiri dari setidaknya 3 guru, banyaknya cara untuk membentuk komite tersebut adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. 119</div>
+                     <div class="option">B. 210</div>
+                     <div class="option">C. 245</div>
+                     <div class="option">D. 371</div>
+                     <div class="option">E. 500</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 21</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Ini adalah masalah kombinasi dengan syarat "setidaknya", yang mirip dengan Soal 3. Kita perlu menjabarkan semua kasus yang mungkin dan menjumlahkan hasilnya.
+                        <br>Rumus Kombinasi: $C(n,k) = \frac{n!}{k!(n-k)!}$
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Total calon: 7 Guru (G) dan 4 Murid (M).
+                        <br>Ukuran komite: 5 orang.
+                        <br>Syarat: Minimal ada 3 Guru.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Jabarkan semua kemungkinan komposisi komite yang valid.</strong>
+                        <br>Kita mulai dari jumlah guru minimum, lalu lengkapi dengan murid hingga total 5 orang.
+                        <ul>
+                            <li><strong>Kasus 1: Tepat 3 Guru.</strong>
+                                <br>Maka kita butuh $5 - 3 = 2$ Murid. Komposisi: <strong>(3 G, 2 M)</strong>. Valid.
+                            </li>
+                            <li><strong>Kasus 2: Tepat 4 Guru.</strong>
+                                <br>Maka kita butuh $5 - 4 = 1$ Murid. Komposisi: <strong>(4 G, 1 M)</strong>. Valid.
+                            </li>
+                            <li><strong>Kasus 3: Tepat 5 Guru.</strong>
+                                <br>Maka kita butuh $5 - 5 = 0$ Murid. Komposisi: <strong>(5 G, 0 M)</strong>. Valid.
+                            </li>
+                            <li>(Tidak mungkin 6 guru atau lebih karena komite hanya 5 orang).</li>
+                        </ul>
+                     </p>
+                     <p><strong>Langkah 2: Hitung banyaknya cara untuk setiap kasus.</strong>
+                        <ul>
+                            <li><strong>Kasus 1 (3 G, 2 M):</strong>
+                                <br>Cara pilih 3 G dari 7 G: $C(7,3) = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$.
+                                <br>Cara pilih 2 M dari 4 M: $C(4,2) = \frac{4 \times 3}{2 \times 1} = 6$.
+                                <br>Total cara kasus 1 = $35 \times 6 = 210$.
+                            </li>
+                            <li><strong>Kasus 2 (4 G, 1 M):</strong>
+                                <br>Cara pilih 4 G dari 7 G: $C(7,4) = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$. (Ingat $C(n,k)=C(n,n-k)$)
+                                <br>Cara pilih 1 M dari 4 M: $C(4,1) = 4$.
+                                <br>Total cara kasus 2 = $35 \times 4 = 140$.
+                            </li>
+                            <li><strong>Kasus 3 (5 G, 0 M):</strong>
+                                <br>Cara pilih 5 G dari 7 G: $C(7,5) = C(7,2) = \frac{7 \times 6}{2 \times 1} = 21$.
+                                <br>Cara pilih 0 M dari 4 M: $C(4,0) = 1$.
+                                <br>Total cara kasus 3 = $21 \times 1 = 21$.
+                            </li>
+                        </ul>
+                     </p>
+                     <p><strong>Langkah 3: Jumlahkan semua cara dari kasus yang valid.</strong>
+                        <br>Total cara = (Cara Kasus 1) + (Cara Kasus 2) + (Cara Kasus 3)
+                        <br>Total cara = $210 + 140 + 21 = 371$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>D. 371</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 22 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                 <p class="question-text"><strong>22.</strong> Terdapat dua kantong. Kantong A berisi 3 bola merah dan 5 bola putih. Kantong B berisi 2 bola merah dan 4 bola putih. Sebuah kantong dipilih secara acak, kemudian diambil satu bola dari kantong tersebut. Jika bola yang terambil adalah bola merah, berapakah peluang bola tersebut berasal dari kantong A?</p>
+                 <div class="options-grid">
+                     <div class="option">A. $\frac{3}{11}$</div>
+                     <div class="option">B. $\frac{6}{11}$</div>
+                     <div class="option">C. $\frac{1}{2}$</div>
+                     <div class="option">D. $\frac{5}{8}$</div>
+                     <div class="option">E. $\frac{9}{17}$</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 22</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Teorema Bayes (Peluang Bersyarat Terbalik):</strong> Digunakan untuk mencari peluang suatu penyebab, setelah hasilnya diketahui.
+                        <br>Rumusnya: $P(A|M) = \frac{P(M|A) \cdot P(A)}{P(M)}$
+                        <br>Di mana:
+                        <ul>
+                            <li>$P(A|M)$: Peluang kejadian A (berasal dari kantong A) <strong>setelah diketahui</strong> kejadian M (terambil bola merah) terjadi. Ini yang kita cari.</li>
+                            <li>$P(M|A)$: Peluang terambil Merah jika kita <strong>sudah memilih</strong> kantong A.</li>
+                            <li>$P(A)$: Peluang awal memilih kantong A.</li>
+                            <li>$P(M)$: Peluang total terambilnya bola Merah (bisa dari A atau B).</li>
+                        </ul>
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Definisikan semua peluang awal yang diketahui.</strong>
+                        <br>Karena kantong dipilih acak, peluang memilih masing-masing kantong adalah sama.
+                        <br>$P(A) = \frac{1}{2}$
+                        <br>$P(B) = \frac{1}{2}$
+                        <br><br>
+                        Selanjutnya, peluang mendapatkan bola merah dari masing-masing kantong.
+                        <br>Kantong A: 3 Merah, 5 Putih (Total 8). $P(M|A) = \frac{3}{8}$.
+                        <br>Kantong B: 2 Merah, 4 Putih (Total 6). $P(M|B) = \frac{2}{6} = \frac{1}{3}$.
+                     </p>
+                     <p><strong>Langkah 2: Hitung peluang total terambilnya bola merah, $P(M)$.</strong>
+                        <br>Bola merah bisa terambil melalui dua jalur: (Pilih A DAN dapat Merah) ATAU (Pilih B DAN dapat Merah).
+                        <br>$P(M) = (P(A) \times P(M|A)) + (P(B) \times P(M|B))$
+                        <br>$P(M) = (\frac{1}{2} \times \frac{3}{8}) + (\frac{1}{2} \times \frac{1}{3})$
+                        <br>$P(M) = \frac{3}{16} + \frac{1}{6}$
+                        <br>Samakan penyebut (KPK dari 16 dan 6 adalah 48):
+                        <br>$P(M) = \frac{3 \times 3}{48} + \frac{1 \times 8}{48} = \frac{9}{48} + \frac{8}{48} = \frac{17}{48}$.
+                        <br>Jadi, peluang mengambil bola merah secara umum adalah $\frac{17}{48}$.
+                     </p>
+                     <p><strong>Langkah 3: Gunakan Teorema Bayes untuk menghitung $P(A|M)$.</strong>
+                        <br>$P(A|M) = \frac{\text{Peluang terambil merah dari jalur A}}{\text{Total peluang terambil merah}}$
+                        <br>$P(A|M) = \frac{P(A) \times P(M|A)}{P(M)}$
+                        <br>$P(A|M) = \frac{\frac{1}{2} \times \frac{3}{8}}{\frac{17}{48}} = \frac{\frac{3}{16}}{\frac{17}{48}}$
+                        <br>$P(A|M) = \frac{3}{16} \times \frac{48}{17} = \frac{3 \times 3}{17} = \frac{9}{17}$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>E. $\frac{9}{17}$</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 23 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan) OSN-Level</p>
+                 <p class="question-text"><strong>23.</strong> Perhatikan data pada tabel berikut. Jika kuartil bawah ($Q_1$) dari data tersebut adalah 37,5, maka nilai $x$ adalah ....</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Interval</th><th>Frekuensi</th></tr></thead>
+                     <tbody>
+                         <tr><td>30-34</td><td>3</td></tr>
+                         <tr><td>35-39</td><td>5</td></tr>
+                         <tr><td>40-44</td><td>$x$</td></tr>
+                         <tr><td>45-49</td><td>8</td></tr>
+                     </tbody>
+                 </table>
+                 <div class="options-grid">
+                     <div class="option">A. 6</div>
+                     <div class="option">B. 7</div>
+                     <div class="option">C. 8</div>
+                     <div class="option">D. 9</div>
+                     <div class="option">E. 10</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 23</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Rumus Kuartil Bawah ($Q_1$) untuk data kelompok adalah:
+                        <br>$Q_1 = L_1 + \left(\frac{\frac{1}{4}n - f_{kum}}{f_1}\right) \cdot p$
+                        <br>Di mana:
+                        <ul>
+                            <li>$L_1$: Tepi bawah kelas $Q_1$. (Batas bawah - 0.5)</li>
+                            <li>$n$: Total seluruh frekuensi.</li>
+                            <li>$f_{kum}$: Frekuensi kumulatif <strong>sebelum</strong> kelas $Q_1$.</li>
+                            <li>$f_1$: Frekuensi kelas $Q_1$.</li>
+                            <li>$p$: Panjang interval kelas.</li>
+                        </ul>
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Identifikasi kelas $Q_1$ dan nilai-nilai yang diketahui.</strong>
+                        <br>Diketahui $Q_1 = 37.5$. Nilai ini berada dalam interval <strong>35-39</strong>. Jadi, ini adalah kelas $Q_1$.
+                        <br>Dari kelas 35-39, kita dapatkan:
+                        <ul>
+                            <li>Tepi bawah ($L_1$) = $35 - 0.5 = 34.5$.</li>
+                            <li>Frekuensi kelas $Q_1$ ($f_1$) = 5.</li>
+                        </ul>
+                        Informasi lain dari tabel:
+                        <ul>
+                           <li>Panjang kelas ($p$) = $(39-35)+1 = 5$.</li>
+                           <li>Frekuensi kumulatif sebelum kelas $Q_1$ ($f_{kum}$) = 3 (hanya frekuensi dari kelas 30-34).</li>
+                           <li>Total frekuensi ($n$) = $3 + 5 + x + 8 = 16 + x$.</li>
+                        </ul>
+                     </p>
+                     <p><strong>Langkah 2: Masukkan semua nilai ke dalam rumus $Q_1$.</strong>
+                        <br>$37.5 = 34.5 + \left(\frac{\frac{1}{4}(16+x) - 3}{5}\right) \cdot 5$
+                     </p>
+                     <p><strong>Langkah 3: Selesaikan persamaan untuk mencari nilai $x$.</strong>
+                        <br>Pindahkan 34.5 ke sisi kiri:
+                        <br>$37.5 - 34.5 = \left(\frac{\frac{16+x}{4} - 3}{5}\right) \cdot 5$
+                        <br>$3 = \left(\frac{\frac{16+x}{4} - 3}{5}\right) \cdot 5$
+                        <br>Angka 5 di pembilang dan penyebut bisa dicoret:
+                        <br>$3 = \frac{16+x}{4} - 3$
+                        <br>Pindahkan -3 ke sisi kiri:
+                        <br>$3 + 3 = \frac{16+x}{4}$
+                        <br>$6 = \frac{16+x}{4}$
+                        <br>Kalikan kedua sisi dengan 4:
+                        <br>$6 \times 4 = 16+x$
+                        <br>$24 = 16+x$
+                        <br>$x = 24 - 16 = 8$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>C. 8</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 24 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran) OSN-Level</p>
+                 <p class="question-text"><strong>24.</strong> Jika terdapat 5 siswa laki-laki dan 5 siswa perempuan, berapa banyak cara untuk mengatur mereka duduk di 10 kursi yang berjajar jika tidak ada dua laki-laki yang duduk bersebelahan?</p>
+                 <div class="options-grid">
+                     <div class="option">A. 2.880</div>
+                     <div class="option">B. 14.400</div>
+                     <div class="option">C. 28.800</div>
+                     <div class="option">D. 120.000</div>
+                     <div class="option">E. 86.400</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 24</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Permutasi Selang-seling/Dengan Batasan:</strong> Untuk soal di mana sekelompok objek tidak boleh bersebelahan, strategi yang efektif adalah:
+                        <br>1. Susun terlebih dahulu kelompok objek yang <strong>tanpa batasan</strong>.
+                        <br>2. Ciptakan "slot" atau ruang kosong di antara dan di ujung susunan tersebut.
+                        <br>3. Tempatkan kelompok objek yang <strong>dengan batasan</strong> ke dalam slot-slot yang tersedia menggunakan permutasi.
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>5 Laki-laki (L) dan 5 Perempuan (P) akan duduk di 10 kursi.
+                        <br>Batasan: Tidak ada dua Laki-laki yang bersebelahan. Ini berarti di antara dua Laki-laki harus ada setidaknya satu Perempuan.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Susun kelompok yang tidak punya batasan (Perempuan).</strong>
+                        <br>Ada 5 perempuan yang berbeda. Banyaknya cara menyusun mereka adalah:
+                        <br>$5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$ cara.
+                     </p>
+                     <p><strong>Langkah 2: Ciptakan slot kosong di antara dan di ujung susunan perempuan.</strong>
+                        <br>Bayangkan susunan perempuan seperti ini:
+                        <br>_ P _ P _ P _ P _ P _
+                        <br>Tanda "_" adalah slot kosong yang bisa diisi oleh laki-laki. Ada <strong>6 slot</strong> yang tersedia.
+                     </p>
+                     <p><strong>Langkah 3: Tempatkan laki-laki (kelompok dengan batasan) ke dalam slot-slot tersebut.</strong>
+                        <br>Kita perlu menempatkan 5 laki-laki ke dalam 6 slot yang tersedia. Karena laki-lakinya berbeda, urutan penempatan penting, jadi kita gunakan permutasi.
+                        <br>Banyaknya cara memilih 5 slot dari 6 dan menyusun 5 laki-laki di dalamnya adalah:
+                        <br>$P(6,5) = \frac{6!}{(6-5)!} = \frac{6!}{1!} = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720$ cara.
+                     </p>
+                     <p><strong>Langkah 4: Hitung total cara menggunakan aturan perkalian.</strong>
+                        <br>Total Cara = (Cara susun perempuan) $\times$ (Cara susun laki-laki)
+                        <br>Total Cara = $120 \times 720 = 86.400$.
+                     </p>
+                     <div class="final-answer">
+                        Jawaban yang benar adalah 86.400, yang sesuai dengan <strong>Opsi E</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 25 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Penalaran)</p>
+                 <p class="question-text"><strong>25.</strong> Seorang peneliti ingin menguji efektivitas pupuk baru terhadap pertumbuhan tanaman. Ia membagi tanaman menjadi dua kelompok. Kelompok A diberi pupuk biasa dan Kelompok B diberi pupuk baru. Tinggi tanaman diukur setiap minggu selama 8 minggu. Apakah simpangan baku tinggi tanaman Kelompok B lebih kecil dari Kelompok A?</p>
+                 <p class="mt-4">Putuskan apakah pernyataan (1) dan (2) berikut cukup untuk menjawab pertanyaan.</p>
+                 <p> (1) Rata-rata tinggi tanaman Kelompok B lebih besar dari Kelompok A. <br>
+                     (2) Rentang tinggi tanaman Kelompok B lebih kecil dari Kelompok A.</p>
+                 <div class="data-sufficiency-options">
+                     <p>A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</p>
+                     <p>B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</p>
+                     <p>C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</p>
+                     <p>D. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</p>
+                     <p>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</p>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 25</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <ul>
+                            <li><strong>Ukuran Pemusatan (Rata-rata):</strong> Memberi tahu di mana "pusat" data berada.</li>
+                            <li><strong>Ukuran Penyebaran (Rentang, Simpangan Baku):</strong> Memberi tahu seberapa "tersebar" atau "bervariasi" data tersebut.
+                                <ul>
+                                    <li><strong>Rentang (Range):</strong> Selisih antara nilai maksimum dan minimum. Sangat sensitif terhadap nilai ekstrem (pencilan).</li>
+                                    <li><strong>Simpangan Baku:</strong> Mengukur rata-rata jarak setiap titik data ke rata-rata. Ini adalah ukuran penyebaran yang lebih robust karena mempertimbangkan semua data.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        Penting: Ukuran pemusatan dan ukuran penyebaran adalah dua hal yang independen.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Analisis Pernyataan (1) SAJA.</strong>
+                        <br>"Rata-rata tinggi tanaman Kelompok B lebih besar dari Kelompok A."
+                        <br>Informasi tentang rata-rata (pusat data) tidak memberi tahu apa-apa tentang sebaran data (simpangan baku).
+                        <br><strong>Contoh Kontra:</strong>
+                        <br>Data A: {40, 50, 60}. Rata-rata = 50, Simpangan Baku $\approx$ 8.16.
+                        <br>Data B: {59, 60, 61}. Rata-rata = 60, Simpangan Baku $\approx$ 0.82. (SB B < SB A)
+                        <br>Data C: {40, 60, 80}. Rata-rata = 60, Simpangan Baku $\approx$ 16.33. (SB C > SB A)
+                        <br>Meskipun rata-rata B dan C sama-sama lebih besar dari A, simpangan bakunya bisa lebih kecil atau lebih besar.
+                        <br>Jadi, pernyataan (1) SAJA <strong>tidak cukup</strong>.
+                     </p>
+                     <p><strong>Langkah 2: Analisis Pernyataan (2) SAJA.</strong>
+                        <br>"Rentang tinggi tanaman Kelompok B lebih kecil dari Kelompok A."
+                        <br>Informasi tentang rentang juga tidak cukup untuk menentukan simpangan baku. Rentang hanya melihat dua titik data (maksimum dan minimum), sedangkan simpangan baku melihat semua titik data.
+                        <br><strong>Contoh Kontra:</strong>
+                        <br>Data A: {10, 20, 30, 40, 50}. Rentang = 40.
+                        <br>Data B: {10, 11, 12, 13, 40}. Rentang = 30. (Rentang B < Rentang A)
+                        <br>Data B lebih banyak mengumpul di nilai kecil, sehingga simpangan bakunya kemungkinan lebih besar daripada data A yang tersebar merata.
+                        <br>Jadi, pernyataan (2) SAJA <strong>tidak cukup</strong>.
+                     </p>
+                     <p><strong>Langkah 3: Analisis Pernyataan (1) dan (2) BERSAMA-SAMA.</strong>
+                        <br>Meskipun kita tahu rata-rata B lebih besar dan rentangnya lebih kecil, kita tetap tidak tahu distribusi data di antara nilai minimum dan maksimum. Distribusi inilah yang menentukan simpangan baku. Kita tidak bisa memberikan jawaban "Ya" atau "Tidak" yang pasti.
+                        <br>Jadi, kedua pernyataan BERSAMA-SAMA pun <strong>tidak cukup</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>E. Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</strong>
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 26 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Aplikasi & Penalaran)</p>
+                 <p class="question-text"><strong>26.</strong> Dalam sebuah survei terhadap 100 orang, didapati 60 orang suka membaca buku, 40 orang suka menonton film, dan 20 orang suka keduanya. Tentukan apakah pernyataan-pernyataan berikut "Benar" atau "Salah".</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
+                     <tbody>
+                         <tr><td>Jumlah orang yang hanya suka membaca buku adalah 40.</td><td>✔</td><td></td></tr>
+                         <tr><td>Banyak orang yang tidak suka keduanya adalah 20.</td><td>✔</td><td></td></tr>
+                         <tr><td>Peluang seseorang hanya suka membaca buku adalah 0.4.</td><td>✔</td><td></td></tr>
+                     </tbody>
+                 </table>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 26</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        <strong>Prinsip Inklusi-Eksklusi (Diagram Venn):</strong> Untuk dua himpunan B (Buku) dan F (Film), berlaku:
+                        <br>Total(B atau F) = Total(B) + Total(F) - Total(B dan F)
+                        <br>Dan:
+                        <br>Hanya B = Total(B) - Total(B dan F)
+                        <br>Tidak suka keduanya = Total Responden - Total(B atau F)
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Total Responden = 100.
+                        <br>Suka Buku (B) = 60.
+                        <br>Suka Film (F) = 40.
+                        <br>Suka Keduanya (B $\cap$ F) = 20.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Pernyataan 1: Jumlah orang yang hanya suka membaca buku adalah 40.</strong>
+                        <br>Hanya Suka Buku = (Total yang Suka Buku) - (Yang Suka Keduanya)
+                        <br>Hanya Suka Buku = $60 - 20 = 40$ orang.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 2: Banyak orang yang tidak suka keduanya adalah 20.</strong>
+                        <br>Pertama, cari dulu berapa banyak orang yang suka setidaknya salah satu (suka buku atau suka film).
+                        <br>Total(B $\cup$ F) = Total(B) + Total(F) - Total(B $\cap$ F)
+                        <br>Total(B $\cup$ F) = $60 + 40 - 20 = 80$ orang.
+                        <br>Jadi, ada 80 orang yang menyukai setidaknya salah satu kegiatan.
+                        <br>Tidak Suka Keduanya = Total Responden - Total(B $\cup$ F)
+                        <br>Tidak Suka Keduanya = $100 - 80 = 20$ orang.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 3: Peluang seseorang hanya suka membaca buku adalah 0.4.</strong>
+                        <br>Peluang = $\frac{\text{Jumlah yang hanya suka buku}}{\text{Total responden}}$
+                        <br>Peluang = $\frac{40}{100} = 0.4$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, <strong>semua pernyataan Benar</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 27 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan & Penalaran) OSN-Level</p>
+                 <p class="question-text"><strong>27.</strong> Sekelompok siswa terdiri dari 7 laki-laki dan 7 perempuan. Jika dari kelompok tersebut akan dipilih 4 orang sebagai perwakilan, manakah dari kejadian berikut yang memiliki peluang sama? <strong>(bisa pilih lebih dari satu jawaban)</strong></p>
+                 <div class="options-grid">
+                     <div class="option">A. Terpilih 4 laki-laki</div>
+                     <div class="option">B. Terpilih 4 perempuan</div>
+                     <div class="option">C. Terpilih 3 laki-laki dan 1 perempuan</div>
+                     <div class="option">D. Terpilih 2 laki-laki dan 2 perempuan</div>
+                     <div class="option">E. Terpilih 1 laki-laki dan 3 perempuan</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 27</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Dua kejadian memiliki peluang yang sama jika <strong>jumlah cara terjadinya</strong> kedua kejadian tersebut sama, karena pembaginya (ruang sampel) sama untuk semua kasus.
+                        <br>Kita perlu menghitung banyaknya cara (kombinasi) untuk setiap opsi.
+                        <br>Total siswa = 7 Laki-laki (L) + 7 Perempuan (P) = 14. Dipilih 4.
+                        <br>Ruang Sampel $n(S) = C(14,4) = \frac{14 \times 13 \times 12 \times 11}{4 \times 3 \times 2 \times 1} = 1001$.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Opsi A: Terpilih 4 laki-laki.</strong>
+                        <br>Cara = Memilih 4 L dari 7 L = $C(7,4) = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$ cara.
+                     </p>
+                     <p><strong>Analisis Opsi B: Terpilih 4 perempuan.</strong>
+                        <br>Cara = Memilih 4 P dari 7 P = $C(7,4) = 35$ cara.
+                     </p>
+                     <p><strong>Analisis Opsi C: Terpilih 3 laki-laki dan 1 perempuan.</strong>
+                        <br>Cara = (Pilih 3 L dari 7 L) $\times$ (Pilih 1 P dari 7 P)
+                        <br>Cara = $C(7,3) \times C(7,1) = 35 \times 7 = 245$ cara.
+                     </p>
+                     <p><strong>Analisis Opsi D: Terpilih 2 laki-laki dan 2 perempuan.</strong>
+                        <br>Cara = (Pilih 2 L dari 7 L) $\times$ (Pilih 2 P dari 7 P)
+                        <br>Cara = $C(7,2) \times C(7,2) = (\frac{7 \times 6}{2}) \times (\frac{7 \times 6}{2}) = 21 \times 21 = 441$ cara.
+                     </p>
+                     <p><strong>Analisis Opsi E: Terpilih 1 laki-laki dan 3 perempuan.</strong>
+                        <br>Cara = (Pilih 1 L dari 7 L) $\times$ (Pilih 3 P dari 7 P)
+                        <br>Cara = $C(7,1) \times C(7,3) = 7 \times 35 = 245$ cara.
+                     </p>
+                     <p><strong>Kesimpulan:</strong>
+                        <br>Opsi A dan B memiliki jumlah cara yang sama (35).
+                        <br>Opsi C dan E memiliki jumlah cara yang sama (245).
+                        <br>Karena jumlah caranya sama, maka peluangnya juga akan sama.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, kejadian yang memiliki peluang sama adalah <strong>A dan B</strong>, serta <strong>C dan E</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 28 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Perhitungan & Penalaran) OSN-Level</p>
+                 <p class="question-text"><strong>28.</strong> Sebuah kantong berisi bola bernomor 1 sampai 10. Jika diambil tiga bola secara acak tanpa pengembalian, peluang terambilnya ketiga bola dengan jumlah nomor lebih dari 25 adalah ....</p>
+                 <div class="options-grid">
+                     <div class="option">A. $\frac{1}{120}$</div>
+                     <div class="option">B. $\frac{1}{60}$</div>
+                     <div class="option">C. $\frac{1}{40}$</div>
+                     <div class="option">D. $\frac{1}{30}$</div>
+                     <div class="option">E. $\frac{1}{20}$</div>
+                 </div>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 28</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Sama seperti soal peluang lainnya, $P(A) = \frac{n(A)}{n(S)}$.
+                        <br>$n(A)$: Banyaknya kombinasi 3 bola yang jumlahnya > 25.
+                        <br>$n(S)$: Total semua kombinasi 3 bola yang mungkin.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Langkah 1: Hitung Ruang Sampel ($n(S)$).</strong>
+                        <br>Memilih 3 bola dari 10 bola yang tersedia.
+                        <br>$n(S) = C(10,3) = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120$.
+                        <br>Ada 120 total kemungkinan.
+                     </p>
+                     <p><strong>Langkah 2: Cari semua kombinasi 3 bola yang jumlahnya > 25 ($n(A)$).</strong>
+                        <br>Untuk mendapatkan jumlah yang besar, kita harus mulai dari bola-bola bernomor terbesar.
+                        <ul>
+                           <li>Kombinasi dengan 10 dan 9: {10, 9, ...}
+                              <ul>
+                                 <li>{10, 9, 8} -> Jumlah = 27. (Lebih dari 25, OK)</li>
+                                 <li>{10, 9, 7} -> Jumlah = 26. (Lebih dari 25, OK)</li>
+                                 <li>{10, 9, 6} -> Jumlah = 25. (Tidak lebih dari 25, Stop)</li>
+                              </ul>
+                           </li>
+                           <li>Kombinasi dengan 10 dan 8 (tanpa 9): {10, 8, ...}
+                              <ul>
+                                 <li>{10, 8, 7} -> Jumlah = 25. (Tidak lebih dari 25, Stop)</li>
+                              </ul>
+                           </li>
+                        </ul>
+                        Hanya ada dua kombinasi yang memenuhi syarat: {10, 9, 8} dan {10, 9, 7}.
+                        <br>Jadi, $n(A) = 2$.
+                     </p>
+                     <p><strong>Langkah 3: Hitung peluangnya.</strong>
+                        <br>Peluang = $\frac{n(A)}{n(S)} = \frac{2}{120} = \frac{1}{60}$.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, jawaban yang benar adalah <strong>B. $\frac{1}{60}$</strong>.
+                     </div>
+                 </div>
+            </div>
+            
+            <!-- Soal 29 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Aplikasi & Penalaran)</p>
+                 <p class="question-text"><strong>29.</strong> Dalam sebuah survei terhadap 50 siswa, didapati 30 suka olahraga basket, 25 suka sepak bola, dan 10 suka keduanya. Tentukan apakah pernyataan berikut "Benar" atau "Salah".</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
+                     <tbody>
+                         <tr><td>Jumlah siswa yang hanya suka basket adalah 20.</td><td>✔</td><td></td></tr>
+                         <tr><td>Jumlah siswa yang tidak suka keduanya adalah 5.</td><td>✔</td><td></td></tr>
+                         <tr><td>Peluang seorang siswa tidak suka keduanya adalah 0,1.</td><td>✔</td><td></td></tr>
+                     </tbody>
+                 </table>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 29</h3>
+                      <p><strong>KONSEP DASAR:</strong>
+                        Ini adalah aplikasi dari konsep himpunan (Diagram Venn), sama seperti Soal 26.
+                        <br>Total = (Hanya A) + (Hanya B) + (Keduanya) + (Tidak Keduanya)
+                     </p>
+                     <p><strong>ANALISIS SOAL:</strong>
+                        <br>Total Siswa = 50.
+                        <br>Suka Basket (B) = 30.
+                        <br>Suka Sepak Bola (S) = 25.
+                        <br>Suka Keduanya (B $\cap$ S) = 10.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Pernyataan 1: Jumlah siswa yang hanya suka basket adalah 20.</strong>
+                        <br>Kelompok yang suka basket (30 orang) terdiri dari mereka yang "hanya suka basket" dan mereka yang "suka keduanya".
+                        <br>Hanya Suka Basket = (Total Suka Basket) - (Suka Keduanya)
+                        <br>Hanya Suka Basket = $30 - 10 = 20$ siswa.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 2: Jumlah siswa yang tidak suka keduanya adalah 5.</strong>
+                        <br>Pertama, cari jumlah total siswa yang suka setidaknya satu olahraga.
+                        <br>Total(B $\cup$ S) = Total(B) + Total(S) - Total(B $\cap$ S)
+                        <br>Total(B $\cup$ S) = $30 + 25 - 10 = 45$ siswa.
+                        <br>Ini adalah jumlah siswa yang ada di dalam lingkaran Venn.
+                        <br>Tidak Suka Keduanya = Total Siswa - Total(B $\cup$ S)
+                        <br>Tidak Suka Keduanya = $50 - 45 = 5$ siswa.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 3: Peluang seorang siswa tidak suka keduanya adalah 0,1.</strong>
+                        <br>Peluang = $\frac{\text{Jumlah yang tidak suka keduanya}}{\text{Total siswa}}$
+                        <br>Peluang = $\frac{5}{50} = \frac{1}{10} = 0.1$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, <strong>semua pernyataan Benar</strong>.
+                     </div>
+                 </div>
+            </div>
+
+            <!-- Soal 30 -->
+            <div class="item-container content-card">
+                 <p class="text-sm text-gray-500 mb-2">Tingkat Kesulitan: Sulit (Analisis Data)</p>
+                 <p class="question-text"><strong>30.</strong> Perhatikan data berikut yang menunjukkan jumlah pengunjung perpustakaan dari hari Senin hingga Jumat:
+                 <table class="complex-table mt-4">
+                     <thead><tr><th>Hari</th><th>Jumlah Pengunjung</th></tr></thead>
+                     <tbody>
+                         <tr><td>Senin</td><td>200</td></tr>
+                         <tr><td>Selasa</td><td>150</td></tr>
+                         <tr><td>Rabu</td><td>250</td></tr>
+                         <tr><td>Kamis</td><td>300</td></tr>
+                         <tr><td>Jumat</td><td>250</td></tr>
+                     </tbody>
+                 </table>
+                 Tentukan apakah pernyataan berikut "Benar" atau "Salah".</p>
+                 <table class="complex-table">
+                     <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
+                     <tbody>
+                         <tr><td>Jumlah pengunjung terbanyak terjadi pada hari Kamis.</td><td>✔</td><td></td></tr>
+                         <tr><td>Rata-rata jumlah pengunjung dari hari Senin sampai Rabu adalah 200.</td><td>✔</td><td></td></tr>
+                         <tr><td>Jumlah pengunjung pada hari Jumat dua kali lipat dari hari Selasa.</td><td></td><td>✔</td></tr>
+                     </tbody>
+                 </table>
+                 <div class="pembahasan">
+                     <h3>Pembahasan Soal 30</h3>
+                     <p><strong>KONSEP DASAR:</strong>
+                        Soal ini murni menguji kemampuan membaca dan menginterpretasi data dari tabel secara akurat.
+                     </p>
+                     <p><strong>LANGKAH-LANGKAH PENGERJAAN:</strong></p>
+                     <p><strong>Analisis Pernyataan 1: Jumlah pengunjung terbanyak terjadi pada hari Kamis.</strong>
+                        <br>Lihat kolom "Jumlah Pengunjung": {200, 150, 250, 300, 250}.
+                        <br>Nilai tertinggi adalah 300, yang berkorespondensi dengan hari Kamis.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 2: Rata-rata jumlah pengunjung dari hari Senin sampai Rabu adalah 200.</strong>
+                        <br>Data Senin-Rabu: {200, 150, 250}.
+                        <br>Jumlah Pengunjung Senin-Rabu = $200 + 150 + 250 = 600$.
+                        <br>Banyak hari = 3.
+                        <br>Rata-rata = $\frac{600}{3} = 200$.
+                        <br>Pernyataan ini <strong>BENAR</strong>.
+                     </p>
+                     <p><strong>Analisis Pernyataan 3: Jumlah pengunjung pada hari Jumat dua kali lipat dari hari Selasa.</strong>
+                        <br>Jumlah pengunjung Jumat = 250.
+                        <br>Jumlah pengunjung Selasa = 150.
+                        <br>Dua kali lipat dari hari Selasa = $2 \times 150 = 300$.
+                        <br>Apakah $250 = 300$? Tidak.
+                        <br>Pernyataan ini <strong>SALAH</strong>.
+                     </p>
+                     <div class="final-answer">
+                        Jadi, <strong>Pernyataan 1 Benar, Pernyataan 2 Benar, dan Pernyataan 3 Salah.</strong>
+                     </div>
+                 </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
+
