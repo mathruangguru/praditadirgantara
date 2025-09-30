@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Matematika Lanjut - Latihan 1</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        height: 29.7cm;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      .layout-2-kolom {
+        columns: 2;
+        column-gap: 15mm;
+        height: 100%;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px; /* Jarak antara nomor dan teks soal */
+        margin-bottom: 20px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 18px; /* Ruang untuk nomor hingga 2 digit */
+      }
+
+      .soal-konten {
+        flex-grow: 1; /* Konten soal mengisi sisa ruang */
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left; /* Pilihan ganda selalu rata kiri */
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: normal;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 60px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .kecukupan-data-pernyataan {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 8px; /* row-gap column-gap */
+        text-align: left; /* Override justify from parent */
+        margin-top: 10px !important;
+        margin-bottom: 10px;
+      }
+      .kecukupan-data-pernyataan span {
+        line-height: 1.5;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text,
+        .kuis-title {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">1.</div>
+              <div class="soal-konten">
+                Dua toko buku, "Cerdas" dan "Pintar", menjual buku tulis,
+                pensil, dan penghapus. Harga barang (dalam ribuan Rupiah)
+                disajikan dalam matriks
+                $H = \begin{pmatrix} 8 & 7 \\ 2 & 2,5 \\ 1 & 1,5 \end{pmatrix}$,
+                dengan baris mewakili buku, pensil, penghapus, dan kolom
+                mewakili toko "Cerdas" dan "Pintar". Budi ingin membeli 5
+                buku, 10 pensil, dan 3 penghapus. Berapakah total biaya yang
+                harus dikeluarkan Budi jika ia memilih toko yang menawarkan
+                harga termurah?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">Rp63.000</li>
+                  <li data-option="B">Rp64.500</li>
+                  <li data-option="C">Rp65.000</li>
+                  <li data-option="D">Rp70.500</li>
+                  <li data-option="E">Rp72.000</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">2.</div>
+              <div class="soal-konten">
+                Sebuah kotak tanpa tutup dibuat dari selembar karton berbentuk
+                persegi dengan panjang sisi 12 cm. Kotak dibuat dengan
+                memotong empat persegi identik di setiap sudutnya, lalu
+                melipat sisinya ke atas. Jika volume kotak yang dihasilkan
+                diberikan oleh fungsi polinomial $V(x) = x(12-2x)^2$ cm³, di
+                mana $x$ adalah panjang sisi persegi yang dipotong, volume
+                maksimum kotak tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">64 cm³</li>
+                  <li data-option="B">96 cm³</li>
+                  <li data-option="C">128 cm³</li>
+                  <li data-option="D">144 cm³</li>
+                  <li data-option="E">160 cm³</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">3.</div>
+              <div class="soal-konten">
+                Intensitas suara $I$ (dalam desibel, dB) diukur menggunakan
+                skala logaritmik dengan rumus $I = 10 \log(\frac{P}{P_0})$,
+                di mana $P$ adalah kekuatan suara dan $P_0$ adalah kekuatan
+                suara ambang batas pendengaran. Jika konser rock memiliki
+                kekuatan suara $10^{11}$ kali $P_0$, dan bisikan memiliki
+                kekuatan suara $10^3$ kali $P_0$, berapa selisih intensitas
+                suara antara konser rock dan bisikan?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">8 dB</li>
+                  <li data-option="B">30 dB</li>
+                  <li data-option="C">80 dB</li>
+                  <li data-option="D">110 dB</li>
+                  <li data-option="E">140 dB</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">4.</div>
+              <div class="soal-konten">
+                Diberikan matriks $M = \begin{pmatrix} k & 4 \\ -1 & 2 \end{pmatrix}$.
+                Apakah matriks M memiliki invers?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>$k$ adalah bilangan prima genap.</span>
+                  <span>(2)</span><span>Determinan dari matriks $2M$ adalah 40.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                Diketahui $P(x)$ adalah polinomial berderajat 3. Berapakah sisa
+                pembagian $P(x)$ oleh $x^2-1$?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>$P(x)$ dibagi $(x-1)$ bersisa 2.</span>
+                  <span>(2)</span><span>$P(x)$ dibagi $(x+1)$ bersisa 4.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">6.</div>
+              <div class="soal-konten">
+                Diberikan fungsi rasional $f(x) = \frac{ax+b}{cx+d}$. Apakah
+                grafik fungsi tersebut memiliki asimtot tegak di $x=2$?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>$2c+d = 0$ dan $2a+b \neq 0$.</span>
+                  <span>(2)</span><span>Domain fungsi tersebut adalah semua bilangan real kecuali
+                    2.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">7.</div>
+              <div class="soal-konten">
+                Diketahui matriks $P = \begin{pmatrix} 2 & -1 \\ 5 & -3 \end{pmatrix}$
+                dan $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$. Manakah
+                pernyataan berikut yang benar?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$P^2 = P - I$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Determinan $P$ adalah -1.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$P^{-1} = \begin{pmatrix} 3 & -1 \\ 5 & -2 \end{pmatrix}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Matriks $P$ tidak memiliki invers.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$P+P^{-1}$ adalah matriks nol.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">8.</div>
+              <div class="soal-konten">
+                Diketahui polinomial $P(x) = x^3 - 2x^2 - 5x + 6$. Manakah di
+                antara berikut ini yang merupakan faktor dari $P(x)$?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div><input type="checkbox" /><span>$(x-1)$</span></div>
+                  <div><input type="checkbox" /><span>$(x+1)$</span></div>
+                  <div><input type="checkbox" /><span>$(x-3)$</span></div>
+                  <div><input type="checkbox" /><span>$(x+2)$</span></div>
+                  <div><input type="checkbox" /><span>$(x-2)$</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+             <div class="soal-latihan">
+              <div class="soal-nomor">9.</div>
+              <div class="soal-konten">
+                Manakah dari fungsi-fungsi berikut yang memiliki domain semua
+                bilangan real ($\mathbb{R}$)?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = x^4 - 2x^2 + 1$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$g(x) = \frac{x-1}{x^2+1}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$h(x) = 2^{x-1}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$k(x) = \log(x^2+1)$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$m(x) = \sqrt{x^2-1}$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="soal-latihan">
+                <div class="soal-nomor">10.</div>
+                <div class="soal-konten">
+                  Sebuah sistem penyandian mengubah pesan menjadi matriks. Pesan
+                  "JAGO" (diasumsikan J=10, A=1, G=7, O=15) disusun menjadi matriks
+                  $P = \begin{pmatrix} 10 & 1 \\ 7 & 15 \end{pmatrix}$. Matriks ini
+                  disandikan dengan mengalikannya dengan matriks kunci
+                  $K = \begin{pmatrix} 2 & 1 \\ 3 & 1 \end{pmatrix}$, menghasilkan
+                  matriks sandi $S = P \times K$. Matriks sandi yang dikirimkan
+                  adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$\begin{pmatrix} 23 & 11 \\ 59 & 22 \end{pmatrix}$</li>
+                    <li data-option="B">$\begin{pmatrix} 20 & 1 \\ 21 & 15 \end{pmatrix}$</li>
+                    <li data-option="C">$\begin{pmatrix} 13 & 11 \\ 22 & 22 \end{pmatrix}$</li>
+                    <li data-option="D">$\begin{pmatrix} 22 & 11 \\ 58 & 22 \end{pmatrix}$</li>
+                    <li data-option="E">$\begin{pmatrix} -23 & 11 \\ -59 & 22 \end{pmatrix}$</li>
+                  </ol>
+                </div>
+              </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">11.</div>
+              <div class="soal-konten">
+                Jika polinomial $P(x) = 2x^4 - 3x^3 + ax^2 + bx + 6$ habis
+                dibagi oleh $(x-2)$ dan bersisa 30 jika dibagi $(x+1)$, maka
+                nilai dari $2a+b$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">-14</li>
+                  <li data-option="B">-7</li>
+                  <li data-option="C">0</li>
+                  <li data-option="D">7</li>
+                  <li data-option="E">14</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+                <div class="soal-nomor">12.</div>
+                <div class="soal-konten">
+                  Grafik fungsi $y = |2x - 6|$ memotong sumbu-X dan sumbu-Y di
+                  titik A dan B. Luas segitiga yang dibentuk oleh titik A, B,
+                  dan titik asal O(0,0) adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">6 satuan luas</li>
+                    <li data-option="B">9 satuan luas</li>
+                    <li data-option="C">12 satuan luas</li>
+                    <li data-option="D">18 satuan luas</li>
+                    <li data-option="E">36 satuan luas</li>
+                  </ol>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">13.</div>
+              <div class="soal-konten">
+                Diberikan matriks $A = \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 4 \\ 5 & 6 & 0 \end{pmatrix}$.
+                Tentukan status kebenaran dari setiap pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Determinan matriks A adalah 1.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Minor dari elemen $a_{23}$ adalah -4.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Matriks A tidak memiliki invers.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        $A^T = \begin{pmatrix} 1 & 0 & 5 \\ 2 & 1 & 6 \\ 3 & 4 & 0 \end{pmatrix}$
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">14.</div>
+              <div class="soal-konten">
+                Polinomial $P(x) = x^4 - 1$ dapat difaktorkan. Tentukan
+                kesesuaian setiap pernyataan pemfaktoran berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Sesuai</th>
+                      <th>Tidak Sesuai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Salah satu faktornya adalah $(x^2-1)$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Dapat difaktorkan menjadi $(x-1)(x+1)(x^2+1)$.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Memiliki dua akar real dan dua akar imajiner.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jika dibagi $(x-2)$, sisanya adalah 15.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">15.</div>
+              <div class="soal-konten">
+                Perhatikan grafik fungsi $f(x) = 2^x$ dan
+                $g(x) = (\frac{1}{2})^x$. Tentukan kebenaran dari setiap
+                pernyataan perbandingan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Kedua grafik berpotongan di sumbu-Y.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Grafik $f(x)$ monoton naik, sedangkan grafik $g(x)$
+                        monoton turun.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Grafik $g(x)$ adalah cerminan dari grafik $f(x)$
+                        terhadap sumbu-Y.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Daerah hasil kedua fungsi adalah semua bilangan real
+                        positif.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 5 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">16.</div>
+              <div class="soal-konten">
+                Sebuah perusahaan memproduksi dua jenis produk, A dan B. Biaya
+                bahan dan biaya tenaga kerja per unit untuk setiap produk
+                disajikan dalam matriks
+                $C = \begin{pmatrix} 30 & 40 \\ 20 & 25 \end{pmatrix}$ (dalam
+                ribuan Rupiah). Baris pertama adalah biaya bahan, baris kedua
+                adalah biaya tenaga kerja, kolom pertama untuk produk A, dan
+                kolom kedua untuk produk B. Jika perusahaan memproduksi 100
+                unit produk A dan 150 unit produk B, manakah pernyataan berikut
+                yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>Total biaya bahan adalah Rp9.000.000.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Total biaya tenaga kerja adalah Rp5.750.000.</span>
+                  </div>
+                   <div>
+                    <input type="checkbox" /><span>Matriks total biaya (Bahan, Tenaga Kerja) adalah $T = \begin{pmatrix} 9.000 \\ 5.750 \end{pmatrix}$.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Total biaya produksi keseluruhan adalah Rp14.750.000.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Perhitungan total biaya menggunakan operasi $Q \times C$.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">17.</div>
+              <div class="soal-konten">
+                Ketinggian sebuah proyektil (dalam meter) setelah $t$ detik
+                diluncurkan diberikan oleh fungsi polinomial
+                $h(t) = -t^3 + 9t^2 - 15t + 7$. Sebuah sensor akan aktif jika
+                proyektil berada pada ketinggian yang sama dengan ketinggian
+                awalnya. Pada detik keberapa sajakah sensor tersebut akan
+                aktif setelah peluncuran awal ($t>0$)?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">1 dan 7</li>
+                  <li data-option="B">2 dan 5</li>
+                  <li data-option="C">3 dan 6</li>
+                  <li data-option="D">$\frac{9 - \sqrt{21}}{2}$ dan $\frac{9 + \sqrt{21}}{2}$</li>
+                  <li data-option="E">Sensor tidak pernah aktif lagi</li>
+                </ol>
+              </div>
+            </div>
+
+             <div class="soal-latihan">
+              <div class="soal-nomor">18.</div>
+              <div class="soal-konten">
+                Diberikan fungsi $f(x) = \log(ax^2+4x+a)$. Berapakah
+                nilai $a$ agar domain dari fungsi $f(x)$ adalah semua
+                bilangan real?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>$a$ adalah bilangan bulat positif.</span>
+                  <span>(2)</span><span>$a > 2$.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 6 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Minat) | Latihan 1
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">19.</div>
+              <div class="soal-konten">
+                Diberikan matriks $B = \begin{pmatrix} 1 & 0 & 2 \\ 2 & -1 & 3 \\ 4 & 1 & 8 \end{pmatrix}$.
+                Tentukan kebenaran dari setiap pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Determinan matriks B adalah -1.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Invers dari matriks B ada.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Kofaktor dari elemen $b_{32}$ adalah 1.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elemen pada baris 2 kolom 1 dari $B^2$ adalah 12.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+             <div class="soal-latihan">
+              <div class="soal-nomor">20.</div>
+              <div class="soal-konten">
+                Suatu zat radioaktif meluruh secara eksponensial. Jika massa
+                awal zat adalah 200 gram dan laju peluruhannya adalah 15%
+                setiap jam, massa zat $M$ setelah $t$ jam dapat dimodelkan
+                oleh fungsi $M(t) = 200(0,85)^t$. Berapa sisa massa zat
+                tersebut setelah 4 jam, dibulatkan ke satuan gram terdekat?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">85 gram</li>
+                  <li data-option="B">104 gram</li>
+                  <li data-option="C">115 gram</li>
+                  <li data-option="D">140 gram</li>
+                  <li data-option="E">170 gram</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+    </div>
+  </body>
+</html>
+
