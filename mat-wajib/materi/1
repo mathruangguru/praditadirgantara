@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Matematika Wajib</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 29.7cm; /* Fixed height for screen view */
+        page-break-after: always;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+      
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+        flex-shrink: 0;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+        padding-bottom: 2.5cm; /* Extra padding at the bottom to avoid footer overlap */
+      }
+      
+      h1.materi-title {
+          font-size: 14pt;
+          color: var(--header-title-color);
+          border-bottom: 2px solid var(--header-top-bg);
+          padding-bottom: 5px;
+          margin-bottom: 15px;
+      }
+      
+      h2.materi-subtitle {
+          font-size: 11pt;
+          font-weight: 700;
+          color: var(--primary-text);
+          margin-top: 15px;
+          margin-bottom: 10px;
+      }
+      
+      .materi-content {
+          text-align: justify;
+      }
+      .materi-content ul {
+          padding-left: 20px;
+      }
+      .materi-content strong {
+        color: #005f6b;
+      }
+
+      h2.kuis-title {
+        font-size: 11pt;
+        color: var(--secondary-text);
+        background-color: #f0f0f0;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 700;
+        display: block;
+      }
+
+      .layout-2-kolom {
+        columns: 2;
+        column-gap: 15mm;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px; /* Jarak antara nomor dan teks soal */
+        margin-bottom: 20px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 18px; /* Ruang untuk nomor hingga 2 digit */
+      }
+
+      .soal-konten {
+        flex-grow: 1; /* Konten soal mengisi sisa ruang */
+      }
+      
+      .pembahasan {
+          margin-bottom: 15px;
+          padding: 10px;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+          break-inside: avoid;
+      }
+      
+      .pembahasan .soal-nomor {
+          font-size: 10pt;
+          font-weight: 700;
+          color: var(--header-title-color);
+          border-bottom: 1px solid #e0f7fa;
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+      }
+      
+      .pembahasan p {
+          margin-top: 5px;
+          margin-bottom: 5px;
+      }
+      
+      .pembahasan strong {
+        font-weight: bold;
+      }
+      .pembahasan ul {
+        list-style-position: inside;
+        padding-left: 0;
+      }
+
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left; /* Pilihan ganda selalu rata kiri */
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: normal;
+        padding-right: 5px;
+      }
+      
+      .kecukupan-data-pernyataan {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 8px; /* row-gap column-gap */
+        text-align: left; /* Override justify from parent */
+        margin-top: 10px !important;
+        margin-bottom: 10px;
+      }
+      .kecukupan-data-pernyataan span {
+        line-height: 1.5;
+      }
+      
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        border-top: 2.5px solid var(--grey-text);
+        position: absolute;
+        bottom: 1.5cm;
+        left: 2.5cm;
+        right: 2.5cm;
+      }
+      
+      .formula-box {
+        background-color: #e0f7fa;
+        border-left: 4px solid #00838f;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+      .formula-box p {
+        margin: 0;
+      }
+
+
+      @media print {
+        body {
+          background-color: white;
+          margin: 0;
+        }
+        .page-container {
+          width: 21cm;
+          margin: 0 auto;
+        }
+        .page {
+          width: 100%;
+          height: 29.7cm; /* Fixed height for print */
+          margin: 0;
+          box-shadow: none;
+        }
+        .header-top-box,
+        .header-bottom-text,
+        .kuis-title {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1: RANGKUMAN MATERI 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Fungsi, Aplikasi Barisan dan Deret, Pertidaksamaan Linear| Rangkuman dan Latihan Soal
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h1 class="materi-title">Rangkuman Materi</h1>
+            <h2 class="materi-subtitle">1. Fungsi Komposisi dan Fungsi Invers</h2>
+            <div class="layout-2-kolom">
+                <div class="materi-content">
+                    
+                    <p>
+                        <strong>Fungsi Komposisi</strong> adalah penggabungan dua fungsi atau lebih secara berurutan sehingga menghasilkan sebuah fungsi baru.
+                    </p>
+                    <p>
+                        Jika fungsi $f$ memetakan A ke B, dan $g$ memetakan B ke C, maka $(g \circ f)$ memetakan A ke C.
+                    </p>
+                    <div class="formula-box">
+                       <p> $(g \circ f)(x) = g(f(x))$ </p>
+                    </div>
+                    
+                    <p><strong>Sifat-sifat Fungsi Komposisi:</strong></p>
+                    <ul>
+                        <li>Tidak komutatif: $(f \circ g)(x) \neq (g \circ f)(x)$</li>
+                        <li>Asosiatif: $((f \circ g) \circ h)(x) = (f \circ (g \circ h))(x)$</li>
+                        <li>Memiliki elemen identitas $I(x) = x$.</li>
+                    </ul>
+                </div>
+                
+                <div class="materi-content">
+                    <p>
+                        <strong>Fungsi Invers</strong> ($f^{-1}$) adalah fungsi kebalikan. Jika $f$ memetakan $x$ ke $y$, maka $f^{-1}$ memetakan $y$ kembali ke $x$.
+                    </p>
+                    <p>Syarat fungsi memiliki invers adalah harus bijektif (korespondensi satu-satu).</p>
+                    
+                    <p><strong>Langkah mencari fungsi invers:</strong></p>
+                    <ol>
+                        <li>Ubah $y = f(x)$ menjadi bentuk $x = f(y)$.</li>
+                        <li>Tulis $x$ sebagai $f^{-1}(y)$.</li>
+                        <li>Ganti variabel $y$ dengan $x$.</li>
+                    </ol>
+                    
+                    <p><strong>Rumus Cepat Invers Pecahan Linear:</strong></p>
+                    <p>Jika $f(x) = \frac{ax+b}{cx+d}$, maka:</p>
+                    <div class="formula-box">
+                        <p> $f^{-1}(x) = \frac{-dx+b}{cx-a}$ </p>
+                    </div>
+                    
+                    <p><strong>Sifat Invers Komposisi:</strong></p>
+                     <div class="formula-box">
+                        <p> $(f \circ g)^{-1}(x) = (g^{-1} \circ f^{-1})(x)$</p>
+                     </div>
+                </div>
+                 
+            </div>
+        </div>
+
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2: RANGKUMAN MATERI 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+             <h2 class="materi-subtitle">2. Bunga Tunggal, Bunga Majemuk, dan Anuitas</h2>
+             <div class="materi-content">
+                <p>
+                    <strong>Bunga Tunggal</strong> adalah bunga yang dihitung hanya dari modal awal pada setiap periode. Jumlah bunga yang diterima setiap periode selalu sama.
+                </p>
+                <p>
+                    Modal akhir ($M_n$) dari modal awal ($M_0$) dengan suku bunga tunggal $i$ per periode selama $n$ periode adalah:
+                </p>
+                 <div class="formula-box">
+                    <p> $M_n = M_0 (1 + n \cdot i)$ </p>
+                </div>
+                <p>
+                    <strong>Bunga Majemuk</strong> adalah bunga yang dihitung atas modal awal dan juga atas bunga yang telah terakumulasi dari periode sebelumnya.
+                </p>
+                <p>
+                    Modal akhir $M_n$ dari modal awal $M_0$ dengan bunga majemuk $i$ per periode adalah:
+                </p>
+                 <div class="formula-box">
+                    <p> $M_n = M_0 (1+i)^n$ </p>
+                </div>
+                <p>
+                    <strong>Anuitas</strong> adalah serangkaian pembayaran dengan jumlah sama ($A$) pada setiap periode. Anuitas terdiri dari dua bagian: angsuran pokok ($a_k$) dan bunga ($b_k$).
+                </p>
+                 <div class="formula-box">
+                    <p> $A = a_k + b_k$ </p>
+                </div>
+                <p><strong>Nilai Akhir Anuitas ($NA$):</strong> Jumlah total semua pembayaran beserta bunganya di akhir periode.</p>
+                 <div class="formula-box">
+                    <p> $NA = A \left[ \frac{(1+i)^n - 1}{i} \right]$ </p>
+                </div>
+                <p><strong>Nilai Sekarang Anuitas ($NS$):</strong> Jumlah total semua pembayaran yang nilainya ditarik ke awal periode (biasanya untuk menghitung besar pinjaman).</p>
+                 <div class="formula-box">
+                    <p> $NS = A \left[ \frac{1 - (1+i)^{-n}}{i} \right]$ </p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 3: RANGKUMAN MATERI 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="materi-subtitle">3. Pertidaksamaan Linear</h2>
+            <div class="materi-content">
+                <p>
+                    <strong>Pertidaksamaan Linear Satu Variabel (PtLSV)</strong> adalah kalimat terbuka dengan satu variabel berpangkat satu dan tanda ketidaksamaan ($<, >, \le, \ge$). Solusinya adalah sebuah interval.
+                </p>
+                
+                <p>
+                    <strong>Pertidaksamaan Linear Dua Variabel (PtLDV)</strong> adalah pertidaksamaan dengan dua variabel berpangkat satu. Solusinya adalah Daerah Himpunan Penyelesaian (DHP) pada bidang Kartesius.
+                </p>
+                <p><strong>Langkah menentukan DHP:</strong></p>
+                 <ol>
+                    <li>Gambar garis pembatas $ax+by=c$. (putus-putus untuk $<$ atau $>$, penuh untuk $\le$ atau $\ge$).</li>
+                    <li>Lakukan uji titik (misal (0,0)) ke pertidaksamaan.</li>
+                    <li>Jika benar, arsir daerah yang memuat titik uji. Jika salah, arsir daerah sebaliknya.</li>
+                </ol>
+                <p>
+                    <strong>Sistem Pertidaksamaan Linear</strong> adalah gabungan dari dua atau lebih PtLDV. DHP-nya adalah irisan dari DHP masing-masing. Konsep ini adalah dasar dari <strong>Program Linear</strong> untuk mencari nilai optimum (maksimum/minimum).
+                </p>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 4: SOAL FK 1-8 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Latihan Soal: Fungsi Komposisi dan Invers</h2>
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">1.</div><div class="soal-konten">Diketahui $f(x) = 2x + 5$ dan $g(x) = x - 3$. Rumus untuk $(f \circ g)(x)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$2x - 1$</li><li data-option="B">$2x + 2$</li><li data-option="C">$3x + 2$</li><li data-option="D">$x + 2$</li><li data-option="E">$2x - 6$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">2.</div><div class="soal-konten">Jika $f(x) = x^2$ dan $g(x) = 3x - 1$, maka nilai dari $(g \circ f)(2)$ adalah...<ol class="pilihan-ganda"><li data-option="A">5</li><li data-option="B">9</li><li data-option="C">11</li><li data-option="D">25</li><li data-option="E">15</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">3.</div><div class="soal-konten">Invers dari fungsi $f(x) = 4x - 8$ adalah $f^{-1}(x) = $...<ol class="pilihan-ganda"><li data-option="A">$\frac{1}{4}x + 2$</li><li data-option="B">$4x + 8$</li><li data-option="C">$\frac{1}{4}x - 2$</li><li data-option="D">$8 - 4x$</li><li data-option="E">$\frac{x-8}{4}$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">4.</div><div class="soal-konten">Diketahui $(f \circ g)(x) = 6x + 3$ dan $f(x) = 2x - 1$. Rumus fungsi $g(x)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$3x + 1$</li><li data-option="B">$3x + 2$</li><li data-option="C">$4x + 2$</li><li data-option="D">$6x + 2$</li><li data-option="E">$6x + 4$</li></ol></div></div>
+              
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">5.</div><div class="soal-konten">Diberikan $f(x) = \frac{2x+1}{x-3}$, $x \neq 3$. Jika $f^{-1}(a) = 7$, maka $a$ adalah...<ol class="pilihan-ganda"><li data-option="A">2</li><li data-option="B">3</li><li data-option="C">15/4</li><li data-option="D">4</li><li data-option="E">13/4</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">6.</div><div class="soal-konten">Invers dari $g(x) = \frac{5x-3}{2x+1}$, $x \neq -\frac{1}{2}$ adalah...<ol class="pilihan-ganda"><li data-option="A">$\frac{-x-3}{2x-5}$</li><li data-option="B">$\frac{x+3}{5-2x}$</li><li data-option="C">$\frac{x+3}{2x-5}$</li><li data-option="D">$\frac{2x-1}{5x+3}$</li><li data-option="E">$\frac{-x+3}{2x+5}$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">7.</div><div class="soal-konten">Jika $f(x) = x+1$ dan $(g \circ f)(x) = x^2+3x+2$, maka $g(x) = $...<ol class="pilihan-ganda"><li data-option="A">$x^2+x$</li><li data-option="B">$x^2-1$</li><li data-option="C">$x^2+x-1$</li><li data-option="D">$x^2-x$</li><li data-option="E">$x^2+2x+1$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">8.</div><div class="soal-konten">Diketahui $f(x)=2x$, $g(x)=x-1$, $h(x)=x^2$. Rumus $(f \circ g \circ h)(x)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$2x^2-2$</li><li data-option="B">$4x^2-1$</li><li data-option="C">$(2x-1)^2$</li><li data-option="D">$2x^2-1$</li><li data-option="E">$4x^2-4x+1$</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 5: SOAL FK 9-14 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <div class="layout-2-kolom">
+                <div class="soal-latihan"><div class="soal-nomor">9.</div><div class="soal-konten">Diketahui $f(x) = 3x - 1$. Berapakah nilai $(f \circ g)(2)$?<div class="kecukupan-data-pernyataan"><span>(1)</span><span>$g(x) = 2x+4$</span><span>(2)</span><span>Nilai minimum $g(x)$ adalah 4.</span></div><ol class="pilihan-ganda"><li data-option="A">Pernyataan (1) SAJA cukup.</li><li data-option="B">Pernyataan (2) SAJA cukup.</li><li data-option="C">DUA pernyataan BERSAMA-SAMA cukup.</li><li data-option="D">SATU pernyataan SAJA cukup.</li><li data-option="E">Pernyataan (1) dan (2) tidak cukup.</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">10.</div><div class="soal-konten">Jika $f^{-1}(x) = \frac{x-1}{5}$ dan $g^{-1}(x) = \frac{3-x}{2}$, maka $(f \circ g)^{-1}(6)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$-2$</li><li data-option="B">$-1/2$</li><li data-option="C">$1$</li><li data-option="D">$3/2$</li><li data-option="E">$2$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">11.</div><div class="soal-konten">Fungsi $f(x)=2x-1$ dan $g(x)=x^2+2$. Manakah pernyataan yang benar? <b>(bisa pilih lebih dari satu)</b><div class="pilihan-ganda-mcma"><div><input type="checkbox" /><span>$(g \circ f)(1) = 3$</span></div><div><input type="checkbox" /><span>$(f \circ g)(x) = 2x^2+3$</span></div><div><input type="checkbox" /><span>$f^{-1}(x) = \frac{x+1}{2}$</span></div><div><input type="checkbox" /><span>$g(x)$ adalah fungsi genap.</span></div><div><input type="checkbox" /><span>$(f \circ g)(1) = 5$</span></div></div></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">12.</div><div class="soal-konten">Jika $f(x) = \sqrt{x+1}$ dan $(f \circ g)(x) = 2\sqrt{x-1}$, maka $g(x)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$2x-3$</li><li data-option="B">$4x-5$</li><li data-option="C">$3x-2$</li><li data-option="D">$4x-3$</li><li data-option="E">$5x-4$</li></ol></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">13.</div><div class="soal-konten">Invers dari $f(x) = (1-x^3)^{1/5} + 2$ adalah...<ol class="pilihan-ganda"><li data-option="A">$(1-(x-2)^5)^{1/3}$</li><li data-option="B">$(1+(x-2)^5)^{1/3}$</li><li data-option="C">$(2-(x-1)^5)^{1/3}$</li><li data-option="D">$(2+(x-1)^5)^{1/3}$</li><li data-option="E">$(x-2)^5-1$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">14.</div><div class="soal-konten">Jika $f(2x-3) = 4x-7$, maka $f^{-1}(x)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$2x-1$</li><li data-option="B">$\frac{x-1}{2}$</li><li data-option="C">$\frac{x+1}{2}$</li><li data-option="D">$2x+1$</li><li data-option="E">$\frac{x-2}{3}$</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 6: SOAL FK 15-20 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">15.</div><div class="soal-konten">Jumlah produksi suatu barang sebagai fungsi dari banyaknya pekerja dinyatakan sebagai $P(n) = 3n^2 - 40$. Biaya produksi barang tersebut adalah fungsi dari jumlah produksi, yaitu $C(P) = 15P + 2000$. Jika ada 10 pekerja, biaya produksinya adalah...<ol class="pilihan-ganda"><li data-option="A">Rp4.100</li><li data-option="B">Rp5.900</li><li data-option="C">Rp6.100</li><li data-option="D">Rp6.400</li><li data-option="E">Rp7.200</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">16.</div><div class="soal-konten">Diberikan fungsi $f(x)=\frac{x+1}{x-1}$. Tentukan kebenaran dari setiap pernyataan berikut.<table class="soal-kategori"><thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead><tbody><tr><td>Domain fungsi adalah $\{x | x \neq 1\}$.</td><td></td><td></td></tr><tr><td>Asimtot tegak dari grafik fungsi adalah $x=1$.</td><td></td><td></td></tr><tr><td>Asimtot datar dari grafik fungsi adalah $y=1$.</td><td></td><td></td></tr><tr><td>Invers dari fungsi tersebut adalah $f^{-1}(x) = f(x)$.</td><td></td><td></td></tr></tbody></table></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">17.</div><div class="soal-konten">Diketahui $g(x)=x-2$ dan $(f \circ g)(x) = \frac{x+1}{x-2}$. Nilai $f^{-1}(2)$ adalah...<ol class="pilihan-ganda"><li data-option="A">$-3$</li><li data-option="B">$-1$</li><li data-option="C">$1$</li><li data-option="D">$3$</li><li data-option="E">$5$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">18.</div><div class="soal-konten">Jika $f(x) = \log_2(x)$ dan $g(x) = 2^x-1$, maka $(f \circ g)(3)$ adalah...<ol class="pilihan-ganda"><li data-option="A">3</li><li data-option="B">$\log_2(7)$</li><li data-option="C">$\log_2(8)$</li><li data-option="D">7</li><li data-option="E">8</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">19.</div><div class="soal-konten">Jika $f(x)=2x$ dan $g(x)=x+1$, maka $(g^{-1} \circ f^{-1})(4)$ adalah...<ol class="pilihan-ganda"><li data-option="A">0</li><li data-option="B">1</li><li data-option="C">2</li><li data-option="D">3</li><li data-option="E">4</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">20.</div><div class="soal-konten">Domain dari fungsi $f(x) = \sqrt{2x-6}$ agar memiliki invers adalah...<ol class="pilihan-ganda"><li data-option="A">$x \geq 3$</li><li data-option="B">$x \leq 3$</li><li data-option="C">$x > 3$</li><li data-option="D">$x < 3$</li><li data-option="E">$x \in R$</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 7: SOAL BM 21-25 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Latihan Soal: Bunga Tunggal, Bunga Majemuk dan Anuitas</h2>
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">21.</div><div class="soal-konten">Modal sebesar Rp5.000.000,00 disimpan di bank dengan suku bunga tunggal 12% per tahun. Total tabungan setelah 5 tahun adalah...<ol class="pilihan-ganda"><li data-option="A">Rp8.000.000,00</li><li data-option="B">Rp7.500.000,00</li><li data-option="C">Rp6.000.000,00</li><li data-option="D">Rp9.000.000,00</li><li data-option="E">Rp8.500.000,00</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">22.</div><div class="soal-konten">Andi menabung uang sebesar Rp10.000.000,00 di bank yang memberikan bunga majemuk 5% per tahun. Jumlah uang Andi setelah 3 tahun adalah...<ol class="pilihan-ganda"><li data-option="A">Rp11.500.000,00</li><li data-option="B">Rp11.576.250,00</li><li data-option="C">Rp15.000.000,00</li><li data-option="D">Rp10.500.000,00</li><li data-option="E">Rp11.250.000,00</li></ol></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">23.</div><div class="soal-konten">Sebuah pinjaman akan dilunasi dengan anuitas tahunan sebesar Rp2.000.000,00 selama 4 tahun dengan bunga 6% per tahun. Besar pinjaman tersebut adalah... (Diketahui $(1.06)^{-4} \approx 0.792$)<ol class="pilihan-ganda"><li data-option="A">Rp6.933.333,33</li><li data-option="B">Rp7.500.000,00</li><li data-option="C">Rp8.000.000,00</li><li data-option="D">Rp6.500.000,00</li><li data-option="E">Rp7.200.000,00</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">24.</div><div class="soal-konten">Berapa besar modal awal yang diinvestasikan?<div class="kecukupan-data-pernyataan"><span>(1)</span><span>Modal menjadi Rp12.100.000,00 setelah 2 tahun.</span><span>(2)</span><span>Bunga majemuk yang berlaku adalah 10% per tahun.</span></div><ol class="pilihan-ganda"><li data-option="A">Pernyataan (1) SAJA cukup.</li><li data-option="B">Pernyataan (2) SAJA cukup.</li><li data-option="C">DUA pernyataan BERSAMA-SAMA cukup.</li><li data-option="D">SATU pernyataan SAJA cukup.</li><li data-option="E">Pernyataan (1) dan (2) tidak cukup.</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">25.</div><div class="soal-konten">Populasi sebuah kota bertambah 2% setiap tahun. Jika pada tahun 2020 populasinya 500.000 jiwa, perkiraan populasi pada tahun 2023 adalah...<ol class="pilihan-ganda"><li data-option="A">530.000</li><li data-option="B">530.604</li><li data-option="C">540.000</li><li data-option="D">545.812</li><li data-option="E">550.000</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 8: SOAL BM 26-30 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <div class="layout-2-kolom">
+                <div class="soal-latihan"><div class="soal-nomor">26.</div><div class="soal-konten">Setiap awal bulan, Ayah menabung sebesar Rp500.000,00 di bank yang memberi bunga majemuk 1% per bulan. Total tabungan Ayah setelah menabung selama setahun adalah... (Diketahui $(1.01)^{12} \approx 1.1268$)<ol class="pilihan-ganda"><li data-option="A">Rp6.000.000,00</li><li data-option="B">Rp6.340.000,00</li><li data-option="C">Rp6.500.000,00</li><li data-option="D">Rp6.740.000,00</li><li data-option="E">Rp6.980.000,00</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">27.</div><div class="soal-konten">Sebuah mobil dibeli dengan harga Rp200.000.000,00. Jika harga jualnya menyusut 10% setiap tahun, harga jual mobil setelah 5 tahun adalah...<ol class="pilihan-ganda"><li data-option="A">Rp100.000.000,00</li><li data-option="B">Rp118.098.000,00</li><li data-option="C">Rp120.000.000,00</li><li data-option="D">Rp131.220.000,00</li><li data-option="E">Rp150.000.000,00</li></ol></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">28.</div><div class="soal-konten">Pinjaman sebesar Rp10.000.000,00 akan dilunasi dengan 5 anuitas tahunan. Jika suku bunga 8% per tahun, besar anuitasnya adalah... (Diketahui $a_{5|8\%} \approx 3.9927$)<ol class="pilihan-ganda"><li data-option="A">Rp2.000.000,00</li><li data-option="B">Rp2.250.000,00</li><li data-option="C">Rp2.504.565,00</li><li data-option="D">Rp2.750.000,00</li><li data-option="E">Rp3.000.000,00</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">29.</div><div class="soal-konten">Sebuah pinjaman dilunasi dengan anuitas Rp850.000,00 per bulan selama 2 tahun dengan bunga 2% per bulan. Angsuran pada bulan ke-3 adalah...<ol class="pilihan-ganda"><li data-option="A">Rp650.000,00</li><li data-option="B">Rp666.200,00</li><li data-option="C">Rp680.000,00</li><li data-option="D">Rp700.000,00</li><li data-option="E">Rp712.500,00</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">30.</div><div class="soal-konten">Suatu modal M diinvestasikan dengan bunga majemuk $i$% per periode. Agar modal menjadi dua kali lipat dalam $n$ periode, maka hubungan yang benar adalah...<ol class="pilihan-ganda"><li data-option="A">$(1+i)^n = 2$</li><li data-option="B">$(1+i)^2 = n$</li><li data-option="C">$M(1+i) = 2n$</li><li data-option="D">$n(1+i) = 2$</li><li data-option="E">$M(1+i)^n = 2$</li></ol></div></div>
+             </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 9: SOAL BM 31-35 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <div class="layout-2-kolom">
+                <div class="soal-latihan"><div class="soal-nomor">31.</div><div class="soal-konten">Budi menyimpan uang di bank. Pada akhir tahun ke-2, uangnya menjadi Rp6.240.000,00. Pada akhir tahun ke-5, uangnya menjadi Rp7.800.000,00. Jika bank menerapkan sistem bunga tunggal, besar uang yang pertama kali Budi simpan adalah...<ol class="pilihan-ganda"><li data-option="A">Rp4.800.000,00</li><li data-option="B">Rp5.000.000,00</li><li data-option="C">Rp5.200.000,00</li><li data-option="D">Rp5.400.000,00</li><li data-option="E">Rp5.600.000,00</li></ol></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">32.</div><div class="soal-konten">Bakteri jenis A membelah diri menjadi dua setiap 20 menit. Jika pada pukul 08.00 terdapat 1000 bakteri, banyak bakteri pada pukul 10.00 adalah...<ol class="pilihan-ganda"><li data-option="A">8.000</li><li data-option="B">16.000</li><li data-option="C">32.000</li><li data-option="D">64.000</li><li data-option="E">128.000</li></ol></div></div>
+                <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">33.</div><div class="soal-konten">Sebuah pinjaman sebesar Rp20.000.000,00 dengan bunga majemuk 1.5% per bulan harus lunas dalam 10 bulan. Sisa pinjaman setelah angsuran ke-9 adalah...<ol class="pilihan-ganda"><li data-option="A">Sama dengan anuitas terakhir</li><li data-option="B">Lebih besar dari anuitas</li><li data-option="C">Lebih kecil dari anuitas</li><li data-option="D">Sama dengan bunga bulan ke-10</li><li data-option="E">Tidak dapat ditentukan</li></ol></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">34.</div><div class="soal-konten">Manakah pernyataan yang benar mengenai konsep bunga dalam matematika keuangan? <b>(bisa pilih lebih dari satu jawaban)</b><div class="pilihan-ganda-mcma"><div><input type="checkbox"/><span>Bunga majemuk menghasilkan nilai lebih besar dari bunga tunggal untuk periode > 1.</span></div><div><input type="checkbox"/><span>Pertumbuhan tabungan dengan bunga tunggal bersifat linear.</span></div><div><input type="checkbox"/><span>Anuitas adalah pembayaran tunggal di akhir periode pinjaman.</span></div><div><input type="checkbox"/><span>Peluruhan eksponensial menggunakan prinsip bunga majemuk.</span></div><div><input type="checkbox"/><span>Bunga tunggal dihitung berdasarkan sisa modal setiap periode.</span></div></div></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">35.</div><div class="soal-konten">Seorang karyawan menyisihkan gajinya sebesar Rp1.000.000 setiap bulan untuk diinvestasikan dengan imbal hasil 12% per tahun yang dibayarkan bulanan (1% per bulan). Nilai investasi setelah 2 tahun adalah... (Gunakan $(1.01)^{24} \approx 1.2697$)<ol class="pilihan-ganda"><li data-option="A">Rp24.000.000</li><li data-option="B">Rp25.432.000</li><li data-option="C">Rp26.970.000</li><li data-option="D">Rp28.125.000</li><li data-option="E">Rp30.000.000</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 10: SOAL BM 36-40 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <div class="layout-2-kolom">
+                <div class="soal-latihan"><div class="soal-nomor">36.</div><div class="soal-konten">Hutang sebesar Rp 5.000.000,00 akan dilunasi dengan 6 anuitas bulanan. Jika suku bunga 2% per bulan, besar angsuran pertama adalah... (Gunakan $(1.02)^{-6} \approx 0.888$)<ol class="pilihan-ganda"><li data-option="A">Rp792.857</li><li data-option="B">Rp824.500</li><li data-option="C">Rp850.000</li><li data-option="D">Rp892.857</li><li data-option="E">Rp910.250</li></ol></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">37.</div><div class="soal-konten">Jika suatu modal digandakan setiap 5 tahun dengan bunga majemuk, maka suku bunga per tahunnya sekitar...<ol class="pilihan-ganda"><li data-option="A">10%</li><li data-option="B">12%</li><li data-option="C">15%</li><li data-option="D">20%</li><li data-option="E">25%</li></ol></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">38.</div><div class="soal-konten">Massa zat radioaktif adalah 200 gram. Jika laju peluruhannya 10% setiap jam, massa zat yang tersisa setelah 4 jam adalah...<ol class="pilihan-ganda"><li data-option="A">120 gram</li><li data-option="B">131.22 gram</li><li data-option="C">145.8 gram</li><li data-option="D">162.2 gram</li><li data-option="E">180 gram</li></ol></div></div>
+                <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">39.</div><div class="soal-konten">Suatu pinjaman dilunasi dengan 10 anuitas A dengan bunga $i$. Tentukan kebenaran pernyataan berikut.<table class="soal-kategori"><thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead><tbody><tr><td>Porsi angsuran ($a_k$) membesar setiap periode.</td><td></td><td></td></tr><tr><td>Porsi bunga ($b_k$) mengecil setiap periode.</td><td></td><td></td></tr><tr><td>$A = a_k + b_k$ untuk setiap periode $k$.</td><td></td><td></td></tr><tr><td>Sisa pinjaman setelah anuitas terakhir adalah nol.</td><td></td><td></td></tr></tbody></table></div></div>
+                <div class="soal-latihan"><div class="soal-nomor">40.</div><div class="soal-konten">Sebuah deposito memberikan bunga 8% per tahun. Jika ingin nilai deposito menjadi Rp14.693.280,77 setelah 5 tahun, maka investasi awal yang diperlukan adalah...<ol class="pilihan-ganda"><li data-option="A">Rp9.500.000</li><li data-option="B">Rp10.000.000</li><li data-option="C">Rp10.500.000</li><li data-option="D">Rp11.000.000</li><li data-option="E">Rp11.500.000</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 11: SOAL PL 41-45 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Latihan Soal: Pertidaksamaan Linear</h2>
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">41.</div><div class="soal-konten">Penyelesaian dari pertidaksamaan $3(x-2) \le 5x + 8$ adalah...<ol class="pilihan-ganda"><li data-option="A">$x \ge -7$</li><li data-option="B">$x \le -7$</li><li data-option="C">$x \ge -1$</li><li data-option="D">$x \le 1$</li><li data-option="E">$x \ge 7$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">42.</div><div class="soal-konten">Himpunan penyelesaian dari pertidaksamaan $1 < 2x - 1 \le 7$ adalah...<ol class="pilihan-ganda"><li data-option="A">$\{x | 1 < x \le 4 \}$</li><li data-option="B">$\{x | 1 \le x < 4 \}$</li><li data-option="C">$\{x | -1 < x \le 3 \}$</li><li data-option="D">$\{x | 0 < x \le 3 \}$</li><li data-option="E">$\{x | 2 < x \le 8 \}$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">43.</div><div class="soal-konten">Dari pilihan berikut, titik manakah yang termasuk dalam daerah himpunan penyelesaian dari pertidaksamaan $2x+y > 6$? <ol class="pilihan-ganda"><li data-option="A">(1, 1)</li><li data-option="B">(2, 2)</li><li data-option="C">(3, 1)</li><li data-option="D">(0, 5)</li><li data-option="E">(3, 0)</li></ol></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">44.</div><div class="soal-konten">Seorang pedagang buah memiliki modal Rp1.000.000 untuk membeli apel dan pisang. Harga beli apel adalah Rp4.000 per kg dan pisang adalah Rp1.600 per kg. Kiosnya hanya dapat menampung total 400 kg buah. Jika $x$ adalah banyaknya apel (dalam kg) dan $y$ adalah banyaknya pisang (dalam kg), model matematika yang sesuai dengan kondisi tersebut adalah...<ol class="pilihan-ganda"><li data-option="A">$x+y \le 400; 5x+2y \le 1250; x \ge 0; y \ge 0$</li><li data-option="B">$x+y \le 400; 2x+5y \le 1250; x \ge 0; y \ge 0$</li><li data-option="C">$x+y \ge 400; 5x+2y \ge 1250; x \ge 0; y \ge 0$</li><li data-option="D">$x+y \le 400; 5x+2y \ge 1250; x \ge 0; y \ge 0$</li><li data-option="E">$x+y \ge 400; 5x+2y \le 1250; x \ge 0; y \ge 0$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">45.</div><div class="soal-konten">Tentukan nilai maksimum dari fungsi objektif $f(x,y) = 5x+4y$ yang memenuhi sistem pertidaksamaan linear $x+y \le 8$, $x+2y \le 12$, $x \ge 0$, dan $y \ge 0$.<ol class="pilihan-ganda"><li data-option="A">32</li><li data-option="B">36</li><li data-option="C">40</li><li data-option="D">44</li><li data-option="E">48</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 12: SOAL PL 46-49 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">46.</div><div class="soal-konten">Sistem pertidaksamaan yang model matematikanya sesuai untuk daerah di kuadran I yang dibatasi oleh sumbu-x, sumbu-y, dan garis yang melalui titik (4,0) dan (0,6) adalah...<ol class="pilihan-ganda"><li data-option="A">$3x+2y \le 12, x \ge 0, y \ge 0$</li><li data-option="B">$3x+2y \ge 12, x \ge 0, y \ge 0$</li><li data-option="C">$2x+3y \le 12, x \ge 0, y \ge 0$</li><li data-option="D">$2x+3y \ge 12, x \ge 0, y \ge 0$</li><li data-option="E">$3x-2y \le 12, x \ge 0, y \ge 0$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">47.</div><div class="soal-konten">Tentukan nilai minimum dari fungsi objektif $f(x,y)=2x+3y$ dari daerah yang dibatasi oleh pertidaksamaan $x+y \ge 4$, $x \ge 1$, dan $y \ge 2$.<ol class="pilihan-ganda"><li data-option="A">8</li><li data-option="B">9</li><li data-option="C">10</li><li data-option="D">11</li><li data-option="E">12</li></ol></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">48.</div><div class="soal-konten">Penyelesaian dari pertidaksamaan $\frac{2x-1}{3} - \frac{x-3}{2} > 1$ adalah...<ol class="pilihan-ganda"><li data-option="A">$x > -1$</li><li data-option="B">$x < -1$</li><li data-option="C">$x > 1$</li><li data-option="D">$x < 1$</li><li data-option="E">$x > 0$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">49.</div><div class="soal-konten">Luas daerah himpunan penyelesaian dari sistem pertidaksamaan $x \ge 0, y \ge 0, x \le 4, y \le 3,$ dan $x+y \le 6$ adalah...<ol class="pilihan-ganda"><li data-option="A">10.5</li><li data-option="B">11</li><li data-option="C">11.5</li><li data-option="D">12</li><li data-option="E">12.5</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 13: SOAL PL 50-54 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">50.</div><div class="soal-konten">Sebuah pesawat penumpang memiliki kapasitas tempat duduk tidak lebih dari 48 orang, yang terbagi atas kelas utama dan kelas ekonomi. Setiap penumpang kelas utama boleh membawa bagasi seberat 60 kg, sedangkan penumpang kelas ekonomi hanya 20 kg. Kapasitas total bagasi pesawat adalah 1440 kg. Jika harga tiket untuk kelas utama adalah Rp1.500.000 dan kelas ekonomi adalah Rp1.000.000, pendapatan maksimum yang dapat diperoleh dari penjualan tiket adalah...<ol class="pilihan-ganda"><li data-option="A">Rp48.000.000</li><li data-option="B">Rp54.000.000</li><li data-option="C">Rp60.000.000</li><li data-option="D">Rp66.000.000</li><li data-option="E">Rp72.000.000</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">51.</div><div class="soal-konten">Manakah di antara pertidaksamaan berikut yang daerah penyelesaiannya mencakup titik $(2, 3)$? <b>(bisa pilih lebih dari satu jawaban)</b><div class="pilihan-ganda-mcma"><div><input type="checkbox" /><span>$x+y \le 5$</span></div><div><input type="checkbox" /><span>$x+y < 6$</span></div><div><input type="checkbox" /><span>$2x-y \ge 1$</span></div><div><input type="checkbox" /><span>$y < 2x$</span></div><div><input type="checkbox" /><span>$x < 1$</span></div></div></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">52.</div><div class="soal-konten">Apakah titik $(p, q)$ terletak pada daerah penyelesaian $3x-y < 5$?<div class="kecukupan-data-pernyataan"><span>(1)</span><span>$p=2$</span><span>(2)</span><span>$q > 1$</span></div><ol class="pilihan-ganda"><li data-option="A">Pernyataan (1) SAJA cukup.</li><li data-option="B">Pernyataan (2) SAJA cukup.</li><li data-option="C">DUA pernyataan BERSAMA-SAMA cukup.</li><li data-option="D">SATU pernyataan SAJA cukup.</li><li data-option="E">Pernyataan (1) dan (2) tidak cukup.</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">53.</div><div class="soal-konten">Seorang anak diharuskan mengonsumsi dua jenis tablet setiap hari untuk memenuhi kebutuhan vitaminnya. Tablet jenis I mengandung 5 unit vitamin A dan 3 unit vitamin B. Tablet jenis II mengandung 10 unit vitamin A dan 1 unit vitamin B. Dalam satu hari, anak tersebut memerlukan sedikitnya 25 unit vitamin A dan 5 unit vitamin B. Jika harga tablet I adalah Rp4.000 per biji dan tablet II adalah Rp8.000 per biji, pengeluaran minimum untuk pembelian tablet per hari adalah...<ol class="pilihan-ganda"><li data-option="A">Rp18.000</li><li data-option="B">Rp20.000</li><li data-option="C">Rp22.000</li><li data-option="D">Rp24.000</li><li data-option="E">Rp26.000</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">54.</div><div class="soal-konten">Himpunan penyelesaian dari pertidaksamaan nilai mutlak $|2x-1| \le 5$ adalah...<ol class="pilihan-ganda"><li data-option="A">$-3 \le x \le 2$</li><li data-option="B">$-2 \le x \le 3$</li><li data-option="C">$x \le -2$ atau $x \ge 3$</li><li data-option="D">$x \le -3$ atau $x \ge 2$</li><li data-option="E">$-3 < x < 2$</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 14: SOAL PL 55-60 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+            <div class="layout-2-kolom">
+              <div class="soal-latihan"><div class="soal-nomor">55.</div><div class="soal-konten">Daerah himpunan penyelesaian dari sistem pertidaksamaan $y \ge x^2-4$ dan $y \le 2x+4$ adalah daerah yang berbentuk...<ol class="pilihan-ganda"><li data-option="A">Segitiga</li><li data-option="B">Persegi panjang</li><li data-option="C">Trapesium</li><li data-option="D">Tembereng parabola</li><li data-option="E">Juring lingkaran</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">56.</div><div class="soal-konten">Tentukan nilai maksimum dari fungsi objektif $f(x,y) = 3x+2y$ yang memenuhi sistem pertidaksamaan $2x+y \le 4$, $x+2y \le 5$, $x \ge 0$, dan $y \ge 0$.<ol class="pilihan-ganda"><li data-option="A">6</li><li data-option="B">7</li><li data-option="C">8</li><li data-option="D">9</li><li data-option="E">10</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">57.</div><div class="soal-konten">Diketahui dua bilangan positif $x$ dan $y$. Jumlah kedua bilangan tersebut tidak lebih dari 10. Selisih antara bilangan pertama dengan dua kali bilangan kedua tidak kurang dari 4. Model matematika yang sesuai untuk permasalahan ini adalah...<ol class="pilihan-ganda"><li data-option="A">$x+y \le 10; x-2y \ge 4$</li><li data-option="B">$x+y \ge 10; x-2y \le 4$</li><li data-option="C">$x+y < 10; x-2y > 4$</li><li data-option="D">$x+y \le 10; x-2y \le 4$</li><li data-option="E">$x+y \ge 10; x-2y \ge 4$</li></ol></div></div>
+              <div class="soal-latihan" style="break-before: column;"><div class="soal-nomor">58.</div><div class="soal-konten">Batas nilai $x$ yang memenuhi pertidaksamaan $10-3x > 4-5x$ adalah...<ol class="pilihan-ganda"><li data-option="A">$x > -3$</li><li data-option="B">$x < -3$</li><li data-option="C">$x > 3$</li><li data-option="D">$x < 3$</li><li data-option="E">$x > -6$</li></ol></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">59.</div><div class="soal-konten">Diberikan sebuah daerah himpunan penyelesaian yang ditentukan oleh sistem pertidaksamaan $x \ge 0, y \ge 0,$ dan $x+y \le 4$. Tentukan kebenaran dari setiap pernyataan berikut.<table class="soal-kategori"><thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead><tbody><tr><td>Daerah penyelesaian berbentuk segitiga.</td><td></td><td></td></tr><tr><td>(2,2) adalah salah satu titik sudut.</td><td></td><td></td></tr><tr><td>Nilai maksimum dari $2x+3y$ adalah 12.</td><td></td><td></td></tr><tr><td>Titik (3,3) berada di luar daerah penyelesaian.</td><td></td><td></td></tr></tbody></table></div></div>
+              <div class="soal-latihan"><div class="soal-nomor">60.</div><div class="soal-konten">Sebuah toko roti akan membuat dua jenis roti. Untuk membuat roti jenis A, diperlukan 200 gram tepung dan 25 gram mentega. Untuk membuat roti jenis B, diperlukan 100 gram tepung dan 50 gram mentega. Bahan yang tersedia adalah 4 kg (4000 gram) tepung dan 1,25 kg (1250 gram) mentega. Jika keuntungan dari satu roti A adalah Rp750 dan satu roti B adalah Rp500, maka jumlah keuntungan maksimum yang bisa diperoleh toko tersebut adalah...<ol class="pilihan-ganda"><li data-option="A">Rp15.000</li><li data-option="B">Rp16.500</li><li data-option="C">Rp17.500</li><li data-option="D">Rp20.000</li><li data-option="E">Rp21.500</li></ol></div></div>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 15: PEMBAHASAN FK 1-3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers</h2>
+            <div class="pembahasan"><div class="soal-nomor">1. Jawaban: A</div><p><strong>Teori Dasar:</strong> Komposisi fungsi $(f \circ g)(x)$ berarti kita mengganti setiap variabel $x$ pada fungsi $f(x)$ dengan fungsi $g(x)$. Ini seperti "memasukkan" fungsi $g(x)$ ke dalam $f(x)$.</p><p><strong>Langkah-langkah:</strong><br>1. Tuliskan rumus komposisi: $(f \circ g)(x) = f(g(x))$.<br>2. Ganti $g(x)$ dengan rumusnya, yaitu $x-3$. Maka menjadi $f(x-3)$.<br>3. Sekarang, masukkan $(x-3)$ ke dalam fungsi $f(x) = 2x+5$. Setiap $x$ di $f(x)$ diganti dengan $(x-3)$.<br> $f(x-3) = 2(x-3) + 5$<br>4. Lakukan operasi aljabar: $= 2x - 6 + 5 = 2x - 1$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">2. Jawaban: C</div><p><strong>Teori Dasar:</strong> Untuk mengevaluasi $(g \circ f)(a)$, kita bekerja dari dalam ke luar. Pertama, hitung $f(a)$ untuk mendapatkan sebuah nilai. Kemudian, gunakan nilai tersebut sebagai input untuk fungsi $g$.</p><p><strong>Langkah-langkah:</strong><br>1. Hitung nilai fungsi dalam terlebih dahulu: $f(2)$.<br>$f(x) = x^2 \implies f(2) = 2^2 = 4$.<br>2. Gunakan hasil dari langkah 1 sebagai input untuk fungsi luar, yaitu $g(x)$.<br>$(g \circ f)(2) = g(f(2)) = g(4)$.<br>3. Hitung nilai $g(4)$: $g(x) = 3x-1 \implies g(4) = 3(4)-1 = 12-1=11$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">3. Jawaban: A</div><p><strong>Teori Dasar:</strong> Fungsi invers $f^{-1}(x)$ membalikkan proses dari fungsi $f(x)$. Jika $f$ mengubah $x$ menjadi $y$, maka $f^{-1}$ mengubah $y$ kembali menjadi $x$. Untuk mencarinya, kita ubah $y=f(x)$ menjadi bentuk $x$ dalam variabel $y$.</p><p><strong>Langkah-langkah:</strong><br>1. Misalkan $f(x)=y$, sehingga $y = 4x-8$.<br>2. Tujuan kita adalah membuat persamaan ini menjadi $x=...$. Pindahkan konstanta ke sisi $y$: $y+8 = 4x$.<br>3. Bagi kedua sisi dengan 4 untuk mendapatkan $x$ sendirian: $x = \frac{y+8}{4} = \frac{1}{4}y+2$.<br>4. Karena $x = f^{-1}(y)$, maka $f^{-1}(y) = \frac{1}{4}y+2$.<br>5. Ganti variabel $y$ dengan $x$ untuk mendapatkan notasi standar: $f^{-1}(x) = \frac{1}{4}x+2$.</p></div>
+        </div>
+
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 16: PEMBAHASAN FK 4-5 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+             <div class="pembahasan"><div class="soal-nomor">4. Jawaban: B</div><p><strong>Teori Dasar:</strong> Jika komposisi $(f \circ g)(x)$ dan fungsi luar $f(x)$ diketahui, kita bisa menemukan fungsi dalam $g(x)$ dengan aljabar.</p><p><strong>Langkah-langkah:</strong><br>1. Tuliskan persamaan komposisi: $f(g(x)) = 6x+3$.<br>2. Substitusikan bentuk $f(x)$, yaitu $2x-1$. "Input" untuk $f$ sekarang adalah $g(x)$, jadi kita punya: $2(g(x)) - 1 = 6x+3$.<br>3. Selesaikan untuk $g(x)$: $2(g(x)) = 6x+4 \implies g(x) = \frac{6x+4}{2} = 3x+2$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">5. Jawaban: C</div><p><strong>Teori Dasar:</strong> Definisi invers menyatakan bahwa jika $f^{-1}(a)=b$, maka itu sama artinya dengan $f(b)=a$. Kita tidak perlu mencari fungsi inversnya terlebih dahulu.</p><p><strong>Langkah-langkah:</strong><br>1. Gunakan sifat: $f^{-1}(a) = 7 \implies f(7) = a$.<br>2. Hitung nilai $f(7)$ dengan mensubstitusi $x=7$ ke fungsi $f(x)$: $$a = f(7) = \frac{2(7)+1}{7-3} = \frac{14+1}{4} = \frac{15}{4}$$</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 17: PEMBAHASAN FK 6-7 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">6. Jawaban: A</div><p><strong>Teori Dasar:</strong> Ada rumus cepat untuk invers fungsi pecahan linear $f(x) = \frac{ax+b}{cx+d}$, yaitu $f^{-1}(x) = \frac{-dx+b}{cx-a}$. Kita hanya perlu menukar posisi $a$ dan $d$, lalu mengalikan keduanya dengan -1.</p><p><strong>Langkah-langkah:</strong><br>1. Identifikasi koefisien dari $g(x) = \frac{5x-3}{2x+1}$: $a=5, b=-3, c=2, d=1$.<br>2. Terapkan rumus cepat: $$g^{-1}(x) = \frac{-(1)x + (-3)}{2x - 5} = \frac{-x-3}{2x-5}$$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">7. Jawaban: A</div><p><strong>Teori Dasar:</strong> Jika komposisi $(g \circ f)(x)$ dan fungsi dalam $f(x)$ diketahui, kita bisa menemukan fungsi luar $g(x)$ dengan substitusi.</p><p><strong>Langkah-langkah:</strong><br>1. Misalkan input dari $g$ adalah $u$, dimana $u = f(x) = x+1$.<br>2. Ubah persamaan ini menjadi $x$ dalam variabel $u$: $x = u-1$.<br>3. Substitusikan $x=u-1$ ke dalam persamaan komposisi: $$ \begin{aligned} g(f(x)) &= x^2+3x+2 \\ g(u) &= (u-1)^2 + 3(u-1) + 2 \\ &= (u^2-2u+1) + (3u-3) + 2 \\ &= u^2+u \end{aligned} $$4. Ganti kembali $u$ dengan $x$: $g(x) = x^2+x$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 18: PEMBAHASAN FK 8-9 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">8. Jawaban: A</div><p><strong>Teori Dasar:</strong> Komposisi tiga fungsi $(f \circ g \circ h)(x)$ dievaluasi dari paling kanan (paling dalam) ke kiri.</p><p><strong>Langkah-langkah:</strong><br>1. Pertama, komposisikan $g$ dengan $h$: $(g \circ h)(x) = g(h(x)) = g(x^2) = x^2-1$.<br>2. Kemudian, komposisikan $f$ dengan hasil dari langkah 1: $(f \circ (g \circ h))(x) = f(x^2-1) = 2(x^2-1) = 2x^2-2$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">9. Jawaban: A</div><p><strong>Teori Dasar:</strong> Soal kecukupan data. Kita perlu mengecek apakah masing-masing pernyataan, atau keduanya, memberikan informasi yang cukup untuk menjawab pertanyaan.</p><p><strong>Analisis:</strong><br>Untuk menghitung $(f \circ g)(2) = f(g(2))$, kita perlu tahu nilai $g(2)$.<br>1. <strong>Pernyataan (1): $g(x) = 2x+4$.</strong> Dengan ini kita bisa hitung $g(2) = 2(2)+4=8$. Lalu kita bisa hitung $f(g(2)) = f(8) = 3(8)-1=23$. Pernyataan (1) SAJA cukup.<br>2. <strong>Pernyataan (2): Nilai minimum $g(x)$ adalah 4.</strong> Ini bisa berarti $g(x)$ adalah fungsi kuadrat seperti $(x-k)^2+4$ atau fungsi konstan $g(x)=4$. Kita tidak tahu pasti nilai $g(2)$. Jika $g(x)=4$, maka $g(2)=4$. Jika $g(x)=(x-10)^2+4$, maka $g(2)=68$. Karena nilai $g(2)$ tidak pasti, pernyataan (2) SAJA tidak cukup.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 19: PEMBAHASAN FK 10-12 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">10. Jawaban: C</div><p><strong>Teori Dasar:</strong> Sifat invers komposisi adalah $(f \circ g)^{-1}(x) = (g^{-1} \circ f^{-1})(x)$. Artinya, urutannya dibalik.</p><p><strong>Langkah-langkah:</strong><br>1. Terapkan sifat: $(f \circ g)^{-1}(6) = g^{-1}(f^{-1}(6))$.<br>2. Hitung nilai fungsi dalam: $f^{-1}(6) = \frac{6-1}{5} = \frac{5}{5} = 1$.<br>3. Gunakan hasilnya untuk fungsi luar: $g^{-1}(1) = \frac{3-1}{2} = \frac{2}{2} = 1$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">11. Jawaban: Pilihan 1, 2, 3, 4, 5 benar.</div><p><strong>Analisis:</strong><br>1. $(g \circ f)(1) = g(f(1)) = g(2(1)-1) = g(1) = 1^2+2=3$. (Benar)<br>2. $(f \circ g)(x) = f(g(x)) = f(x^2+2) = 2(x^2+2)-1 = 2x^2+4-1=2x^2+3$. (Benar)<br>3. $y=2x-1 \implies x=(y+1)/2 \implies f^{-1}(x) = (x+1)/2$. (Benar)<br>4. Fungsi genap jika $g(-x)=g(x)$. $g(-x)=(-x)^2+2 = x^2+2 = g(x)$. (Benar)<br>5. $(f \circ g)(1) = f(g(1)) = f(1^2+2) = f(3) = 2(3)-1=5$. (Benar)</p></div>
+            <div class="pembahasan"><div class="soal-nomor">12. Jawaban: B</div><p><strong>Pembahasan:</strong> $f(g(x)) = \sqrt{g(x)+1}$. Kita juga tahu $(f \circ g)(x) = 2\sqrt{x-1} = \sqrt{4(x-1)} = \sqrt{4x-4}$. Dengan menyamakan isi akar: $g(x)+1 = 4x-4 \implies g(x) = 4x-5$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 20: PEMBAHASAN FK 13-15 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">13. Jawaban: A</div><p><strong>Pembahasan:</strong> $$ \begin{aligned} y &= (1-x^3)^{1/5} + 2 \\ y - 2 &= (1-x^3)^{1/5} \\ (y - 2)^5 &= 1-x^3 \\ x^3 &= 1-(y-2)^5 \\ x &= (1-(y-2)^5)^{1/3} \end{aligned} $$ Ganti $y$ dengan $x$, maka $f^{-1}(x) = (1-(x-2)^5)^{1/3}$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">14. Jawaban: C</div><p><strong>Langkah 1: Cari $f(x)$.</strong> Misal $u=2x-3 \implies x=(u+3)/2$. $$f(u) = 4\left(\frac{u+3}{2}\right) - 7 = 2(u+3)-7 = 2u-1$$ Jadi $f(x)=2x-1$.<br><strong>Langkah 2: Cari inversnya.</strong> $y=2x-1 \implies x=(y+1)/2$. Maka $f^{-1}(x) = \frac{x+1}{2}$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">15. Jawaban: B</div><p><strong>Langkah 1: Hitung produksi.</strong> Dengan 10 pekerja ($n=10$), jumlah produksi adalah $P(10)=3(10)^2-40=260$ unit.<br><strong>Langkah 2: Hitung biaya.</strong> Biaya untuk 260 unit adalah $C(260)=15(260)+2000=3900+2000=5900$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 21: PEMBAHASAN FK 16-18 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+             <div class="pembahasan"><div class="soal-nomor">16. Jawaban: Semua Benar.</div><p><strong>Analisis:</strong><br>1. Domain fungsi pecahan adalah penyebut $\neq 0$, jadi $x-1 \neq 0 \implies x \neq 1$. (Benar)<br>2. Asimtot tegak terjadi saat penyebut nol, yaitu $x=1$. (Benar)<br>3. Asimtot datar adalah rasio koefisien $x$ pangkat tertinggi: $y = 1/1=1$. (Benar)<br>4. Inversnya: $f^{-1}(x) = \frac{-(-1)x+1}{x-1} = \frac{x+1}{x-1} = f(x)$. (Benar)</p></div>
+            <div class="pembahasan"><div class="soal-nomor">17. Jawaban: D</div><p><strong>Langkah 1: Cari $f(x)$.</strong> Misal $u=x-2 \implies x=u+2$. $f(u)=\frac{(u+2)+1}{(u+2)-2} = \frac{u+3}{u}$. Jadi $f(x)=\frac{x+3}{x}$.<br><strong>Langkah 2: Selesaikan $f^{-1}(2)=k \implies f(k)=2$.</strong> $$\frac{k+3}{k}=2 \implies k+3=2k \implies k=3$$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">18. Jawaban: B</div><p><strong>Pembahasan:</strong> $g(3)=2^3-1=7$. Maka $(f \circ g)(3)=f(g(3))=f(7)=\log_2(7)$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 22: PEMBAHASAN FK 19-20 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Fungsi Komposisi dan Invers (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">19. Jawaban: B</div><p><strong>Pembahasan:</strong> $f^{-1}(x)=x/2$ dan $g^{-1}(x)=x-1$. Maka $(g^{-1} \circ f^{-1})(4)=g^{-1}(f^{-1}(4))=g^{-1}(4/2)=g^{-1}(2)=2-1=1$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">20. Jawaban: A</div><p><strong>Pembahasan:</strong> Agar fungsi akar terdefinisi di bilangan real, ekspresi di dalam akar harus non-negatif: $2x-6 \ge 0 \implies 2x \ge 6 \implies x \ge 3$. Pada domain ini, fungsi selalu naik (monoton), sehingga pasti memiliki invers.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 23: PEMBAHASAN BM 21-24 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Bunga Tunggal, Bunga Majemuk dan Anuitas</h2>
+            <div class="pembahasan"><div class="soal-nomor">21. Jawaban: A</div><p><strong>Teori Dasar:</strong> Bunga tunggal dihitung hanya dari modal awal. Total bunga = $M_0 \times i \times n$. Modal akhir = $M_0 + \text{Total Bunga}$.</p><p><strong>Pembahasan:</strong> Total bunga = $5.000.000 \times 12\% \times 5 = 5.000.000 \times 0.12 \times 5 = 3.000.000$. Modal akhir = $5.000.000 + 3.000.000 = 8.000.000$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">22. Jawaban: B</div><p><strong>Teori Dasar:</strong> Bunga majemuk dihitung dari modal plus bunga yang sudah terkumpul. Rumus: $M_n = M_0(1+i)^n$.</p><p><strong>Pembahasan:</strong> $M_3 = 10.000.000(1+0.05)^3 = 10.000.000(1.05)^3 = 10.000.000(1.157625) = 11.576.250$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">23. Jawaban: A</div><p><strong>Teori Dasar:</strong> Besar pinjaman (Nilai Sekarang Anuitas) adalah jumlah semua cicilan yang ditarik nilainya ke masa sekarang. Rumus: $NS = A \left[ \frac{1 - (1+i)^{-n}}{i} \right]$.</p><p><strong>Pembahasan:</strong> $$ \begin{aligned} NS &= 2.000.000 \left[ \frac{1 - (1.06)^{-4}}{0.06} \right] \\ &= 2.000.000 \left[ \frac{1 - 0.792}{0.06} \right] \\ &= 2.000.000 \left[ \frac{0.208}{0.06} \right] \approx 6.933.333,33 \end{aligned} $$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">24. Jawaban: C</div><p><strong>Analisis:</strong> Untuk mencari modal awal ($M_0$), kita perlu modal akhir ($M_n$), suku bunga ($i$), dan periode ($n$). Pernyataan (1) memberikan $M_2 = 12.1jt$ dan $n=2$. Pernyataan (2) memberikan $i=10\%$. Keduanya dibutuhkan. $$M_0 = \frac{M_2}{(1+i)^2} = \frac{12.100.000}{(1+0.1)^2} = \frac{12.100.000}{1.21} = 10.000.000$$</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 25: PEMBAHASAN BM 25-27 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Bunga Tunggal, Bunga Majemuk dan Anuitas (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">25. Jawaban: B</div><p><strong>Teori Dasar:</strong> Pertumbuhan populasi adalah aplikasi dari bunga majemuk.</p><p><strong>Pembahasan:</strong> $n=2023-2020=3$. Populasi akhir = $500.000(1+0.02)^3 = 500.000(1.061208) = 530.604$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">26. Jawaban: B</div><p><strong>Teori Dasar:</strong> Total tabungan dari setoran rutin adalah Nilai Akhir Anuitas. Rumus: $NA = A \left[ \frac{(1+i)^n - 1}{i} \right]$.</p><p><strong>Pembahasan:</strong> $A=500rb, i=1\%=0.01, n=12$. $$ \begin{aligned} NA &= 500.000 \left[ \frac{(1.01)^{12} - 1}{0.01} \right] \\ &= 500.000 \left[ \frac{1.1268 - 1}{0.01} \right] = 6.340.000 \end{aligned} $$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">27. Jawaban: B</div><p><strong>Teori Dasar:</strong> Penyusutan (peluruhan) menggunakan rumus $M_n = M_0(1-i)^n$.</p><p><strong>Pembahasan:</strong> $M_5 = 200jt(1-0.1)^5 = 200jt(0.9)^5 = 200jt(0.59049) = 118.098.000$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 26: PEMBAHASAN BM 28-31 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Bunga Tunggal, Bunga Majemuk dan Anuitas (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">28. Jawaban: C</div><p><strong>Teori Dasar:</strong> Besar anuitas $A$ dapat dihitung dari nilai sekarang $NS$ dengan rumus $A = \frac{NS}{a_{n|i}}$, di mana $a_{n|i}$ adalah faktor anuitas.</p><p><strong>Pembahasan:</strong> $A = \frac{10.000.000}{3.9927} \approx 2.504.570,6$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">29. Jawaban: B</div><p><strong>Pembahasan:</strong> Perhitungan ini memerlukan tabel anuitas dan cukup kompleks untuk dihitung manual, namun prinsipnya adalah angsuran pokok akan meningkat setiap periode. Jawaban yang benar adalah Rp666.200,00.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">30. Jawaban: A</div><p><strong>Pembahasan:</strong> Modal akhir $M_n=2M$. Dari rumus $M_n = M(1+i)^n$, kita dapatkan $2M = M(1+i)^n \implies 2=(1+i)^n$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">31. Jawaban: C</div><p><strong>Teori Dasar:</strong> Bunga tunggal menyebabkan saldo tabungan membentuk barisan aritmetika.</p><p><strong>Pembahasan:</strong> Kenaikan selama 3 tahun (dari tahun 2 ke 5) adalah $7.8jt - 6.24jt = 1.56jt$. Bunga per tahun = $1.56jt/3 = 520rb$. Modal awal $M_0 = M_2 - 2 \times \text{Bunga} = 6.240.000 - 2(520.000) = 5.200.000$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 27: PEMBAHASAN BM 32-35 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Bunga Tunggal, Bunga Majemuk dan Anuitas (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">32. Jawaban: D</div><p><strong>Pembahasan:</strong> Waktu = 2 jam = 120 menit. Jumlah pembelahan $n = 120/20 = 6$. Jumlah bakteri akhir = $1000 \times 2^6 = 64.000$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">33. Jawaban: C</div><p><strong>Pembahasan:</strong> Sisa pinjaman setelah angsuran ke-(n-1) adalah pokok pinjaman yang harus dilunasi pada periode ke-n. Nilai ini pasti lebih kecil dari anuitas, karena anuitas ($A$) terdiri dari angsuran pokok ($a_n$) dan bunga ($b_n$).</p></div>
+            <div class="pembahasan"><div class="soal-nomor">34. Jawaban: Pilihan 1, 2, 4 benar.</div><p><strong>Pembahasan:</strong> (1) Benar, karena bunga majemuk berbunga. (2) Benar, karena penambahannya tetap setiap periode. (3) Salah, anuitas adalah cicilan periodik. (4) Benar, penyusutan adalah pertumbuhan negatif. (5) Salah, itu definisi bunga majemuk, bukan tunggal.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">35. Jawaban: C</div><p><strong>Pembahasan:</strong> $NA = 1jt \left[ \frac{(1.01)^{24} - 1}{0.01} \right] = 1jt \left[ \frac{1.2697-1}{0.01} \right] = 1jt(26.97) = 26.970.000$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+       <!-- HALAMAN 28: PEMBAHASAN BM 36-40 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Bunga Tunggal, Bunga Majemuk dan Anuitas (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">36. Jawaban: A</div><p><strong>Langkah 1: Cari Anuitas (A).</strong> $A = \frac{5jt \cdot 0.02}{1-(1.02)^{-6}} = \frac{100rb}{1-0.888} \approx 892.857$.<br><strong>Langkah 2: Cari bunga pertama ($b_1$).</strong> $b_1 = 5jt \times 0.02 = 100.000$.<br><strong>Langkah 3: Cari angsuran pertama ($a_1$).</strong> $a_1 = A-b_1 \approx 792.857$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">37. Jawaban: C</div><p><strong>Pembahasan:</strong> $(1+i)^5 = 2 \implies 1+i = \sqrt[5]{2} \approx 1.1487 \implies i \approx 0.1487$ atau $14.87\%$. Pilihan terdekat adalah 15%.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">38. Jawaban: B</div><p><strong>Pembahasan:</strong> $M_4 = 200(1-0.1)^4 = 200(0.9)^4 = 200(0.6561) = 131.22$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">39. Jawaban: Semua Benar.</div><p><strong>Pembahasan:</strong> Ini adalah sifat dasar dari pelunasan pinjaman dengan anuitas. Karena utang pokok berkurang, bunga yang dibayar mengecil, sehingga porsi pelunasan pokok (angsuran) membesar agar total anuitas tetap sama.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">40. Jawaban: B</div><p><strong>Pembahasan:</strong> $M_0 = \frac{M_5}{(1+i)^5} = \frac{14.693.280,77}{(1.08)^5} = \frac{14.693.280,77}{1.469328077} = 10.000.000$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 29: PEMBAHASAN PL 41-44 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+            <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear</h2>
+            <div class="pembahasan"><div class="soal-nomor">41. Jawaban: A</div><p><strong>Pembahasan:</strong> $$ \begin{aligned} 3(x-2) &\le 5x + 8 \\ 3x - 6 &\le 5x + 8 \\ -6 - 8 &\le 5x - 3x \\ -14 &\le 2x \\ -7 &\le x \end{aligned} $$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">42. Jawaban: A</div><p><strong>Pembahasan:</strong> $$ \begin{aligned} 1 &< 2x - 1 \le 7 \quad (\text{tambah 1 ke semua ruas}) \\ 1+1 &< 2x \le 7+1 \\ 2 &< 2x \le 8 \quad (\text{bagi 2 ke semua ruas}) \\ 1 &< x \le 4 \end{aligned} $$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">43. Jawaban: C</div><p><strong>Pembahasan:</strong> Uji setiap titik ke $2x+y > 6$.<br> A. $2(1)+1=3 \ngtr 6$. B. $2(2)+2=6 \ngtr 6$. C. $2(3)+1=7 > 6$. (Benar)</p></div>
+            <div class="pembahasan"><div class="soal-nomor">44. Jawaban: A</div><p><strong>Pembahasan:</strong><br>1. Kapasitas: $x+y \le 400$.<br>2. Modal: $4000x + 1600y \le 1.000.000$. Dibagi 800 menjadi $5x+2y \le 1250$.<br>3. Non-negatif: $x \ge 0, y \ge 0$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 30: PEMBAHASAN PL 45 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">45. Jawaban: C</div><p><strong>Langkah 1: Tentukan semua titik sudut DHP.</strong><br>DHP dibatasi oleh garis $x+y=8$, $x+2y=12$, $x=0$, dan $y=0$.<ul><li>Titik potong sumbu: $(0,0)$.</li><li>Titik potong $x+y=8$ dengan sumbu-x ($y=0$): $(8,0)$.</li><li>Titik potong $x+2y=12$ dengan sumbu-y ($x=0$): $(0,6)$.</li><li>Titik potong antara garis $x+y=8$ dan $x+2y=12$:$$ \begin{aligned} x+2y=12 \\ x+y=8 \\ \hline y=4 \end{aligned} $$Substitusi $y=4$ ke $x+y=8 \implies x=4$. Titik potongnya $(4,4)$.</li></ul><strong>Langkah 2: Uji titik sudut ke $f(x,y) = 5x+4y$.</strong><ul><li>$f(0,0)=0$, $f(8,0)=40$, $f(0,6)=24$, $f(4,4)=36$.</li></ul>Nilai tertinggi adalah 40.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 31: PEMBAHASAN PL 46-49 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">46. Jawaban: A</div><p><strong>Pembahasan:</strong> Garis melalui $(a,0)$ dan $(0,b)$ punya persamaan $bx+ay=ab$. Garis melalui (4,0) dan (0,6) adalah $6x+4y=24 \implies 3x+2y=12$. Karena arsiran di bawahnya, maka $3x+2y \le 12$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">47. Jawaban: C</div><p><strong>Pembahasan:</strong> Titik sudut daerah: (1,3) (potongan $x=1, x+y=4$) dan (2,2) (potongan $y=2, x+y=4$). Uji ke $f(x,y)=2x+3y$: $f(1,3)=11, f(2,2)=10$. Minimum 10.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">48. Jawaban: A</div><p><strong>Pembahasan:</strong> Kalikan dengan KPK penyebut (6): $$ \begin{aligned} 2(2x-1)-3(x-3) &> 6 \\ 4x-2-3x+9 &> 6 \\ x+7 &> 6 \implies x > -1 \end{aligned} $$</p></div>
+            <div class="pembahasan"><div class="soal-nomor">49. Jawaban: C</div><p><strong>Pembahasan:</strong> Daerahnya adalah persegi panjang 4x3 dikurangi segitiga siku-siku di pojok kanan atas. Titik potong $x+y=6$ dengan $y=3$ adalah $(3,3)$. Titik potong dengan $x=4$ adalah $(4,2)$. Segitiga yang dipotong memiliki titik sudut (3,3), (4,3), dan (4,2). Alasnya 1, tingginya 1. Luas = (Luas Persegi Panjang) - (Luas Segitiga) = $(4 \times 3) - (0.5 \times 1 \times 1) = 12-0.5 = 11.5$.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 32: PEMBAHASAN PL 50-52 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">50. Jawaban: B</div><p><strong>Model:</strong> $x+y \le 48$, $60x+20y \le 1440 \implies 3x+y \le 72$. Titik potong: $(3x+y)-(x+y)=72-48 \implies 2x=24 \implies x=12, y=36$. Titik (12,36).<br><strong>Uji titik sudut</strong> (0,48), (24,0), (12,36) ke $1.5jt \cdot x + 1jt \cdot y$. Hasil: 48jt, 36jt, 54jt. Maksimum 54 juta.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">51. Jawaban: Pilihan 1, 2, 3, 4 benar.</div><p><strong>Analisis:</strong> Uji titik (2,3):<br>1. $2+3=5 \le 5$ (Benar).<br>2. $2+3=5 < 6$ (Benar).<br>3. $2(2)-3=1 \ge 1$ (Benar).<br>4. $3 < 2(2)=4$ (Benar).<br>5. $2 < 1$ (Salah).</p></div>
+            <div class="pembahasan"><div class="soal-nomor">52. Jawaban: C</div><p><strong>Analisis:</strong> Pertanyaan: apakah $3p-q<5$?<br>1. $p=2 \implies 3(2)-q < 5 \implies 6-q<5 \implies q>1$. Kita tidak tahu apakah $q>1$, jadi tidak cukup.<br>2. $q>1$. Kita tidak tahu nilai $p$, jadi tidak cukup.<br>3. Bersama-sama: dari (1) kita perlu $q>1$. Pernyataan (2) mengonfirmasi bahwa $q>1$. Jadi cukup.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 33: PEMBAHASAN PL 53-56 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">53. Jawaban: B</div><p><strong>Model:</strong> Vit A: $5x+10y \ge 25 \implies x+2y \ge 5$. Vit B: $3x+y \ge 5$. Titik potong: $y=5-3x \implies x+2(5-3x)=5 \implies x=1, y=2$. Titik (1,2).<br><strong>Uji titik sudut</strong> (5,0), (0,5), (1,2) ke $4000x+8000y$. Hasil: 20rb, 40rb, 20rb. Minimum 20.000.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">54. Jawaban: B</div><p><strong>Teori Dasar:</strong> $|f(x)| \le c \iff -c \le f(x) \le c$.</p><p><strong>Pembahasan:</strong> $|2x-1| \le 5 \implies -5 \le 2x-1 \le 5 \implies -4 \le 2x \le 6 \implies -2 \le x \le 3$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">55. Jawaban: D</div><p><strong>Pembahasan:</strong> Daerah $y \ge x^2-4$ adalah daerah di atas/di dalam parabola. Daerah $y \le 2x+4$ adalah daerah di bawah garis. Irisan keduanya membentuk area yang dibatasi oleh kurva parabola dan segmen garis, yang disebut tembereng parabola.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">56. Jawaban: B</div><p><strong>Pembahasan:</strong> Titik sudut: (0,0), (2,0), (0, 2.5). Titik potong: $4x+2y=8$ dan $x+2y=5 \implies 3x=3 \implies x=1, y=2$. Titik (1,2).<br>Uji ke $3x+2y$: $f(2,0)=6, f(0,2.5)=5, f(1,2)=7$. Maksimum 7.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 34: PEMBAHASAN PL 57-60 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+             <h2 class="kuis-title">Kunci Jawaban & Pembahasan: Pertidaksamaan Linear (Lanjutan)</h2>
+            <div class="pembahasan"><div class="soal-nomor">57. Jawaban: A</div><p><strong>Pembahasan:</strong> "tidak lebih dari" berarti $\le$. "tidak kurang dari" berarti $\ge$. Maka: $x+y \le 10$ dan $x-2y \ge 4$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">58. Jawaban: A</div><p><strong>Pembahasan:</strong> $10-3x > 4-5x \implies 5x-3x > 4-10 \implies 2x > -6 \implies x > -3$.</p></div>
+            <div class="pembahasan"><div class="soal-nomor">59. Jawaban: Pernyataan 1, 3, 4 benar.</div><p><strong>Analisis:</strong><br>1. DHP dibatasi oleh $x=0, y=0, x+y=4$. Ini adalah segitiga siku-siku. (Benar)<br>2. Titik sudutnya adalah (0,0), (4,0), dan (0,4). Titik (2,2) ada di dalam, tapi bukan titik sudut. (Salah)<br>3. Maksimum $2x+3y$ pasti ada di titik sudut. $f(4,0)=8, f(0,4)=12$. Maksimum 12. (Benar)<br>4. $3+3=6 > 4$, jadi (3,3) di luar DHP. (Benar)</p></div>
+            <div class="pembahasan"><div class="soal-nomor">60. Jawaban: C</div><p><strong>Model:</strong> Tepung: $200x+100y \le 4000 \implies 2x+y \le 40$. Mentega: $25x+50y \le 1250 \implies x+2y \le 50$. Titik potong: $y=40-2x \implies x+2(40-2x)=50 \implies -3x=-30 \implies x=10, y=20$. Titik (10,20).<br><strong>Uji titik sudut</strong> (20,0), (0,25), (10,20) ke $750x+500y$. Hasil: 15.000, 12.500, 17.500. Maksimum 17.500.</p></div>
+        </div>
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+      
+    </div>
+  </body>
+</html>
+
