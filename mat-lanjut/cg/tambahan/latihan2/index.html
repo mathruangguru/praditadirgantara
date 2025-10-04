@@ -262,20 +262,6 @@
         font-weight: bold;
       }
 
-      .pilihan-ganda-mcma div {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 8px;
-        padding-left: 5px;
-      }
-      .pilihan-ganda-mcma input[type="checkbox"] {
-        width: 14px;
-        height: 14px;
-        margin-right: 10px;
-        flex-shrink: 0;
-        margin-top: 4px;
-      }
-
       .page-footer {
         text-align: left;
         font-size: 6pt;
@@ -287,42 +273,6 @@
         width: 100%;
         position: relative;
         z-index: 10;
-      }
-
-      table.soal-kategori {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: left;
-        margin-top: 10px;
-        font-size: 8pt;
-      }
-      table.soal-kategori th,
-      table.soal-kategori td {
-        padding: 8px;
-        border: 1px solid #ccc;
-        vertical-align: middle;
-      }
-      table.soal-kategori th {
-        background-color: var(--table-header-bg);
-      }
-      table.soal-kategori th:not(:first-child) {
-        text-align: center;
-        width: 50px;
-      }
-      table.soal-kategori td:not(:first-child) {
-        text-align: center;
-      }
-
-      .kecukupan-data-pernyataan {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 2px 8px;
-        text-align: left;
-        margin-top: 10px !important;
-        margin-bottom: 10px;
-      }
-      .kecukupan-data-pernyataan span {
-        line-height: 1.5;
       }
 
       /* --- PRINT STYLES --- */
@@ -365,7 +315,6 @@
         .soal-card td:first-child,
         .summary-table .summary-table-header td,
         .pembahasan-detail,
-        table.soal-kategori th,
         .header-top-box,
         .header-bottom-text {
           -webkit-print-color-adjust: exact;
@@ -392,7 +341,7 @@
           </div>
           <div class="header-bottom-box">
             <div class="header-bottom-text">
-               XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
               Soal TKA Matematika (Lanjut) | Latihan 2
             </div>
           </div>
@@ -608,7 +557,7 @@
           >
         </footer>
       </section>
-      
+
       <!-- HALAMAN 4: Pembahasan Soal 1 -->
       <section class="page">
         <header class="page-header">
@@ -625,6 +574,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">1.</div>
@@ -651,17 +601,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 5: Soal 2 -->
@@ -699,7 +649,7 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">2.</div>
               <div class="soal-konten">
-                 Sebuah pemancar Wi-Fi di sebuah kafe dapat menjangkau area berbentuk lingkaran. Jika kafe tersebut direpresentasikan pada bidang koordinat dengan pemancar Wi-Fi di titik (2, -1) dan jangkauan maksimumnya adalah 5 meter, persamaan lingkaran yang merepresentasikan area jangkauan Wi-Fi adalah...
+                Sebuah pemancar Wi-Fi di sebuah kafe dapat menjangkau area berbentuk lingkaran. Jika kafe tersebut direpresentasikan pada bidang koordinat dengan pemancar Wi-Fi di titik (2, -1) dan jangkauan maksimumnya adalah 5 meter, persamaan lingkaran yang merepresentasikan area jangkauan Wi-Fi adalah...
                 <ol class="pilihan-ganda">
                   <li data-option="A">$(x-2)^2 + (y+1)^2 = 5$</li>
                   <li data-option="B">$x^2 + y^2 = 25$</li>
@@ -741,6 +691,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">2.</div>
@@ -771,18 +722,18 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 7: Soal 3 -->
@@ -847,7 +798,7 @@
       </section>
 
       <!-- HALAMAN 8: Pembahasan Soal 3 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -862,6 +813,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">3.</div>
@@ -891,22 +843,22 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 9: Soal 4 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -982,6 +934,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">4.</div>
@@ -1012,17 +965,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 11: Soal 5 -->
@@ -1121,6 +1074,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">5.</div>
@@ -1161,20 +1115,20 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-      
+
       <!-- HALAMAN 13: Soal 6 -->
       <section class="page">
         <header class="page-header">
@@ -1271,6 +1225,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">6.</div>
@@ -1306,18 +1261,18 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 15: Soal 7 -->
@@ -1416,6 +1371,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">7.</div>
@@ -1454,22 +1410,22 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
-       <!-- HALAMAN 17: Soal 8 -->
-       <section class="page">
+      <!-- HALAMAN 17: Soal 8 -->
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -1548,7 +1504,7 @@
         </footer>
       </section>
 
-      <!-- HALAMAN 18: Pembahasan Soal 8 (REVISED) -->
+      <!-- HALAMAN 18: Pembahasan Soal 8 -->
       <section class="page">
         <header class="page-header">
           <div class="header-top-box">
@@ -1564,6 +1520,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">8.</div>
@@ -1602,18 +1559,18 @@
             </div>
           </div>
         </div>
-         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 19: Soal 9 -->
@@ -1693,6 +1650,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">9.</div>
@@ -1729,21 +1687,21 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 21: Soal 10 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -1819,6 +1777,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">10.</div>
@@ -1850,17 +1809,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 23: Soal 11 -->
@@ -1940,6 +1899,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">11.</div>
@@ -1973,17 +1933,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 25: Soal 12 -->
@@ -2063,6 +2023,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">12.</div>
@@ -2092,17 +2053,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 27: Soal 13 -->
@@ -2206,6 +2167,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">13.</div>
@@ -2235,19 +2197,19 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
+      
       <!-- HALAMAN 29: Soal 14 -->
       <section class="page">
         <header class="page-header">
@@ -2349,6 +2311,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">14.</div>
@@ -2386,21 +2349,21 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 31: Soal 15 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -2434,7 +2397,7 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">15.</div>
               <div class="soal-konten">
-                   Cocokkan setiap transformasi geometri dengan matriksnya yang sesuai.
+                  Cocokkan setiap transformasi geometri dengan matriksnya yang sesuai.
                   <table class="soal-kategori">
                     <thead>
                       <tr>
@@ -2500,6 +2463,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">15.</div>
@@ -2533,17 +2497,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 33: Soal 16 -->
@@ -2647,6 +2611,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">16.</div>
@@ -2678,17 +2643,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 35: Soal 17 -->
@@ -2768,6 +2733,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">17.</div>
@@ -2801,20 +2767,20 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
-       <!-- HALAMAN 37: Soal 18 -->
+      <!-- HALAMAN 37: Soal 18 -->
        <section class="page">
         <header class="page-header">
           <div class="header-top-box">
@@ -2891,6 +2857,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">18.</div>
@@ -2929,21 +2896,21 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
-       <!-- HALAMAN 39: Soal 19 -->
-       <section class="page">
+      <!-- HALAMAN 39: Soal 19 -->
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -2977,7 +2944,7 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">19.</div>
               <div class="soal-konten">
-                   Populasi serangga di suatu area pertanian mengikuti pola musiman yang dapat dimodelkan oleh fungsi trigonometri $P(t) = 1.000 + 500\sin(\frac{\pi}{6}t)$, dengan $t$ adalah bulan (t=0 untuk Januari). Populasi akan mencapai maksimum pada bulan...
+                  Populasi serangga di suatu area pertanian mengikuti pola musiman yang dapat dimodelkan oleh fungsi trigonometri $P(t) = 1.000 + 500\sin(\frac{\pi}{6}t)$, dengan $t$ adalah bulan (t=0 untuk awal Januari). Populasi akan mencapai maksimum pada bulan...
                   <ol class="pilihan-ganda">
                     <li data-option="A">Maret</li>
                     <li data-option="B">April</li>
@@ -3003,7 +2970,7 @@
         </footer>
       </section>
 
-      <!-- HALAMAN 40: Pembahasan Soal 19 (REVISED) -->
+      <!-- HALAMAN 40: Pembahasan Soal 19 -->
       <section class="page">
         <header class="page-header">
           <div class="header-top-box">
@@ -3019,6 +2986,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">19.</div>
@@ -3040,7 +3008,7 @@
                   Jadi, populasi mencapai maksimum saat $t=3$.
                   <br/><br/>
                   <b>Langkah 4: Tentukan bulan yang sesuai dengan $t=3$.</b><br/>
-                  Soal mendefinisikan bahwa $t=0$ adalah untuk bulan Januari. Maka urutannya adalah:
+                  Soal mendefinisikan bahwa $t=0$ adalah untuk awal bulan Januari. Maka urutannya adalah:
                   <ul>
                       <li>$t=0$: Januari</li>
                       <li>$t=1$: Februari</li>
@@ -3054,17 +3022,17 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
 
       <!-- HALAMAN 41: Soal 20 -->
@@ -3144,6 +3112,7 @@
           </div>
         </header>
         <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <div class="soal-pembahasan">
               <div class="soal-nomor">20.</div>
@@ -3173,19 +3142,19 @@
           </div>
         </div>
         <footer class="page-footer">
-            <span
-              ><b
-                >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
-                Reserved.</b
-              >
-              <i
-                >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
-                Indonesia.</i
-              ></span
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
             >
-          </footer>
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
+
     </div>
   </body>
 </html>
-
