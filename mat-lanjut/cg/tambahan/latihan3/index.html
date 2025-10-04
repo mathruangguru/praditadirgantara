@@ -44,13 +44,11 @@
         --table-header-bg: #e9e9e9;
         --grey-text: #8d8e8d;
       }
-
       *,
       *::before,
       *::after {
         box-sizing: border-box;
       }
-
       body {
         font-family: "Montserrat", sans-serif;
         font-size: 9pt;
@@ -60,13 +58,11 @@
         margin: 0;
         padding: 0;
       }
-
       .page-container {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
       .page {
         background: white;
         width: 21cm;
@@ -78,14 +74,12 @@
         display: flex;
         flex-direction: column;
       }
-
       .page-header {
         margin: -1.8cm -2.5cm 0 -2.5cm;
         flex-shrink: 0;
         position: relative;
         z-index: 10;
       }
-
       .header-top-box {
         background-color: var(--header-top-bg);
         padding: 10px 2.5cm;
@@ -94,32 +88,27 @@
         align-items: center;
         margin-bottom: 2px;
       }
-
       .page:not(:first-of-type) .header-bottom-box {
         display: none;
       }
       .page:not(:first-of-type) .header-top-box {
         margin-bottom: 20px;
       }
-
       .header-title-main {
         font-size: 18pt;
         font-weight: 700;
         color: var(--header-title-color);
         line-height: 1.2;
       }
-
       .header-title-sub {
         font-size: 9pt;
         font-weight: 700;
         color: var(--primary-text);
       }
-
       .header-bottom-box {
         padding: 0 2.5cm 20px 2.5cm;
         text-align: left;
       }
-
       .header-bottom-text {
         background-color: var(--header-bottom-bg);
         padding: 8px 15px;
@@ -130,15 +119,12 @@
         border-radius: 4px;
         white-space: normal;
       }
-
       .header-logo {
         max-height: 60px;
       }
-
       .content-wrapper {
         flex-grow: 1;
       }
-
       .section-title {
         font-size: 14pt;
         font-weight: 700;
@@ -148,23 +134,19 @@
         margin-bottom: 15px;
         margin-top: 10px;
       }
-
       ol.guide-list,
       ul.guide-list {
         padding-left: 20px;
         font-size: 8.5pt;
       }
-
       ol.guide-list li,
       ul.guide-list li {
         margin-bottom: 8px;
       }
-
       .pembahasan-box {
         margin-bottom: 25px;
         page-break-inside: avoid;
       }
-
       .soal-card {
         width: 100%;
         border-collapse: collapse;
@@ -182,7 +164,6 @@
         background-color: var(--table-header-bg);
         width: 120px;
       }
-
       .summary-table {
         width: 100%;
         border-collapse: collapse;
@@ -204,13 +185,12 @@
         padding-left: 20px;
         margin: 4px 0 0 0;
       }
-       .table-continuation {
+      .table-continuation {
         border-top: none;
       }
       .table-continuation td {
         border-top: none;
       }
-
       .soal-pembahasan {
         display: flex;
         align-items: flex-start;
@@ -225,7 +205,6 @@
         flex-grow: 1;
         text-align: justify;
       }
-
       .soal-konten ol.pilihan-ganda {
         list-style-type: none;
         padding-left: 0;
@@ -249,7 +228,6 @@
         border-left: 4px solid var(--header-title-color);
         padding: 10px 15px;
         border-radius: 0 4px 4px 0;
-        text-align: justify;
       }
       .pembahasan-detail ul,
       .pembahasan-detail ol {
@@ -262,52 +240,6 @@
         border-radius: 3px;
         font-weight: bold;
       }
-      
-      .kecukupan-data-pernyataan {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 2px 8px;
-        text-align: left;
-        margin: 10px 0;
-      }
-      .pilihan-ganda-mcma div {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 8px;
-        text-align: left;
-      }
-      .pilihan-ganda-mcma input[type="checkbox"] {
-        width: 14px;
-        height: 14px;
-        margin-right: 10px;
-        flex-shrink: 0;
-        margin-top: 4px;
-      }
-      table.soal-kategori {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: left;
-        margin-top: 10px;
-        font-size: 8pt;
-      }
-      table.soal-kategori th,
-      table.soal-kategori td {
-        padding: 8px;
-        border: 1px solid #ccc;
-        vertical-align: middle;
-      }
-      table.soal-kategori th {
-        background-color: #f2f2f2;
-      }
-      table.soal-kategori th:not(:first-child) {
-        text-align: center;
-        width: 60px;
-      }
-      table.soal-kategori td:not(:first-child) {
-        text-align: center;
-      }
-
-
       .page-footer {
         text-align: left;
         font-size: 6pt;
@@ -320,23 +252,19 @@
         position: relative;
         z-index: 10;
       }
-
       /* --- PRINT STYLES --- */
       @media print {
         @page {
           size: A4;
           margin: 0;
         }
-
         body {
           background-color: white;
           margin: 0;
         }
-        
         .page-container {
           margin: 0;
         }
-
         .page {
           box-shadow: none;
           margin: 0;
@@ -348,16 +276,13 @@
           flex-direction: column;
           position: relative;
         }
-
         .page:last-of-type {
           page-break-after: auto;
         }
-
         .content-wrapper {
           flex-grow: 1;
           overflow: hidden;
         }
-
         .soal-card td:first-child,
         .summary-table .summary-table-header td,
         .pembahasan-detail,
@@ -392,7 +317,6 @@
             </div>
           </div>
         </header>
-
         <div class="content-wrapper">
           <table class="summary-table">
             <tr class="summary-table-header">
@@ -400,23 +324,38 @@
             </tr>
             <tr class="summary-table-content">
               <td colspan="2">
-                Drill soal TKA untuk mengulas kembali dan memperdalam pemahaman
-                materi-materi esensial Matematika Lanjut yang sering muncul dalam ujian, dengan fokus pada aplikasi konsep dalam berbagai konteks.
+                Sesi ini bertujuan untuk mengasah kemampuan siswa dalam
+                menyelesaikan beragam soal TKA Matematika Lanjut. Fokusnya
+                adalah pada pemecahan masalah yang mencakup berbagai topik
+                esensial, mulai dari geometri analitik, aljabar, hingga
+                kalkulus, dengan penekanan pada aplikasi konsep dan analisis
+                kecukupan data.
                 <ul>
                   <li>
-                    <b>Lingkaran:</b> Menganalisis kedudukan garis dan titik terhadap lingkaran, serta hubungan antarlingkaran.
+                    <b>Geometri Analitik (Lingkaran):</b> Menghitung jarak titik
+                    ke garis, menganalisis kedudukan dua lingkaran, menentukan
+                    garis singgung, dan memecahkan masalah kontekstual terkait
+                    persamaan lingkaran.
                   </li>
                   <li>
-                    <b>Vektor:</b> Menerapkan konsep kolinearitas, produk skalar, dan aplikasi vektor dalam fisika.
+                    <b>Transformasi Geometri & Matriks:</b> Menganalisis
+                    perubahan luas akibat transformasi, sifat-sifat determinan,
+                    dan aplikasi rotasi pada koordinat.
                   </li>
                   <li>
-                    <b>Transformasi Geometri:</b> Memahami pengaruh determinan matriks terhadap luas dan mengaplikasikan matriks rotasi.
+                    <b>Limit & Fungsi Lanjutan:</b> Menyelesaikan limit fungsi
+                    trigonometri dan limit di tak hingga, menerapkan Teorema
+                    Apit, dan membandingkan laju pertumbuhan fungsi.
                   </li>
                   <li>
-                    <b>Limit & Fungsi Lanjutan:</b> Menentukan nilai limit fungsi di tak hingga, menganalisis kecukupan data untuk limit, dan menerapkan Teorema Apit.
+                    <b>Polinomial & Fungsi Kuadrat:</b> Menerapkan Teorema Vieta,
+                    menganalisis grafik fungsi polinomial, dan menentukan
+                    jangkauan fungsi kuadrat.
                   </li>
-                   <li>
-                    <b>Polinomial & Fungsi Trigonometri:</b> Menggunakan Teorema Vieta untuk menganalisis akar-akar polinomial dan memahami sifat-sifat dasar fungsi trigonometri.
+                  <li>
+                    <b>Vektor:</b> Menganalisis kolinearitas, menentukan
+                    ortogonalitas, dan menerapkan konsep resultan kecepatan dalam
+                    masalah fisika.
                   </li>
                 </ul>
               </td>
@@ -426,33 +365,41 @@
               <td>Learning Objectives (LO)</td>
             </tr>
             <tr class="summary-table-content">
-              <td>
-                <b>Lingkaran</b>
-              </td>
+              <td><b>Lingkaran</b></td>
               <td>
                 <ul>
-                  <li>Menghitung jari-jari lingkaran yang menyinggung sebuah garis.</li>
-                  <li>Menganalisis hubungan dua lingkaran (bersinggungan).</li>
-                  <li>Menganalisis kecukupan data untuk menghitung panjang garis singgung.</li>
-                  <li>Mengidentifikasi garis-garis yang menyinggung sebuah lingkaran.</li>
+                  <li>
+                    Menghitung jari-jari lingkaran yang menyinggung sebuah
+                    garis.
+                  </li>
+                  <li>
+                    Menganalisis kedudukan dua lingkaran (bersinggungan,
+                    berpotongan, atau lepas).
+                  </li>
+                  <li>
+                    Mengidentifikasi garis-garis yang menyinggung lingkaran.
+                  </li>
+                  <li>
+                    Menganalisis kecukupan data untuk menghitung panjang garis
+                    singgung dari titik eksternal.
+                  </li>
                 </ul>
               </td>
             </tr>
              <tr class="summary-table-content">
-              <td><b>Vektor & Matriks</b></td>
+              <td><b>Transformasi Geometri & Matriks</b></td>
               <td>
                 <ul>
-                  <li>Memverifikasi sifat-sifat determinan matriks 2x2.</li>
-                  <li>Menganalisis kolinearitas tiga titik di ruang 3D.</li>
-                  <li>Menganalisis kecukupan data untuk menentukan formasi segitiga siku-siku menggunakan dot product.</li>
-                  <li>Menganalisis sistem persamaan linear dan sifat matriks koefisiennya.</li>
-                   <li>Menyelesaikan masalah fisika sederhana (resultan kecepatan) menggunakan vektor.</li>
+                    <li>Menganalisis kecukupan data untuk menentukan pengaruh transformasi terhadap luas.</li>
+                    <li>Mengidentifikasi sifat-sifat determinan matriks.</li>
+                    <li>Menghitung koordinat titik setelah rotasi.</li>
+                    <li>Mengidentifikasi properti geometri yang invarian terhadap rotasi.</li>
+                    <li>Mengaplikasikan matriks untuk menyelesaikan sistem persamaan linear.</li>
                 </ul>
               </td>
             </tr>
           </table>
         </div>
-
         <footer class="page-footer">
           <span
             ><b
@@ -466,7 +413,6 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 2: LANJUTAN RINGKASAN & PEMANTIK -->
       <section class="page">
         <header class="page-header">
@@ -483,32 +429,40 @@
           </div>
         </header>
         <div class="content-wrapper">
-           <table class="summary-table table-continuation">
+          <table class="summary-table table-continuation">
             <tr class="summary-table-header">
               <td>Topik</td>
               <td>Learning Objectives (LO)</td>
             </tr>
             <tr class="summary-table-content">
-              <td><b>Transformasi Geometri</b></td>
+              <td><b>Limit & Fungsi Lanjutan</b></td>
               <td>
                 <ul>
-                    <li>Menganalisis kecukupan data untuk menentukan perubahan luas akibat transformasi matriks.</li>
-                    <li>Mengaplikasikan matriks rotasi untuk menemukan koordinat bayangan sebuah titik.</li>
-                    <li>Mengidentifikasi properti geometri yang invarian (tidak berubah) di bawah transformasi rotasi.</li>
+                    <li>Menganalisis kecukupan data untuk menentukan nilai limit trigonometri.</li>
+                    <li>Menyelesaikan soal limit di tak hingga dalam konteks.</li>
+                    <li>Menerapkan Teorema Apit untuk menyimpulkan nilai limit.</li>
+                    <li>Membandingkan laju pertumbuhan fungsi eksponensial dan polinomial.</li>
+                     <li>Menganalisis kecukupan data untuk menentukan jangkauan fungsi kuadrat.</li>
                 </ul>
               </td>
             </tr>
             <tr class="summary-table-content">
-              <td><b>Limit, Polinomial & Fungsi</b></td>
+              <td><b>Polinomial & Fungsi Trigonometri</b></td>
               <td>
                 <ul>
-                    <li>Menganalisis kecukupan data untuk menentukan nilai limit fungsi trigonometri.</li>
-                    <li>Memverifikasi sifat-sifat akar polinomial menggunakan Teorema Vieta.</li>
-                    <li>Menganalisis sifat-sifat grafik fungsi trigonometri (amplitudo, periode, pergeseran).</li>
-                    <li>Menghitung limit di tak hingga untuk fungsi rasional dalam konteks fisika.</li>
-                    <li>Menganalisis kecukupan data untuk menentukan jangkauan (range) fungsi kuadrat.</li>
-                    <li>Mengaplikasikan Teorema Apit untuk menyimpulkan nilai limit.</li>
-                    <li>Membandingkan laju pertumbuhan fungsi eksponensial dan polinomial.</li>
+                  <li>Menerapkan Teorema Vieta untuk polinomial derajat tiga.</li>
+                  <li>Menganalisis sifat grafik fungsi kosinus (amplitudo, periode, pergeseran).</li>
+                  <li>Menganalisis perilaku grafik fungsi polinomial.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="summary-table-content">
+              <td><b>Vektor</b></td>
+              <td>
+                <ul>
+                    <li>Menganalisis kolinearitas tiga titik dalam ruang 3D.</li>
+                    <li>Menganalisis kecukupan data untuk menentukan ortogonalitas vektor.</li>
+                    <li>Menghitung jarak simpangan benda yang bergerak akibat pengaruh resultan kecepatan.</li>
                 </ul>
               </td>
             </tr>
@@ -516,13 +470,34 @@
           <h2 class="section-title">Alur & Pertanyaan Pemantik</h2>
           <ul class="guide-list">
             <li>
-              <b>Geometri (Lingkaran & Vektor):</b> "Bayangkan sebuah satelit mengorbit Bumi. Bagaimana kita bisa yakin lintasannya tidak akan menabrak satelit lain? Atau saat tiga pesawat jet terbang dalam formasi, bagaimana pilot tahu mereka berada dalam satu garis lurus? Konsep lingkaran dan vektor membantu kita memetakan posisi dan hubungan objek-objek ini secara presisi."
+              <b>Geometri Analitik:</b> "Bagaimana radar di bandara bisa
+              memastikan dua pesawat tidak terlalu dekat? Jawabannya ada pada
+              konsep kedudukan dua lingkaran. Jika lintasan pesawat adalah
+              lingkaran, kondisi apa yang harus dipenuhi agar mereka
+              bersinggungan atau bahkan tidak berpotongan sama sekali?"
             </li>
             <li>
-              <b>Transformasi & Matriks:</b> "Pernahkah kalian berpikir bagaimana filter di Instagram bisa memutar atau mengubah ukuran wajah kalian secara real-time? Di baliknya, ada matriks transformasi yang bekerja. Apa rahasia di dalam matriks yang bisa mengubah gambar tanpa mengubah luasnya? Dan bagaimana kita bisa memprediksi posisi objek setelah diputar sekian derajat?"
+              <b>Aljabar (Matriks & Polinomial):</b> "Saat kamu mengedit foto
+              dan menerapkan filter, di baliknya ada operasi matriks yang
+              bekerja. Beberapa filter hanya mengubah warna, tapi ada juga yang
+              memutar atau meregangkan gambar. Sifat apa dari sebuah matriks
+              yang menentukan apakah luas gambar akan tetap sama atau berubah?"
             </li>
             <li>
-              <b>Limit, Polinomial & Fungsi:</b> "Sebuah benda panas yang didiamkan, suhunya akan terus turun, tapi tidak akan pernah lebih dingin dari suhu ruangan. Nilai 'batas' suhu ini adalah konsep limit. Bagaimana kita bisa memprediksi nilai akhir dari suatu proses yang berjalan selamanya? Dan bagaimana perilaku jangka panjang fungsi eksponensial (seperti penyebaran virus) dibandingkan fungsi polinomial (seperti lintasan roller coaster)?"
+              <b>Kalkulus (Limit):</b> "Bayangkan kamu menuang air panas ke
+              dalam gelas. Suhu air akan turun dan semakin lama akan semakin
+              mendekati suhu ruangan, tapi tidak pernah melebihinya. Konsep
+              matematika apa yang bisa menjelaskan 'nilai batas' yang didekati
+              oleh suhu air ini seiring berjalannya waktu?"
+            </li>
+            <li>
+              <b>Kecukupan Data:</b> "Dalam memecahkan sebuah misteri, seorang
+              detektif membutuhkan petunjuk. Kadang satu petunjuk sudah cukup,
+              tapi seringkali butuh dua petunjuk yang digabungkan. Soal-soal
+              kecukupan data ini melatih kita berpikir seperti detektif:
+              informasi mana yang benar-benar kita butuhkan, dan mana yang
+              tidak relevan atau bahkan kurang untuk menjawab sebuah
+              pertanyaan?"
             </li>
           </ul>
         </div>
@@ -539,7 +514,6 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 3: Soal 1 -->
       <section class="page">
         <header class="page-header">
@@ -561,11 +535,11 @@
             <table class="soal-card">
               <tr>
                 <td>Topik</td>
-                <td>Geometri Analitik</td>
+                <td>Lingkaran</td>
               </tr>
               <tr>
                 <td>Sub Topik</td>
-                <td>Jarak Titik ke Garis (Aplikasi Lingkaran)</td>
+                <td>Jarak Titik ke Garis</td>
               </tr>
               <tr>
                 <td>Level Kognitif</td>
@@ -575,8 +549,9 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">1.</div>
               <div class="soal-konten">
-                Sebuah roda gigi pada mesin berpusat di (-3, 5) dan menyinggung garis $4x - 3y + 2 = 0$. Jari-jari roda gigi tersebut adalah...
-                 <ol class="pilihan-ganda">
+                Sebuah roda gigi pada mesin berpusat di (-3, 5) dan menyinggung
+                garis $4x - 3y + 2 = 0$. Jari-jari roda gigi tersebut adalah...
+                <ol class="pilihan-ganda">
                   <li data-option="A">3</li>
                   <li data-option="B">5</li>
                   <li data-option="C">4</li>
@@ -600,7 +575,6 @@
           >
         </footer>
       </section>
-      
       <!-- HALAMAN 4: Pembahasan Soal 1 -->
       <section class="page">
         <header class="page-header">
@@ -617,36 +591,47 @@
           </div>
         </header>
         <div class="content-wrapper">
-           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-            <div class="pembahasan-box">
-                <div class="soal-pembahasan">
-                    <div class="soal-nomor">1.</div>
-                    <div class="soal-konten">
-                        <div class="pembahasan-detail">
-                            <b class="jawaban">Jawaban: B. 5</b><br />
-                            <b>Pembahasan Detail:</b><br />
-                            Jari-jari lingkaran yang berpusat di $(x_1, y_1)$ dan menyinggung garis $Ax + By + C = 0$ sama dengan jarak dari titik pusat ke garis singgung tersebut.
-                            <br /><br />
-                            <b>Langkah 1: Identifikasi komponen dari soal.</b><br />
-                            <ul>
-                                <li>Titik pusat lingkaran $(x_1, y_1) = (-3, 5)$.</li>
-                                <li>Persamaan garis singgung: $4x - 3y + 2 = 0$, sehingga $A=4$, $B=-3$, dan $C=2$.</li>
-                            </ul>
-                            <br />
-                            <b>Langkah 2: Gunakan rumus jarak dari titik ke garis.</b><br />
-                            Rumus jarak (yang juga merupakan jari-jari, $r$) adalah:
-                            $$r = \frac{|Ax_1 + By_1 + C|}{\sqrt{A^2 + B^2}}$$
-                            <br />
-                            <b>Langkah 3: Substitusikan nilai-nilai yang diketahui.</b><br />
-                            $$r = \frac{|(4)(-3) + (-3)(5) + 2|}{\sqrt{(4)^2 + (-3)^2}}$$
-                            $$r = \frac{|-12 - 15 + 2|}{\sqrt{16 + 9}}$$
-                            $$r = \frac{|-25|}{\sqrt{25}} = \frac{25}{5} = 5$$
-                            <br />
-                            Jadi, jari-jari roda gigi tersebut adalah 5.
-                        </div>
-                    </div>
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">1.</div>
+              <div class="soal-konten">
+                <div class="pembahasan-detail">
+                  <b class="jawaban">Jawaban: B. 5</b><br />
+                  <b>Pembahasan Detail:</b><br />
+                  <b>Langkah 1: Pahami konsep soal.</b><br />
+                  Jari-jari sebuah lingkaran (dalam hal ini, roda gigi) yang
+                  menyinggung sebuah garis lurus adalah sama dengan jarak tegak
+                  lurus dari titik pusat lingkaran ke garis tersebut.
+                  <br /><br />
+                  <b>Langkah 2: Identifikasi data yang diketahui.</b><br />
+                  <ul>
+                    <li>
+                      Titik pusat lingkaran $(x_1, y_1)$ adalah $(-3, 5)$.
+                    </li>
+                    <li>
+                      Persamaan garis singgung adalah $4x - 3y + 2 = 0$. Dari
+                      sini, kita dapatkan koefisien $A=4$, $B=-3$, dan $C=2$.
+                    </li>
+                  </ul>
+                  <br />
+                  <b>Langkah 3: Gunakan rumus jarak dari titik ke garis.</b><br />
+                  Rumus untuk menghitung jarak ($d$) dari titik $(x_1, y_1)$ ke
+                  garis $Ax + By + C = 0$ adalah:
+                  $$d = \frac{|Ax_1 + By_1 + C|}{\sqrt{A^2 + B^2}}$$
+                  Dalam konteks ini, jarak $d$ adalah jari-jari $r$.
+                  <br /><br />
+                  <b>Langkah 4: Substitusikan nilai-nilai ke dalam rumus.</b><br />
+                  $$r = \frac{|(4)(-3) + (-3)(5) + 2|}{\sqrt{(4)^2 + (-3)^2}}$$
+                  $$r = \frac{|-12 - 15 + 2|}{\sqrt{16 + 9}}$$
+                  $$r = \frac{|-25|}{\sqrt{25}}$$
+                  $$r = \frac{25}{5} = 5$$
+                  <br />
+                  Jadi, jari-jari roda gigi tersebut adalah 5 unit.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
         <footer class="page-footer">
           <span
@@ -661,7 +646,6 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 5: Soal 2 -->
       <section class="page">
         <header class="page-header">
@@ -687,7 +671,7 @@
               </tr>
               <tr>
                 <td>Sub Topik</td>
-                <td>Determinan dan Luas (Kecukupan Data)</td>
+                <td>Luas Hasil Transformasi (Kecukupan Data)</td>
               </tr>
               <tr>
                 <td>Level Kognitif</td>
@@ -697,27 +681,31 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">2.</div>
               <div class="soal-konten">
-               Luas sebuah persegi dengan titik sudut di (0,0), (a,0), (a,a), dan (0,a) adalah $a^2$. Apa yang terjadi pada luasnya jika ditransformasi oleh matriks $T = \begin{pmatrix} 3 & 1 \\ 2 & 2 \end{pmatrix}$?
+                Luas sebuah persegi dengan titik sudut di (0,0), (a,0), (a,a),
+                dan (0,a) adalah $a^2$. Apa yang terjadi pada luasnya jika
+                ditransformasi oleh matriks
+                $T = \begin{pmatrix} 3 & 1 \\ 2 & 2 \end{pmatrix}$?
                 <div class="kecukupan-data-pernyataan">
-                  <span>(1)</span><span>Determinan matriks T adalah 4.</span>
+                  <span>(1)</span
+                  ><span>Determinan matriks T adalah 4.</span>
                   <span>(2)</span><span>Nilai $a=5$.</span>
                 </div>
                 <ol class="pilihan-ganda">
                   <li data-option="A">
-                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
-                    tetapi pernyataan (2) SAJA tidak cukup.
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
                   </li>
                   <li data-option="B">
-                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
-                    tetapi pernyataan (1) SAJA tidak cukup.
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
                   </li>
                   <li data-option="C">
-                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
-                    pernyataan (2) SAJA cukup.
-                  </li>
-                  <li data-option="D">
                     DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
                     pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
                   </li>
                   <li data-option="E">
                     Pernyataan (1) dan pernyataan (2) tidak cukup untuk
@@ -741,9 +729,8 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 6: Pembahasan Soal 2 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -758,34 +745,68 @@
           </div>
         </header>
         <div class="content-wrapper">
-           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-            <div class="pembahasan-box">
-                <div class="soal-pembahasan">
-                    <div class="soal-nomor">2.</div>
-                    <div class="soal-konten">
-                         <div class="pembahasan-detail">
-                            <b class="jawaban">Jawaban: A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</b><br />
-                            <b>Pembahasan Detail:</b><br />
-                            <b>Langkah 1: Pahami pertanyaan.</b><br />
-                            Pertanyaan "Apa yang terjadi pada luasnya?" menanyakan bagaimana luas akhir berhubungan dengan luas awal (misalnya, menjadi berapa kali lipat). Untuk mengetahui nilai numerik luas akhir, kita butuh luas awal. Namun, untuk mengetahui perubahannya (faktor pengali), kita hanya butuh determinan matriks transformasi.
-                            <br /><br />
-                            <b>Langkah 2: Hubungan Luas dan Determinan.</b><br />
-                            Luas bayangan ($L'$) setelah transformasi oleh matriks $T$ adalah $L' = |\det(T)| \times L_{awal}$.
-                            <br /><br />
-                            <b>Langkah 3: Hitung determinan dari informasi di soal.</b><br />
-                             Determinan matriks $T = \begin{pmatrix} 3 & 1 \\ 2 & 2 \end{pmatrix}$ adalah $\det(T) = (3)(2) - (1)(2) = 6 - 2 = 4$. Ini berarti luas bayangan akan menjadi 4 kali luas awal. Informasi ini sudah cukup untuk menjawab "apa yang terjadi pada luasnya", yaitu luasnya menjadi 4 kali lipat.
-                            <br /><br />
-                            <b>Analisis Pernyataan (1):</b> "Determinan matriks T adalah 4."<br/>
-                            Pernyataan ini memberikan nilai $|\det(T)| = 4$. Dengan informasi ini, kita bisa menyimpulkan bahwa $L' = 4 \times L_{awal}$. Ini menjawab pertanyaan tentang apa yang terjadi pada luasnya. Pernyataan (1) SAJA cukup.
-                            <br /><br />
-                            <b>Analisis Pernyataan (2):</b> "Nilai $a=5$."<br/>
-                            Pernyataan ini memberitahu kita luas awal, yaitu $L_{awal} = a^2 = 5^2 = 25$. Namun, tanpa mengetahui determinan matriks T, kita tidak bisa tahu apa yang terjadi pada luas tersebut setelah transformasi. Pernyataan (2) SAJA tidak cukup.
-                            <br /><br />
-                            Karena pernyataan (1) saja sudah cukup dan pernyataan (2) saja tidak cukup, jawaban yang benar adalah A.
-                        </div>
-                    </div>
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">2.</div>
+              <div class="soal-konten">
+                <div class="pembahasan-detail">
+                  <b class="jawaban"
+                    >Jawaban: A. Pernyataan (1) SAJA cukup untuk menjawab
+                    pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</b
+                  ><br />
+                  <b>Pembahasan Detail:</b><br />
+                  <b>Langkah 1: Pahami hubungan antara transformasi dan luas.</b
+                  ><br />
+                  Jika sebuah bangun datar dengan Luas Awal ($L_{awal}$)
+                  ditransformasikan oleh sebuah matriks $T$, maka luas bangun
+                  hasil transformasi ($L_{akhir}$) adalah:
+                  $$L_{akhir} = |\det(T)| \times L_{awal}$$
+                  Pertanyaan "Apa yang terjadi pada luasnya?" berarti kita
+                  diminta untuk menentukan hubungan antara $L_{akhir}$ dan
+                  $L_{awal}$, atau menentukan nilai $L_{akhir}$ secara
+                  spesifik.
+                  <br /><br />
+                  <b>Langkah 2: Analisis informasi dari soal.</b><br />
+                  <ul>
+                    <li>Luas awal persegi adalah $L_{awal} = a^2$.</li>
+                    <li>
+                      Matriks transformasi adalah
+                      $T = \begin{pmatrix} 3 & 1 \\ 2 & 2 \end{pmatrix}$. Kita
+                      bisa menghitung determinannya: $\det(T) = (3)(2) -
+                      (1)(2) = 6-2 = 4$.
+                    </li>
+                  </ul>
+                  Dari informasi di soal saja, kita sudah tahu bahwa
+                  $L_{akhir} = |\det(T)| \times L_{awal} = |4| \times a^2 =
+                  4a^2$.
+                  Jadi, kita dapat menjawab bahwa "luasnya menjadi 4 kali
+                  luas semula".
+                  <br /><br />
+                  <b>Analisis Pernyataan (1):</b><br />
+                  "Determinan matriks T adalah 4."<br />
+                  Pernyataan ini memberi tahu kita nilai $|\det(T)| = 4$. Dengan
+                  informasi ini, kita dapat menyimpulkan bahwa
+                  $L_{akhir} = 4 \times L_{awal}$. Ini sudah cukup untuk
+                  menjelaskan apa yang terjadi pada luasnya. Pernyataan (1)
+                  SAJA cukup. (Perhatikan bahwa informasi ini sebenarnya sudah
+                  bisa dihitung dari soal, membuatnya *redundant* tapi tetap
+                  cukup).
+                  <br /><br />
+                  <b>Analisis Pernyataan (2):</b><br />
+                  "Nilai $a=5$."<br />
+                  Pernyataan ini memberi tahu kita Luas Awal, $L_{awal} = 5^2 =
+                  25$. Namun, tanpa mengetahui faktor pengali (yaitu
+                  determinan), kita tidak dapat mengetahui apa yang terjadi pada
+                  luasnya. Kita tidak bisa menghitung $L_{akhir}$. Pernyataan
+                  (2) SAJA tidak cukup.
+                  <br /><br />
+                  Karena pernyataan (1) saja sudah cukup dan pernyataan (2)
+                  saja tidak cukup, maka jawabannya adalah A.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
         <footer class="page-footer">
           <span
@@ -800,9 +821,8 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 7: Soal 3 -->
-       <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -826,7 +846,7 @@
               </tr>
               <tr>
                 <td>Sub Topik</td>
-                <td>Limit Fungsi Trigonometri (Kecukupan Data)</td>
+                <td>Limit Trigonometri (Kecukupan Data)</td>
               </tr>
               <tr>
                 <td>Level Kognitif</td>
@@ -836,33 +856,33 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">3.</div>
               <div class="soal-konten">
-               Apakah nilai dari $\lim\limits_{x \to 0} \frac{\sin(ax)}{bx}$?
-                  <div class="kecukupan-data-pernyataan">
-                    <span>(1)</span><span>$a+b=5$</span>
-                    <span>(2)</span><span>$a-b=1$</span>
-                  </div>
-                  <ol class="pilihan-ganda">
-                    <li data-option="A">
-                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
-                      tetapi pernyataan (2) SAJA tidak cukup.
-                    </li>
-                    <li data-option="B">
-                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
-                      tetapi pernyataan (1) SAJA tidak cukup.
-                    </li>
-                    <li data-option="C">
-                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
-                      pernyataan (2) SAJA cukup.
-                    </li>
-                    <li data-option="D">
-                        Pernyataan (1) dan pernyataan (2) tidak cukup untuk
-                        menjawab pertanyaan.
-                    </li>
-                    <li data-option="E">
-                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
-                      pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
-                    </li>
-                  </ol>
+                Apakah nilai dari $\lim\limits_{x \to 0} \frac{\sin(ax)}{bx}$?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>$a+b=5$</span>
+                  <span>(2)</span><span>$a-b=1$</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
               </div>
             </div>
           </div>
@@ -880,9 +900,8 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 8: Pembahasan Soal 3 -->
-        <section class="page">
+      <section class="page">
         <header class="page-header">
           <div class="header-top-box">
             <div>
@@ -897,38 +916,68 @@
           </div>
         </header>
         <div class="content-wrapper">
-           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-            <div class="pembahasan-box">
-                <div class="soal-pembahasan">
-                    <div class="soal-nomor">3.</div>
-                    <div class="soal-konten">
-                        <div class="pembahasan-detail">
-                            <b class="jawaban">Jawaban: E. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</b><br />
-                            <b>Pembahasan Detail:</b><br />
-                            <b>Langkah 1: Pahami pertanyaan.</b><br />
-                            Kita perlu mencari nilai dari limit $\lim\limits_{x \to 0} \frac{\sin(ax)}{bx}$. Berdasarkan sifat dasar limit trigonometri, nilai dari limit ini adalah $\frac{a}{b}$. Jadi, pertanyaan ini setara dengan "Berapakah nilai dari $\frac{a}{b}$?". Untuk menjawabnya, kita perlu mengetahui nilai $a$ dan $b$ secara spesifik.
-                            <br /><br />
-                            <b>Analisis Pernyataan (1):</b> $a+b=5$.<br />
-                            Pernyataan ini memberikan satu persamaan dengan dua variabel. Ada banyak kemungkinan pasangan $(a,b)$ yang memenuhi, misalnya $(1,4)$, $(2,3)$, $(4,1)$. Masing-masing akan memberikan nilai $\frac{a}{b}$ yang berbeda ($\frac{1}{4}, \frac{2}{3}, 4$). Karena nilainya tidak tunggal, pernyataan (1) SAJA tidak cukup.
-                            <br /><br />
-                            <b>Analisis Pernyataan (2):</b> $a-b=1$.<br />
-                            Sama seperti sebelumnya, ini adalah satu persamaan dengan dua variabel. Kemungkinan pasangan $(a,b)$ adalah $(2,1)$, $(3,2)$, $(4,3)$, yang menghasilkan nilai $\frac{a}{b}$ yang berbeda ($2, \frac{3}{2}, \frac{4}{3}$). Pernyataan (2) SAJA tidak cukup.
-                            <br /><br />
-                             <b>Analisis Pernyataan (1) dan (2) Bersama-sama:</b><br />
-                            Kita memiliki sistem persamaan linear dua variabel:
-                            <ol>
-                                <li>$a+b=5$</li>
-                                <li>$a-b=1$</li>
-                            </ol>
-                            Dengan metode eliminasi (menjumlahkan kedua persamaan), kita dapatkan:
-                            $$(a+b) + (a-b) = 5+1$$
-                            $$2a = 6 \implies a=3$$
-                            Substitusikan $a=3$ ke persamaan pertama: $3+b=5 \implies b=2$.
-                            Dengan kedua pernyataan, kita mendapatkan nilai unik $a=3$ dan $b=2$. Maka, nilai limit $\frac{a}{b} = \frac{3}{2}$ dapat ditentukan. Kedua pernyataan BERSAMA-SAMA cukup.
-                        </div>
-                    </div>
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">3.</div>
+              <div class="soal-konten">
+                <div class="pembahasan-detail">
+                  <b class="jawaban"
+                    >Jawaban: C. DUA pernyataan BERSAMA-SAMA cukup untuk
+                    menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak
+                    cukup.</b
+                  ><br />
+                  <b>Pembahasan Detail:</b><br />
+                  <b>Langkah 1: Pahami properti limit yang relevan.</b><br />
+                  Untuk limit fungsi trigonometri, terdapat sifat dasar:
+                  $$\lim\limits_{x \to 0} \frac{\sin(ax)}{bx} = \frac{a}{b}$$
+                  Untuk dapat menjawab pertanyaan "Apakah nilai dari limit
+                  tersebut?", kita perlu mengetahui nilai dari rasio $\frac{a}{b}$.
+                  <br /><br />
+                  <b>Analisis Pernyataan (1):</b><br />
+                  "$a+b=5$."<br />
+                  Pernyataan ini memberikan satu persamaan dengan dua variabel.
+                  Ada banyak pasangan $(a, b)$ yang memenuhi, misalnya:
+                  <ul>
+                    <li>Jika $a=1, b=4$, maka nilai limit adalah $\frac{1}{4}$.</li>
+                    <li>Jika $a=2, b=3$, maka nilai limit adalah $\frac{2}{3}$.</li>
+                    <li>Jika $a=4, b=1$, maka nilai limit adalah $\frac{4}{1}=4$.</li>
+                  </ul>
+                  Karena kita mendapatkan nilai limit yang berbeda-beda,
+                  pernyataan (1) SAJA tidak cukup.
+                  <br /><br />
+                  <b>Analisis Pernyataan (2):</b><br />
+                  "$a-b=1$."<br />
+                  Sama seperti sebelumnya, pernyataan ini juga tidak memberikan
+                  nilai unik untuk rasio $\frac{a}{b}$. Contoh:
+                  <ul>
+                    <li>Jika $a=2, b=1$, maka nilai limit adalah $\frac{2}{1}=2$.</li>
+                    <li>Jika $a=3, b=2$, maka nilai limit adalah $\frac{3}{2}$.</li>
+                  </ul>
+                  Karena kita mendapatkan nilai limit yang berbeda-beda,
+                  pernyataan (2) SAJA tidak cukup.
+                  <br /><br />
+                  <b>Analisis Pernyataan (1) dan (2) Bersama-sama:</b><br />
+                  Kita memiliki sistem persamaan linear dua variabel:
+                  <ol>
+                    <li>$a+b=5$</li>
+                    <li>$a-b=1$</li>
+                  </ol>
+                  Kita dapat menyelesaikannya dengan metode eliminasi. Jumlahkan
+                  kedua persamaan:
+                  $$(a+b)+(a-b) = 5+1$$
+                  $$2a=6 \implies a=3$$
+                  Substitusikan $a=3$ ke persamaan pertama:
+                  $$3+b=5 \implies b=2$$
+                  Dengan kedua pernyataan, kita mendapatkan nilai unik $a=3$ dan
+                  $b=2$. Maka, kita dapat menentukan nilai limit secara pasti:
+                  $$\lim\limits_{x \to 0} \frac{\sin(3x)}{2x} = \frac{3}{2}$$
+                  Karena kedua pernyataan bersama-sama cukup untuk menjawab,
+                  maka jawabannya adalah C.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
         <footer class="page-footer">
           <span
@@ -943,7 +992,6 @@
           >
         </footer>
       </section>
-
       <!-- HALAMAN 9: Soal 4 -->
       <section class="page">
         <header class="page-header">
@@ -979,13 +1027,165 @@
             <div class="soal-pembahasan">
               <div class="soal-nomor">4.</div>
               <div class="soal-konten">
-               Jika A adalah matriks 2x2. Manakah dari pernyataan berikut yang selalu benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+                Jika A adalah matriks 2x2. Manakah dari pernyataan berikut yang
+                selalu benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$det(A^T) = det(A)$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$det(kA) = k^2 det(A)$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Jika $det(A) \neq 0$, maka $A$ memiliki invers.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >$det(A^{-1}) = \frac{1}{det(A)}$</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >$det(A+B) = det(A) + det(B)$</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      <!-- HALAMAN 10: Pembahasan Soal 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">4.</div>
+              <div class="soal-konten">
+                <div class="pembahasan-detail">
+                  <b class="jawaban"
+                    >Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b
+                  ><br />
+                  <b>Pembahasan Detail:</b><br />
+                  Kita akan menganalisis setiap pernyataan berdasarkan
+                  sifat-sifat dasar determinan matriks.
+                  <br /><br />
+                  <b>Pernyataan 1: $det(A^T) = det(A)$</b><br />
+                  Ini adalah salah satu sifat fundamental determinan. Determinan
+                  sebuah matriks sama dengan determinan transposenya. Pernyataan
+                  ini <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 2: $det(kA) = k^2 det(A)$</b><br />
+                  Jika A adalah matriks berordo n x n, maka $det(kA) = k^n
+                  det(A)$. Karena A adalah matriks 2x2, maka n=2. Sehingga,
+                  $det(kA) = k^2 det(A)$. Pernyataan ini <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 3: Jika $det(A) \neq 0$, maka $A$ memiliki
+                    invers.</b><br />
+                  Ini adalah definisi dari matriks non-singular. Sebuah matriks
+                  persegi memiliki invers jika dan hanya jika determinannya
+                  tidak sama dengan nol. Pernyataan ini <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 4: $det(A^{-1}) = \frac{1}{det(A)}$</b><br />
+                  Ini adalah sifat determinan dari matriks invers, yang berlaku
+                  jika A memiliki invers (yaitu, $det(A) \neq 0$). Kita tahu
+                  bahwa $A A^{-1} = I$, maka $det(A A^{-1}) = det(I)$. Menggunakan
+                  sifat determinan perkalian, $det(A) \cdot det(A^{-1}) = 1$,
+                  sehingga $det(A^{-1}) = \frac{1}{det(A)}$. Pernyataan ini
+                  <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 5: $det(A+B) = det(A) + det(B)$</b><br />
+                  Determinan tidak bersifat distributif terhadap penjumlahan.
+                  Secara umum, $det(A+B) \neq det(A) + det(B)$. Pernyataan ini
+                  <b>SALAH</b>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+        <!-- HALAMAN 11: Soal 5 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Polinomial</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Teorema Vieta</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                  Akar-akar dari polinomial $x^3 - 6x^2 + 11x - 6 = 0$ adalah $x_1, x_2, x_3$. Manakah dari pernyataan berikut yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
                   <div class="pilihan-ganda-mcma">
-                    <div><input type="checkbox" /><span>$det(A^T) = det(A)$</span></div>
-                    <div><input type="checkbox" /><span>$det(kA) = k^2 det(A)$</span></div>
-                    <div><input type="checkbox" /><span>Jika $det(A) \neq 0$, maka $A$ memiliki invers.</span></div>
-                    <div><input type="checkbox" /><span>$det(A^{-1}) = \frac{1}{det(A)}$</span></div>
-                    <div><input type="checkbox" /><span>$det(A+B) = det(A) + det(B)$</span></div>
+                    <div><input type="checkbox" /><span>$x_1+x_2+x_3 = 6$</span></div>
+                    <div><input type="checkbox" /><span>$x_1x_2+x_1x_3+x_2x_3 = 11$</span></div>
+                    <div><input type="checkbox" /><span>$x_1x_2x_3 = 6$</span></div>
+                    <div><input type="checkbox" /><span>Salah satu akarnya adalah 1.</span></div>
+                    <div><input type="checkbox" /><span>Jumlah kuadrat akar-akarnya adalah 25.</span></div>
                   </div>
               </div>
             </div>
@@ -1004,8 +1204,7 @@
           >
         </footer>
       </section>
-
-      <!-- HALAMAN 10: Pembahasan Soal 4 -->
+      <!-- HALAMAN 12: Pembahasan Soal 5 -->
       <section class="page">
         <header class="page-header">
           <div class="header-top-box">
@@ -1021,34 +1220,45 @@
           </div>
         </header>
         <div class="content-wrapper">
-           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-            <div class="pembahasan-box">
-                <div class="soal-pembahasan">
-                    <div class="soal-nomor">4.</div>
-                    <div class="soal-konten">
-                        <div class="pembahasan-detail">
-                            <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br />
-                            <b>Pembahasan Detail:</b><br />
-                            Mari kita analisis setiap pernyataan berdasarkan sifat-sifat determinan.
-                            <br /><br />
-                            <b>Pernyataan 1: $det(A^T) = det(A)$</b><br />
-                            Ini adalah sifat dasar determinan. Determinan dari sebuah matriks sama dengan determinan dari transposenya. Pernyataan ini <b>BENAR</b>.
-                            <br /><br />
-                            <b>Pernyataan 2: $det(kA) = k^2 det(A)$</b><br />
-                            Sifat umum adalah $det(kA) = k^n det(A)$, di mana $n$ adalah ordo matriks. Karena A adalah matriks 2x2, maka $n=2$. Jadi, $det(kA) = k^2 det(A)$. Pernyataan ini <b>BENAR</b>.
-                            <br /><br />
-                            <b>Pernyataan 3: Jika $det(A) \neq 0$, maka $A$ memiliki invers.</b><br />
-                            Ini adalah syarat utama sebuah matriks persegi memiliki invers. Matriks yang determinannya tidak nol disebut matriks non-singular. Pernyataan ini <b>BENAR</b>.
-                            <br /><br />
-                            <b>Pernyataan 4: $det(A^{-1}) = \frac{1}{det(A)}$</b><br />
-                            Ini juga merupakan sifat dasar determinan untuk matriks yang memiliki invers (syaratnya $det(A) \neq 0$). Pernyataan ini <b>BENAR</b>.
-                            <br /><br />
-                            <b>Pernyataan 5: $det(A+B) = det(A) + det(B)$</b><br />
-                            Determinan tidak bersifat distributif terhadap penjumlahan atau pengurangan matriks. Sifat ini secara umum tidak berlaku. Pernyataan ini <b>SALAH</b>.
-                        </div>
-                    </div>
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                <div class="pembahasan-detail">
+                  <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br />
+                  <b>Pembahasan Detail:</b><br />
+                  Untuk polinomial $Ax^3 + Bx^2 + Cx + D = 0$, Teorema Vieta menyatakan hubungan antara koefisien dan akar-akarnya ($x_1, x_2, x_3$):
+                  <ul>
+                    <li>$x_1+x_2+x_3 = -B/A$</li>
+                    <li>$x_1x_2+x_1x_3+x_2x_3 = C/A$</li>
+                    <li>$x_1x_2x_3 = -D/A$</li>
+                  </ul>
+                  Dalam soal ini, $A=1$, $B=-6$, $C=11$, $D=-6$.
+                  <br/><br/>
+                  <b>Pernyataan 1: $x_1+x_2+x_3 = 6$</b><br/>
+                  $x_1+x_2+x_3 = -(-6)/1 = 6$. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 2: $x_1x_2+x_1x_3+x_2x_3 = 11$</b><br/>
+                  $x_1x_2+x_1x_3+x_2x_3 = 11/1 = 11$. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 3: $x_1x_2x_3 = 6$</b><br/>
+                  $x_1x_2x_3 = -(-6)/1 = 6$. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: Salah satu akarnya adalah 1.</b><br/>
+                  Kita bisa menguji dengan substitusi $x=1$ ke dalam polinomial:
+                  $P(1) = (1)^3 - 6(1)^2 + 11(1) - 6 = 1 - 6 + 11 - 6 = 0$.
+                  Karena $P(1)=0$, maka $x=1$ adalah salah satu akarnya. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 5: Jumlah kuadrat akar-akarnya adalah 25.</b><br/>
+                  Kita gunakan identitas: $x_1^2+x_2^2+x_3^2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_1x_3+x_2x_3)$.
+                  Dari hasil sebelumnya, kita tahu:
+                  $x_1^2+x_2^2+x_3^2 = (6)^2 - 2(11) = 36 - 22 = 14$.
+                  Nilai yang benar adalah 14, bukan 25. Pernyataan ini <b>SALAH</b>.
                 </div>
+              </div>
             </div>
+          </div>
         </div>
         <footer class="page-footer">
           <span
@@ -1063,8 +1273,7 @@
           >
         </footer>
       </section>
-
-      <!-- HALAMAN 11: Soal 5 -->
+        <!-- HALAMAN 13: Soal 6 -->
       <section class="page">
         <header class="page-header">
           <div class="header-top-box">
@@ -1083,96 +1292,62 @@
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Polinomial</td></tr>
-              <tr><td>Sub Topik</td><td>Teorema Vieta</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
-            </table>
-            <div class="soal-pembahasan">
-              <div class="soal-nomor">5.</div>
-              <div class="soal-konten">
-                Akar-akar dari polinomial $x^3 - 6x^2 + 11x - 6 = 0$ adalah $x_1, x_2, x_3$. Manakah dari pernyataan berikut yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>$x_1+x_2+x_3 = 6$</span></div>
-                  <div><input type="checkbox" /><span>$x_1x_2+x_1x_3+x_2x_3 = 11$</span></div>
-                  <div><input type="checkbox" /><span>$x_1x_2x_3 = 6$</span></div>
-                  <div><input type="checkbox" /><span>Salah satu akarnya adalah 1.</span></div>
-                  <div><input type="checkbox" /><span>Jumlah kuadrat akar-akarnya adalah 25.</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
-      </section>
-
-      <!-- HALAMAN 12: Pembahasan Soal 5 -->
-      <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
-        <div class="content-wrapper">
-          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-          <div class="pembahasan-box">
-            <div class="soal-pembahasan">
-              <div class="soal-nomor">5.</div>
-              <div class="soal-konten">
-                <div class="pembahasan-detail">
-                  <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br />
-                  <b>Pembahasan Detail:</b><br />
-                  Untuk polinomial $Ax^3+Bx^2+Cx+D=0$, dengan $A=1, B=-6, C=11, D=-6$, berlaku Teorema Vieta:<br/>
-                  <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li>$x_1+x_2+x_3 = -B/A$</li>
-                    <li>$x_1x_2+x_1x_3+x_2x_3 = C/A$</li>
-                    <li>$x_1x_2x_3 = -D/A$</li>
-                  </ul>
-                  <br/>
-                  <b>Pernyataan 1:</b> $x_1+x_2+x_3 = -(-6)/1 = 6$. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 2:</b> $x_1x_2+x_1x_3+x_2x_3 = 11/1 = 11$. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 3:</b> $x_1x_2x_3 = -(-6)/1 = 6$. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 4:</b> Untuk memeriksa apakah $x=1$ adalah akar, substitusikan ke dalam polinomial: $P(1) = 1^3 - 6(1)^2 + 11(1) - 6 = 1 - 6 + 11 - 6 = 0$. Karena hasilnya 0, maka $x=1$ adalah akar. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 5:</b> Jumlah kuadrat akar-akarnya adalah $x_1^2+x_2^2+x_3^2 = (x_1+x_2+x_3)^2 - 2(x_1x_2+x_1x_3+x_2x_3) = (6)^2 - 2(11) = 36-22 = 14$. Pernyataan mengatakan hasilnya 25. <b>SALAH</b>.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
-      </section>
-
-      <!-- HALAMAN 13: Soal 6 -->
-      <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
-        <div class="content-wrapper">
-          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
-          <div class="pembahasan-box">
-            <table class="soal-card">
-              <tr><td>Topik</td><td>Fungsi Trigonometri</td></tr>
-              <tr><td>Sub Topik</td><td>Analisis Grafik Fungsi Kosinus</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Fungsi Trigonometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Grafik Fungsi Kosinus</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">6.</div>
               <div class="soal-konten">
-                Perhatikan fungsi $f(x) = 2\cos(3x - \frac{\pi}{2})$. Manakah pernyataan berikut yang benar mengenai grafik fungsi tersebut? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>Amplitudonya adalah 2.</span></div>
-                  <div><input type="checkbox" /><span>Periodenya adalah $\frac{2\pi}{3}$.</span></div>
-                  <div><input type="checkbox" /><span>Grafik digeser ke kiri sejauh $\frac{\pi}{6}$.</span></div>
-                  <div><input type="checkbox" /><span>Nilai maksimumnya adalah 2.</span></div>
-                  <div><input type="checkbox" /><span>Grafik identik dengan $y=2\sin(3x)$.</span></div>
-                </div>
+                  Perhatikan fungsi $f(x) = 2\cos(3x - \frac{\pi}{2})$. Manakah pernyataan berikut yang benar mengenai grafik fungsi tersebut? <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div><input type="checkbox" /><span>Amplitudonya adalah 2.</span></div>
+                    <div><input type="checkbox" /><span>Periodenya adalah $\frac{2\pi}{3}$.</span></div>
+                    <div><input type="checkbox" /><span>Grafik digeser ke kiri sejauh $\frac{\pi}{6}$.</span></div>
+                    <div><input type="checkbox" /><span>Nilai maksimumnya adalah 2.</span></div>
+                    <div><input type="checkbox" /><span>Grafik identik dengan $y=2\sin(3x)$.</span></div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 14: Pembahasan Soal 6 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1182,64 +1357,143 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Pernyataan 1, 2, 4, dan 5 benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Fungsi $f(x) = A\cos(k(x-d))$ memiliki:<br/>
-                  - Amplitudo: $|A|$<br/>
-                  - Periode: $2\pi/|k|$<br/>
-                  - Pergeseran fasa: $d$<br/><br/>
-                  <b>Langkah 1: Ubah fungsi ke bentuk standar.</b><br/>
-                  $f(x) = 2\cos(3x - \frac{\pi}{2}) = 2\cos(3(x - \frac{\pi}{6}))$.<br/>
-                  Dari sini kita dapatkan $A=2$, $k=3$, dan $d=\frac{\pi}{6}$.<br/><br/>
-                  <b>Pernyataan 1:</b> Amplitudo adalah $|A|=2$. <b>BENAR</b>.
+                  Fungsi yang diberikan adalah $f(x) = 2\cos(3x - \frac{\pi}{2})$. Bentuk umumnya adalah $y = A\cos(kx+c)$.
                   <br/><br/>
-                  <b>Pernyataan 2:</b> Periode adalah $2\pi/|k| = 2\pi/3$. <b>BENAR</b>.
+                  <b>Pernyataan 1: Amplitudonya adalah 2.</b><br/>
+                  Amplitudo adalah $|A|$. Di sini, $A=2$, jadi amplitudonya adalah 2. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 3:</b> Pergeseran fasa $d=\frac{\pi}{6}$ (positif), artinya digeser ke kanan sejauh $\frac{\pi}{6}$. Pernyataan mengatakan digeser ke kiri. <b>SALAH</b>.
+                  <b>Pernyataan 2: Periodenya adalah $\frac{2\pi}{3}$.</b><br/>
+                  Periode dihitung dengan rumus $P = \frac{2\pi}{|k|}$. Di sini, $k=3$, jadi periodenya adalah $\frac{2\pi}{3}$. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 4:</b> Nilai maksimum fungsi kosinus adalah Amplitudo. Nilai maksimumnya adalah 2. <b>BENAR</b>.
+                  <b>Pernyataan 3: Grafik digeser ke kiri sejauh $\frac{\pi}{6}$.</b><br/>
+                  Pergeseran fasa (horizontal shift) ditemukan dengan menyetel argumen kosinus ke nol: $3x - \frac{\pi}{2} = 0 \implies 3x = \frac{\pi}{2} \implies x = \frac{\pi}{6}$. Karena tandanya positif, grafik digeser ke <b>kanan</b> sejauh $\frac{\pi}{6}$. Pernyataan ini <b>SALAH</b>.
                   <br/><br/>
-                  <b>Pernyataan 5:</b> Gunakan identitas kofungsi $\cos(\theta - \frac{\pi}{2}) = \sin(\theta)$. Dengan $\theta=3x$, maka $2\cos(3x - \frac{\pi}{2}) = 2\sin(3x)$. Grafik identik. <b>BENAR</b>.
+                  <b>Pernyataan 4: Nilai maksimumnya adalah 2.</b><br/>
+                  Nilai maksimum dari fungsi kosinus adalah Amplitudo. Jadi, nilai maksimumnya adalah 2. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 5: Grafik identik dengan $y=2\sin(3x)$.</b><br/>
+                  Kita gunakan identitas kofungsi: $\cos(\theta - \frac{\pi}{2}) = \sin(\theta)$.
+                  Dengan mengambil $\theta = 3x$, kita dapatkan:
+                  $$2\cos(3x - \frac{\pi}{2}) = 2\sin(3x)$$
+                  Jadi, kedua grafik tersebut identik. Pernyataan ini <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 15: Soal 7 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Vektor</td></tr>
-              <tr><td>Sub Topik</td><td>Kolinearitas dan Operasi Vektor</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Vektor</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Kolinearitas dan Operasi Vektor</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">7.</div>
               <div class="soal-konten">
-                Diberikan titik-titik A(1,2,3), B(2,4,5), dan C(3,6,7) di ruang. Tentukan status kebenaran dari setiap pernyataan berikut.
+                Diberikan titik-titik A(1,2,3), B(2,4,5), dan C(3,6,7) di ruang.
+                Tentukan status kebenaran dari setiap pernyataan berikut.
                 <table class="soal-kategori">
-                  <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
                   <tbody>
-                    <tr><td>Vektor $\vec{AB}$ dan $\vec{BC}$ adalah kelipatan.</td><td></td><td></td></tr>
-                    <tr><td>Titik A, B, dan C segaris (kolinear).</td><td></td><td></td></tr>
-                    <tr><td>$\vec{AB} \cdot \vec{AC} = 20$</td><td></td><td></td></tr>
-                    <tr><td>Luas segitiga ABC adalah nol.</td><td></td><td></td></tr>
+                    <tr>
+                      <td>Vektor $\vec{AB}$ dan $\vec{BC}$ adalah kelipatan.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Titik A, B, dan C segaris (kolinear).</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$\vec{AB} \cdot \vec{AC} = 20$</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Luas segitiga ABC adalah nol.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 16: Pembahasan Soal 7 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1249,59 +1503,162 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Benar, Benar, Salah, Benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  <b>Langkah Awal: Hitung vektor-vektor yang relevan.</b><br/>
-                  $\vec{AB} = B - A = (2-1, 4-2, 5-3) = (1, 2, 2)$.<br/>
-                  $\vec{BC} = C - B = (3-2, 6-4, 7-5) = (1, 2, 2)$.<br/>
-                  $\vec{AC} = C - A = (3-1, 6-2, 7-3) = (2, 4, 4)$.<br/><br/>
-                  <b>Pernyataan 1:</b> Karena $\vec{AB} = (1, 2, 2)$ dan $\vec{BC} = (1, 2, 2)$, maka $\vec{AB} = 1 \cdot \vec{BC}$. Mereka adalah kelipatan satu sama lain. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 2:</b> Titik A, B, dan C segaris jika $\vec{AB}$ adalah kelipatan dari $\vec{BC}$. Karena ini benar dan mereka berbagi titik B, maka ketiganya segaris. <b>BENAR</b>.
-                  <br/><br/>
-                  <b>Pernyataan 3:</b> $\vec{AB} \cdot \vec{AC} = (1)(2) + (2)(4) + (2)(4) = 2 + 8 + 8 = 18$. Pernyataan mengatakan hasilnya 20. <b>SALAH</b>.
-                  <br/><br/>
-                  <b>Pernyataan 4:</b> Karena titik-titiknya segaris, mereka tidak membentuk segitiga sejati. Luas dari "segitiga" yang terbentuk adalah nol. <b>BENAR</b>.
+                  <b>Langkah Awal: Hitung vektor-vektor yang relevan.</b>
+                  <ul>
+                    <li>$\vec{AB} = B - A = (2-1, 4-2, 5-3) = (1, 2, 2)$</li>
+                    <li>$\vec{BC} = C - B = (3-2, 6-4, 7-5) = (1, 2, 2)$</li>
+                    <li>$\vec{AC} = C - A = (3-1, 6-2, 7-3) = (2, 4, 4)$</li>
+                  </ul>
+                  <br />
+                  <b>Pernyataan 1: Vektor $\vec{AB}$ dan $\vec{BC}$ adalah
+                    kelipatan.</b><br />
+                  Dua vektor adalah kelipatan jika $\vec{u} = k \cdot \vec{v}$
+                  untuk suatu skalar $k$. Di sini, $\vec{AB} = (1, 2, 2)$ dan
+                  $\vec{BC} = (1, 2, 2)$. Jelas bahwa
+                  $\vec{AB} = 1 \cdot \vec{BC}$. Jadi, mereka adalah kelipatan.
+                  Pernyataan ini <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 2: Titik A, B, dan C segaris (kolinear).</b><br />
+                  Tiga titik A, B, C adalah kolinear jika vektor $\vec{AB}$
+                  adalah kelipatan dari vektor $\vec{BC}$. Karena kita sudah
+                  membuktikan ini di pernyataan 1, maka titik-titik tersebut
+                  segaris. Pernyataan ini <b>BENAR</b>.
+                  <br /><br />
+                  <b>Pernyataan 3: $\vec{AB} \cdot \vec{AC} = 20$</b><br />
+                  Kita hitung perkalian titik (dot product):
+                  $$\vec{AB} \cdot \vec{AC} = (1)(2) + (2)(4) + (2)(4) = 2 + 8 + 8 = 18$$
+                  Hasilnya adalah 18, bukan 20. Pernyataan ini <b>SALAH</b>.
+                  <br /><br />
+                  <b>Pernyataan 4: Luas segitiga ABC adalah nol.</b><br />
+                  Jika tiga titik segaris (kolinear), mereka tidak membentuk
+                  segitiga, atau bisa dianggap membentuk segitiga dengan luas
+                  nol. Karena A, B, C segaris, luas segitiga ABC adalah 0.
+                  Pernyataan ini <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-      
       <!-- HALAMAN 17: Soal 8 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Geometri Analitik</td></tr>
-              <tr><td>Sub Topik</td><td>Hubungan Antar Lingkaran</td></tr>
-              <tr><td>Level Kognitif</td><td>LOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Kedudukan Dua Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">8.</div>
               <div class="soal-konten">
-                 Diberikan dua lingkaran, L1: $x^2+y^2=4$ dan L2: $(x-3)^2+y^2=1$. Tentukan kesesuaian dari setiap pernyataan berikut mengenai hubungan kedua lingkaran.
+                Diberikan dua lingkaran, L1: $x^2+y^2=4$ dan L2:
+                $(x-3)^2+y^2=1$. Tentukan kesesuaian dari setiap pernyataan
+                berikut mengenai hubungan kedua lingkaran.
                 <table class="soal-kategori">
-                  <thead><tr><th>Pernyataan</th><th>Sesuai</th><th>Tidak Sesuai</th></tr></thead>
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Sesuai</th>
+                      <th>Tidak Sesuai</th>
+                    </tr>
+                  </thead>
                   <tbody>
-                    <tr><td>Jarak antara kedua pusat lingkaran adalah 3.</td><td></td><td></td></tr>
-                    <tr><td>Selisih jari-jari kedua lingkaran adalah 2.</td><td></td><td></td></tr>
-                    <tr><td>Kedua lingkaran bersinggungan di luar.</td><td></td><td></td></tr>
-                    <tr><td>Kedua lingkaran tidak berpotongan.</td><td></td><td></td></tr>
+                    <tr>
+                      <td>
+                        Jarak antara kedua pusat lingkaran adalah 3.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Selisih jari-jari kedua lingkaran adalah 2.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Kedua lingkaran bersinggungan di luar.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Kedua lingkaran tidak berpotongan.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 18: Pembahasan Soal 8 -->
-       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1309,60 +1666,126 @@
               <div class="soal-nomor">8.</div>
               <div class="soal-konten">
                 <div class="pembahasan-detail">
-                  <b class="jawaban">Jawaban: Sesuai, Tidak Sesuai, Sesuai, Sesuai.</b><br />
+                  <b class="jawaban">Jawaban: Sesuai, Tidak Sesuai, Sesuai, Tidak Sesuai.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  <b>Langkah Awal: Identifikasi pusat dan jari-jari kedua lingkaran.</b><br/>
-                  L1: $x^2+y^2=4 \implies$ Pusat $P_1(0,0)$, Jari-jari $r_1 = \sqrt{4} = 2$.<br/>
-                  L2: $(x-3)^2+y^2=1 \implies$ Pusat $P_2(3,0)$, Jari-jari $r_2 = \sqrt{1} = 1$.<br/><br/>
-                  <b>Pernyataan 1:</b> Jarak antara kedua pusat ($d$) adalah jarak antara $P_1(0,0)$ dan $P_2(3,0)$.
+                  <b>Langkah 1: Identifikasi pusat dan jari-jari kedua lingkaran.</b>
+                  <ul>
+                    <li>L1: $x^2+y^2=4$. Pusat $P_1(0,0)$, jari-jari $r_1 = \sqrt{4} = 2$.</li>
+                    <li>L2: $(x-3)^2+y^2=1$. Pusat $P_2(3,0)$, jari-jari $r_2 = \sqrt{1} = 1$.</li>
+                  </ul>
+                  <br />
+                  <b>Langkah 2: Hitung jarak antara kedua pusat ($d$).</b>
                   $$d = \sqrt{(3-0)^2 + (0-0)^2} = \sqrt{3^2} = 3$$
-                  Pernyataan <b>SESUAI</b>.
-                  <br/><br/>
-                  <b>Pernyataan 2:</b> Selisih jari-jari adalah $|r_1-r_2| = |2-1|=1$. Pernyataan mengatakan hasilnya 2. Pernyataan <b>TIDAK SESUAI</b>.
-                  <br/><br/>
-                  <b>Pernyataan 3:</b> Kedua lingkaran bersinggungan di luar jika jarak antar pusat sama dengan jumlah jari-jari ($d = r_1+r_2$). Kita tahu $d=3$ dan $r_1+r_2=2+1=3$. Karena $d=r_1+r_2$, maka mereka bersinggungan di luar. Pernyataan <b>SESUAI</b>.
-                  <br/><br/>
-                  <b>Pernyataan 4:</b> Bersinggungan berarti mereka hanya bertemu di satu titik. Mereka tidak berpotongan di dua titik yang berbeda. Pernyataan <b>SESUAI</b>.
+                  <br />
+                  <b>Pernyataan 1: Jarak antara kedua pusat lingkaran adalah 3.</b><br />
+                  Hasil perhitungan kita menunjukkan $d=3$. Pernyataan ini <b>SESUAI</b>.
+                  <br /><br />
+                  <b>Pernyataan 2: Selisih jari-jari kedua lingkaran adalah 2.</b><br />
+                  Selisih jari-jari adalah $|r_1 - r_2| = |2 - 1| = 1$. Pernyataan ini mengatakan selisihnya 2. Pernyataan ini <b>TIDAK SESUAI</b>.
+                  <br /><br />
+                  <b>Pernyataan 3: Kedua lingkaran bersinggungan di luar.</b><br />
+                  Kondisi dua lingkaran bersinggungan di luar adalah jika jarak antar pusat sama dengan jumlah jari-jarinya ($d = r_1 + r_2$).
+                  <ul>
+                    <li>Jarak pusat, $d=3$.</li>
+                    <li>Jumlah jari-jari, $r_1+r_2 = 2+1=3$.</li>
+                  </ul>
+                  Karena $d = r_1+r_2$, kedua lingkaran bersinggungan di luar. Pernyataan ini <b>SESUAI</b>.
+                  <br /><br />
+                  <b>Pernyataan 4: Kedua lingkaran tidak berpotongan.</b><br />
+                  Karena kedua lingkaran bersinggungan, mereka berpotongan tepat di satu titik. Oleh karena itu, pernyataan bahwa mereka "tidak berpotongan" adalah salah. Pernyataan ini <b>TIDAK SESUAI</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 19: Soal 9 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Transformasi Geometri</td></tr>
-              <tr><td>Sub Topik</td><td>Rotasi Titik</td></tr>
-              <tr><td>Level Kognitif</td><td>LOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Transformasi Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Rotasi Titik</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">9.</div>
               <div class="soal-konten">
-                Sebuah objek pada layar komputer yang terletak pada titik (10, 20) akan diputar sebesar $45^\circ$ berlawanan arah jarum jam dengan pusat putaran di titik asal (0,0). Posisi baru objek tersebut setelah rotasi adalah... (Gunakan $\sin 45^\circ = \cos 45^\circ = \frac{\sqrt{2}}{2}$)
-                <ol class="pilihan-ganda">
-                  <li data-option="A">$(-5\sqrt{2}, 15\sqrt{2})$</li>
-                  <li data-option="B">$(5\sqrt{2}, 15\sqrt{2})$</li>
-                  <li data-option="C">$(-15\sqrt{2}, -5\sqrt{2})$</li>
-                  <li data-option="D">$(10, 20)$</li>
-                  <li data-option="E">$(15\sqrt{2}, 5\sqrt{2})$</li>
-                </ol>
+                  Sebuah objek pada layar komputer yang terletak pada titik (10, 20) akan diputar sebesar $45^\circ$ berlawanan arah jarum jam dengan pusat putaran di titik asal (0,0). Posisi baru objek tersebut setelah rotasi adalah... (Gunakan $\sin 45^\circ = \cos 45^\circ = \frac{\sqrt{2}}{2}$)
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$(-5\sqrt{2}, 15\sqrt{2})$</li>
+                    <li data-option="B">$(5\sqrt{2}, 15\sqrt{2})$</li>
+                    <li data-option="C">$(-15\sqrt{2}, -5\sqrt{2})$</li>
+                    <li data-option="D">$(10, 20)$</li>
+                    <li data-option="E">$(15\sqrt{2}, 5\sqrt{2})$</li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-      
       <!-- HALAMAN 20: Pembahasan Soal 9 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1372,56 +1795,122 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: A. $(-5\sqrt{2}, 15\sqrt{2})$</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Rumus rotasi titik $(x, y)$ sebesar $\theta$ berlawanan arah jarum jam dengan pusat (0,0) adalah:<br/>
-                  $x' = x \cos\theta - y \sin\theta$<br/>
-                  $y' = x \sin\theta + y \cos\theta$<br/><br/>
-                  <b>Langkah 1: Identifikasi nilai-nilai.</b><br/>
-                  $(x, y) = (10, 20)$, $\theta=45^\circ$, $\sin 45^\circ = \cos 45^\circ = \frac{\sqrt{2}}{2}$.<br/><br/>
-                  <b>Langkah 2: Hitung $x'$.</b><br/>
-                  $x' = 10 \cos 45^\circ - 20 \sin 45^\circ = 10(\frac{\sqrt{2}}{2}) - 20(\frac{\sqrt{2}}{2}) = 5\sqrt{2} - 10\sqrt{2} = -5\sqrt{2}$.<br/><br/>
-                  <b>Langkah 3: Hitung $y'$.</b><br/>
-                  $y' = 10 \sin 45^\circ + 20 \cos 45^\circ = 10(\frac{\sqrt{2}}{2}) + 20(\frac{\sqrt{2}}{2}) = 5\sqrt{2} + 10\sqrt{2} = 15\sqrt{2}$.<br/><br/>
-                  Posisi baru adalah $(-5\sqrt{2}, 15\sqrt{2})$.
+                  <b>Langkah 1: Pahami rumus rotasi.</b><br />
+                  Rotasi sebuah titik $(x, y)$ sebesar sudut $\theta$ berlawanan arah jarum jam dengan pusat O(0,0) menghasilkan titik baru $(x', y')$ dengan rumus:
+                  $$x' = x \cos\theta - y \sin\theta$$
+                  $$y' = x \sin\theta + y \cos\theta$$
+                  <br/>
+                  <b>Langkah 2: Identifikasi nilai-nilai yang diketahui.</b>
+                  <ul>
+                      <li>Titik awal $(x, y) = (10, 20)$</li>
+                      <li>Sudut rotasi $\theta = 45^\circ$</li>
+                      <li>Nilai trigonometri: $\cos 45^\circ = \frac{\sqrt{2}}{2}$ dan $\sin 45^\circ = \frac{\sqrt{2}}{2}$</li>
+                  </ul>
+                  <br/>
+                  <b>Langkah 3: Hitung koordinat x baru (x').</b>
+                  $$x' = 10 \cos 45^\circ - 20 \sin 45^\circ$$
+                  $$x' = 10 \left(\frac{\sqrt{2}}{2}\right) - 20 \left(\frac{\sqrt{2}}{2}\right)$$
+                  $$x' = 5\sqrt{2} - 10\sqrt{2} = -5\sqrt{2}$$
+                  <br/>
+                  <b>Langkah 4: Hitung koordinat y baru (y').</b>
+                  $$y' = 10 \sin 45^\circ + 20 \cos 45^\circ$$
+                  $$y' = 10 \left(\frac{\sqrt{2}}{2}\right) + 20 \left(\frac{\sqrt{2}}{2}\right)$$
+                  $$y' = 5\sqrt{2} + 10\sqrt{2} = 15\sqrt{2}$$
+                  <br/>
+                  Jadi, posisi baru objek setelah rotasi adalah $(-5\sqrt{2}, 15\sqrt{2})$.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
-      <!-- HALAMAN 21: Soal 10 -->
+        <!-- HALAMAN 21: Soal 10 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Limit Fungsi</td></tr>
-              <tr><td>Sub Topik</td><td>Limit di Tak Hingga</td></tr>
-              <tr><td>Level Kognitif</td><td>LOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Limit Fungsi</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Limit di Tak Hingga</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">10.</div>
               <div class="soal-konten">
-                Suhu sebuah benda yang dipanaskan mendekati suhu ruangan $25^\circ C$ setelah pemanas dimatikan. Model suhu benda setelah $t$ menit adalah $T(t) = 25 + \frac{100}{t+1}$. Suhu benda setelah waktu yang sangat lama ($\lim\limits_{t\to\infty} T(t)$) adalah...
-                <ol class="pilihan-ganda">
-                  <li data-option="A">$0^\circ C$</li>
-                  <li data-option="B">$25^\circ C$</li>
-                  <li data-option="C">$100^\circ C$</li>
-                  <li data-option="D">$125^\circ C$</li>
-                  <li data-option="E">Tak hingga</li>
-                </ol>
+                  Suhu sebuah benda yang dipanaskan mendekati suhu ruangan $25^\circ C$ setelah pemanas dimatikan. Model suhu benda setelah $t$ menit adalah $T(t) = 25 + \frac{100}{t+1}$. Suhu benda setelah waktu yang sangat lama ($\lim\limits_{t\to\infty} T(t)$) adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$0^\circ C$</li>
+                    <li data-option="B">$25^\circ C$</li>
+                    <li data-option="C">$100^\circ C$</li>
+                    <li data-option="D">$125^\circ C$</li>
+                    <li data-option="E">Tak hingga</li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-      
       <!-- HALAMAN 22: Pembahasan Soal 10 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1431,57 +1920,134 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: B. $25^\circ C$</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Kita perlu menghitung limit dari $T(t)$ saat $t \to \infty$.<br/>
-                  $$\lim_{t\to\infty} T(t) = \lim_{t\to\infty} \left(25 + \frac{100}{t+1}\right)$$
-                  Menggunakan sifat limit, kita bisa memisahkannya:<br/>
-                  $$= \lim_{t\to\infty} 25 + \lim_{t\to\infty} \frac{100}{t+1}$$
-                  Limit dari konstanta adalah konstanta itu sendiri. Untuk suku kedua, saat $t$ menjadi sangat besar, $t+1$ juga sangat besar. Sebuah konstanta (100) dibagi dengan bilangan yang sangat besar akan mendekati 0.
-                  $$= 25 + 0 = 25$$
-                  Jadi, suhu benda setelah waktu yang sangat lama adalah $25^\circ C$.
+                  <b>Langkah 1: Pahami pertanyaan.</b><br/>
+                  Pertanyaan "suhu benda setelah waktu yang sangat lama" secara matematis berarti kita perlu menghitung nilai limit dari fungsi suhu $T(t)$ saat waktu $t$ mendekati tak hingga ($t \to \infty$).
+                  <br/><br/>
+                  <b>Langkah 2: Tuliskan bentuk limitnya.</b><br/>
+                  Kita perlu menghitung:
+                  $$\lim\limits_{t\to\infty} T(t) = \lim\limits_{t\to\infty} \left(25 + \frac{100}{t+1}\right)$$
+                  <br/>
+                  <b>Langkah 3: Gunakan sifat-sifat limit.</b><br/>
+                  Limit dari penjumlahan adalah penjumlahan dari limit masing-masing suku:
+                  $$\lim\limits_{t\to\infty} 25 + \lim\limits_{t\to\infty} \frac{100}{t+1}$$
+                  <br/>
+                  <b>Langkah 4: Hitung nilai masing-masing limit.</b><br/>
+                  <ul>
+                      <li>Limit dari sebuah konstanta adalah konstanta itu sendiri: $\lim\limits_{t\to\infty} 25 = 25$.</li>
+                      <li>Untuk limit kedua, saat $t$ menjadi sangat besar, penyebut $t+1$ juga menjadi sangat besar. Sebuah konstanta (100) dibagi dengan bilangan yang sangat besar akan mendekati nol: $\lim\limits_{t\to\infty} \frac{100}{t+1} = 0$.</li>
+                  </ul>
+                  <br/>
+                  <b>Langkah 5: Jumlahkan hasilnya.</b><br/>
+                  $$25 + 0 = 25$$
+                  <br/>
+                  Jadi, suhu benda setelah waktu yang sangat lama akan stabil di $25^\circ C$, yang sesuai dengan suhu ruangan yang disebutkan di soal.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
-      <!-- HALAMAN 23: Soal 11 -->
+        <!-- HALAMAN 23: Soal 11 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Vektor</td></tr>
-              <tr><td>Sub Topik</td><td>Ortogonalitas (Kecukupan Data)</td></tr>
-              <tr><td>Level Kognitif</td><td>HOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Vektor</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Ortogonalitas Vektor (Kecukupan Data)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">11.</div>
               <div class="soal-konten">
-                Tiga buah kapal berada pada posisi A, B, dan C. Apakah ketiga kapal tersebut membentuk formasi segitiga siku-siku?
-                <div class="kecukupan-data-pernyataan">
-                  <span>(1)</span><span>Vektor posisi $\vec{A}=(1,1)$, $\vec{B}=(2,3)$, dan $\vec{C}=(5,-1)$.</span>
-                  <span>(2)</span><span>Vektor $\vec{AB} \cdot \vec{BC} = -5$.</span>
-                </div>
-                <ol class="pilihan-ganda">
-                  <li data-option="A">Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</li>
-                  <li data-option="B">Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</li>
-                  <li data-option="C">DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</li>
-                  <li data-option="D">Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</li>
-                  <li data-option="E">Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</li>
-                </ol>
+                  Tiga buah kapal berada pada posisi A, B, dan C. Apakah ketiga kapal tersebut membentuk formasi segitiga siku-siku?
+                  <div class="kecukupan-data-pernyataan">
+                    <span>(1)</span><span>Vektor posisi $\vec{A}=(1,1)$, $\vec{B}=(2,3)$, dan $\vec{C}=(5,-1)$.</span>
+                    <span>(2)</span><span>Vektor $\vec{AB} \cdot \vec{BC} = -5$.</span>
+                  </div>
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.
+                    </li>
+                    <li data-option="B">
+                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.
+                    </li>
+                    <li data-option="C">
+                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                    </li>
+                    <li data-option="D">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.
+                    </li>
+                    <li data-option="E">
+                      Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.
+                    </li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 24: Pembahasan Soal 11 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1491,63 +2057,136 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</b><br />
                   <b>Pembahasan Detail:</b><br />
+                  <b>Langkah 1: Pahami syarat segitiga siku-siku dalam konteks vektor.</b><br/>
+                  Sebuah segitiga ABC adalah siku-siku jika salah satu sudutnya $90^\circ$. Ini terjadi jika hasil perkalian titik (dot product) dari dua vektor sisi yang bertemu di sudut tersebut adalah nol. Kita perlu memeriksa apakah $\vec{AB} \cdot \vec{BC} = 0$, atau $\vec{BA} \cdot \vec{AC} = 0$, atau $\vec{CA} \cdot \vec{CB} = 0$.
+                  <br/><br/>
                   <b>Analisis Pernyataan (1):</b><br/>
-                  Kita hitung vektor-vektor sisi segitiga:
-                  $\vec{AB} = B - A = (2-1, 3-1) = (1, 2)$.<br/>
-                  $\vec{BC} = C - B = (5-2, -1-3) = (3, -4)$.<br/>
-                  $\vec{AC} = C - A = (5-1, -1-1) = (4, -2)$.<br/>
-                  Kemudian cek dot product antar vektor:
-                  $\vec{AB} \cdot \vec{BC} = (1)(3) + (2)(-4) = 3 - 8 = -5$.<br/>
-                  $\vec{BC} \cdot \vec{AC} = (3)(4) + (-4)(-2) = 12 + 8 = 20$.<br/>
-                  $\vec{AB} \cdot \vec{AC} = (1)(4) + (2)(-2) = 4 - 4 = 0$.<br/>
-                  Karena $\vec{AB} \cdot \vec{AC} = 0$, maka vektor $\vec{AB}$ dan $\vec{AC}$ tegak lurus, membentuk sudut siku-siku di titik A. Pernyataan (1) SAJA cukup.
+                  "Vektor posisi $\vec{A}=(1,1)$, $\vec{B}=(2,3)$, dan $\vec{C}=(5,-1)$."<br/>
+                  Dengan informasi ini, kita bisa menghitung semua vektor sisi:
+                  <ul>
+                    <li>$\vec{AB} = B - A = (2-1, 3-1) = (1, 2)$</li>
+                    <li>$\vec{BC} = C - B = (5-2, -1-3) = (3, -4)$</li>
+                    <li>$\vec{AC} = C - A = (5-1, -1-1) = (4, -2)$</li>
+                  </ul>
+                  Sekarang, kita cek perkalian titiknya:
+                  <ul>
+                    <li>$\vec{AB} \cdot \vec{BC} = (1)(3) + (2)(-4) = 3 - 8 = -5$ (Tidak siku-siku di B)</li>
+                    <li>$\vec{AB} \cdot \vec{AC} = (1)(4) + (2)(-2) = 4 - 4 = 0$ (Siku-siku di A!)</li>
+                  </ul>
+                  Karena kita menemukan satu perkalian titik yang hasilnya nol, kita bisa menjawab "Ya, kapal-kapal tersebut membentuk segitiga siku-siku". Pernyataan (1) SAJA cukup.
                   <br/><br/>
                   <b>Analisis Pernyataan (2):</b><br/>
-                  Mengetahui $\vec{AB} \cdot \vec{BC} = -5$ hanya memberitahu kita bahwa sudut di titik B tidak siku-siku. Kita tidak tahu apakah sudut di A atau C siku-siku. Pernyataan (2) SAJA tidak cukup.
+                  "Vektor $\vec{AB} \cdot \vec{BC} = -5$."<br/>
+                  Informasi ini hanya memberitahu kita bahwa sudut di titik B tidak siku-siku. Kita tidak memiliki informasi apa pun tentang sudut di A atau C. Oleh karena itu, kita tidak bisa menyimpulkan apakah segitiga tersebut siku-siku atau tidak. Pernyataan (2) SAJA tidak cukup.
+                  <br/><br/>
+                  Karena pernyataan (1) cukup dan pernyataan (2) tidak cukup, jawabannya adalah A.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 25: Soal 12 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Geometri Analitik</td></tr>
-              <tr><td>Sub Topik</td><td>Garis Singgung Lingkaran (Kecukupan Data)</td></tr>
-              <tr><td>Level Kognitif</td><td>HOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Garis Singgung (Kecukupan Data)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">12.</div>
               <div class="soal-konten">
-                Sebuah taman berbentuk lingkaran L. Di luar taman pada titik P, akan dipasang lampu sorot yang menyorot taman dengan garis singgung. Berapa panjang garis singgung dari lampu ke taman?
-                <div class="kecukupan-data-pernyataan">
-                  <span>(1)</span><span>Persamaan taman adalah $x^2+y^2=9$.</span>
-                  <span>(2)</span><span>Posisi lampu sorot di titik P(5,0).</span>
-                </div>
-                <ol class="pilihan-ganda">
-                  <li data-option="A">Pernyataan (1) SAJA cukup...</li>
-                  <li data-option="B">Pernyataan (2) SAJA cukup...</li>
-                  <li data-option="C">DUA pernyataan BERSAMA-SAMA cukup...</li>
-                  <li data-option="D">Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
-                  <li data-option="E">Pernyataan (1) dan pernyataan (2) tidak cukup...</li>
-                </ol>
+                  Sebuah taman berbentuk lingkaran L. Di luar taman pada titik P, akan dipasang lampu sorot yang menyorot taman dengan garis singgung. Berapa panjang garis singgung dari lampu ke taman?
+                  <div class="kecukupan-data-pernyataan">
+                    <span>(1)</span><span>Persamaan taman adalah $x^2+y^2=9$.</span>
+                    <span>(2)</span><span>Posisi lampu sorot di titik P(5,0).</span>
+                  </div>
+                    <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.
+                    </li>
+                    <li data-option="B">
+                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.
+                    </li>
+                    <li data-option="C">
+                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                    </li>
+                    <li data-option="D">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.
+                    </li>
+                    <li data-option="E">
+                      Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.
+                    </li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 26: Pembahasan Soal 12 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1557,57 +2196,137 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Panjang garis singgung ($l$) dari titik di luar lingkaran dapat dihitung dengan teorema Pythagoras: $l^2 = d^2 - r^2$, di mana $d$ adalah jarak dari titik ke pusat lingkaran, dan $r$ adalah jari-jari. Untuk menghitung $l$, kita butuh pusat lingkaran, jari-jari, dan koordinat titik P.
+                  <b>Langkah 1: Pahami konsep panjang garis singgung.</b><br/>
+                  Panjang garis singgung dari sebuah titik eksternal P ke sebuah lingkaran dapat dihitung menggunakan Teorema Pythagoras. Misalkan pusat lingkaran adalah C dan titik singgungnya adalah T, maka segitiga PTC adalah segitiga siku-siku di T. Panjang garis singgung adalah PT.
+                  $$PT^2 = PC^2 - CT^2$$
+                  di mana $PC$ adalah jarak dari titik P ke pusat lingkaran, dan $CT$ adalah jari-jari lingkaran ($r$). Jadi, kita perlu tahu: (1) posisi titik P, (2) posisi pusat lingkaran C, dan (3) jari-jari lingkaran $r$.
                   <br/><br/>
-                  <b>Pernyataan (1):</b> Memberikan persamaan lingkaran $x^2+y^2=9$. Dari sini kita tahu pusatnya (0,0) dan jari-jarinya $r=3$. Namun, kita tidak tahu posisi titik P. Tidak cukup.
+                  <b>Analisis Pernyataan (1):</b><br/>
+                  "Persamaan taman adalah $x^2+y^2=9$."<br/>
+                  Dari sini kita tahu pusat lingkaran C adalah (0,0) dan jari-jarinya $r = \sqrt{9} = 3$. Namun, kita tidak tahu posisi titik P. Pernyataan (1) SAJA tidak cukup.
                   <br/><br/>
-                  <b>Pernyataan (2):</b> Memberikan posisi P(5,0). Namun, kita tidak tahu detail lingkaran (pusat dan jari-jari). Tidak cukup.
+                  <b>Analisis Pernyataan (2):</b><br/>
+                  "Posisi lampu sorot di titik P(5,0)."<br/>
+                  Kita tahu posisi titik P, tapi kita tidak tahu apa-apa tentang lingkaran (pusat dan jari-jarinya). Pernyataan (2) SAJA tidak cukup.
                   <br/><br/>
-                  <b>Bersama-sama:</b> Kita punya pusat (0,0), $r=3$, dan P(5,0). Jarak $d$ dari (5,0) ke (0,0) adalah 5. Maka $l = \sqrt{d^2 - r^2} = \sqrt{5^2 - 3^2} = \sqrt{16} = 4$. Panjangnya dapat dihitung. Cukup.
+                  <b>Analisis Pernyataan (1) dan (2) Bersama-sama:</b><br/>
+                  Dengan kedua pernyataan, kita memiliki semua informasi yang dibutuhkan:
+                  <ul>
+                    <li>Titik P = (5,0)</li>
+                    <li>Pusat C = (0,0)</li>
+                    <li>Jari-jari $r$ = 3</li>
+                  </ul>
+                  Jarak PC = $\sqrt{(5-0)^2 + (0-0)^2} = \sqrt{25} = 5$.
+                  Panjang garis singgung (PT) adalah:
+                  $$PT = \sqrt{PC^2 - r^2} = \sqrt{5^2 - 3^2} = \sqrt{25 - 9} = \sqrt{16} = 4$$
+                  Kita bisa menghitung panjangnya. Jadi, kedua pernyataan bersama-sama cukup.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 27: Soal 13 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Fungsi Kuadrat</td></tr>
-              <tr><td>Sub Topik</td><td>Range Fungsi (Kecukupan Data)</td></tr>
-              <tr><td>Level Kognitif</td><td>HOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Fungsi Kuadrat</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Range/Daerah Hasil (Kecukupan Data)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">13.</div>
               <div class="soal-konten">
-                Berapakah jangkauan (range) dari fungsi $f(x) = x^2+4x+c$?
-                <div class="kecukupan-data-pernyataan">
-                  <span>(1)</span><span>Grafik fungsi memotong sumbu-y di titik (0,7).</span>
-                  <span>(2)</span><span>Titik puncak parabola berada di $x=-2$.</span>
-                </div>
-                <ol class="pilihan-ganda">
-                  <li data-option="A">Pernyataan (1) SAJA cukup...</li>
-                  <li data-option="B">Pernyataan (2) SAJA cukup...</li>
-                  <li data-option="C">DUA pernyataan BERSAMA-SAMA cukup...</li>
-                  <li data-option="D">Pernyataan (1) SAJA cukup dan pernyataan (2) SAJA cukup.</li>
-                  <li data-option="E">Pernyataan (1) dan pernyataan (2) tidak cukup...</li>
-                </ol>
+                  Berapakah jangkauan (range) dari fungsi $f(x) = x^2+4x+c$?
+                  <div class="kecukupan-data-pernyataan">
+                    <span>(1)</span><span>Grafik fungsi memotong sumbu-y di titik (0,7).</span>
+                    <span>(2)</span><span>Titik puncak parabola berada di $x=-2$.</span>
+                  </div>
+                    <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.
+                    </li>
+                    <li data-option="B">
+                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.
+                    </li>
+                    <li data-option="C">
+                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                    </li>
+                    <li data-option="D">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.
+                    </li>
+                    <li data-option="E">
+                      Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.
+                    </li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 28: Pembahasan Soal 13 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1617,56 +2336,118 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Range dari parabola $f(x) = ax^2+bx+c$ yang membuka ke atas ($a>0$) adalah $[y_p, \infty)$, di mana $y_p$ adalah nilai y di titik puncak. Kita perlu mencari $y_p$.<br/>
-                  Titik puncak $x_p = -b/(2a) = -4/(2*1) = -2$.<br/>
-                  Maka $y_p = f(-2) = (-2)^2+4(-2)+c = 4-8+c = c-4$.<br/>
-                  Untuk mengetahui range, kita perlu nilai $c$.
+                  <b>Langkah 1: Pahami konsep jangkauan (range) fungsi kuadrat.</b><br/>
+                  Fungsi $f(x) = x^2+4x+c$ adalah parabola yang terbuka ke atas (karena koefisien $x^2$ adalah 1, positif). Jangkauannya akan berbentuk $[y_{puncak}, \infty)$. Untuk menentukan jangkauan, kita perlu menemukan nilai y dari titik puncak ($y_p$).
                   <br/><br/>
-                  <b>Pernyataan (1):</b> Memotong sumbu-y di (0,7) berarti $f(0)=7$.
-                  $f(0) = 0^2+4(0)+c = 7 \implies c=7$.
-                  Dengan $c=7$, kita dapatkan $y_p = 7-4=3$. Range adalah $[3, \infty)$. Pernyataan (1) SAJA cukup.
+                  <b>Langkah 2: Cari koordinat titik puncak dalam bentuk c.</b><br/>
+                  Koordinat x puncak ($x_p$) diberikan oleh rumus $x_p = -\frac{b}{2a}$.
+                  $$x_p = -\frac{4}{2(1)} = -2$$
+                  Koordinat y puncak ($y_p$) adalah nilai fungsi di $x_p$:
+                  $$y_p = f(-2) = (-2)^2 + 4(-2) + c = 4 - 8 + c = c-4$$
+                  Jadi, jangkauan fungsi ini adalah $[c-4, \infty)$. Pertanyaannya adalah "Berapakah jangkauan?", yang berarti kita perlu menemukan nilai $c$.
                   <br/><br/>
-                  <b>Pernyataan (2):</b> Titik puncak di $x=-2$. Ini adalah informasi yang sudah bisa kita hitung dari fungsi aslinya. Ini tidak memberikan informasi baru tentang nilai $c$. Tidak cukup.
+                  <b>Analisis Pernyataan (1):</b><br/>
+                  "Grafik fungsi memotong sumbu-y di titik (0,7)."<br/>
+                  Ini berarti $f(0)=7$. Kita substitusikan ke dalam fungsi:
+                  $$f(0) = (0)^2 + 4(0) + c = 7 \implies c=7$$
+                  Dengan mengetahui $c=7$, kita bisa menentukan nilai $y_p = 7-4=3$. Jangkauannya adalah $[3, \infty)$. Pernyataan (1) SAJA cukup.
+                  <br/><br/>
+                  <b>Analisis Pernyataan (2):</b><br/>
+                  "Titik puncak parabola berada di $x=-2$."<br/>
+                  Seperti yang kita hitung di Langkah 2, informasi ini sudah bisa kita dapatkan langsung dari persamaan $f(x)=x^2+4x+c$. Pernyataan ini tidak memberikan informasi baru dan tidak membantu kita menemukan nilai $c$. Pernyataan (2) SAJA tidak cukup.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 29: Soal 14 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Matriks</td></tr>
-              <tr><td>Sub Topik</td><td>Sistem Persamaan Linear</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Matriks</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Sistem Persamaan Linear</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">14.</div>
               <div class="soal-konten">
-                Sebuah jaringan pipa air... Sistem persamaan linear yang sesuai adalah $x_1-x_2-x_3=0$, $x_2=20$, $x_3=30$. Manakah pernyataan yang benar terkait solusi sistem menggunakan matriks? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>Matriks koefisien sistem adalah singular.</span></div>
-                  <div><input type="checkbox" /><span>Sistem memiliki solusi tunggal.</span></div>
-                  <div><input type="checkbox" /><span>Nilai $x_1 = 50$.</span></div>
-                  <div><input type="checkbox" /><span>Determinan matriks koefisiennya adalah -1.</span></div>
-                  <div><input type="checkbox" /><span>Solusi dapat ditemukan dengan metode Cramer.</span></div>
-                </div>
+                  Sebuah jaringan pipa air terdiri dari 3 titik (A, B, C). Aliran air (dalam liter/detik) dimodelkan sebagai berikut: $x_1$ dari luar ke A, $x_2$ dari A ke B, $x_3$ dari A ke C, 20 dari B ke luar, 30 dari C ke luar. Sistem persamaan linear yang sesuai adalah $x_1-x_2-x_3=0$, $x_2=20$, $x_3=30$. Manakah pernyataan yang benar terkait solusi sistem menggunakan matriks? <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div><input type="checkbox" /><span>Matriks koefisien sistem adalah singular.</span></div>
+                    <div><input type="checkbox" /><span>Sistem memiliki solusi tunggal.</span></div>
+                    <div><input type="checkbox" /><span>Nilai $x_1 = 50$.</span></div>
+                    <div><input type="checkbox" /><span>Determinan matriks koefisiennya adalah -1.</span></div>
+                    <div><input type="checkbox" /><span>Solusi dapat ditemukan dengan metode Cramer.</span></div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 30: Pembahasan Soal 14 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1676,60 +2457,147 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Pernyataan 2, 3, dan 5 benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
+                  <b>Langkah 1: Susun sistem persamaan dalam bentuk matriks.</b><br/>
                   Sistem persamaannya adalah:
-                  $x_1 - x_2 - x_3 = 0$<br/>
-                  $0x_1 + 1x_2 + 0x_3 = 20$<br/>
-                  $0x_1 + 0x_2 + 1x_3 = 30$<br/>
-                  Matriks koefisien $A = \begin{pmatrix} 1 & -1 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$.<br/><br/>
-                  <b>Pernyataan 1 & 4:</b> Determinan $\det(A) = 1(1\cdot1 - 0\cdot0) = 1$. Karena determinan tidak nol, matriksnya non-singular. Pernyataan 1 (singular) dan 4 ($\det(A)=-1$) <b>SALAH</b>.
+                  <br/>$x_1 - x_2 - x_3 = 0$
+                  <br/>$0x_1 + 1x_2 + 0x_3 = 20$
+                  <br/>$0x_1 + 0x_2 + 1x_3 = 30$
+                  <br/>Bentuk matriksnya ($A\mathbf{x}=\mathbf{b}$) adalah:
+                  $$ \begin{pmatrix} 1 & -1 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 20 \\ 30 \end{pmatrix} $$
+                  Matriks koefisiennya adalah $A = \begin{pmatrix} 1 & -1 & -1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$.
                   <br/><br/>
-                  <b>Pernyataan 2:</b> Karena $\det(A) \neq 0$, sistem memiliki solusi tunggal. <b>BENAR</b>.
+                  <b>Pernyataan 1 & 4: Matriks singular dan determinan.</b><br/>
+                  Matriks singular jika determinannya nol. Kita hitung determinan matriks A (matriks segitiga atas):
+                  $$ \det(A) = 1 \cdot 1 \cdot 1 = 1 $$
+                  Karena $\det(A) = 1 \neq 0$, matriksnya tidak singular. Maka, pernyataan 1 (singular) <b>SALAH</b> dan pernyataan 4 (determinan -1) <b>SALAH</b>.
                   <br/><br/>
-                  <b>Pernyataan 3:</b> Dari $x_2=20$ dan $x_3=30$, kita substitusi ke persamaan pertama: $x_1 - 20 - 30 = 0 \implies x_1 = 50$. <b>BENAR</b>.
+                  <b>Pernyataan 2: Sistem memiliki solusi tunggal.</b><br/>
+                  Karena determinan matriks koefisien tidak nol ($\det(A) \neq 0$), maka sistem persamaan linear ini memiliki solusi tunggal. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 5:</b> Metode Cramer dapat digunakan jika determinan matriks koefisien tidak nol. Karena $\det(A)=1 \neq 0$, metode ini bisa digunakan. <b>BENAR</b>.
+                  <b>Pernyataan 5: Solusi dapat ditemukan dengan metode Cramer.</b><br/>
+                  Metode Cramer dapat digunakan untuk menyelesaikan sistem persamaan linear jika determinan matriks koefisiennya tidak nol. Karena $\det(A)=1$, metode Cramer dapat digunakan. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 3: Nilai $x_1 = 50$.</b><br/>
+                  Kita bisa langsung substitusi. Dari persamaan 2 dan 3, kita tahu $x_2=20$ dan $x_3=30$. Substitusikan ke persamaan 1:
+                  $$ x_1 - 20 - 30 = 0 \implies x_1 = 50 $$
+                  Pernyataan ini <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 31: Soal 15 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Polinomial</td></tr>
-              <tr><td>Sub Topik</td><td>Sifat Grafik Polinomial</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Polinomial</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Grafik Fungsi Polinomial</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">15.</div>
               <div class="soal-konten">
-                Jalur sebuah roller coaster dimodelkan oleh fungsi polinomial $y = (x-1)(x-4)(x-6)$. Tentukan kebenaran pernyataan berikut mengenai jalur roller coaster.
-                <table class="soal-kategori">
-                  <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
-                  <tbody>
-                    <tr><td>Roller coaster memotong permukaan tanah (y=0) di 3 titik.</td><td></td><td></td></tr>
-                    <tr><td>Saat x sangat besar, ketinggian y juga sangat besar.</td><td></td><td></td></tr>
-                    <tr><td>Jalur roller coaster berada di bawah tanah antara x=1 dan x=4.</td><td></td><td></td></tr>
-                    <tr><td>Titik awal jalur (x=0) berada di ketinggian -24.</td><td></td><td></td></tr>
-                  </tbody>
-                </table>
+                  Jalur sebuah roller coaster dimodelkan oleh fungsi polinomial $y = (x-1)(x-4)(x-6)$. Tentukan kebenaran pernyataan berikut mengenai jalur roller coaster.
+                  <table class="soal-kategori">
+                    <thead>
+                      <tr>
+                        <th>Pernyataan</th>
+                        <th>Benar</th>
+                        <th>Salah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Roller coaster memotong permukaan tanah (y=0) di 3 titik.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Saat x sangat besar, ketinggian y juga sangat besar.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Jalur roller coaster berada di bawah tanah antara x=1 dan x=4.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Titik awal jalur (x=0) berada di ketinggian -24.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 32: Pembahasan Soal 15 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1738,56 +2606,117 @@
               <div class="soal-konten">
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Benar, Benar, Salah, Benar.</b><br />
-                  <b>Pembahasan Detail:</b><br/>
-                  <b>Pernyataan 1:</b> Roller coaster memotong tanah saat $y=0$, yaitu ketika $(x-1)(x-4)(x-6)=0$. Ini terjadi di $x=1, x=4, x=6$. Ada 3 titik. <b>BENAR</b>.
+                  <b>Pembahasan Detail:</b><br />
+                  Fungsi yang diberikan adalah $y = (x-1)(x-4)(x-6)$.
                   <br/><br/>
-                  <b>Pernyataan 2:</b> Jika $x$ sangat besar dan positif, ketiga faktor $(x-1), (x-4), (x-6)$ akan positif. Hasil kalinya juga positif dan sangat besar. <b>BENAR</b>.
+                  <b>Pernyataan 1: Roller coaster memotong permukaan tanah (y=0) di 3 titik.</b><br/>
+                  Permukaan tanah berarti $y=0$. Kita selesaikan $(x-1)(x-4)(x-6)=0$. Solusinya adalah $x=1$, $x=4$, dan $x=6$. Ada 3 titik potong. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 3:</b> Ambil titik uji antara $x=1$ dan $x=4$, misal $x=2$.
-                  $y = (2-1)(2-4)(2-6) = (1)(-2)(-4) = 8$.
-                  Karena hasilnya positif, jalur berada di atas tanah. <b>SALAH</b>.
+                  <b>Pernyataan 2: Saat x sangat besar, ketinggian y juga sangat besar.</b><br/>
+                  Ini adalah tentang perilaku ujung (end behavior) dari grafik. Jika kita ekspansi fungsinya, suku dengan pangkat tertinggi adalah $x \cdot x \cdot x = x^3$. Saat $x \to \infty$, maka $y \approx x^3 \to \infty$. Ketinggian y juga menjadi sangat besar. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 4:</b> Saat $x=0$, $y = (0-1)(0-4)(0-6) = (-1)(-4)(-6) = -24$. Ketinggian -24. <b>BENAR</b>.
+                  <b>Pernyataan 3: Jalur roller coaster berada di bawah tanah antara x=1 dan x=4.</b><br/>
+                  Kita uji dengan mengambil satu titik di antara 1 dan 4, misalnya $x=2$.
+                  $$ y = (2-1)(2-4)(2-6) = (1)(-2)(-4) = 8 $$
+                  Karena $y=8$ (positif), jalur berada di atas tanah, bukan di bawah. Pernyataan ini <b>SALAH</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: Titik awal jalur (x=0) berada di ketinggian -24.</b><br/>
+                  Kita substitusikan $x=0$ ke dalam fungsi:
+                  $$ y = (0-1)(0-4)(0-6) = (-1)(-4)(-6) = -24 $$
+                  Ketinggian di $x=0$ adalah -24. Pernyataan ini <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 33: Soal 16 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Transformasi Geometri</td></tr>
-              <tr><td>Sub Topik</td><td>Invarian Rotasi</td></tr>
-              <tr><td>Level Kognitif</td><td>LOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Transformasi Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Invarian Transformasi</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">16.</div>
               <div class="soal-konten">
-                Manakah dari properti geometri berikut yang tidak berubah (invarian) di bawah transformasi rotasi? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>Panjang sisi</span></div>
-                  <div><input type="checkbox" /><span>Luas</span></div>
-                  <div><input type="checkbox" /><span>Koordinat titik</span></div>
-                  <div><input type="checkbox" /><span>Besar sudut</span></div>
-                  <div><input type="checkbox" /><span>Orientasi (arah)</span></div>
-                </div>
+                  Manakah dari properti geometri berikut yang tidak berubah (invarian) di bawah transformasi rotasi? <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div><input type="checkbox" /><span>Panjang sisi</span></div>
+                    <div><input type="checkbox" /><span>Luas</span></div>
+                    <div><input type="checkbox" /><span>Koordinat titik</span></div>
+                    <div><input type="checkbox" /><span>Besar sudut</span></div>
+                    <div><input type="checkbox" /><span>Orientasi (arah)</span></div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 34: Pembahasan Soal 16 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1797,57 +2726,115 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Pernyataan 1, 2, dan 4 benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Rotasi adalah transformasi isometri (rigid), yang berarti tidak mengubah bentuk dan ukuran objek.
+                  Rotasi adalah jenis transformasi isometri, yang berarti transformasi tersebut mempertahankan jarak. Mari kita analisis setiap properti:
                   <br/><br/>
-                  - <b>Panjang sisi:</b> Jarak antar titik tidak berubah. <b>BENAR</b>.
-                  <br/>
-                  - <b>Luas:</b> Karena bentuk dan ukuran tidak berubah, luas juga tidak berubah. <b>BENAR</b>.
-                  <br/>
-                  - <b>Koordinat titik:</b> Posisi titik berubah, sehingga koordinatnya berubah (kecuali titik pusat rotasi). <b>SALAH</b>.
-                  <br/>
-                  - <b>Besar sudut:</b> Bentuk tidak berubah, jadi sudut-sudutnya tetap sama. <b>BENAR</b>.
-                  <br/>
-                  - <b>Orientasi:</b> Arah objek berubah (misalnya dari menghadap ke atas menjadi ke samping). <b>SALAH</b>.
+                  <b>Pernyataan 1: Panjang sisi</b><br/>
+                  Karena rotasi mempertahankan jarak antara dua titik, panjang setiap sisi dari sebuah bangun akan tetap sama setelah rotasi. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 2: Luas</b><br/>
+                  Transformasi isometri seperti rotasi, translasi, dan refleksi selalu mempertahankan luas. Bangun yang diputar tidak menjadi lebih besar atau lebih kecil. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 3: Koordinat titik</b><br/>
+                  Kecuali jika titik tersebut adalah pusat rotasi, koordinatnya pasti akan berubah. Misalnya, memutar titik (1,0) sebesar 90 derajat akan menghasilkan (0,1). Pernyataan ini <b>SALAH</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: Besar sudut</b><br/>
+                  Rotasi mempertahankan bentuk bangun, yang berarti besar sudut-sudut di dalamnya juga tidak berubah. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 5: Orientasi (arah)</b><br/>
+                  Orientasi atau arah hadap sebuah bangun akan berubah. Sebuah panah yang menunjuk ke kanan, setelah diputar 90 derajat, akan menunjuk ke atas. Pernyataan ini <b>SALAH</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 35: Soal 17 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Limit Fungsi</td></tr>
-              <tr><td>Sub Topik</td><td>Teorema Apit</td></tr>
-              <tr><td>Level Kognitif</td><td>HOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Limit Fungsi</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Teorema Apit (Squeeze Theorem)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">17.</div>
               <div class="soal-konten">
-                Jika diketahui $-x^2 \le f(x) \le x^2$ untuk semua $x \neq 0$, manakah pernyataan yang dapat disimpulkan mengenai $\lim\limits_{x \to 0} f(x)$? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} -x^2 = 0$.</span></div>
-                  <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} x^2 = 0$.</span></div>
-                  <div><input type="checkbox" /><span>Berdasarkan Teorema Apit, limitnya ada.</span></div>
-                  <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} f(x) = 0$.</span></div>
-                  <div><input type="checkbox" /><span>Nilai $f(0)$ pasti sama dengan 0.</span></div>
-                </div>
+                  Jika diketahui $-x^2 \le f(x) \le x^2$ untuk semua $x \neq 0$, manakah pernyataan yang dapat disimpulkan mengenai $\lim\limits_{x \to 0} f(x)$? <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} -x^2 = 0$.</span></div>
+                    <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} x^2 = 0$.</span></div>
+                    <div><input type="checkbox" /><span>Berdasarkan Teorema Apit, limitnya ada.</span></div>
+                    <div><input type="checkbox" /><span>$\lim\limits_{x \to 0} f(x) = 0$.</span></div>
+                    <div><input type="checkbox" /><span>Nilai $f(0)$ pasti sama dengan 0.</span></div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 36: Pembahasan Soal 17 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1857,51 +2844,115 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  <b>Pernyataan 1 & 2:</b> $\lim\limits_{x \to 0} -x^2 = -(0)^2 = 0$ dan $\lim\limits_{x \to 0} x^2 = (0)^2 = 0$. Kedua pernyataan ini <b>BENAR</b>.
+                  Soal ini adalah aplikasi langsung dari Teorema Apit (Squeeze Theorem). Teorema ini menyatakan bahwa jika $g(x) \le f(x) \le h(x)$ untuk semua $x$ di sekitar $c$, dan $\lim\limits_{x \to c} g(x) = \lim\limits_{x \to c} h(x) = L$, maka $\lim\limits_{x \to c} f(x) = L$.
                   <br/><br/>
-                  <b>Pernyataan 3 & 4:</b> Karena $f(x)$ "diapit" oleh dua fungsi ($g(x)=-x^2$ dan $h(x)=x^2$) dan kedua fungsi apit ini mendekati nilai yang sama (yaitu 0) saat $x \to 0$, maka menurut Teorema Apit (Squeeze Theorem), limit $f(x)$ juga ada dan nilainya sama dengan 0. Jadi, $\lim\limits_{x \to 0} f(x) = 0$. Kedua pernyataan ini <b>BENAR</b>.
+                  <b>Pernyataan 1: $\lim\limits_{x \to 0} -x^2 = 0$.</b><br/>
+                  Ini adalah fungsi pembatas bawah. Dengan substitusi langsung, $\lim\limits_{x \to 0} -x^2 = -(0)^2 = 0$. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 5:</b> Teorema Apit hanya menyimpulkan nilai limit. Nilai fungsi di titik itu sendiri, $f(0)$, bisa jadi tidak terdefinisi atau bernilai lain. Pernyataan ini <b>SALAH</b>.
+                  <b>Pernyataan 2: $\lim\limits_{x \to 0} x^2 = 0$.</b><br/>
+                  Ini adalah fungsi pembatas atas. Dengan substitusi langsung, $\lim\limits_{x \to 0} x^2 = (0)^2 = 0$. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 3: Berdasarkan Teorema Apit, limitnya ada.</b><br/>
+                  Karena fungsi $f(x)$ "diapit" oleh dua fungsi ($g(x)=-x^2$ dan $h(x)=x^2$) dan limit kedua fungsi apit tersebut sama saat $x \to 0$, maka Teorema Apit menjamin bahwa limit dari $f(x)$ juga ada. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: $\lim\limits_{x \to 0} f(x) = 0$.</b><br/>
+                  Karena limit fungsi pembatas bawah dan atas keduanya adalah 0, maka limit fungsi yang diapit juga harus 0. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 5: Nilai $f(0)$ pasti sama dengan 0.</b><br/>
+                  Teorema limit dan Teorema Apit hanya menjelaskan perilaku fungsi saat *mendekati* suatu titik, bukan nilai fungsi *tepat di* titik tersebut. Ketidaksetaraan $-x^2 \le f(x) \le x^2$ diberikan untuk $x \neq 0$. Nilai $f(0)$ bisa jadi tidak terdefinisi, atau bisa jadi nilai lain (misal $f(0)=5$). Kita tidak bisa menyimpulkan nilai $f(0)$ dari informasi yang diberikan. Pernyataan ini <b>SALAH</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
-      <!-- HALAMAN 37: Soal 18 -->
+        <!-- HALAMAN 37: Soal 18 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Vektor</td></tr>
-              <tr><td>Sub Topik</td><td>Aplikasi Vektor Kecepatan</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Vektor</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Aplikasi Vektor (Resultan Kecepatan)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">18.</div>
               <div class="soal-konten">
-                Sebuah perahu menyeberangi sungai yang lebarnya 120 m. Kecepatan perahu tegak lurus tepi sungai adalah 3 m/s, dan kecepatan arus sungai adalah 4 m/s. Berapa jauh perahu menyimpang dari titik tujuan yang berada tepat di seberang titik awal?
-                <ol class="pilihan-ganda">
-                  <li data-option="A">90 m</li>
-                  <li data-option="B">120 m</li>
-                  <li data-option="C">150 m</li>
-                  <li data-option="D">160 m</li>
-                  <li data-option="E">200 m</li>
-                </ol>
+                  Sebuah perahu menyeberangi sungai yang lebarnya 120 m. Kecepatan perahu tegak lurus tepi sungai adalah 3 m/s, dan kecepatan arus sungai adalah 4 m/s. Berapa jauh perahu menyimpang dari titik tujuan yang berada tepat di seberang titik awal?
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">90 m</li>
+                    <li data-option="B">120 m</li>
+                    <li data-option="C">150 m</li>
+                    <li data-option="D">160 m</li>
+                    <li data-option="E">200 m</li>
+                  </ol>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 38: Pembahasan Soal 18 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1911,54 +2962,119 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: D. 160 m</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  <b>Langkah 1: Hitung waktu yang dibutuhkan untuk menyeberangi sungai.</b><br/>
-                  Waktu penyeberangan hanya dipengaruhi oleh komponen kecepatan yang tegak lurus dengan tepi sungai.
-                  $$Waktu = \frac{Lebar Sungai}{Kecepatan Tegak Lurus} = \frac{120 \text{ m}}{3 \text{ m/s}} = 40 \text{ s}$$
+                  <b>Langkah 1: Pahami gerakan perahu.</b><br/>
+                  Perahu mengalami dua gerakan yang saling tegak lurus secara bersamaan:
+                  <ol>
+                    <li>Gerakan menyeberangi sungai (karena kecepatan perahu).</li>
+                    <li>Gerakan menyusuri sungai (karena kecepatan arus).</li>
+                  </ol>
+                  Jarak simpangan adalah jarak horizontal yang ditempuh perahu karena terbawa arus.
+                  <br/><br/>
+                  <b>Langkah 2: Hitung waktu yang dibutuhkan untuk menyeberang.</b><br/>
+                  Waktu penyeberangan hanya ditentukan oleh lebar sungai dan kecepatan perahu yang tegak lurus terhadap tepi sungai.
+                  $$ Waktu = \frac{Jarak_{lebar}}{Kecepatan_{tegaklurus}} $$
+                  $$ Waktu = \frac{120 \text{ m}}{3 \text{ m/s}} = 40 \text{ s} $$
+                  Jadi, perahu membutuhkan waktu 40 detik untuk sampai ke seberang.
+                  <br/><br/>
+                  <b>Langkah 3: Hitung jarak simpangan.</b><br/>
+                  Selama 40 detik menyeberang, perahu juga bergerak ke samping karena terbawa arus sungai. Jarak simpangan dihitung dari kecepatan arus dan waktu tempuh.
+                  $$ Jarak_{simpangan} = Kecepatan_{arus} \times Waktu $$
+                  $$ Jarak_{simpangan} = 4 \text{ m/s} \times 40 \text{ s} = 160 \text{ m} $$
                   <br/>
-                  <b>Langkah 2: Hitung jarak penyimpangan (jarak yang ditempuh searah arus).</b><br/>
-                  Selama 40 detik menyeberang, perahu juga terseret oleh arus sungai.
-                  $$Jarak Simpang = Kecepatan Arus \times Waktu = 4 \text{ m/s} \times 40 \text{ s} = 160 \text{ m}$$
-                  Jadi, perahu menyimpang sejauh 160 m dari tujuannya.
+                  Jadi, perahu menyimpang sejauh 160 m dari titik tujuan yang berada tepat di seberangnya.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
-      <!-- HALAMAN 39: Soal 19 -->
+        <!-- HALAMAN 39: Soal 19 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Geometri Analitik</td></tr>
-              <tr><td>Sub Topik</td><td>Garis Singgung Lingkaran</td></tr>
-              <tr><td>Level Kognitif</td><td>MOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Garis Singgung Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">19.</div>
               <div class="soal-konten">
-                Manakah dari garis-garis berikut yang menyinggung lingkaran $x^2+y^2=25$? <b>(bisa pilih lebih dari satu jawaban)</b>
-                <div class="pilihan-ganda-mcma">
-                  <div><input type="checkbox" /><span>$x=5$</span></div>
-                  <div><input type="checkbox" /><span>$y=-5$</span></div>
-                  <div><input type="checkbox" /><span>$3x+4y=25$</span></div>
-                  <div><input type="checkbox" /><span>$x+y=5$</span></div>
-                  <div><input type="checkbox" /><span>$4x-3y=25$</span></div>
-                </div>
+                  Manakah dari garis-garis berikut yang menyinggung lingkaran $x^2+y^2=25$? <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div><input type="checkbox" /><span>$x=5$</span></div>
+                    <div><input type="checkbox" /><span>$y=-5$</span></div>
+                    <div><input type="checkbox" /><span>$3x+4y=25$</span></div>
+                    <div><input type="checkbox" /><span>$x+y=5$</span></div>
+                    <div><input type="checkbox" /><span>$4x-3y=25$</span></div>
+                  </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 40: Pembahasan Soal 19 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -1968,59 +3084,143 @@
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 5 benar.</b><br />
                   <b>Pembahasan Detail:</b><br />
-                  Lingkaran $x^2+y^2=25$ berpusat di (0,0) dengan jari-jari $r=5$. Sebuah garis $Ax+By+C=0$ menyinggung lingkaran jika jaraknya dari pusat sama dengan jari-jari.
+                  <b>Langkah 1: Identifikasi lingkaran dan syarat garis singgung.</b><br/>
+                  Lingkaran $x^2+y^2=25$ memiliki pusat di $P(0,0)$ dan jari-jari $r = \sqrt{25}=5$.
+                  Sebuah garis menyinggung lingkaran jika jarak dari pusat lingkaran ke garis tersebut sama dengan panjang jari-jari.
+                  Jarak dari pusat $(0,0)$ ke garis $Ax+By+C=0$ adalah $d = \frac{|A(0)+B(0)+C|}{\sqrt{A^2+B^2}} = \frac{|C|}{\sqrt{A^2+B^2}}$.
+                  Syaratnya adalah $d=r=5$.
                   <br/><br/>
-                  - <b>$x=5 \implies x-5=0$:</b> Jarak = $\frac{|1(0)+0(0)-5|}{\sqrt{1^2+0^2}}=5$. <b>BENAR</b>.
-                  <br/>
-                  - <b>$y=-5 \implies y+5=0$:</b> Jarak = $\frac{|0(0)+1(0)+5|}{\sqrt{0^2+1^2}}=5$. <b>BENAR</b>.
-                  <br/>
-                  - <b>$3x+4y=25 \implies 3x+4y-25=0$:</b> Jarak = $\frac{|3(0)+4(0)-25|}{\sqrt{3^2+4^2}}=\frac{25}{5}=5$. <b>BENAR</b>.
-                  <br/>
-                  - <b>$x+y=5 \implies x+y-5=0$:</b> Jarak = $\frac{|1(0)+1(0)-5|}{\sqrt{1^2+1^2}}=\frac{5}{\sqrt{2}} \neq 5$. <b>SALAH</b>.
-                  <br/>
-                  - <b>$4x-3y=25 \implies 4x-3y-25=0$:</b> Jarak = $\frac{|4(0)-3(0)-25|}{\sqrt{4^2+(-3)^2}}=\frac{25}{5}=5$. <b>BENAR</b>.
+                  <b>Pernyataan 1: $x=5$</b> (atau $x-5=0$)<br/>
+                  $A=1, B=0, C=-5$. Jarak $d = \frac{|-5|}{\sqrt{1^2+0^2}} = 5$. Karena $d=r$, garis ini menyinggung. <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 2: $y=-5$</b> (atau $y+5=0$)<br/>
+                  $A=0, B=1, C=5$. Jarak $d = \frac{|5|}{\sqrt{0^2+1^2}} = 5$. Karena $d=r$, garis ini menyinggung. <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 3: $3x+4y=25$</b> (atau $3x+4y-25=0$)<br/>
+                  $A=3, B=4, C=-25$. Jarak $d = \frac{|-25|}{\sqrt{3^2+4^2}} = \frac{25}{\sqrt{9+16}} = \frac{25}{\sqrt{25}} = 5$. Karena $d=r$, garis ini menyinggung. <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: $x+y=5$</b> (atau $x+y-5=0$)<br/>
+                  $A=1, B=1, C=-5$. Jarak $d = \frac{|-5|}{\sqrt{1^2+1^2}} = \frac{5}{\sqrt{2}} \neq 5$. Garis ini memotong lingkaran, bukan menyinggung. <b>SALAH</b>.
+                  <br/><br/>
+                  <b>Pernyataan 5: $4x-3y=25$</b> (atau $4x-3y-25=0$)<br/>
+                  $A=4, B=-3, C=-25$. Jarak $d = \frac{|-25|}{\sqrt{4^2+(-3)^2}} = \frac{25}{\sqrt{16+9}} = \frac{25}{\sqrt{25}} = 5$. Karena $d=r$, garis ini menyinggung. <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 41: Soal 20 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
             <table class="soal-card">
-              <tr><td>Topik</td><td>Fungsi</td></tr>
-              <tr><td>Sub Topik</td><td>Perbandingan Pertumbuhan Fungsi</td></tr>
-              <tr><td>Level Kognitif</td><td>HOTS</td></tr>
+              <tr>
+                <td>Topik</td>
+                <td>Fungsi Lanjutan</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Pertumbuhan Eksponensial vs Polinomial</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
             </table>
             <div class="soal-pembahasan">
               <div class="soal-nomor">20.</div>
               <div class="soal-konten">
-                Dua model pertumbuhan investasi adalah A: $f(t) = 1000 \cdot 2^t$ dan B: $g(t) = t^4+1000$. Tentukan kebenaran dari perbandingan pertumbuhan kedua investasi ini.
-                <table class="soal-kategori">
-                  <thead><tr><th>Pernyataan</th><th>Benar</th><th>Salah</th></tr></thead>
-                  <tbody>
-                    <tr><td>Pada awalnya (t=0), kedua investasi bernilai sama.</td><td></td><td></td></tr>
-                    <tr><td>Untuk t=2, investasi B lebih besar dari A.</td><td></td><td></td></tr>
-                    <tr><td>Untuk t=10, investasi A jauh lebih besar dari B.</td><td></td><td></td></tr>
-                    <tr><td>Pertumbuhan eksponensial (A) pada akhirnya selalu melampaui pertumbuhan polinomial (B).</td><td></td><td></td></tr>
-                  </tbody>
-                </table>
+                  Dua model pertumbuhan investasi adalah A: $f(t) = 1000 \cdot 2^t$ dan B: $g(t) = t^4+1000$. Tentukan kebenaran dari perbandingan pertumbuhan kedua investasi ini.
+                  <table class="soal-kategori">
+                    <thead>
+                      <tr>
+                        <th>Pernyataan</th>
+                        <th>Benar</th>
+                        <th>Salah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Pada awalnya (t=0), kedua investasi bernilai sama.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Untuk t=2, investasi B lebih besar dari A.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Untuk t=10, investasi A jauh lebih besar dari B.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Pertumbuhan eksponensial (A) pada akhirnya selalu melampaui pertumbuhan polinomial (B).</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-
       <!-- HALAMAN 42: Pembahasan Soal 20 -->
       <section class="page">
-        <header class="page-header"><div class="header-top-box"><div><div class="header-title-main">Panduan Mengajar</div><div class="header-title-sub">Matematika Lanjut</div></div><img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png" alt="Brain Academy Logo" class="header-logo" /></div></header>
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Lanjut</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
         <div class="content-wrapper">
           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
           <div class="pembahasan-box">
@@ -2029,23 +3229,50 @@
               <div class="soal-konten">
                 <div class="pembahasan-detail">
                   <b class="jawaban">Jawaban: Benar, Salah, Benar, Benar.</b><br />
-                  <b>Pembahasan Detail:</b><br/>
-                  <b>Pernyataan 1:</b> Saat $t=0$, $f(0) = 1000 \cdot 2^0 = 1000$. $g(0) = 0^4+1000 = 1000$. Nilainya sama. <b>BENAR</b>.
+                  <b>Pembahasan Detail:</b><br />
+                  Kita akan membandingkan nilai fungsi $f(t) = 1000 \cdot 2^t$ dan $g(t) = t^4+1000$ pada berbagai nilai $t$.
                   <br/><br/>
-                  <b>Pernyataan 2:</b> Saat $t=2$, $f(2) = 1000 \cdot 2^2 = 4000$. $g(2) = 2^4+1000 = 16+1000 = 1016$. Investasi A lebih besar dari B. Pernyataan mengatakan sebaliknya. <b>SALAH</b>.
+                  <b>Pernyataan 1: Pada awalnya (t=0), kedua investasi bernilai sama.</b><br/>
+                  <ul>
+                    <li>$f(0) = 1000 \cdot 2^0 = 1000 \cdot 1 = 1000$.</li>
+                    <li>$g(0) = 0^4 + 1000 = 0 + 1000 = 1000$.</li>
+                  </ul>
+                  Kedua nilai sama. Pernyataan ini <b>BENAR</b>.
                   <br/><br/>
-                  <b>Pernyataan 3:</b> Saat $t=10$, $f(10) = 1000 \cdot 2^{10} = 1000 \cdot 1024 = 1.024.000$. $g(10) = 10^4+1000 = 10.000+1000 = 11.000$. A jauh lebih besar. <b>BENAR</b>.
+                  <b>Pernyataan 2: Untuk t=2, investasi B lebih besar dari A.</b><br/>
+                   <ul>
+                    <li>$f(2) = 1000 \cdot 2^2 = 1000 \cdot 4 = 4000$.</li>
+                    <li>$g(2) = 2^4 + 1000 = 16 + 1000 = 1016$.</li>
+                  </ul>
+                  Nilai investasi A (4000) lebih besar dari B (1016). Pernyataan ini <b>SALAH</b>.
                   <br/><br/>
-                  <b>Pernyataan 4:</b> Ini adalah sifat fundamental dari laju pertumbuhan. Fungsi eksponensial dengan basis lebih besar dari 1 akan selalu tumbuh lebih cepat daripada fungsi polinomial manapun untuk nilai $t$ yang cukup besar. <b>BENAR</b>.
+                  <b>Pernyataan 3: Untuk t=10, investasi A jauh lebih besar dari B.</b><br/>
+                  <ul>
+                    <li>$f(10) = 1000 \cdot 2^{10} = 1000 \cdot 1024 = 1.024.000$.</li>
+                    <li>$g(10) = 10^4 + 1000 = 10.000 + 1000 = 11.000$.</li>
+                  </ul>
+                  Nilai $f(10)$ memang jauh lebih besar dari $g(10)$. Pernyataan ini <b>BENAR</b>.
+                  <br/><br/>
+                  <b>Pernyataan 4: Pertumbuhan eksponensial (A) pada akhirnya selalu melampaui pertumbuhan polinomial (B).</b><br/>
+                  Ini adalah prinsip dasar dalam matematika. Untuk nilai $t$ yang cukup besar, laju pertumbuhan fungsi eksponensial (seperti $a^t$ dengan $a>1$) akan selalu melampaui laju pertumbuhan fungsi polinomial (seperti $t^n$). Pernyataan ini <b>BENAR</b>.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <footer class="page-footer"><span><b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b><i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i></span></footer>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
       </section>
-      
     </div>
   </body>
 </html>
-
