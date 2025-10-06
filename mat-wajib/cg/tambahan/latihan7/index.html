@@ -1,0 +1,2860 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Mengajar - Drill Soal TKA Matematika Wajib - 7</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --table-header-bg: #e9e9e9;
+        --grey-text: #8d8e8d;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+        font-size: 9pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+      .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .page {
+        background: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        padding: 1.8cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+      .page-header {
+        margin: -1.8cm -2.5cm 0 -2.5cm;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 10;
+      }
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+      .page:not(:first-of-type) .header-bottom-box {
+        display: none;
+      }
+      .page:not(:first-of-type) .header-top-box {
+        margin-bottom: 20px;
+      }
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 700;
+        color: var(--primary-text);
+      }
+      .header-bottom-box {
+        padding: 0 2.5cm 20px 2.5cm;
+        text-align: left;
+      }
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--primary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+      }
+      .header-logo {
+        max-height: 60px;
+      }
+      .content-wrapper {
+        flex-grow: 1;
+      }
+      .section-title {
+        font-size: 14pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        border-bottom: 2px solid var(--header-top-bg);
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+      }
+      ol.guide-list,
+      ul.guide-list {
+        padding-left: 20px;
+        font-size: 8.5pt;
+      }
+      ol.guide-list li,
+      ul.guide-list li {
+        margin-bottom: 8px;
+      }
+      .pembahasan-box {
+        margin-bottom: 25px;
+        page-break-inside: avoid;
+      }
+      .soal-card {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        border: 1px solid var(--border-color);
+      }
+      .soal-card td {
+        border: 1px solid var(--border-color);
+        padding: 6px 10px;
+        font-size: 8.5pt;
+        vertical-align: top;
+      }
+      .soal-card td:first-child {
+        font-weight: 700;
+        background-color: var(--table-header-bg);
+        width: 120px;
+      }
+      .summary-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid var(--border-color);
+        margin-bottom: 15px;
+      }
+      .summary-table td {
+        border: 1px solid var(--border-color);
+        padding: 6px 10px;
+        vertical-align: top;
+        font-size: 8.5pt;
+      }
+      .summary-table .summary-table-header td {
+        background-color: var(--table-header-bg);
+        font-weight: 700;
+        font-size: 9.5pt;
+      }
+      .summary-table .summary-table-content ul {
+        padding-left: 20px;
+        margin: 4px 0 0 0;
+      }
+      .soal-pembahasan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        margin-top: 10px;
+      }
+      .soal-nomor {
+        font-weight: bold;
+        min-width: 20px;
+      }
+      .soal-konten {
+        flex-grow: 1;
+        text-align: justify;
+      }
+      .soal-gambar {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .soal-konten ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+      }
+      .soal-konten ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 25px;
+        position: relative;
+        text-align: left;
+      }
+      .soal-konten ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      .pembahasan-detail {
+        margin-top: 10px;
+        background-color: #f9f9f9;
+        border-left: 4px solid var(--header-title-color);
+        padding: 10px 15px;
+        border-radius: 0 4px 4px 0;
+      }
+      .pembahasan-detail ul,
+      .pembahasan-detail ol {
+        padding-left: 20px;
+      }
+      .pembahasan-detail b.jawaban {
+        background-color: var(--header-title-color);
+        color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+        text-align: left;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        margin-top: auto;
+        padding-top: 2px;
+        border-top: 2.5px solid var(--border-color);
+        flex-shrink: 0;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+      }
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: var(--table-header-bg);
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+      .kecukupan-data-pernyataan {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 8px;
+        text-align: left;
+        margin-top: 10px !important;
+        margin-bottom: 10px;
+      }
+      .kecukupan-data-pernyataan span {
+        line-height: 1.5;
+      }
+      /* --- PRINT STYLES --- */
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+        body {
+          background-color: white;
+          margin: 0;
+        }
+        .page-container {
+          margin: 0;
+        }
+        .page {
+          box-shadow: none;
+          margin: 0;
+          padding: 1.8cm 2.5cm;
+          width: 21cm;
+          min-height: 29.7cm;
+          page-break-after: always;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+        }
+        .page:last-of-type {
+          page-break-after: auto;
+        }
+        .content-wrapper {
+          flex-grow: 1;
+          overflow: hidden;
+        }
+        .soal-card td:first-child,
+        .summary-table .summary-table-header td,
+        .pembahasan-detail,
+        table.soal-kategori th,
+        .header-top-box,
+        .header-bottom-text {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1: TUJUAN & RINGKASAN -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 7
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <table class="summary-table">
+            <tr class="summary-table-header">
+              <td colspan="2">Belajar Apa Hari Ini</td>
+            </tr>
+            <tr class="summary-table-content">
+              <td colspan="2">
+                Sesi drill soal ini bertujuan untuk menguatkan pemahaman siswa
+                terhadap berbagai konsep fundamental dalam Matematika Wajib yang
+                sering diujikan. Latihan ini dirancang untuk menguji
+                keterampilan siswa dalam menerapkan rumus dan konsep pada
+                berbagai tipe soal.
+                <ul>
+                  <li>
+                    <b>Aljabar & Logika:</b> Menganalisis kecukupan data pada barisan geometri, fungsi rasional, logaritma, dan persamaan kuadrat, serta aplikasi perbandingan bertingkat.
+                  </li>
+                  <li>
+                    <b>Geometri & Trigonometri:</b> Menghitung volume bangun ruang (kerucut terpancung), aplikasi kesebangunan, aturan sinus, dilatasi, sudut elevasi, dan jarak dalam bangun ruang (kubus).
+                  </li>
+                  <li>
+                    <b>Statistika & Peluang:</b> Menghitung simpangan rata-rata, peluang kejadian majemuk (dadu), dan kaidah pencacahan (permutasi siklis).
+                  </li>
+                   <li>
+                    <b>Kalkulus & Program Linear:</b> Menerapkan konsep pertumbuhan eksponensial dan optimisasi pada program linear.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="summary-table-header">
+              <td>Topik</td>
+              <td>Learning Objectives (LO)</td>
+            </tr>
+            <tr class="summary-table-content">
+              <td>
+                <b>Aljabar & Logika</b>
+              </td>
+              <td>
+                <ul>
+                  <li>Menganalisis kecukupan data untuk menyelesaikan masalah barisan dan fungsi kuadrat.</li>
+                  <li>Menentukan daerah hasil (range) dari sebuah fungsi rasional.</li>
+                  <li>Menyelesaikan masalah perbandingan bertingkat.</li>
+                   <li>Mengaplikasikan sifat-sifat logaritma untuk memverifikasi kebenaran pernyataan.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="summary-table-content">
+              <td><b>Geometri & Trigonometri</b></td>
+              <td>
+                <ul>
+                  <li>Menghitung volume kerucut terpancung.</li>
+                  <li>Menyelesaikan masalah kesebangunan pada segitiga.</li>
+                  <li>Menggunakan aturan sinus untuk mencari unsur dalam segitiga.</li>
+                  <li>Menentukan luas bayangan hasil dilatasi.</li>
+                   <li>Menyelesaikan masalah kontekstual menggunakan konsep sudut elevasi.</li>
+                   <li>Menentukan jarak antar unsur (titik, garis, bidang) dalam kubus.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="summary-table-content">
+              <td><b>Statistika & Peluang</b></td>
+              <td>
+                <ul>
+                  <li>Menghitung simpangan rata-rata dari data tunggal.</li>
+                  <li>Menerapkan permutasi siklis dalam masalah pencacahan.</li>
+                  <li>Menghitung peluang kejadian berulang (distribusi binomial).</li>
+                  <li>Menganalisis dan memverifikasi pernyataan terkait luas dan keliling lingkaran.</li>
+                </ul>
+              </td>
+            </tr>
+             <tr class="summary-table-content">
+              <td><b>Kalkulus & Program Linear</b></td>
+              <td>
+                <ul>
+                    <li>Menghitung pertumbuhan populasi secara eksponensial.</li>
+                    <li>Menentukan nilai maksimum dari fungsi tujuan dalam masalah program linear.</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2: PERTANYAAN PEMANTIK -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Alur & Pertanyaan Pemantik</h2>
+          <ul class="guide-list">
+            <li>
+              <b>Logika & Informasi:</b> "Jika kalian ingin mengetahui suku ke-5 dari sebuah barisan, informasi apa saja yang 'wajib' kalian miliki? Apakah mengetahui suku pertama saja cukup? Bagaimana jika kita hanya tahu hasil kali dua suku lainnya? Mari kita selidiki di soal nomor 1 dan 11."
+            </li>
+            <li>
+              <b>Aplikasi di Dunia Nyata:</b> "Bagaimana seorang manajer parkir bisa memaksimalkan pendapatannya jika luas lahan dan jenis kendaraannya terbatas? Atau, bagaimana ahli demografi memperkirakan jumlah penduduk sebuah kota di masa depan? Konsep apa yang akan kita gunakan untuk memecahkan masalah seperti di soal nomor 12 dan 20?"
+            </li>
+            <li>
+              <b>Geometri di Sekitar Kita:</b> "Pernahkah kalian melihat bayangan sebuah tiang? Bagaimana kita bisa mengukur tinggi tiang tersebut hanya dengan mengukur tinggi badan kita dan panjang bayangan kita? Konsep apa yang menghubungkan semua itu? Kita akan lihat aplikasinya di soal nomor 7."
+            </li>
+             <li>
+              <b>Peluang & Pengambilan Keputusan:</b> "Dalam permainan lempar dadu, seberapa besar kemungkinan kita mendapatkan angka tertentu jika kita melemparnya berkali-kali? Apakah peluangnya akan selalu sama di setiap lemparan? Mari kita hitung probabilitasnya di soal nomor 18."
+            </li>
+          </ul>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            >
+            <i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 3: Soal 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Barisan Geometri & Kecukupan Data</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">1.</div>
+              <div class="soal-konten">
+                Dalam sebuah barisan geometri dengan rasio positif, berapakah
+                nilai suku ke-5?
+                <div style="text-align: left; margin-top: 5px">
+                  (1) Suku pertama adalah 3.<br />
+                  (2) Hasil kali suku pertama dan suku ketiga adalah 144.
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+                    tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+                    pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 4: Pembahasan Soal 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+            <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+             <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</b><br />
+                <b>Pembahasan Detail:</b><br />
+                Untuk menemukan suku ke-5 ($U_5 = ar^4$), kita membutuhkan nilai suku pertama ($a$) dan rasio ($r$).<br/><br/>
+                <b>Analisis Pernyataan (1): Suku pertama adalah 3.</b><br/>
+                Kita tahu $a=3$. Namun, kita tidak mengetahui nilai rasio ($r$). Jadi, kita tidak bisa menghitung $U_5$. <b>Pernyataan (1) SAJA tidak cukup.</b><br/><br/>
+                <b>Analisis Pernyataan (2): Hasil kali suku pertama dan suku ketiga adalah 144.</b><br/>
+                $U_1 \times U_3 = 144 \implies a \times (ar^2) = 144 \implies a^2r^2 = 144 \implies (ar)^2 = 144$.<br/>
+                Karena rasio positif, maka $ar = 12$. Ini adalah nilai suku ke-2 ($U_2$), tetapi kita tidak mengetahui nilai $a$ atau $r$ secara individu. <b>Pernyataan (2) SAJA tidak cukup.</b><br/><br/>
+                <b>Analisis Pernyataan (1) dan (2) Bersama-sama:</b><br/>
+                Dari (1), kita punya $a=3$.<br/>
+                Dari (2), kita punya $ar=12$.<br/>
+                Substitusi $a=3$ ke dalam persamaan kedua: $3r=12 \implies r=4$.<br/>
+                Karena nilai $a$ dan $r$ sudah diketahui, kita dapat menghitung nilai $U_5 = ar^4 = 3 \times 4^4 = 3 \times 256 = 768$.<br/>
+                <b>DUA pernyataan BERSAMA-SAMA cukup.</b>
+              </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 5: Soal 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Volume Bangun Ruang</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">2.</div>
+              <div class="soal-konten">
+                Sebuah ember berbentuk kerucut terpancung. Jari-jari alasnya 10 cm, jari-jari atasnya 20 cm, dan tingginya 21 cm. Volume air yang dapat ditampung ember tersebut adalah... (Gunakan $\pi \approx \frac{22}{7}$)
+                <ol class="pilihan-ganda">
+                  <li data-option="A">12.100 cm³</li>
+                  <li data-option="B">14.200 cm³</li>
+                  <li data-option="C">15.400 cm³</li>
+                  <li data-option="D">18.300 cm³</li>
+                  <li data-option="E">21.500 cm³</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 6: Pembahasan Soal 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: C. 15.400 cm³</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Identifikasi variabel yang diketahui.</b><br/>
+                Jari-jari alas ($r$) = 10 cm.<br/>
+                Jari-jari atas ($R$) = 20 cm.<br/>
+                Tinggi ($t$) = 21 cm.<br/><br/>
+                <b>Langkah 2: Gunakan rumus volume kerucut terpancung.</b><br/>
+                $V = \frac{1}{3} \pi t (R^2 + Rr + r^2)$<br/><br/>
+                <b>Langkah 3: Substitusikan nilai ke dalam rumus.</b><br/>
+                $V = \frac{1}{3} \times \frac{22}{7} \times 21 \times (20^2 + (20)(10) + 10^2)$<br/><br/>
+                <b>Langkah 4: Lakukan perhitungan.</b><br/>
+                $V = \frac{1}{3} \times 22 \times 3 \times (400 + 200 + 100)$<br/>
+                $V = 22 \times (700)$<br/>
+                $V = 15.400$ cm³.<br/>
+                Jadi, volume air yang dapat ditampung adalah 15.400 cm³.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 7: Soal 3 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Fungsi Rasional</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">3.</div>
+              <div class="soal-konten">
+                Daerah hasil (range) dari fungsi $f(x)=\frac{4x-1}{2x+3}$
+                adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    $\{y | y \neq - \frac{3}{2}, y \in \mathbb{R}\}$
+                  </li>
+                  <li data-option="B">
+                    $\{y | y \neq \frac{1}{4}, y \in \mathbb{R}\}$
+                  </li>
+                  <li data-option="C">$\{y | y \neq 2, y \in \mathbb{R}\}$</li>
+                  <li data-option="D">$\{y | y \neq 4, y \in \mathbb{R}\}$</li>
+                  <li data-option="E">$\{y | y \in \mathbb{R}\}$</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 8: Pembahasan Soal 3 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: C. $\{y | y \neq 2, y \in \mathbb{R}\}$</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Pahami konsep daerah hasil (range) fungsi rasional.</b><br/>
+                Daerah hasil dari fungsi rasional berbentuk $f(x)=\frac{ax+b}{cx+d}$ adalah semua bilangan real kecuali nilai asimtot datarnya. Asimtot datar ditemukan dengan rumus $y = \frac{a}{c}$.<br/><br/>
+                <b>Langkah 2: Identifikasi koefisien $a$ dan $c$.</b><br/>
+                Dari fungsi $f(x)=\frac{4x-1}{2x+3}$, kita peroleh:<br/>
+                $a = 4$ (koefisien $x$ di pembilang)<br/>
+                $c = 2$ (koefisien $x$ di penyebut)<br/><br/>
+                <b>Langkah 3: Hitung nilai asimtot datar.</b><br/>
+                $y = \frac{a}{c} = \frac{4}{2} = 2$.<br/>
+                Ini berarti grafik fungsi tidak akan pernah memotong garis $y=2$.<br/><br/>
+                <b>Langkah 4: Tuliskan daerah hasilnya.</b><br/>
+                Daerah hasilnya adalah semua bilangan real $y$ kecuali 2, yang ditulis sebagai $\{y | y \neq 2, y \in \mathbb{R}\}$.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 9: Soal 4 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Peluang & Kombinatorika</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Permutasi Siklis</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">4.</div>
+              <div class="soal-konten">
+                 Sebuah keluarga terdiri dari ayah, ibu, dan 4 orang anak. Mereka
+                akan duduk mengelilingi meja makan bundar. Jika ayah dan ibu
+                harus selalu duduk berdampingan, ada berapa banyak cara mereka
+                duduk?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">24</li>
+                  <li data-option="B">48</li>
+                  <li data-option="C">120</li>
+                  <li data-option="D">240</li>
+                  <li data-option="E">720</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 10: Pembahasan Soal 4 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: B. 48</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Gabungkan elemen yang harus berdampingan.</b><br/>
+                Karena ayah dan ibu harus selalu duduk berdampingan, kita anggap mereka sebagai satu unit tunggal (AI).<br/>
+                Sekarang, objek yang akan kita susun adalah { (AI), Anak1, Anak2, Anak3, Anak4 }. Total ada 5 objek.<br/><br/>
+                <b>Langkah 2: Gunakan rumus permutasi siklis.</b><br/>
+                Banyak cara menyusun $n$ objek secara melingkar adalah $(n-1)!$.<br/>
+                Dalam kasus ini, $n=5$. Maka, banyak cara menyusun 5 objek ini adalah $(5-1)! = 4! = 4 \times 3 \times 2 \times 1 = 24$ cara.<br/><br/>
+                <b>Langkah 3: Hitung permutasi internal dari elemen yang digabung.</b><br/>
+                Unit (AI) bisa memiliki dua susunan internal: Ayah di kiri, Ibu di kanan (AI) atau Ibu di kiri, Ayah di kanan (IA). Banyak cara menyusun internal adalah $2! = 2$ cara.<br/><br/>
+                <b>Langkah 4: Kalikan hasil permutasi siklis dengan permutasi internal.</b><br/>
+                Total cara = (Cara susunan melingkar) $\times$ (Cara susunan internal)<br/>
+                Total cara = $24 \times 2 = 48$ cara.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 11: Soal 5 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Trigonometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Aturan Sinus</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                 Dalam segitiga ABC, diketahui panjang sisi $a=8$ cm, sisi $b=10$
+                cm, dan sudut $A=30^\circ$. Nilai dari $\sin B$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$\frac{1}{2}$</li>
+                  <li data-option="B">$\frac{2}{5}$</li>
+                  <li data-option="C">$\frac{4}{5}$</li>
+                  <li data-option="D">$\frac{5}{8}$</li>
+                  <li data-option="E">1</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 12: Pembahasan Soal 5 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: D. $\frac{5}{8}$</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Ingat Aturan Sinus.</b><br/>
+                Pada segitiga sembarang, perbandingan antara panjang sisi dengan sinus sudut di hadapannya adalah konstan.<br/>
+                $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$<br/><br/>
+                <b>Langkah 2: Substitusikan nilai-nilai yang diketahui.</b><br/>
+                Kita memiliki $a=8$, $b=10$, dan $A=30^\circ$. Kita akan mencari $\sin B$.<br/>
+                $\frac{8}{\sin 30^\circ} = \frac{10}{\sin B}$<br/><br/>
+                <b>Langkah 3: Selesaikan persamaan untuk $\sin B$.</b><br/>
+                Kita tahu bahwa $\sin 30^\circ = \frac{1}{2}$.<br/>
+                $\frac{8}{1/2} = \frac{10}{\sin B}$<br/>
+                $16 = \frac{10}{\sin B}$<br/>
+                $16 \sin B = 10$<br/>
+                $\sin B = \frac{10}{16} = \frac{5}{8}$.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 13: Soal 6 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Perbandingan Bertingkat</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">6.</div>
+              <div class="soal-konten">
+                Sebuah kios menjual buah-buahan. Perbandingan antara berat Apel
+                dan Jeruk adalah 2:3. Perbandingan berat Jeruk dan Mangga adalah
+                4:5. Jika total berat ketiga buah tersebut 70 kg, manakah
+                pernyataan berikut yang benar?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span
+                      >Perbandingan berat Apel, Jeruk, dan Mangga adalah
+                      8:12:15.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Berat Apel adalah 16 kg.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Berat Jeruk adalah 24 kg.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Selisih berat Mangga dan Apel adalah 14 kg.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Berat Mangga 5 kg lebih berat dari berat Jeruk.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 14: Pembahasan Soal 6 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Gabungkan perbandingan.</b><br/>
+                A : J = 2 : 3<br/>
+                J : M = 4 : 5<br/>
+                Untuk menggabungkan, samakan angka perbandingan Jeruk (KPK dari 3 dan 4 adalah 12).<br/>
+                A : J = (2 $\times$ 4) : (3 $\times$ 4) = 8 : 12<br/>
+                J : M = (4 $\times$ 3) : (5 $\times$ 3) = 12 : 15<br/>
+                Maka, A : J : M = 8 : 12 : 15. <b>(Pernyataan 1 Benar)</b><br/><br/>
+                <b>Langkah 2: Hitung berat masing-masing buah.</b><br/>
+                Total angka perbandingan = 8 + 12 + 15 = 35.<br/>
+                Total berat = 70 kg.<br/>
+                Faktor pengali = $\frac{70}{35} = 2$.<br/>
+                - Berat Apel = $8 \times 2 = 16$ kg. <b>(Pernyataan 2 Benar)</b><br/>
+                - Berat Jeruk = $12 \times 2 = 24$ kg. <b>(Pernyataan 3 Benar)</b><br/>
+                - Berat Mangga = $15 \times 2 = 30$ kg.<br/><br/>
+                <b>Langkah 3: Verifikasi pernyataan sisa.</b><br/>
+                - Selisih Mangga dan Apel = $30 - 16 = 14$ kg. <b>(Pernyataan 4 Benar)</b><br/>
+                - Selisih Mangga dan Jeruk = $30 - 24 = 6$ kg. Pernyataan 5 menyebutkan 5 kg. <b>(Pernyataan 5 Salah)</b>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 15: Soal 7 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Kesebangunan</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">7.</div>
+              <div class="soal-konten">
+                Seorang anak dengan tinggi 160 cm berdiri pada jarak 8 meter
+                dari sebuah tiang lampu. Panjang bayangan anak oleh sinar lampu
+                adalah 4 meter. Tinggi tiang lampu tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">4,8 m</li>
+                  <li data-option="B">5,6 m</li>
+                  <li data-option="C">6,0 m</li>
+                  <li data-option="D">6,4 m</li>
+                  <li data-option="E">7,2 m</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 16: Pembahasan Soal 7 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: A. 4,8 m</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Visualisasikan masalah dan identifikasi segitiga sebangun.</b><br/>
+                Masalah ini membentuk dua segitiga siku-siku yang sebangun. Segitiga pertama dibentuk oleh tiang lampu dan bayangannya (jarak dari dasar tiang ke ujung bayangan). Segitiga kedua dibentuk oleh anak dan bayangannya.<br/><br/>
+                <b>Langkah 2: Tentukan ukuran-ukuran yang relevan (dalam satuan yang sama).</b><br/>
+                - Tinggi anak = 160 cm = 1,6 m.<br/>
+                - Panjang bayangan anak (alas segitiga kecil) = 4 m.<br/>
+                - Tinggi tiang = T (yang dicari).<br/>
+                - Jarak anak dari tiang = 8 m.<br/>
+                - Alas segitiga besar = Jarak anak dari tiang + Panjang bayangan anak = 8 m + 4 m = 12 m.<br/><br/>
+                <b>Langkah 3: Gunakan perbandingan kesebangunan.</b><br/>
+                $\frac{\text{Tinggi Tiang}}{\text{Alas Segitiga Besar}} = \frac{\text{Tinggi Anak}}{\text{Alas Segitiga Kecil}}$<br/>
+                $\frac{T}{12} = \frac{1,6}{4}$<br/><br/>
+                <b>Langkah 4: Selesaikan persamaan untuk T.</b><br/>
+                $T = \frac{1,6 \times 12}{4}$<br/>
+                $T = 1,6 \times 3$<br/>
+                $T = 4,8$ m.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+       <!-- HALAMAN 17: Soal 8 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Statistika</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Ukuran Penyebaran Data</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">8.</div>
+              <div class="soal-konten">
+                Simpangan rata-rata dari data: 4, 6, 8, 5, 7 adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">1,0</li>
+                  <li data-option="B">1,2</li>
+                  <li data-option="C">1,5</li>
+                  <li data-option="D">2,0</li>
+                  <li data-option="E">6,0</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 18: Pembahasan Soal 8 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: B. 1,2</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Hitung rata-rata ($\bar{x}$) dari data.</b><br/>
+                $\bar{x} = \frac{4+6+8+5+7}{5} = \frac{30}{5} = 6$.<br/><br/>
+                <b>Langkah 2: Hitung nilai mutlak dari selisih setiap data dengan rata-rata.</b><br/>
+                - $|x_1 - \bar{x}| = |4-6| = 2$<br/>
+                - $|x_2 - \bar{x}| = |6-6| = 0$<br/>
+                - $|x_3 - \bar{x}| = |8-6| = 2$<br/>
+                - $|x_4 - \bar{x}| = |5-6| = 1$<br/>
+                - $|x_5 - \bar{x}| = |7-6| = 1$<br/><br/>
+                <b>Langkah 3: Gunakan rumus Simpangan Rata-rata (SR).</b><br/>
+                $SR = \frac{1}{n} \sum_{i=1}^{n} |x_i - \bar{x}|$<br/>
+                $SR = \frac{1}{5} (2+0+2+1+1)$<br/>
+                $SR = \frac{6}{5} = 1,2$.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+       <!-- HALAMAN 19: Soal 9 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Logaritma</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">9.</div>
+              <div class="soal-konten">
+                 Diberikan $^2\log 3 = a$ dan $^3\log 5 = b$. Tentukan kebenaran
+                dari pernyataan-pernyataan logaritma berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>$^2\log 5 = ab$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$^9\log 4 = a$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$^{15}\log 20 = \frac{2+ab}{a(1+b)}$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$^3\log 2 = \frac{1}{a}$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 20: Pembahasan Soal 9 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: Benar, Salah, Benar, Benar</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>1. Pernyataan $^2\log 5 = ab$:</b><br/>
+                Gunakan sifat $^p\log q = ^p\log r \times ^r\log q$.<br/>
+                $^2\log 5 = (^2\log 3) \times (^3\log 5) = a \times b = ab$. <b>(Benar)</b><br/><br/>
+                <b>2. Pernyataan $^9\log 4 = a$:</b><br/>
+                Gunakan sifat $^{(p^m)}\log (q^n) = \frac{n}{m} ^p\log q$ dan $^p\log q = \frac{1}{^q\log p}$.<br/>
+                $^9\log 4 = ^{3^2}\log 2^2 = \frac{2}{2} ^3\log 2 = ^3\log 2$.<br/>
+                Karena $^2\log 3 = a$, maka $^3\log 2 = \frac{1}{a}$. Jadi, $^9\log 4 = \frac{1}{a}$. Pernyataan menyebutkan $a$. <b>(Salah)</b><br/><br/>
+                <b>3. Pernyataan $^{15}\log 20 = \frac{2+ab}{a(1+b)}$:</b><br/>
+                Ubah basis ke basis 2: $^{15}\log 20 = \frac{^2\log 20}{^2\log 15} = \frac{^2\log(4 \times 5)}{^2\log(3 \times 5)} = \frac{^2\log 2^2 + ^2\log 5}{^2\log 3 + ^2\log 5}$.<br/>
+                Substitusi nilai yang diketahui: $\frac{2 + ab}{a + ab} = \frac{2+ab}{a(1+b)}$. <b>(Benar)</b><br/><br/>
+                <b>4. Pernyataan $^3\log 2 = \frac{1}{a}$:</b><br/>
+                Gunakan sifat $^p\log q = \frac{1}{^q\log p}$.<br/>
+                $^3\log 2 = \frac{1}{^2\log 3} = \frac{1}{a}$. <b>(Benar)</b>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 21: Soal 10 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Peluang</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Frekuensi Harapan</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">10.</div>
+              <div class="soal-konten">
+                Sebuah koin tidak seimbang dilempar. Peluang munculnya sisi
+                Angka adalah dua kali peluang munculnya sisi Gambar. Dari 90
+                kali pelemparan, frekuensi harapan munculnya sisi Gambar
+                adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">30 kali</li>
+                  <li data-option="B">45 kali</li>
+                  <li data-option="C">50 kali</li>
+                  <li data-option="D">60 kali</li>
+                  <li data-option="E">75 kali</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 22: Pembahasan Soal 10 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: A. 30 kali</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Tentukan peluang munculnya sisi Gambar, P(G).</b><br/>
+                Misalkan P(G) = p. Maka, peluang munculnya sisi Angka, P(A) = 2p.<br/>
+                Jumlah semua peluang dalam suatu percobaan adalah 1.<br/>
+                P(A) + P(G) = 1<br/>
+                2p + p = 1<br/>
+                3p = 1<br/>
+                p = $\frac{1}{3}$. Jadi, P(G) = $\frac{1}{3}$.<br/><br/>
+                <b>Langkah 2: Hitung frekuensi harapan.</b><br/>
+                Frekuensi Harapan (Fh) dari suatu kejadian adalah hasil kali banyaknya percobaan ($n$) dengan peluang kejadian tersebut ($P(Kejadian)$).<br/>
+                Fh(G) = $n \times P(G)$<br/><br/>
+                <b>Langkah 3: Substitusi nilai yang diketahui.</b><br/>
+                $n$ = 90 kali pelemparan.<br/>
+                P(G) = $\frac{1}{3}$.<br/>
+                Fh(G) = $90 \times \frac{1}{3} = 30$ kali.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 23: Soal 11 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Fungsi Kuadrat & Kecukupan Data</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">11.</div>
+              <div class="soal-konten">
+                Parabola $y=ax^2+bx+c$ memotong sumbu x di dua titik berbeda.
+                Apakah parabola tersebut membuka ke atas?
+                <div style="text-align: left; margin-top: 5px">
+                  (1) $a+c > b$.<br />
+                  (2) Titik puncaknya berada di bawah sumbu x.
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+                    tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+                    pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 24: Pembahasan Soal 11 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                Pertanyaan: Apakah $a > 0$? <br/>
+                Informasi soal: Parabola memotong sumbu x di dua titik, yang berarti definitnya positif ($D = b^2 - 4ac > 0$).<br/><br/>
+                <b>Analisis Pernyataan (1): $a+c > b$.</b><br/>
+                Pertidaksamaan ini dapat ditulis ulang menjadi $a - b + c > 0$.<br/>
+                Bentuk $a(-1)^2 + b(-1) + c$ adalah nilai fungsi saat $x=-1$, yaitu $f(-1)$.<br/>
+                Jadi, $f(-1)>0$. Informasi ini tidak cukup untuk menentukan apakah parabola membuka ke atas atau ke bawah. Bisa saja parabola membuka ke bawah tetapi saat $x=-1$, nilainya masih positif. <b>Pernyataan (1) SAJA tidak cukup.</b><br/><br/>
+                <b>Analisis Pernyataan (2): Titik puncaknya berada di bawah sumbu x.</b><br/>
+                Koordinat y dari titik puncak adalah $y_p = -\frac{D}{4a}$.<br/>
+                Diberikan $y_p < 0$, maka $-\frac{D}{4a} < 0$.<br/>
+                Karena kita tahu dari soal bahwa $D>0$, maka pembilang $(-D)$ bernilai negatif.<br/>
+                Agar hasil pembagiannya negatif ($<0$), penyebut ($4a$) harus bernilai positif.<br/>
+                $4a > 0 \implies a > 0$.<br/>
+                Ini membuktikan bahwa parabola membuka ke atas. <b>Pernyataan (2) SAJA cukup.</b>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 25: Soal 12 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Kalkulus</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Pertumbuhan Eksponensial</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>LOTS (Lower Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">12.</div>
+              <div class="soal-konten">
+                 Populasi penduduk suatu kota pada tahun 2020 adalah 2.000.000
+                jiwa. Jika tingkat pertumbuhan penduduknya 2% per tahun,
+                perkiraan jumlah penduduk kota tersebut pada tahun 2025
+                adalah... (Gunakan $(1,02)^5 \approx 1,104$)
+                <ol class="pilihan-ganda">
+                  <li data-option="A">2.104.000 jiwa</li>
+                  <li data-option="B">2.200.000 jiwa</li>
+                  <li data-option="C">2.208.000 jiwa</li>
+                  <li data-option="D">2.240.000 jiwa</li>
+                  <li data-option="E">2.300.000 jiwa</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 26: Pembahasan Soal 12 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: C. 2.208.000 jiwa</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Gunakan rumus pertumbuhan eksponensial.</b><br/>
+                $P_n = P_0 (1+r)^n$<br/>
+                Dimana:<br/>
+                - $P_n$ = Populasi pada tahun ke-n<br/>
+                - $P_0$ = Populasi awal<br/>
+                - $r$ = Tingkat pertumbuhan (dalam desimal)<br/>
+                - $n$ = Jumlah tahun<br/><br/>
+                <b>Langkah 2: Identifikasi nilai-nilai yang diketahui.</b><br/>
+                - $P_0 = 2.000.000$<br/>
+                - $r = 2\% = 0,02$<br/>
+                - $n = 2025 - 2020 = 5$ tahun<br/><br/>
+                <b>Langkah 3: Substitusikan nilai ke dalam rumus.</b><br/>
+                $P_5 = 2.000.000 \times (1 + 0,02)^5$<br/>
+                $P_5 = 2.000.000 \times (1,02)^5$<br/><br/>
+                <b>Langkah 4: Gunakan nilai perkiraan yang diberikan.</b><br/>
+                Diketahui $(1,02)^5 \approx 1,104$.<br/>
+                $P_5 = 2.000.000 \times 1,104$<br/>
+                $P_5 = 2.208.000$ jiwa.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 27: Soal 13 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Transformasi Geometri (Dilatasi)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">13.</div>
+              <div class="soal-konten">
+                Sebuah segitiga ABC dengan titik sudut A(2,1), B(6,1), dan
+                C(2,4) didilatasikan dengan pusat P(1,1) dan faktor skala $\sqrt{5}$.
+                Luas bayangan segitiga tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">6 satuan luas</li>
+                  <li data-option="B">12 satuan luas</li>
+                  <li data-option="C">18 satuan luas</li>
+                  <li data-option="D">24 satuan luas</li>
+                  <li data-option="E">30 satuan luas</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 28: Pembahasan Soal 13 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: E. 30 satuan luas</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Hitung luas bangun awal.</b><br/>
+                Segitiga ABC memiliki titik sudut A(2,1), B(6,1), dan C(2,4).<br/>
+                Sisi AB sejajar sumbu-x, dan sisi AC sejajar sumbu-y. Ini adalah segitiga siku-siku di A.<br/>
+                - Panjang alas (AB) = $|6-2| = 4$.<br/>
+                - Tinggi (AC) = $|4-1| = 3$.<br/>
+                - Luas Awal ($L_{awal}$) = $\frac{1}{2} \times \text{alas} \times \text{tinggi} = \frac{1}{2} \times 4 \times 3 = 6$ satuan luas.<br/><br/>
+                <b>Langkah 2: Gunakan rumus luas bayangan hasil dilatasi.</b><br/>
+                Jika sebuah bangun datar dengan luas $L_{awal}$ didilatasikan dengan faktor skala $k$, maka luas bayangannya ($L_{bayangan}$) adalah:<br/>
+                $L_{bayangan} = k^2 \times L_{awal}$<br/><br/>
+                <b>Langkah 3: Substitusikan nilai-nilai yang diketahui.</b><br/>
+                - $k = \sqrt{5}$<br/>
+                - $L_{awal} = 6$<br/>
+                $L_{bayangan} = (\sqrt{5})^2 \times 6$<br/>
+                $L_{bayangan} = 5 \times 6 = 30$ satuan luas.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 29: Soal 14 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Trigonometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Aplikasi Trigonometri (Sudut Elevasi)</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">14.</div>
+              <div class="soal-konten">
+                Sebuah antena dipasang di atas sebuah gedung. Dari suatu titik
+                di tanah yang berjarak 100 m dari dasar gedung, sudut elevasi ke
+                dasar antena adalah $30^\circ$ dan ke puncak antena adalah
+                $45^\circ$. Tinggi antena tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$100(1-\frac{1}{\sqrt{3}})$ m</li>
+                  <li data-option="B">$100(\sqrt{3}-1)$ m</li>
+                  <li data-option="C">100 m</li>
+                  <li data-option="D">$100(1+\frac{1}{\sqrt{3}})$ m</li>
+                  <li data-option="E">50 m</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 30: Pembahasan Soal 14 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: A. $100(1-\frac{1}{\sqrt{3}})$ m</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Definisikan variabel.</b><br/>
+                - Jarak horizontal pengamat ke gedung = 100 m.<br/>
+                - Tinggi gedung (sampai dasar antena) = $h_1$.<br/>
+                - Tinggi total (sampai puncak antena) = $h_2$.<br/>
+                - Tinggi antena = $h_2 - h_1$.<br/><br/>
+                <b>Langkah 2: Hitung tinggi gedung ($h_1$).</b><br/>
+                Menggunakan segitiga pertama dengan sudut elevasi $30^\circ$:<br/>
+                $\tan 30^\circ = \frac{\text{depan}}{\text{samping}} = \frac{h_1}{100}$<br/>
+                $h_1 = 100 \times \tan 30^\circ = 100 \times \frac{1}{\sqrt{3}}$ m.<br/><br/>
+                <b>Langkah 3: Hitung tinggi total ($h_2$).</b><br/>
+                Menggunakan segitiga kedua dengan sudut elevasi $45^\circ$:<br/>
+                $\tan 45^\circ = \frac{h_2}{100}$<br/>
+                $h_2 = 100 \times \tan 45^\circ = 100 \times 1 = 100$ m.<br/><br/>
+                <b>Langkah 4: Hitung tinggi antena.</b><br/>
+                Tinggi antena = $h_2 - h_1 = 100 - 100 \frac{1}{\sqrt{3}}$<br/>
+                Tinggi antena = $100(1 - \frac{1}{\sqrt{3}})$ m.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 31: Soal 15 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Barisan Rekursif</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">15.</div>
+              <div class="soal-konten">
+                Diketahui suku-suku suatu barisan $U_1, U_2, U_3, ...$ di mana
+                $U_n = U_{n-1} - U_{n-2}$ untuk $n \ge 3$. Jika $U_1 = 5$ dan
+                $U_2 = 2$, maka nilai dari $U_6$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">-5</li>
+                  <li data-option="B">-2</li>
+                  <li data-option="C">2</li>
+                  <li data-option="D">3</li>
+                  <li data-option="E">5</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 32: Pembahasan Soal 15 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: D. 3</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Hitung suku-suku barisan secara berurutan menggunakan rumus rekursif yang diberikan.</b><br/>
+                - $U_1 = 5$ (diberikan)<br/>
+                - $U_2 = 2$ (diberikan)<br/>
+                - $U_3 = U_2 - U_1 = 2 - 5 = -3$<br/>
+                - $U_4 = U_3 - U_2 = -3 - 2 = -5$<br/>
+                - $U_5 = U_4 - U_3 = -5 - (-3) = -5 + 3 = -2$<br/>
+                - $U_6 = U_5 - U_4 = -2 - (-5) = -2 + 5 = 3$<br/><br/>
+                Barisan ini periodik dengan periode 6, yaitu $(5, 2, -3, -5, -2, 3, ...)$. Nilai $U_6$ adalah 3.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 33: Soal 16 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Luas dan Keliling Lingkaran</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">16.</div>
+              <div class="soal-konten">
+                 Sebuah taman berbentuk lingkaran dengan diameter 28 meter. Di
+                tengah taman dibuat kolam berbentuk lingkaran dengan diameter 14
+                meter. Sisa area taman ditanami rumput. Manakah pernyataan
+                berikut yang benar? (Gunakan $\pi \approx \frac{22}{7}$)
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span
+                      >Luas total taman adalah 616 m².</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Luas kolam adalah 154 m².</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Luas area yang ditanami rumput adalah 462 m².</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Keliling taman adalah 88 m.</span
+                    >
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span
+                      >Selisih keliling taman dan keliling kolam adalah 22
+                      m.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 34: Pembahasan Soal 16 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: Pernyataan 1, 2, 3, dan 4 benar.</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                - Jari-jari taman ($R$) = $\frac{28}{2} = 14$ m.<br/>
+                - Jari-jari kolam ($r$) = $\frac{14}{2} = 7$ m.<br/><br/>
+                <b>1. Luas total taman:</b><br/>
+                $L_{taman} = \pi R^2 = \frac{22}{7} \times 14^2 = \frac{22}{7} \times 196 = 22 \times 28 = 616$ m². <b>(Benar)</b><br/><br/>
+                <b>2. Luas kolam:</b><br/>
+                $L_{kolam} = \pi r^2 = \frac{22}{7} \times 7^2 = 22 \times 7 = 154$ m². <b>(Benar)</b><br/><br/>
+                <b>3. Luas area rumput:</b><br/>
+                $L_{rumput} = L_{taman} - L_{kolam} = 616 - 154 = 462$ m². <b>(Benar)</b><br/><br/>
+                <b>4. Keliling taman:</b><br/>
+                $K_{taman} = 2 \pi R = 2 \times \frac{22}{7} \times 14 = 2 \times 22 \times 2 = 88$ m. <b>(Benar)</b><br/><br/>
+                <b>5. Selisih keliling:</b><br/>
+                $K_{kolam} = 2 \pi r = 2 \times \frac{22}{7} \times 7 = 44$ m.<br/>
+                Selisih = $K_{taman} - K_{kolam} = 88 - 44 = 44$ m. Pernyataan menyebutkan 22 m. <b>(Salah)</b>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 35: Soal 17 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Aljabar</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Fungsi Komposisi</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">17.</div>
+              <div class="soal-konten">
+                 Jika $f(x) = \sqrt{x+1}$ dan $(f \circ g)(x) = 2\sqrt{x-1}$, maka
+                fungsi $g(x)$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$4x-5$</li>
+                  <li data-option="B">$2x-3$</li>
+                  <li data-option="C">$4x-4$</li>
+                  <li data-option="D">$2x-2$</li>
+                  <li data-option="E">$4x-3$</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 36: Pembahasan Soal 17 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: A. $4x-5$</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Tuliskan definisi komposisi fungsi.</b><br/>
+                $(f \circ g)(x) = f(g(x))$.<br/>
+                Kita tahu $f(x) = \sqrt{x+1}$, maka $f(g(x)) = \sqrt{g(x)+1}$.<br/><br/>
+                <b>Langkah 2: Samakan hasil komposisi dengan yang diketahui di soal.</b><br/>
+                $f(g(x)) = (f \circ g)(x)$<br/>
+                $\sqrt{g(x)+1} = 2\sqrt{x-1}$<br/><br/>
+                <b>Langkah 3: Selesaikan persamaan untuk $g(x)$.</b><br/>
+                Kuadratkan kedua ruas untuk menghilangkan akar:<br/>
+                $(\sqrt{g(x)+1})^2 = (2\sqrt{x-1})^2$<br/>
+                $g(x)+1 = 4(x-1)$<br/>
+                $g(x)+1 = 4x-4$<br/>
+                $g(x) = 4x - 4 - 1$<br/>
+                $g(x) = 4x-5$.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 37: Soal 18 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Peluang</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Peluang Binomial</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>MOTS (Middle Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">18.</div>
+              <div class="soal-konten">
+                 Sebuah dadu dilempar sebanyak 3 kali. Peluang munculnya mata
+                dadu 6 tepat dua kali adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$\frac{5}{216}$</li>
+                  <li data-option="B">$\frac{15}{216}$</li>
+                  <li data-option="C">$\frac{25}{216}$</li>
+                  <li data-option="D">$\frac{1}{36}$</li>
+                  <li data-option="E">$\frac{3}{36}$</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 38: Pembahasan Soal 18 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: B. $\frac{15}{216}$</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                Ini adalah masalah peluang binomial.<br/>
+                <b>Langkah 1: Identifikasi parameter binomial.</b><br/>
+                - Banyaknya percobaan ($n$) = 3 kali lemparan.<br/>
+                - Kejadian "sukses" adalah muncul mata dadu 6. Peluang sukses ($p$) = $\frac{1}{6}$.<br/>
+                - Kejadian "gagal" adalah tidak muncul mata dadu 6. Peluang gagal ($q$) = $1 - p = \frac{5}{6}$.<br/>
+                - Banyaknya sukses yang diharapkan ($k$) = 2 kali.<br/><br/>
+                <b>Langkah 2: Gunakan rumus peluang binomial.</b><br/>
+                $P(X=k) = C(n,k) \cdot p^k \cdot q^{n-k}$<br/><br/>
+                <b>Langkah 3: Substitusikan nilai-nilai ke dalam rumus.</b><br/>
+                $P(X=2) = C(3,2) \cdot (\frac{1}{6})^2 \cdot (\frac{5}{6})^{3-2}$<br/>
+                $C(3,2) = \frac{3!}{2!(3-2)!} = \frac{3 \times 2 \times 1}{(2 \times 1)(1)} = 3$.<br/>
+                $P(X=2) = 3 \cdot (\frac{1}{36}) \cdot (\frac{5}{6})^1$<br/>
+                $P(X=2) = 3 \cdot \frac{1}{36} \cdot \frac{5}{6} = \frac{15}{216}$.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 39: Soal 19 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Geometri</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Jarak pada Bangun Ruang</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">19.</div>
+              <div class="soal-konten">
+                 Pada kubus ABCD.EFGH dengan rusuk 12 cm, P adalah titik tengah
+                CG. Tentukan kebenaran pernyataan jarak berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jarak titik P ke garis FB adalah 12 cm.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jarak titik A ke titik P adalah $6\sqrt{6}$ cm.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Jarak titik P ke bidang ABGH adalah $3\sqrt{2}$ cm.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jarak titik B ke titik P adalah $6\sqrt{5}$ cm.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 40: Pembahasan Soal 19 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: Benar, Salah, Benar, Benar</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                Rusuk = 12 cm. P di tengah CG, maka CP = PG = 6 cm.<br/><br/>
+                <b>1. Jarak P ke garis FB:</b><br/>
+                Garis CG sejajar dengan garis FB. Jarak titik P pada garis CG ke garis FB adalah sama dengan panjang rusuk yang tegak lurus keduanya, yaitu BC. Jadi, jaraknya adalah 12 cm. <b>(Benar)</b><br/><br/>
+                <b>2. Jarak A ke P:</b><br/>
+                Buat segitiga siku-siku ACG. AC adalah diagonal sisi, $AC = 12\sqrt{2}$ cm. AP adalah hipotenusa dari segitiga siku-siku ACP.<br/>
+                $AP = \sqrt{AC^2 + CP^2} = \sqrt{(12\sqrt{2})^2 + 6^2} = \sqrt{288 + 36} = \sqrt{324} = 18$ cm. Pernyataan menyebutkan $6\sqrt{6}$ cm. <b>(Salah)</b><br/><br/>
+                <b>3. Jarak P ke bidang ABGH:</b><br/>
+                Jarak P ke bidang ABGH sama dengan jarak titik P ke proyeksinya di bidang tersebut. Proyeksi P ke bidang ABGH adalah titik Q pada garis GH. Jarak PQ sama dengan jarak titik tengah CG ke bidang diagonal ABGH. Ini adalah setengah dari jarak C ke bidang ABGH, yang sama dengan setengah dari setengah diagonal sisi, yaitu $\frac{1}{2} \times \frac{1}{2} \times 12\sqrt{2} \times \sqrt{2} = 6$. Cara lain: Jarak P(12,12,6) ke bidang y-z=0 adalah $d = \frac{|12-6|}{\sqrt{1^2+(-1)^2}} = \frac{6}{\sqrt{2}} = 3\sqrt{2}$ cm. <b>(Benar)</b><br/><br/>
+                <b>4. Jarak B ke P:</b><br/>
+                Gunakan segitiga siku-siku BCP (siku-siku di C).<br/>
+                $BP = \sqrt{BC^2 + CP^2} = \sqrt{12^2 + 6^2} = \sqrt{144 + 36} = \sqrt{180} = \sqrt{36 \times 5} = 6\sqrt{5}$ cm. <b>(Benar)</b>
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 41: Soal 20 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+          <div class="pembahasan-box">
+            <table class="soal-card">
+              <tr>
+                <td>Topik</td>
+                <td>Program Linear</td>
+              </tr>
+              <tr>
+                <td>Sub Topik</td>
+                <td>Nilai Optimum</td>
+              </tr>
+              <tr>
+                <td>Level Kognitif</td>
+                <td>HOTS (Higher Order Thinking Skills)</td>
+              </tr>
+            </table>
+            <div class="soal-pembahasan">
+              <div class="soal-nomor">20.</div>
+              <div class="soal-konten">
+                Luas daerah parkir adalah 1.760 m². Luas rata-rata untuk mobil
+                kecil 4 m² dan mobil besar 20 m². Daya tampung maksimum hanya
+                200 kendaraan. Biaya parkir mobil kecil Rp6.000/jam dan mobil
+                besar Rp11.000/jam. Jika dalam satu jam tidak ada kendaraan yang
+                pergi dan datang, penghasilan maksimum dari tempat parkir itu
+                adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">Rp1.360.000</li>
+                  <li data-option="B">Rp1.500.000</li>
+                  <li data-option="C">Rp1.760.000</li>
+                  <li data-option="D">Rp2.000.000</li>
+                  <li data-option="E">Rp2.200.000</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+      
+       <!-- HALAMAN 42: Pembahasan Soal 20 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Panduan Mengajar</div>
+              <div class="header-title-sub">Matematika Wajib</div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+        <div class="content-wrapper">
+           <h2 class="section-title">Kunci Jawaban dan Pembahasan</h2>
+           <div class="pembahasan-detail">
+                <b class="jawaban">Jawaban: B. Rp1.500.000</b><br/>
+                <b>Pembahasan Detail:</b><br/>
+                <b>Langkah 1: Tentukan model matematika.</b><br/>
+                Misal $x$ = banyak mobil kecil, dan $y$ = banyak mobil besar.<br/>
+                - Fungsi tujuan (maksimalkan pendapatan): $f(x,y) = 6000x + 11000y$.<br/>
+                - Kendala:
+                  <ol>
+                    <li>$x+y \le 200$ (daya tampung)</li>
+                    <li>$4x+20y \le 1760 \implies x+5y \le 440$ (luas area)</li>
+                    <li>$x \ge 0, y \ge 0$</li>
+                  </ol>
+                <b>Langkah 2: Tentukan titik-titik pojok daerah penyelesaian.</b><br/>
+                - Titik A: Perpotongan sumbu-x dan sumbu-y, (0,0).<br/>
+                - Titik B: Perpotongan $x+y=200$ dengan sumbu-x ($y=0$), maka $x=200$. Titik (200,0).<br/>
+                - Titik C: Perpotongan $x+5y=440$ dengan sumbu-y ($x=0$), maka $5y=440 \implies y=88$. Titik (0,88).<br/>
+                - Titik D: Perpotongan garis $x+y=200$ dan $x+5y=440$.<br/>
+                  $x+5y = 440$<br/>
+                  $x+y = 200$<br/>
+                  ----------- (-) <br/>
+                  $4y = 240 \implies y=60$.<br/>
+                  Substitusi $y=60$ ke $x+y=200 \implies x+60=200 \implies x=140$. Titik (140,60).<br/><br/>
+                <b>Langkah 3: Uji titik-titik pojok ke fungsi tujuan.</b><br/>
+                - A(0,0): $f(0,0) = 0$.<br/>
+                - B(200,0): $f(200,0) = 6000(200) + 0 = 1.200.000$.<br/>
+                - C(0,88): $f(0,88) = 0 + 11000(88) = 968.000$.<br/>
+                - D(140,60): $f(140,60) = 6000(140) + 11000(60) = 840.000 + 660.000 = 1.500.000$.<br/><br/>
+                Nilai maksimum adalah Rp1.500.000.
+            </div>
+        </div>
+        <footer class="page-footer">
+          <span
+            ><b
+              >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+              Reserved.</b
+            ><i
+              >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+              Indonesia.</i
+            ></span
+          >
+        </footer>
+      </section>
+
+    </div>
+  </body>
+</html>
+
