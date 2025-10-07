@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Latihan TKA Matematika Lanjut</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: auto;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+      }
+
+      .layout-2-kolom {
+        column-count: 2;
+        column-gap: 15mm;
+        align-items: flex-start;
+      }
+
+      .manual-flex-layout {
+        display: flex;
+        gap: 15mm;
+        align-items: flex-start;
+      }
+      .manual-flex-layout .kolom {
+        flex: 1;
+        width: 50%;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 15px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 24px;
+      }
+
+      .soal-konten {
+        flex-grow: 1;
+      }
+
+      .soal-gambar {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .soal-gambar-deskripsi {
+        padding: 10px;
+        background-color: #f5f5f5;
+        border: 1px dashed #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-style: italic;
+        text-align: left;
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: bold;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma {
+        margin-top: 10px;
+      }
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+        text-align: left;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 11
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">1.</div>
+              <div class="soal-konten">
+                Sebuah roket ditembakkan ke atas dengan ketinggian $h(t)=400t-5t^2$ meter setelah $t$ detik. Manakah pernyataan berikut yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>Roket mencapai ketinggian maksimum setelah 40 detik.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Ketinggian maksimum roket adalah 16000 meter.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Roket kembali ke tanah setelah 80 detik.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Pada detik ke-20, ketinggian roket adalah 6000 meter.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Kecepatan awal roket adalah 400 m/s.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">2.</div>
+              <div class="soal-konten">
+                Panjang bayangan sebuah pohon adalah 15 meter. Pada saat yang sama, sebuah tongkat setinggi 2 meter yang ditancapkan tegak lurus memiliki bayangan 3 meter. Tinggi pohon tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">8 m</li>
+                  <li data-option="B">10 m</li>
+                  <li data-option="C">12 m</li>
+                  <li data-option="D">20 m</li>
+                  <li data-option="E">22.5 m</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">3.</div>
+              <div class="soal-konten">
+                Dalam sebuah rapat yang dihadiri 10 orang, setiap orang berjabat tangan satu sama lain tepat satu kali. Berapa banyak jabat tangan yang terjadi?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">20</li>
+                  <li data-option="B">45</li>
+                  <li data-option="C">90</li>
+                  <li data-option="D">100</li>
+                  <li data-option="E">120</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">4.</div>
+              <div class="soal-konten">
+                Garis $l$ melalui titik $(2,3)$ dan $(-1,0)$. Garis $k$ melalui titik $(0,5)$ dan $(3,6)$. Tentukan kebenaran dari pernyataan-pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gradien garis $l$ adalah 1.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Persamaan garis $k$ adalah $x-3y=-15$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Garis $l$ dan $k$ tidak sejajar.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Garis yang tegak lurus dengan garis $l$ memiliki gradien 1.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                Sebuah mesin menghasilkan komponen dengan 3% di antaranya cacat. Jika diambil sampel 2 komponen secara acak, peluang setidaknya satu komponen cacat adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">0.0009</li>
+                  <li data-option="B">0.0291</li>
+                  <li data-option="C">0.0582</li>
+                  <li data-option="D">0.0591</li>
+                  <li data-option="E">0.9409</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 11
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">6.</div>
+              <div class="soal-konten">
+                Sebuah toko menjual dua jenis kaos, A dan B. Berapa keuntungan total toko hari ini?
+                <div style="text-align: left; margin-top: 5px">
+                  (1) Hari ini terjual 20 kaos A dan 15 kaos B.<br />
+                  (2) Keuntungan dari kaos A adalah Rp15.000 per buah dan kaos B adalah Rp20.000 per buah.
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+                    tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+                    pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">7.</div>
+              <div class="soal-konten">
+                Volume sebuah piramida dengan alas persegi adalah 400 cm³. Jika tinggi piramida 12 cm, panjang sisi alas piramida tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">8 cm</li>
+                  <li data-option="B">10 cm</li>
+                  <li data-option="C">12 cm</li>
+                  <li data-option="D">15 cm</li>
+                  <li data-option="E">20 cm</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">8.</div>
+              <div class="soal-konten">
+                Sebuah roda berputar dengan kecepatan 360 putaran per menit. Kecepatan sudut roda tersebut dalam radian per detik adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$6\pi$ rad/s</li>
+                  <li data-option="B">$10\pi$ rad/s</li>
+                  <li data-option="C">$12\pi$ rad/s</li>
+                  <li data-option="D">$18\pi$ rad/s</li>
+                  <li data-option="E">$36\pi$ rad/s</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">9.</div>
+              <div class="soal-konten">
+                Pada suatu barisan geometri, diketahui $U_2=6$ dan $U_5=162$. Suku ke-7 dari barisan tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">486</li>
+                  <li data-option="B">972</li>
+                  <li data-option="C">1.458</li>
+                  <li data-option="D">2.916</li>
+                  <li data-option="E">4.374</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">10.</div>
+              <div class="soal-konten">
+                Himpunan penyelesaian dari pertidaksamaan $\sqrt{x-1} < 2$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$x<5$</li>
+                  <li data-option="B">$x>1$</li>
+                  <li data-option="C">$1<x<5$</li>
+                  <li data-option="D">$1 \le x < 5$</li>
+                  <li data-option="E">$x \ge 1$</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 11
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">11.</div>
+              <div class="soal-konten">
+                Seorang pengrajin membuat dua jenis suvenir, A dan B. Suvenir A membutuhkan 2 jam di mesin I dan 1 jam di mesin II. Suvenir B membutuhkan 1 jam di mesin I dan 3 jam di mesin II. Waktu kerja mesin I adalah 10 jam per hari dan mesin II adalah 15 jam per hari. Keuntungan suvenir A Rp5.000 dan B Rp8.000. Jika $x$ dan $y$ adalah jumlah suvenir A dan B, manakah pernyataan yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>Model matematikanya adalah $2x+y \le 10$, $x+3y \le 15$, $x \ge 0$, $y \ge 0$.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Titik potong kedua kendala adalah (4, 3).</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Keuntungan maksimum tercapai saat memproduksi 3 suvenir A dan 4 suvenir B.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Keuntungan maksimumnya adalah Rp47.000.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Jika hanya memproduksi suvenir B, keuntungan maksimum adalah Rp40.000.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">12.</div>
+              <div class="soal-konten">
+                Grafik fungsi $y=(p-1)x^2+2px+(p+2)$ tidak memotong sumbu x. Batas-batas nilai $p$ yang memenuhi adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$p>2$</li>
+                  <li data-option="B">$p<-1$</li>
+                  <li data-option="C">$-1<p<2$</li>
+                  <li data-option="D">$p<1$ atau $p>2$</li>
+                  <li data-option="E">$p< -2$ atau $p>-1$</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">13.</div>
+              <div class="soal-konten">
+                Sebuah taman berbentuk persegi panjang dengan ukuran 30 m x 20 m. Di sekeliling taman akan dibuat jalan setapak dengan lebar 1 m. Biaya pembuatan jalan adalah Rp50.000 per m². Total biaya yang dibutuhkan adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">Rp4.800.000</li>
+                  <li data-option="B">Rp5.000.000</li>
+                  <li data-option="C">Rp5.200.000</li>
+                  <li data-option="D">Rp5.400.000</li>
+                  <li data-option="E">Rp6.000.000</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">14.</div>
+              <div class="soal-konten">
+                Diketahui titik $A(1,2,3)$, $B(3,3,1)$, dan $C(7,5,-3)$. Tentukan kebenaran dari pernyataan-pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Benar</th>
+                      <th>Salah</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Vektor $\vec{AB} = 2\hat{i}+\hat{j}-2\hat{k}$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Vektor $\vec{BC} = 4\hat{i}+2\hat{j}-4\hat{k}$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Titik A, B, dan C segaris (kolinear).</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$|\vec{AC}| = 2 |\vec{AB}|$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">15.</div>
+              <div class="soal-konten">
+                Empat koin dilempar bersamaan. Peluang munculnya paling sedikit satu sisi Angka adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$\frac{1}{16}$</li>
+                  <li data-option="B">$\frac{4}{16}$</li>
+                  <li data-option="C">$\frac{11}{16}$</li>
+                  <li data-option="D">$\frac{12}{16}$</li>
+                  <li data-option="E">$\frac{15}{16}$</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 11
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">16.</div>
+              <div class="soal-konten">
+                Berapa persen laba yang diperoleh seorang pedagang dari penjualan suatu barang?
+                <div style="text-align: left; margin-top: 5px">
+                  (1) Harga jual barang tersebut adalah Rp120.000.<br />
+                  (2) Laba yang diperoleh adalah sepertiga dari harga beli.
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+                    tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+                    pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">17.</div>
+              <div class="soal-konten">
+                Jangkauan semi interkuartil (simpangan kuartil) dari data 3, 5, 8, 4, 6, 10, 8, 9, 7 adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">1.5</li>
+                  <li data-option="B">1.75</li>
+                  <li data-option="C">2</li>
+                  <li data-option="D">2.5</li>
+                  <li data-option="E">3.5</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">18.</div>
+              <div class="soal-konten">
+                Dalam sebuah pentas seni, lampu sorot diarahkan ke panggung. Jarak lampu ke salah satu ujung panggung adalah 10 meter dan ke ujung lainnya 12 meter. Sudut yang terbentuk antara dua sorotan lampu tersebut adalah $60^\circ$. Jarak antara kedua ujung panggung adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$2\sqrt{21}$ m</li>
+                  <li data-option="B">$2\sqrt{31}$ m</li>
+                  <li data-option="C">$11$ m</li>
+                  <li data-option="D">$4\sqrt{6}$ m</li>
+                  <li data-option="E">$2\sqrt{61}$ m</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">19.</div>
+              <div class="soal-konten">
+                Jika garis $2x-3y=6$ didilatasikan dengan pusat $(0, 0)$ dan faktor skala 3, persamaan bayangan garisnya adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$2x-3y=12$</li>
+                  <li data-option="B">$2x-3y=18$</li>
+                  <li data-option="C">$2x-3y=23$</li>
+                  <li data-option="D">$3x-2y=12$</li>
+                  <li data-option="E">$3x-2y=18$</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="soal-latihan">
+              <div class="soal-nomor">20.</div>
+              <div class="soal-konten">
+                Seutas kawat sepanjang 155 cm dipotong menjadi 5 bagian yang panjangnya membentuk barisan geometri. Jika potongan terpendek 5 cm, rasio barisan tersebut adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">1.5</li>
+                  <li data-option="B">2</li>
+                  <li data-option="C">2.5</li>
+                  <li data-option="D">3</li>
+                  <li data-option="E">4</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
+
