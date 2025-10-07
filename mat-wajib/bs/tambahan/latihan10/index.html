@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Latihan TKA Matematika Wajib</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: auto;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+      }
+
+      .layout-2-kolom {
+        column-count: 2;
+        column-gap: 15mm;
+        align-items: flex-start;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 20px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 24px;
+      }
+
+      .soal-konten {
+        flex-grow: 1;
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: bold;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma {
+        margin-top: 10px;
+      }
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+        text-align: left;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .soal-gambar {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 4px;
+      }
+
+      .soal-gambar-deskripsi {
+        font-style: italic;
+        color: #555;
+        background-color: #f9f9f9;
+        border: 1px dashed #ccc;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 4px;
+      }
+      
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 10
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+				<div class="soal-nomor">1.</div>
+				<div class="soal-konten">
+				  Seorang anak diharuskan minum dua jenis tablet setiap hari. Tablet jenis I mengandung 5 unit vitamin A dan 3 unit vitamin B. Tablet jenis II mengandung 10 unit vitamin A dan 1 unit vitamin B. Dalam 1 hari, anak tersebut memerlukan 25 unit vitamin A dan 5 unit vitamin B. Jika harga tablet I Rp4.000 per butir dan tablet II Rp8.000 per butir, pengeluaran minimum untuk pembelian tablet per hari adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">Rp12.000</li>
+					<li data-option="B">Rp16.000</li>
+					<li data-option="C">Rp18.000</li>
+					<li data-option="D">Rp20.000</li>
+					<li data-option="E">Rp24.000</li>
+				  </ol>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">2.</div>
+				<div class="soal-konten">
+				  Persamaan lingkaran $x^2+y^2-4x+6y-3=0$ memiliki karakteristik sebagai berikut. Manakah pernyataan yang benar? <b>(bisa pilih lebih dari satu jawaban)</b>
+				  <div class="pilihan-ganda-mcma">
+					<div>
+					  <input type="checkbox" /><span>Pusat lingkaran berada di titik (2, -3).</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>Jari-jari lingkaran adalah 4.</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>Lingkaran melalui titik (1, 1).</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>Jarak pusat lingkaran ke titik asal O(0,0) adalah $\sqrt{13}$.</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>Lingkaran menyinggung sumbu X.</span>
+					</div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">3.</div>
+				<div class="soal-konten">
+				  Terdapat 10 siswa yang terdiri dari 6 pria dan 4 wanita. Akan dibentuk sebuah tim cerdas cermat yang terdiri dari 3 orang. Peluang terbentuknya tim yang terdiri dari 2 pria dan 1 wanita adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$\frac{1}{2}$</li>
+					<li data-option="B">$\frac{1}{3}$</li>
+					<li data-option="C">$\frac{2}{3}$</li>
+					<li data-option="D">$\frac{4}{15}$</li>
+					<li data-option="E">$\frac{6}{10}$</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">4.</div>
+				<div class="soal-konten">
+				  Jika $g(x) = x-2$ dan $(f \circ g)(x) = x^2 - 4x + 1$. Tentukan kebenaran dari pernyataan berikut.
+				  <table class="soal-kategori">
+					  <thead>
+						  <tr>
+							  <th>Pernyataan</th>
+							  <th>Benar</th>
+							  <th>Salah</th>
+						  </tr>
+					  </thead>
+					  <tbody>
+						  <tr>
+							  <td>$f(x) = x^2 - 3$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>$f(0) = -3$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>$(g \circ f)(x) = x^2 - 1$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>Fungsi $f(x)$ adalah fungsi genap.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+					  </tbody>
+				  </table>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">5.</div>
+				<div class="soal-konten">
+				  Diketahui limas beraturan T.ABC dengan bidang alas berbentuk segitiga sama sisi. Rusuk tegak $TA=6\sqrt{2}$ cm dan rusuk alas $AB=6$ cm. Jarak titik T ke bidang alas ABC adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">6 cm</li>
+					<li data-option="B">$2\sqrt{15}$ cm</li>
+					<li data-option="C">$4\sqrt{3}$ cm</li>
+					<li data-option="D">$2\sqrt{21}$ cm</li>
+					<li data-option="E">$6\sqrt{6}$ cm</li>
+				  </ol>
+				</div>
+			</div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b>Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights Reserved.</b>
+          <i>Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya Indonesia.</i>
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+				XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 10
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+				<div class="soal-nomor">6.</div>
+				<div class="soal-konten">
+				  Jika $x$ dan $y$ adalah bilangan bulat, apakah $x > y$?
+				  <div style="text-align: left; margin-top: 5px">
+					(1) $x+y > 0$.<br />
+					(2) $y < 1$.
+				  </div>
+				  <ol class="pilihan-ganda">
+					<li data-option="A">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (2) SAJA tidak cukup.
+					</li>
+					<li data-option="B">
+					  Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (1) SAJA tidak cukup.
+					</li>
+					<li data-option="C">
+					  DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+					  tetapi SATU pernyataan SAJA tidak cukup.
+					</li>
+					<li data-option="D">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+					  pernyataan (2) SAJA cukup.
+					</li>
+					<li data-option="E">
+					  Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+					  pertanyaan.
+					</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">7.</div>
+				<div class="soal-konten">
+				  Bentuk $\cos(x+y)\cos y + \sin(x+y)\sin y$ identik dengan...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$\cos x$</li>
+					<li data-option="B">$\sin x$</li>
+					<li data-option="C">$\cos(x+2y)$</li>
+					<li data-option="D">$\sin(x+2y)$</li>
+					<li data-option="E">1</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">8.</div>
+				<div class="soal-konten">
+				  Kuartil atas (Q3) dari data pada tabel berikut adalah...
+				  <table class="soal-kategori" style="width:100%; text-align:center;">
+					  <tr><th>Nilai</th><td>21-25</td><td>26-30</td><td>31-35</td><td>36-40</td><td>41-45</td></tr>
+					  <tr><th>Frekuensi</th><td>2</td><td>8</td><td>9</td><td>6</td><td>3</td></tr>
+				  </table>
+				  <ol class="pilihan-ganda">
+					<li data-option="A">35,5</li>
+					<li data-option="B">36,5</li>
+					<li data-option="C">37,0</li>
+					<li data-option="D">37,5</li>
+					<li data-option="E">38,0</li>
+				  </ol>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">9.</div>
+				<div class="soal-konten">
+				  Jumlah $n$ suku pertama suatu deret aritmetika dinyatakan dengan $S_n = 2n^2 + 4n$. Suku ke-9 deret tersebut adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">34</li>
+					<li data-option="B">38</li>
+					<li data-option="C">42</li>
+					<li data-option="D">46</li>
+					<li data-option="E">50</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">10.</div>
+				<div class="soal-konten">
+				  Sebuah foto berukuran 30 cm x 20 cm diletakkan pada selembar karton. Di sebelah kiri, kanan, dan atas foto masih terdapat sisa karton selebar 3 cm. Jika foto dan karton sebangun, lebar sisa karton di bagian bawah foto adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">3 cm</li>
+					<li data-option="B">4 cm</li>
+					<li data-option="C">5 cm</li>
+					<li data-option="D">6 cm</li>
+					<li data-option="E">7 cm</li>
+				  </ol>
+				</div>
+			</div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+				XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 10
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+				<div class="soal-nomor">11.</div>
+				<div class="soal-konten">
+				  Persamaan garis singgung lingkaran $x^2+y^2=25$ yang dapat ditarik dari titik (7, 1) adalah... <b>(bisa pilih lebih dari satu jawaban)</b>
+				  <div class="pilihan-ganda-mcma">
+					<div>
+					  <input type="checkbox" /><span>$4x-3y=25$</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>$3x-4y=25$</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>$4x+3y=25$</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>$3x+4y=25$</span>
+					</div>
+					<div>
+					  <input type="checkbox" /><span>$-3x+4y=-25$</span>
+					</div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">12.</div>
+				<div class="soal-konten">
+				  Himpunan penyelesaian dari pertidaksamaan $\frac{2x-1}{x+2} \ge 1$ adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$x\lt-2$ atau $x\ge3$</li>
+					<li data-option="B">$x\le-2$ atau $x>3$</li>
+					<li data-option="C">$-2\lt x\le3$</li>
+					<li data-option="D">$x\ge3$</li>
+					<li data-option="E">$x\lt-2$</li>
+				  </ol>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">13.</div>
+				<div class="soal-konten">
+				  Keuntungan seorang pedagang bertambah setiap bulan dengan jumlah yang sama. Jika keuntungan pada bulan pertama Rp55.000 dan pertambahan keuntungan setiap bulan Rp18.000, maka jumlah keuntungan sampai bulan ke-12 adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">Rp1.740.000</li>
+					<li data-option="B">Rp1.848.000</li>
+					<li data-option="C">Rp1.956.000</li>
+					<li data-option="D">Rp2.064.000</li>
+					<li data-option="E">Rp2.172.000</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">14.</div>
+				<div class="soal-konten">
+				  Sebuah titik $P(8, -4)$ dirotasikan dengan pusat $O(0,0)$. Tentukan kebenaran dari pernyataan rotasi dan bayangannya berikut.
+				  <table class="soal-kategori">
+					  <thead>
+						  <tr>
+							  <th>Pernyataan Rotasi</th>
+							  <th>Benar</th>
+							  <th>Salah</th>
+						  </tr>
+					  </thead>
+					  <tbody>
+						  <tr>
+							  <td>Rotasi $90^\circ$ searah jarum jam menghasilkan $P'(-4, -8)$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>Rotasi $180^\circ$ menghasilkan $P'(-8, 4)$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>Rotasi $270^\circ$ berlawanan arah jarum jam menghasilkan $P'(-4, -8)$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+						  <tr>
+							  <td>Rotasi $-90^\circ$ menghasilkan $P'(4, 8)$.</td>
+							  <td></td>
+							  <td></td>
+						  </tr>
+					  </tbody>
+				  </table>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">15.</div>
+				<div class="soal-konten">
+				  Peluang Ali, Budi, dan Caca lulus ujian berturut-turut adalah 0,7; 0,8; dan 0,9. Peluang bahwa hanya satu orang yang lulus dari ketiga orang tersebut adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">0.054</li>
+					<li data-option="B">0.082</li>
+					<li data-option="C">0.092</li>
+					<li data-option="D">0.504</li>
+					<li data-option="E">0.994</li>
+				  </ol>
+				</div>
+			</div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+				XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 10
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+				<div class="soal-nomor">16.</div>
+				<div class="soal-konten">
+				  Berapa volume balok X?
+				  <div style="text-align: left; margin-top: 5px">
+					(1) Luas alas balok X adalah 40 cm².<br />
+					(2) Luas permukaan balok X adalah 340 cm².
+				  </div>
+				  <ol class="pilihan-ganda">
+					<li data-option="A">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (2) SAJA tidak cukup.
+					</li>
+					<li data-option="B">
+					  Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (1) SAJA tidak cukup.
+					</li>
+					<li data-option="C">
+					  DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+					  tetapi SATU pernyataan SAJA tidak cukup.
+					</li>
+					<li data-option="D">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+					  pernyataan (2) SAJA cukup.
+					</li>
+					<li data-option="E">
+					  Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+					  pertanyaan.
+					</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">17.</div>
+				<div class="soal-konten">
+				  Sebuah bandul terdiri dari sebuah kerucut dan setengah bola yang sepusat. Diameter setengah bola sama dengan diameter alas kerucut, yaitu 12 cm. Jika tinggi kerucut 8 cm, luas permukaan bandul tersebut adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$96\pi$ cm²</li>
+					<li data-option="B">$108\pi$ cm²</li>
+					<li data-option="C">$120\pi$ cm²</li>
+					<li data-option="D">$132\pi$ cm²</li>
+					<li data-option="E">$144\pi$ cm²</li>
+				  </ol>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">18.</div>
+				<div class="soal-konten">
+				  Jika $\tan x = \frac{1}{2}$ dan $\tan y = \frac{1}{3}$, dengan $x$ dan $y$ adalah sudut lancip, maka nilai dari $\tan(x+y)$ adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$\frac{1}{6}$</li>
+					<li data-option="B">$\frac{5}{6}$</li>
+					<li data-option="C">1</li>
+					<li data-option="D">$\frac{6}{5}$</li>
+					<li data-option="E">6</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">19.</div>
+				<div class="soal-konten">
+				  Modus dari data yang disajikan pada histogram berikut adalah...
+				   <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_eyyfey_6819.png" alt="Histogram Data Kelompok" class="soal-gambar"/>
+				  <ol class="pilihan-ganda">
+					<li data-option="A">45,5</li>
+					<li data-option="B">46,0</li>
+					<li data-option="C">46,5</li>
+					<li data-option="D">47,0</li>
+					<li data-option="E">48,5</li>
+				  </ol>
+				</div>
+			</div>
+
+			<div class="soal-latihan">
+				<div class="soal-nomor">20.</div>
+				<div class="soal-konten">
+				  Sebuah sel membelah diri menjadi 3 setiap 30 menit. Jika pada awalnya ada 2 sel, maka setelah 3 jam jumlah sel akan menjadi...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">1.458 sel</li>
+					<li data-option="B">2.187 sel</li>
+					<li data-option="C">4.374 sel</li>
+					<li data-option="D">6.561 sel</li>
+					<li data-option="E">19.683 sel</li>
+				  </ol>
+				</div>
+			</div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
+
+
