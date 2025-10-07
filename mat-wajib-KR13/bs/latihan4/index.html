@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Soal TKA Matematika - Latihan 4</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: auto;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+      }
+
+      .manual-flex-layout {
+        display: flex;
+        gap: 15mm;
+        align-items: flex-start;
+      }
+      .manual-flex-layout .kolom {
+        flex: 1;
+        width: 50%;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px; /* Jarak antara nomor dan teks soal */
+        margin-bottom: 20px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 18px; /* Ruang untuk nomor hingga 2 digit */
+      }
+
+      .soal-konten {
+        flex-grow: 1; /* Konten soal mengisi sisa ruang */
+      }
+
+      .soal-gambar {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .soal-gambar-deskripsi {
+        padding: 10px;
+        background-color: #f5f5f5;
+        border: 1px dashed #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left; /* Pilihan ganda selalu rata kiri */
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: bold;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .kecukupan-data-pernyataan {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 8px; /* row-gap column-gap */
+        text-align: left; /* Override justify from parent */
+        margin-top: 10px !important;
+        margin-bottom: 10px;
+      }
+      .kecukupan-data-pernyataan span {
+        line-height: 1.5;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | K13 Revisi | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 4
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">1.</div>
+                <div class="soal-konten">
+                  Seorang peneliti mengamati populasi amuba. Populasi awal
+                  adalah $2,5 \times 10^5$. Setelah satu jam, populasinya
+                  menjadi $5 \times 10^5$. Jika pertumbuhan populasi mengikuti
+                  pola eksponensial, berapa populasi amuba setelah 4 jam?
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$1 \times 10^6$</li>
+                    <li data-option="B">$2 \times 10^6$</li>
+                    <li data-option="C">$4 \times 10^6$</li>
+                    <li data-option="D">$8 \times 10^6$</li>
+                    <li data-option="E">$1,6 \times 10^7$</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="soal-latihan">
+                <div class="soal-nomor">2.</div>
+                <div class="soal-konten">
+                  Titik P berada pada garis $y=mx+c$. Apakah titik P berada di
+                  kuadran I?
+                  <div class="kecukupan-data-pernyataan">
+                    <span>(1)</span><span>Garis tersebut memotong sumbu Y positif.</span>
+                    <span>(2)</span><span>Gradien garis tersebut negatif.</span>
+                  </div>
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                      pernyataan (2) SAJA tidak cukup.
+                    </li>
+                    <li data-option="B">
+                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                      pernyataan (1) SAJA tidak cukup.
+                    </li>
+                    <li data-option="C">
+                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                      pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                    </li>
+                    <li data-option="D">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                      pernyataan (2) SAJA cukup.
+                    </li>
+                    <li data-option="E">
+                      Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                      menjawab pertanyaan.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">3.</div>
+                <div class="soal-konten">
+                  Diagram batang berikut menunjukkan hasil panen padi (dalam
+                  ton) di sebuah desa selama 5 tahun. Berapakah rata-rata hasil
+                  panen per tahun selama periode tersebut?
+                  <img
+                    src="https://imgix3.ruangguru.com/assets/miscellaneous/png_uitxuc_3291.png"
+                    alt="Diagram Batang Hasil Panen"
+                    class="soal-gambar"
+                  />
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">25 ton</li>
+                    <li data-option="B">26 ton</li>
+                    <li data-option="C">27 ton</li>
+                    <li data-option="D">28 ton</li>
+                    <li data-option="E">30 ton</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">4.</div>
+                <div class="soal-konten">
+                  Dua buah tiang bendera memiliki tinggi 10 m dan 17 m. Jarak
+                  antara kedua tiang tersebut adalah 24 m. Seutas tali dipasang
+                  dari puncak tiang pertama ke puncak tiang kedua. Panjang tali
+                  tersebut adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">25 m</li>
+                    <li data-option="B">26 m</li>
+                    <li data-option="C">27 m</li>
+                    <li data-option="D">28 m</li>
+                    <li data-option="E">30 m</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | K13 Revisi | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 4
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">5.</div>
+                <div class="soal-konten">
+                  Sebuah perusahaan taksi online menetapkan tarif buka pintu
+                  sebesar Rp8.000 dan tarif per kilometer sebesar Rp3.000. Jika
+                  $f(x)$ adalah total biaya untuk perjalanan sejauh $x$
+                  kilometer, maka rumus fungsi dan biaya untuk perjalanan
+                  sejauh 15 km adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      $f(x)=8000x+3000$, Biaya Rp123.000
+                    </li>
+                    <li data-option="B">
+                      $f(x)=3000x+8000$, Biaya Rp53.000
+                    </li>
+                    <li data-option="C">$f(x)=11000x$, Biaya Rp165.000</li>
+                    <li data-option="D">
+                      $f(x)=3000(x+8000)$, Biaya Rp24.045.000
+                    </li>
+                    <li data-option="E">
+                      $f(x)=8000x-3000$, Biaya Rp117.000
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">6.</div>
+                <div class="soal-konten">
+                  Sebuah tabung tanpa tutup memiliki jari-jari alas 7 cm dan
+                  tinggi 10 cm. Manakah pernyataan berikut yang benar? (Gunakan
+                  $\pi \approx \frac{22}{7}$)
+                  <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div>
+                      <input type="checkbox" /><span>Luas alas tabung adalah 154 cm².</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Luas selimut tabung adalah 440 cm².</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Luas permukaan tabung tanpa tutup adalah 594
+                        cm².</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Volume tabung adalah 1540 cm³.</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Keliling alas tabung adalah 44 cm.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="soal-latihan">
+                <div class="soal-nomor">7.</div>
+                <div class="soal-konten">
+                  Di sebuah gedung pertunjukan, baris kursi paling depan ada 15
+                  kursi. Baris di belakangnya selalu bertambah 3 kursi dari
+                  baris di depannya. Jika ada 12 baris kursi, total kapasitas
+                  gedung adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">342 kursi</li>
+                    <li data-option="B">358 kursi</li>
+                    <li data-option="C">366 kursi</li>
+                    <li data-option="D">378 kursi</li>
+                    <li data-option="E">390 kursi</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">8.</div>
+                <div class="soal-konten">
+                  Titik A(3, 5) ditranslasikan oleh
+                  $T_1 = \begin{pmatrix} -2 \\ 4 \end{pmatrix}$ kemudian
+                  dilanjutkan dengan translasi
+                  $T_2 = \begin{pmatrix} 1 \\ -7 \end{pmatrix}$. Tentukan
+                  kebenaran pernyataan berikut.
+                  <table class="soal-kategori">
+                    <thead>
+                      <tr>
+                        <th>Pernyataan</th>
+                        <th>Benar</th>
+                        <th>Salah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Bayangan setelah translasi $T_1$ adalah A'(1, 9).
+                        </td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Bayangan akhir setelah dua translasi adalah A''(2, 2).
+                        </td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Translasi tunggal yang mewakili $T_1$ dilanjutkan
+                          $T_2$ adalah
+                          $T = \begin{pmatrix} -1 \\ -3 \end{pmatrix}$.
+                        </td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Urutan translasi tidak mempengaruhi hasil akhir ($T_1
+                          \circ T_2 = T_2 \circ T_1$).
+                        </td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="soal-latihan">
+                <div class="soal-nomor">9.</div>
+                <div class="soal-konten">
+                  Dari seperangkat kartu bridge, diambil sebuah kartu secara
+                  acak. Peluang terambilnya kartu King atau kartu berwarna
+                  merah adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$\frac{26}{52}$</li>
+                    <li data-option="B">$\frac{28}{52}$</li>
+                    <li data-option="C">$\frac{30}{52}$</li>
+                    <li data-option="D">$\frac{4}{52}$</li>
+                    <li data-option="E">$\frac{7}{13}$</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | K13 Revisi | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 4
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">10.</div>
+                <div class="soal-konten">
+                  Agar fungsi $f(x) = \sqrt{\frac{x^2 - 4}{x-1}}$ terdefinisi,
+                  domain dari fungsi tersebut adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$-2 \le x < 1$ atau $x \ge 2$</li>
+                    <li data-option="B">$x < 1$ atau $x > 2$</li>
+                    <li data-option="C">$-2 \le x \le 2$</li>
+                    <li data-option="D">$x \ge 2$</li>
+                    <li data-option="E">$x > 1$</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">11.</div>
+                <div class="soal-konten">
+                  Sebuah tenda pramuka berbentuk limas dengan alas persegi.
+                  Panjang sisi alasnya 6 meter dan tinggi tenda 4 meter. Kain
+                  yang dibutuhkan untuk membuat tenda tersebut (tanpa alas)
+                  adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">36 m²</li>
+                    <li data-option="B">48 m²</li>
+                    <li data-option="C">60 m²</li>
+                    <li data-option="D">72 m²</li>
+                    <li data-option="E">96 m²</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">12.</div>
+                <div class="soal-konten">
+                  Diberikan $p$ adalah bilangan prima. Apakah $p+4$ juga
+                  merupakan bilangan prima?
+                  <div class="kecukupan-data-pernyataan">
+                    <span>(1)</span><span>$p > 2$.</span>
+                    <span>(2)</span><span>$p$ adalah faktor dari 15.</span>
+                  </div>
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                      pernyataan (2) SAJA tidak cukup.
+                    </li>
+                    <li data-option="B">
+                      Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                      pernyataan (1) SAJA tidak cukup.
+                    </li>
+                    <li data-option="C">
+                      DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                      pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                    </li>
+                    <li data-option="D">
+                      Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                      pernyataan (2) SAJA cukup.
+                    </li>
+                    <li data-option="E">
+                      Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                      menjawab pertanyaan.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="soal-latihan">
+                <div class="soal-nomor">13.</div>
+                <div class="soal-konten">
+                  Umur seorang ayah 4 kali umur anaknya. Lima tahun yang lalu,
+                  umur ayah 7 kali umur anaknya. Jumlah umur mereka sekarang
+                  adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">40 tahun</li>
+                    <li data-option="B">45 tahun</li>
+                    <li data-option="C">50 tahun</li>
+                    <li data-option="D">55 tahun</li>
+                    <li data-option="E">60 tahun</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | K13 Revisi | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 4
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">14.</div>
+                <div class="soal-konten">
+                  Median dari data pada tabel frekuensi berikut adalah...
+                  <table
+                    class="soal-kategori"
+                    style="width: 100%; text-align: center"
+                  >
+                    <tr>
+                      <th>Nilai</th>
+                      <td>51-55</td>
+                      <td>56-60</td>
+                      <td>61-65</td>
+                      <td>66-70</td>
+                      <td>71-75</td>
+                    </tr>
+                    <tr>
+                      <th>Frekuensi</th>
+                      <td>5</td>
+                      <td>8</td>
+                      <td>12</td>
+                      <td>10</td>
+                      <td>5</td>
+                    </tr>
+                  </table>
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">61,75</li>
+                    <li data-option="B">62,00</li>
+                    <li data-option="C">62,25</li>
+                    <li data-option="D">62,50</li>
+                    <li data-option="E">63,00</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">15.</div>
+                <div class="soal-konten">
+                  Nilai dari
+                  $\sin(150^\circ) + \cos(240^\circ) - \tan(315^\circ)$ adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">-1</li>
+                    <li data-option="B">0</li>
+                    <li data-option="C">1</li>
+                    <li data-option="D">$\frac{3}{2}$</li>
+                    <li data-option="E">$2$</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">16.</div>
+                <div class="soal-konten">
+                  Seorang pengusaha kue memproduksi kue donat dengan biaya
+                  Rp1.000 per buah dan kue bolu dengan biaya Rp1.500 per buah.
+                  Modal yang ia miliki adalah Rp900.000. Setiap hari ia hanya
+                  mampu memproduksi paling banyak 700 kue. Jika keuntungan kue
+                  donat Rp500 dan kue bolu Rp800, keuntungan maksimum yang
+                  didapat adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">Rp350.000</li>
+                    <li data-option="B">Rp420.000</li>
+                    <li data-option="C">Rp480.000</li>
+                    <li data-option="D">Rp510.000</li>
+                    <li data-option="E">Rp560.000</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">17.</div>
+                <div class="soal-konten">
+                  Diberikan sebuah segienam beraturan ABCDEF dengan panjang sisi
+                  10 cm. Manakah pernyataan berikut yang benar?
+                  <b>(bisa pilih lebih dari satu jawaban)</b>
+                  <div class="pilihan-ganda-mcma">
+                    <div>
+                      <input type="checkbox" /><span>Panjang diagonal terpanjang (misal AD) adalah 20
+                        cm.</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Luas segienam tersebut adalah $150\sqrt{3}$
+                        cm².</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Besar setiap sudut dalamnya adalah
+                        $120^\circ$.</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Keliling segienam tersebut adalah 60 cm.</span>
+                    </div>
+                    <div>
+                      <input type="checkbox" /><span>Jarak dari pusat ke salah satu sisinya adalah
+                        $5\sqrt{3}$ cm.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 5 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | K13 Revisi | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 4
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">18.</div>
+                <div class="soal-konten">
+                  Di dalam tas, terdapat 3 buku Matematika, 2 buku Fisika, dan
+                  4 buku Kimia. Jika diambil tiga buku secara acak satu per
+                  satu tanpa pengembalian, peluang terambil buku Matematika,
+                  lalu Fisika, lalu Kimia adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">$\frac{1}{21}$</li>
+                    <li data-option="B">$\frac{2}{21}$</li>
+                    <li data-option="C">$\frac{1}{12}$</li>
+                    <li data-option="D">$\frac{24}{729}$</li>
+                    <li data-option="E">$\frac{1}{84}$</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="soal-latihan">
+                <div class="soal-nomor">19.</div>
+                <div class="soal-konten">
+                  Diberikan fungsi kuadrat $f(x) = -x^2 + 4x - 3$. Tentukan
+                  kebenaran dari analisis grafik fungsi tersebut.
+                  <table class="soal-kategori">
+                    <thead>
+                      <tr>
+                        <th>Pernyataan Analisis</th>
+                        <th>Benar</th>
+                        <th>Salah</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Grafik membuka ke bawah.</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Titik puncak grafik adalah (2, 1).</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Grafik memotong sumbu Y di titik (0, 3).</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Grafik memotong sumbu X di titik (1, 0) dan (3, 0).
+                        </td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="kolom">
+              <div class="soal-latihan">
+                <div class="soal-nomor">20.</div>
+                <div class="soal-konten">
+                  Tiga bilangan membentuk barisan geometri. Hasil kalinya adalah
+                  216 dan jumlahnya adalah 21. Rasio dari barisan tersebut
+                  adalah...
+                  <ol class="pilihan-ganda">
+                    <li data-option="A">2 atau $\frac{1}{2}$</li>
+                    <li data-option="B">3 atau $\frac{1}{3}$</li>
+                    <li data-option="C">4 atau $\frac{1}{4}$</li>
+                    <li data-option="D">2 atau 3</li>
+                    <li data-option="E">$\frac{1}{2}$ atau $\frac{1}{3}$</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
