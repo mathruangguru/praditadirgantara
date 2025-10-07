@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Latihan TKA Matematika Wajib</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        min-height: 29.7cm;
+        height: auto;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+      }
+
+      .layout-2-kolom {
+        column-count: 2;
+        column-gap: 15mm;
+        align-items: flex-start;
+      }
+      
+      .manual-flex-layout {
+        display: flex;
+        gap: 15mm;
+        align-items: flex-start;
+      }
+      .manual-flex-layout .kolom {
+        flex: 1;
+        width: 50%;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 15px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 24px;
+      }
+
+      .soal-konten {
+        flex-grow: 1;
+      }
+
+      .soal-gambar {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      .soal-gambar-deskripsi {
+        padding: 10px;
+        background-color: #f5f5f5;
+        border: 1px dashed #ccc;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-style: italic;
+        text-align: left;
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: bold;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 50px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma {
+        margin-top: 10px;
+      }
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+        text-align: left;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Wajib) | Latihan 9
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+				<div class="soal-nomor">1.</div>
+				<div class="soal-konten">
+				Berapakah jari-jari lingkaran L?
+				  <div style="text-align: left; margin-top: 5px">
+					(1) Lingkaran L menyinggung garis $y=5$.<br />
+					(2) Pusat lingkaran L adalah $(2,1)$.
+				  </div>
+				  <ol class="pilihan-ganda">
+					<li data-option="A">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (2) SAJA tidak cukup.
+					</li>
+					<li data-option="B">
+					  Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+					  pernyataan (1) SAJA tidak cukup.
+					</li>
+					<li data-option="C">
+					  DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+					  tetapi SATU pernyataan SAJA tidak cukup.
+					</li>
+					<li data-option="D">
+					  Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+					  pernyataan (2) SAJA cukup.
+					</li>
+					<li data-option="E">
+					  Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+					  pertanyaan.
+					</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">2.</div>
+				<div class="soal-konten">
+				Suhu di dalam lemari es (dalam derajat Celcius) setelah $t$ menit dinyalakan adalah $C(t) = 25 - 2t$. Suatu zat akan membeku pada suhu $32^\circ F$. Zat tersebut akan membeku setelah lemari es dinyalakan selama... (Gunakan $F = \frac{9}{5}C+32$)
+				  <ol class="pilihan-ganda">
+					<li data-option="A">10 menit</li>
+					<li data-option="B">12,5 menit</li>
+					<li data-option="C">15 menit</li>
+					<li data-option="D">20 menit</li>
+					<li data-option="E">28,5 menit</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">3.</div>
+				<div class="soal-konten">
+				Sebuah kerucut memiliki volume V. Jika jari-jari alasnya diperbesar 2 kali dan tingginya menjadi setengah dari tinggi semula, volume kerucut yang baru adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">$\frac{1}{2}V$</li>
+					<li data-option="B">$V$</li>
+					<li data-option="C">$2V$</li>
+					<li data-option="D">$4V$</li>
+					<li data-option="E">$8V$</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">4.</div>
+				<div class="soal-konten">
+				Dari 7 orang finalis lomba menyanyi, akan dipilih Juara I, Juara II, serta 3 Juara Harapan. Banyaknya cara pemilihan juara tersebut adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">210</li>
+					<li data-option="B">420</li>
+					<li data-option="C">1260</li>
+					<li data-option="D">2520</li>
+					<li data-option="E">5040</li>
+				  </ol>
+				</div>
+			</div>
+			
+			<div class="soal-latihan">
+				<div class="soal-nomor">5.</div>
+				<div class="soal-konten">
+				Jika $x > 0$, $y > 0$, dan $x \neq 1$, $y \neq 1$, maka nilai dari $^x\log y \cdot ^y\log x$ adalah...
+				  <ol class="pilihan-ganda">
+					<li data-option="A">1</li>
+					<li data-option="B">2</li>
+					<li data-option="C">$x$</li>
+					<li data-option="D">$y$</li>
+					<li data-option="E">$x^2$</li>
+				  </ol>
+				</div>
+			</div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+             XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 9
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+                <div class="soal-latihan">
+                    <div class="soal-nomor">6.</div>
+                    <div class="soal-konten">
+                    Tabel berikut menunjukkan data usia penduduk di suatu RT. Manakah pernyataan yang benar?
+                      <table class="soal-kategori" style="width:100%; text-align:center;">
+                          <tr><th>Usia (Tahun)</th><td>1-10</td><td>11-20</td><td>21-30</td><td>31-40</td><td>41-50</td></tr>
+                          <tr><th>Frekuensi</th><td>8</td><td>12</td><td>15</td><td>10</td><td>5</td></tr>
+                      </table>
+                      <b>(bisa pilih lebih dari satu jawaban)</b>
+                      <div class="pilihan-ganda-mcma">
+                        <div>
+                          <input type="checkbox" /><span>Letak kelas median adalah 21-30.</span>
+                        </div>
+                        <div>
+                          <input type="checkbox" /><span>Tepi bawah kelas modus adalah 20,5.</span>
+                        </div>
+                        <div>
+                          <input type="checkbox" /><span>Panjang interval kelas adalah 9.</span>
+                        </div>
+                        <div>
+                          <input type="checkbox" /><span>Total penduduk adalah 50 orang.</span>
+                        </div>
+                        <div>
+                          <input type="checkbox" /><span>Kuartil bawah berada di kelas 11-20.</span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="soal-latihan">
+                    <div class="soal-nomor">7.</div>
+                    <div class="soal-konten">
+                    Nilai maksimum dari fungsi $f(x) = 5 - 3\cos(2x - \frac{\pi}{2})$ adalah...
+                      <ol class="pilihan-ganda">
+                        <li data-option="A">2</li>
+                        <li data-option="B">3</li>
+                        <li data-option="C">5</li>
+                        <li data-option="D">8</li>
+                        <li data-option="E">10</li>
+                      </ol>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kolom">
+                <div class="soal-latihan">
+                    <div class="soal-nomor">8.</div>
+                    <div class="soal-konten">
+                    Seorang pengrajin menyusun batang-batang lidi membentuk persegi seperti pada gambar. Jika pola dilanjutkan, banyak lidi yang dibutuhkan untuk membuat pola ke-10 adalah...
+                    <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_1oyftn_4752.png" alt="Pola Batang Lidi" class="soal-gambar"/>
+                      <ol class="pilihan-ganda">
+                        <li data-option="A">28</li>
+                        <li data-option="B">29</li>
+                        <li data-option="C">30</li>
+                        <li data-option="D">31</li>
+                        <li data-option="E">32</li>
+                      </ol>
+                    </div>
+                </div>
+                <div class="soal-latihan">
+                    <div class="soal-nomor">9.</div>
+                    <div class="soal-konten">
+                    Diberikan sistem pertidaksamaan $y \ge x^2-4$ dan $y \le -x+2$. Tentukan kebenaran dari pernyataan berikut.
+                      <table class="soal-kategori">
+                          <thead>
+                              <tr>
+                                  <th>Pernyataan</th>
+                                  <th>Benar</th>
+                                  <th>Salah</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Titik $(0,0)$ berada dalam daerah penyelesaian.</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>Titik potong kedua kurva adalah $(-3,5)$ dan $(2,1)$.</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>Parabola membuka ke atas.</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                              <tr>
+                                  <td>Garis memotong sumbu Y di titik $(0,2)$.</td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+             XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 9
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="manual-flex-layout">
+            <div class="kolom">
+                <div class="soal-latihan">
+                    <div class="soal-nomor">10.</div>
+                    <div class="soal-konten">
+                    Pada gambar berikut, ABCD adalah persegi dengan panjang sisi 10 cm. Luas daerah yang diarsir adalah...
+                    <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_vkv32n_5948.png" alt="Luas Daerah Arsir" class="soal-gambar"/>
+                      <ol class="pilihan-ganda">
+                        <li data-option="A">$100 - 25\pi$</li>
+                        <li data-option="B">$50\pi - 100$</li>
+                        <li data-option="C">$25\pi$</li>
+                        <li data-option="D">$100 - 50\pi$</li>
+                        <li data-option="E">$50$</li>
+                      </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="kolom">
+                <div class="soal-latihan">
+                    <div class="soal-nomor">11.</div>
+                    <div class="soal-konten">
+                    Berapakah nilai dari $f(g(1))$?
+                      <div style="text-align: left; margin-top: 5px">
+                        (1) $f(x)=2x+1$.<br />
+                        (2) $g(1)=3$.
+                      </div>
+                      <ol class="pilihan-ganda">
+                        <li data-option="A">
+                          Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                          pernyataan (2) SAJA tidak cukup.
+                        </li>
+                        <li data-option="B">
+                          Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                          pernyataan (1) SAJA tidak cukup.
+                        </li>
+                        <li data-option="C">
+                          DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan,
+                          tetapi SATU pernyataan SAJA tidak cukup.
+                        </li>
+                        <li data-option="D">
+                          Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                          pernyataan (2) SAJA cukup.
+                        </li>
+                        <li data-option="E">
+                          Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab
+                          pertanyaan.
+                        </li>
+                      </ol>
+                    </div>
+                </div>
+                 <div class="soal-latihan">
+                    <div class="soal-nomor">12.</div>
+                    <div class="soal-konten">
+                    Peluang seorang siswa lulus ujian Matematika adalah 0,6 dan peluang lulus ujian Fisika adalah 0,8. Jika diketahui ia lulus ujian Matematika, peluang ia juga lulus ujian Fisika adalah 0,9. Peluang siswa tersebut lulus kedua ujian adalah...
+                      <ol class="pilihan-ganda">
+                        <li data-option="A">0,48</li>
+                        <li data-option="B">0,54</li>
+                        <li data-option="C">0,60</li>
+                        <li data-option="D">0,72</li>
+                        <li data-option="E">0,90</li>
+                      </ol>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 4 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+             XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 9
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+           <div class="manual-flex-layout">
+                <div class="kolom">
+                    <div class="soal-latihan">
+                        <div class="soal-nomor">13.</div>
+                        <div class="soal-konten">
+                        Transformasi yang bersesuaian dengan matriks $\begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$ diikuti oleh refleksi terhadap sumbu Y dapat diwakili oleh matriks tunggal...
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">$\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$</li>
+                            <li data-option="B">$\begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}$</li>
+                            <li data-option="C">$\begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix}$</li>
+                            <li data-option="D">$\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$</li>
+                            <li data-option="E">$\begin{pmatrix} 0 & -1 \\ -1 & 0 \end{pmatrix}$</li>
+                          </ol>
+                        </div>
+                    </div>
+                    <div class="soal-latihan">
+                        <div class="soal-nomor">14.</div>
+                        <div class="soal-konten">
+                        Anton menabung Rp1.000.000 dengan bunga tunggal 12% per tahun. Bima menabung Rp1.000.000 dengan bunga majemuk 12% per tahun. Setelah 2 tahun, tabungan siapakah yang lebih besar dan berapa selisihnya?
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">Anton, selisih Rp10.000</li>
+                            <li data-option="B">Anton, selisih Rp14.400</li>
+                            <li data-option="C">Anton, selisih Rp30.000</li>
+                            <li data-option="D">Bima, selisih Rp10.000</li>
+                            <li data-option="E">Bima, selisih Rp14.400</li>
+                          </ol>
+                        </div>
+                    </div>
+                    <div class="soal-latihan">
+                        <div class="soal-nomor">15.</div>
+                        <div class="soal-konten">
+                        Dalam sebuah segitiga, perbandingan besar sudut-sudutnya adalah 1:2:3. Jenis segitiga tersebut adalah...
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">Siku-siku</li>
+                            <li data-option="B">Sama kaki</li>
+                            <li data-option="C">Sama sisi</li>
+                            <li data-option="D">Lancip</li>
+                            <li data-option="E">Tumpul</li>
+                          </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="kolom">
+                     <div class="soal-latihan">
+                        <div class="soal-nomor">16.</div>
+                        <div class="soal-konten">
+                        Daerah yang diarsir pada gambar adalah daerah penyelesaian dari sistem pertidaksamaan linear. Manakah pernyataan yang benar mengenai nilai fungsi tujuan $F(x,y)=5x+4y$?
+                        <img src="https://imgix3.ruangguru.com/assets/miscellaneous/png_5acknk_3807.png" alt="Daerah Arsir Program Linear" class="soal-gambar"/>
+                          <b>(bisa pilih lebih dari satu jawaban)</b>
+                          <div class="pilihan-ganda-mcma">
+                            <div>
+                              <input type="checkbox" /><span>Nilai minimumnya adalah 12.</span>
+                            </div>
+                            <div>
+                              <input type="checkbox" /><span>Nilai di titik (3,0) adalah 15.</span>
+                            </div>
+                            <div>
+                              <input type="checkbox" /><span>Nilai di titik potong kedua garis adalah 16,8.</span>
+                            </div>
+                            <div>
+                              <input type="checkbox" /><span>Nilai maksimumnya terjadi di titik (0,3).</span>
+                            </div>
+                            <div>
+                              <input type="checkbox" /><span>Nilai maksimumnya adalah 15.</span>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                     <div class="soal-latihan">
+                        <div class="soal-nomor">17.</div>
+                        <div class="soal-konten">
+                        Jumlah tak hingga dari deret geometri $18 + 12 + 8 + ...$ adalah...
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">27</li>
+                            <li data-option="B">36</li>
+                            <li data-option="C">48</li>
+                            <li data-option="D">54</li>
+                            <li data-option="E">60</li>
+                          </ol>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 5 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Wajib</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+             XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill Soal TKA Matematika (Wajib) | Latihan 9
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+           <div class="manual-flex-layout">
+                <div class="kolom">
+                    <div class="soal-latihan">
+                        <div class="soal-nomor">18.</div>
+                        <div class="soal-konten">
+                        Desil ke-6 (D6) dari data pada tabel frekuensi berikut adalah...
+                          <table class="soal-kategori" style="width:100%; text-align:center;">
+                              <tr><th>Nilai</th><td>40-49</td><td>50-59</td><td>60-69</td><td>70-79</td><td>80-89</td></tr>
+                              <tr><th>Frekuensi</th><td>4</td><td>6</td><td>10</td><td>4</td><td>6</td></tr>
+                          </table>
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">59,5</li>
+                            <li data-option="B">60,5</li>
+                            <li data-option="C">61,5</li>
+                            <li data-option="D">62,5</li>
+                            <li data-option="E">67,5</li>
+                          </ol>
+                        </div>
+                    </div>
+                     <div class="soal-latihan">
+                        <div class="soal-nomor">19.</div>
+                        <div class="soal-konten">
+                        Pada $\triangle ABC$, diketahui $AC=10$, $BC=5\sqrt{6}$ dan $\angle A=60^\circ$. Tentukan kebenaran pernyataan berikut.
+                          <table class="soal-kategori">
+                              <thead>
+                                  <tr>
+                                      <th>Pernyataan</th>
+                                      <th>Benar</th>
+                                      <th>Salah</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>$\sin B = \frac{\sqrt{2}}{2}$.</td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Besar $\angle B$ adalah $45^\circ$.</td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Besar $\angle C$ adalah $75^\circ$.</td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Panjang sisi AB adalah $5(\sqrt{3}-1)$.</td>
+                                      <td></td>
+                                      <td></td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="kolom">
+                    <div class="soal-latihan">
+                        <div class="soal-nomor">20.</div>
+                        <div class="soal-konten">
+                        Sebuah akuarium berbentuk balok memiliki ukuran $80 \text{ cm} \times 40 \text{ cm} \times 50 \text{ cm}$. Jika akuarium diisi air hingga mencapai ketinggian 40 cm, volume air dalam akuarium tersebut adalah...
+                          <ol class="pilihan-ganda">
+                            <li data-option="A">12.800 cm³</li>
+                            <li data-option="B">16.000 cm³</li>
+                            <li data-option="C">128.000 cm³</li>
+                            <li data-option="D">160.000 cm³</li>
+                            <li data-option="E">1.280.000 cm³</li>
+                          </ol>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
+
+
+
