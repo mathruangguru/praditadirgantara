@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Aktivitas - Matematika Lanjut - Latihan 6</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+          packages: { "[+]": ["ams"] },
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-text: #333333;
+        --secondary-text: #555555;
+        --border-color: #dddddd;
+        --header-top-bg: #e0f7fa;
+        --header-bottom-bg: #f0f0f0;
+        --header-title-color: #00838f;
+        --grey-text: #8d8e8d;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-size: 8.5pt;
+        line-height: 1.6;
+        color: var(--primary-text);
+        background-color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .page-container {
+        counter-reset: page;
+      }
+
+      .page {
+        background: white;
+        width: 21cm;
+        height: 29.7cm;
+        padding: 1.8cm 2.5cm 1.5cm 2.5cm;
+        margin: 1cm auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .page-header {
+        margin: -1.8cm -2.5cm 20px -2.5cm;
+        width: 21cm;
+      }
+
+      .header-top-box {
+        background-color: var(--header-top-bg);
+        padding: 10px 2.5cm;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2px;
+      }
+
+      .page:not(:first-child) .header-top-box {
+        margin-bottom: 0;
+      }
+
+      .header-title-main {
+        font-size: 18pt;
+        font-weight: 700;
+        color: var(--header-title-color);
+        line-height: 1.2;
+      }
+
+      .header-title-sub {
+        font-size: 9pt;
+        font-weight: 400;
+        color: var(--primary-text);
+      }
+
+      .header-bottom-box {
+        padding: 8px 2.5cm;
+      }
+
+      .header-bottom-text {
+        background-color: var(--header-bottom-bg);
+        padding: 8px 15px;
+        font-weight: 700;
+        font-size: 8.5pt;
+        color: var(--secondary-text);
+        display: block;
+        border-radius: 4px;
+        white-space: normal;
+        text-align: left;
+      }
+
+      .header-logo {
+        max-height: 60px;
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        flex-grow: 1;
+        overflow: hidden;
+      }
+
+      .layout-2-kolom {
+        columns: 2;
+        column-gap: 15mm;
+        height: 100%;
+      }
+
+      .soal-latihan {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px; /* Jarak antara nomor dan teks soal */
+        margin-bottom: 20px;
+        break-inside: avoid;
+        text-align: justify;
+      }
+
+      .soal-nomor {
+        font-weight: bold;
+        flex-shrink: 0;
+        min-width: 25px; /* Ruang untuk nomor hingga 3 digit */
+      }
+
+      .soal-konten {
+        flex-grow: 1; /* Konten soal mengisi sisa ruang */
+      }
+
+      ol {
+        padding-left: 0;
+      }
+      ol.pilihan-ganda {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        text-align: left; /* Pilihan ganda selalu rata kiri */
+      }
+      ol.pilihan-ganda li {
+        margin-bottom: 8px;
+        padding-left: 20px;
+        text-indent: -20px;
+        text-align: left;
+      }
+      ol.pilihan-ganda li::before {
+        content: attr(data-option) ". ";
+        font-weight: normal;
+        padding-right: 5px;
+      }
+
+      table.soal-kategori {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        margin-top: 10px;
+        font-size: 8pt;
+      }
+      table.soal-kategori th,
+      table.soal-kategori td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        vertical-align: middle;
+      }
+      table.soal-kategori th {
+        background-color: #f2f2f2;
+      }
+      table.soal-kategori th:not(:first-child) {
+        text-align: center;
+        width: 60px;
+      }
+      table.soal-kategori td:not(:first-child) {
+        text-align: center;
+      }
+
+      .pilihan-ganda-mcma {
+        margin-top: 10px;
+      }
+
+      .pilihan-ganda-mcma div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 8px;
+        padding-left: 5px;
+        text-align: left;
+      }
+      .pilihan-ganda-mcma input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-top: 4px;
+      }
+
+      .kecukupan-data-pernyataan {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 2px 8px; /* row-gap column-gap */
+        text-align: left; /* Override justify from parent */
+        margin-top: 10px !important;
+        margin-bottom: 10px;
+      }
+      .kecukupan-data-pernyataan span {
+        line-height: 1.5;
+      }
+
+      .page-footer {
+        text-align: left;
+        font-size: 6pt;
+        color: var(--grey-text);
+        padding-top: 2px;
+        margin-top: auto;
+        border-top: 2.5px solid var(--grey-text);
+      }
+
+      @media print {
+        @page {
+          size: A4;
+          margin: 0;
+        }
+
+        body {
+          background-color: white;
+          margin: 0;
+        }
+
+        .page {
+          width: 100%;
+          min-height: 29.7cm;
+          height: 100%;
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+        }
+        .page:last-child {
+          page-break-after: avoid;
+        }
+
+        .page-header {
+          display: block;
+          margin: -1.8cm -2.5cm 20px -2.5cm;
+          position: relative;
+        }
+
+        .header-top-box,
+        .header-bottom-text,
+        .kuis-title {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- HALAMAN 1 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+          <div class="header-bottom-box">
+            <div class="header-bottom-text">
+              XII SMA | Kurikulum Merdeka | [TKA] Drill Soal | Subtopik: Drill
+              Soal TKA Matematika (Lanjut) | Latihan 6
+            </div>
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">1.</div>
+              <div class="soal-konten">
+                Kecepatan sebuah roket pada saat $t$ mendekati 1 detik diberikan
+                oleh fungsi $v(t) = \frac{3t^2-2t-1}{t-1}$ m/s. Berapakah
+                kecepatan roket tersebut saat $t$ tepat mendekati 1 detik?
+                <ol class="pilihan-ganda">
+                  <li data-option="A">0 m/s</li>
+                  <li data-option="B">1 m/s</li>
+                  <li data-option="C">2 m/s</li>
+                  <li data-option="D">4 m/s</li>
+                  <li data-option="E">Tidak dapat ditentukan</li>
+                </ol>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">2.</div>
+              <div class="soal-konten">
+                Matriks rotasi
+                $A = \begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$
+                digunakan dalam grafika komputer. Manakah pernyataan berikut
+                yang selalu benar untuk matriks ini?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$A$ merupakan matriks ortogonal.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$A^{-1} = A^T$.</span>
+                  </div>
+                  <div><input type="checkbox" /><span>$det(A)=1$.</span></div>
+                  <div>
+                    <input type="checkbox" /><span>$A^2$ merepresentasikan rotasi sebesar $2\theta$.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Transformasi oleh A mengubah luas.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">3.</div>
+              <div class="soal-konten">
+                Apakah $x=-1$ merupakan salah satu akar dari polinomial
+                $P(x) = x^4 + ax^3 + bx^2 + x + 1$?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>Jumlah semua koefisien $P(x)$ adalah nol.</span>
+                  <span>(2)</span><span>$P(x)$ habis dibagi oleh $x^2-1$.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi
+                    pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">4.</div>
+              <div class="soal-konten">
+                Sebuah radar pesawat di (0,0) memiliki jangkauan
+                $x^2+y^2 \le 10000$. Pesawat musuh terbang lurus di jalur
+                $y=x+c$. Tentukan status deteksi untuk setiap skenario.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Terdeteksi</th>
+                      <th>Tidak Terdeteksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jalur pesawat $c=150$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jalur pesawat $c=100$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jalur pesawat $c=100\sqrt{2}$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jalur pesawat $c=0$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">5.</div>
+              <div class="soal-konten">
+                Dua gaya $\vec{F_1} = (1, 5)$ N dan $\vec{F_2} = (3, -2)$ N
+                bekerja pada sebuah partikel. Agar partikel tetap diam
+                (setimbang), gaya ketiga $\vec{F_3}$ harus diterapkan. Vektor
+                $\vec{F_3}$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">(4, 3) N</li>
+                  <li data-option="B">(-4, -3) N</li>
+                  <li data-option="C">(2, -7) N</li>
+                  <li data-option="D">(-2, 7) N</li>
+                  <li data-option="E">(5, 0) N</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 2 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+           
+            <div class="soal-latihan">
+              <div class="soal-nomor">6.</div>
+              <div class="soal-konten">
+                Bayangan garis $2x-y+5=0$ oleh transformasi yang diwakili oleh
+                matriks $T=\begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}$
+                adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$3x+y-5=0$</li>
+                  <li data-option="B">$3x-4y+5=0$</li>
+                  <li data-option="C">$x+3y-5=0$</li>
+                  <li data-option="D">$3x-y+5=0$</li>
+                  <li data-option="E">$x-y+5=0$</li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">7.</div>
+              <div class="soal-konten">
+                Diketahui $\lim\limits_{x \to 4} \frac{ax+b-\sqrt{x}}{x-4}=\frac{3}{4}$. Nilai $a+b$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">3</li>
+                  <li data-option="B">2</li>
+                  <li data-option="C">1</li>
+                  <li data-option="D">0</li>
+                  <li data-option="E">-1</li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">8.</div>
+              <div class="soal-konten">
+                Jika A adalah matriks 3x3. Apakah A matriks singular?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>Dua baris dari matriks A identik.</span>
+                  <span>(2)</span><span>$det(2A) = 0$.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">9.</div>
+              <div class="soal-konten">
+                Manakah pernyataan berikut yang benar tentang polinomial
+                $P(x)=x^4-5x^2+4$?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>Memiliki 2 akar real yang sama.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$x=1$ adalah salah satu akarnya.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$P(x)$ merupakan fungsi genap.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Jumlah akar-akarnya adalah 0.</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>Habis dibagi oleh $x-3$.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">10.</div>
+              <div class="soal-konten">
+                Diberikan dua fungsi $f(x)=2^x$ dan $g(x)=\log_2(x)$.
+                Tentukan kesesuaian pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Sesuai</th>
+                      <th>Tidak Sesuai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Grafik $f(x)$ dan $g(x)$ simetris terhadap garis
+                        $y=x$.
+                      </td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Domain $f(x)$ adalah range $g(x)$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$f(g(x))=x$ untuk $x>0$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Kedua grafik berpotongan.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+      
+      <!-- HALAMAN 3 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">11.</div>
+              <div class="soal-konten">
+                Volume sebuah paralelepipedum yang dibentuk oleh tiga vektor
+                $\vec{u}, \vec{v}, \vec{w}$ adalah
+                $|(\vec{u} \times \vec{v}) \cdot \vec{w}|$. Jika
+                $\vec{u}=(1,0,0)$, $\vec{v}=(0,2,0)$, dan $\vec{w}=(1,1,3)$,
+                volumenya adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">6</li>
+                  <li data-option="B">3</li>
+                  <li data-option="C">5</li>
+                  <li data-option="D">2</li>
+                  <li data-option="E">8</li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">12.</div>
+              <div class="soal-konten">
+                Diketahui persamaan lingkaran $x^2+y^2+Ax+By+C=0$. Apakah
+                lingkaran tersebut menyinggung sumbu-X?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>Pusat lingkaran adalah $(-A/2, -B/2)$.</span>
+                  <span>(2)</span><span>$A^2 - 4C = 0$.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">13.</div>
+              <div class="soal-konten">
+                Titik P(3, -2) dicerminkan terhadap garis $y=-x$ menghasilkan
+                P', lalu P' dirotasi $180^\circ$ berpusat di O(0,0)
+                menghasilkan P''. Koordinat P'' adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">(-2, 3)</li>
+                  <li data-option="B">(2, -3)</li>
+                  <li data-option="C">(-3, 2)</li>
+                  <li data-option="D">(3, -2)</li>
+                  <li data-option="E">(-2, -3)</li>
+                </ol>
+              </div>
+            </div>
+             <div class="soal-latihan">
+              <div class="soal-nomor">14.</div>
+              <div class="soal-konten">
+                $\lim\limits_{x \to \infty} \frac{(2x-1)^3}{(x+1)(x^2-3)} =
+                ...$
+                <ol class="pilihan-ganda">
+                  <li data-option="A">0</li>
+                  <li data-option="B">8</li>
+                  <li data-option="C">4</li>
+                  <li data-option="D">2</li>
+                  <li data-option="E">Tak hingga</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 4 -->
+       <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+             <div class="soal-latihan">
+              <div class="soal-nomor">15.</div>
+              <div class="soal-konten">
+                Jumlah n suku pertama deret $S_n$ dimodelkan oleh
+                $S_n=n^3+2n^2$. Tentukan kesesuaian pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Sesuai</th>
+                      <th>Tidak Sesuai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Suku pertama ($U_1$) adalah 3.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Suku kedua ($U_2$) adalah 13.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Rumus suku ke-n adalah $U_n=3n^2+n-2$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$S_n$ adalah sebuah fungsi polinomial.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">16.</div>
+              <div class="soal-konten">
+                Manakah di antara fungsi berikut yang grafiknya tidak pernah
+                memotong sumbu-X?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = x^2+1$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = e^x$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = \log(x)$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = \frac{1}{x^2+1}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$f(x) = \sin(x)+2$</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">17.</div>
+              <div class="soal-konten">
+                Diberikan matriks $A = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$.
+                Manakah yang benar mengenai $A^n$?
+                <b>(bisa pilih lebih dari satu jawaban)</b>
+                <div class="pilihan-ganda-mcma">
+                  <div>
+                    <input type="checkbox" /><span>$A^2 = \begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$A^n = \begin{pmatrix} 1 & 2n \\ 0 & 1 \end{pmatrix}$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$det(A^n)=1$</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>A merepresentasikan transformasi geser (shear).</span>
+                  </div>
+                  <div>
+                    <input type="checkbox" /><span>$A$ tidak punya invers.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">18.</div>
+              <div class="soal-konten">
+                Dua buah vektor membentuk sudut $\theta$. Berapakah nilai
+                $\cos \theta$?
+                <div class="kecukupan-data-pernyataan">
+                  <span>(1)</span><span>Panjang kedua vektor adalah 5 dan 6.</span>
+                  <span>(2)</span><span>Hasil kali titik kedua vektor adalah 15.</span>
+                </div>
+                <ol class="pilihan-ganda">
+                  <li data-option="A">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (2) SAJA tidak cukup.
+                  </li>
+                  <li data-option="B">
+                    Pernyataan (2) SAJA cukup untuk menjawab pertanyaan,
+                    tetapi pernyataan (1) SAJA tidak cukup.
+                  </li>
+                  <li data-option="C">
+                    DUA pernyataan BERSAMA-SAMA cukup untuk menjawab
+                    pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+                  </li>
+                  <li data-option="D">
+                    Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan
+                    pernyataan (2) SAJA cukup.
+                  </li>
+                  <li data-option="E">
+                    Pernyataan (1) dan pernyataan (2) tidak cukup untuk
+                    menjawab pertanyaan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+
+      <!-- HALAMAN 5 -->
+      <section class="page">
+        <header class="page-header">
+          <div class="header-top-box">
+            <div>
+              <div class="header-title-main">Bank Aktivitas</div>
+              <div class="header-title-sub">
+                <strong>Matematika Lanjut</strong>
+              </div>
+            </div>
+            <img
+              src="https://imgix3.ruangguru.com/assets/miscellaneous/png_63qwb1_5293.png"
+              alt="Brain Academy Logo"
+              class="header-logo"
+            />
+          </div>
+        </header>
+
+        <div class="content-wrapper">
+          <div class="layout-2-kolom">
+            <div class="soal-latihan">
+              <div class="soal-nomor">19.</div>
+              <div class="soal-konten">
+                Persamaan garis polar dari titik (8, 6) terhadap lingkaran
+                $x^2+y^2=25$ adalah...
+                <ol class="pilihan-ganda">
+                  <li data-option="A">$8x+6y=25$</li>
+                  <li data-option="B">$6x+8y=25$</li>
+                  <li data-option="C">$4x+3y=25$</li>
+                  <li data-option="D">$3x+4y=25$</li>
+                  <li data-option="E">$8x+6y=100$</li>
+                </ol>
+              </div>
+            </div>
+            <div class="soal-latihan">
+              <div class="soal-nomor">20.</div>
+              <div class="soal-konten">
+                Matriks $A = \begin{pmatrix} a & 1 \\ 0 & a \end{pmatrix}$.
+                Tentukan kesesuaian pernyataan berikut.
+                <table class="soal-kategori">
+                  <thead>
+                    <tr>
+                      <th>Pernyataan</th>
+                      <th>Sesuai</th>
+                      <th>Tidak Sesuai</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nilai eigen matriks A adalah $a$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Matriks A hanya memiliki satu vektor eigen.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Jika $a=0$, maka $A^2=0$.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>$A$ selalu dapat didiagonalkan.</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="page-footer">
+          <b
+            >Copyright Ⓒ 2025 - PT Ruang Raya Indonesia - All Rights
+            Reserved.</b
+          >
+          <i
+            >Dilarang menyebarluaskan dokumen ini tanpa seizin PT Ruang Raya
+            Indonesia.</i
+          >
+        </footer>
+      </section>
+    </div>
+  </body>
+</html>
+
+
